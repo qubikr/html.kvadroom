@@ -10,6 +10,11 @@
 	}
 }
 
+.footer.light {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
 .page-complex {
 	.title-block {
 		margin-top: 36px;
@@ -34,6 +39,7 @@
 
 	.offer-transport-params {
 		text-align: center;
+		margin-bottom: 25px;
 
 		.item {
 			float: none;
@@ -43,8 +49,81 @@
 	}
 }
 
+.complex-button {
+	border: 2px solid #BFD4A4;
+	border-radius: 5px;
+	display: block;
+	transition: .2s;
+
+	&:hover {
+		border-color: #BFD4A4 - 25;
+		text-decoration: none;
+		color: #000;
+	}
+
+	&.plans {
+		padding: 18px 0 0 150px;
+		font-size: 20px;
+		font-weight: bold;
+		height: 90px;
+		box-sizing: border-box;
+		background-image: url(../img/plans.png);
+		background-size: 147px 90px;
+		background-repeat: no-repeat;
+	}
+
+	&.jumbo {
+		padding: 50px 30px 68px;
+		text-align: center;
+
+		.title {
+			font-size: 20px;
+			color: #999;
+			display: block;
+			margin-bottom: 6px;
+		}
+
+		.accent {
+			font-size: 50px;
+			line-height: 60px;
+			font-weight: bold;
+			display: block;
+			color: #63992E;
+		}
+	}
+}
+
+.complex-categories {
+	.title {
+		color: #666;
+		display: block;
+		margin-bottom: .75em;
+	}
+
+	a {
+		display: inline-block;
+		margin: 0 2.25ex .75em 0;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 20px;
+
+		span {
+			font-weight: normal;
+			color: #666;
+			margin-left: .8ex;
+		}
+
+		&.warn {
+			span {
+				color: @color-red;
+			}
+		}
+	}
+}
+
 .complex-hero {
 	border-bottom: 1px solid #ccc;
+	margin-bottom: 40px;
 
 	.viewport {
 		margin-bottom: 30px;
@@ -177,6 +256,138 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.complex-phone {
+	text-align: center;
+
+	i {
+		color: #63992E;
+		border: 2px solid #BFD4A4;
+		border-radius: 41px;
+		width: 76px;
+		height: 76px;
+		font-size: 70px;
+		margin: 0 auto 20px;
+	}
+
+	.num {
+		font-size: 46px;
+		line-height: 53px;
+		font-weight: bold;
+		white-space: nowrap;
+		margin-bottom: 12px;
+	}
+
+	.desc {
+		color: #999;
+	}
+}
+
+.complex-phones {
+	position: relative;
+
+	.title {
+		text-align: center;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	i {
+		color: #63992E;
+		border: 2px solid #BFD4A4;
+		border-radius: 41px;
+		width: 76px;
+		height: 76px;
+		font-size: 70px;
+		position: absolute;
+		left: 50%;
+		margin-left: -40px;
+		margin-top: 6px;
+	}
+
+	.phones {
+		.left,
+		.right {
+			width: 43%;
+
+			.num {
+				font-size: 46px;
+				line-height: 53px;
+				font-weight: bold;
+				white-space: nowrap;
+				margin-bottom: 12px;
+			}
+
+			.desc {
+				color: #999;
+			}
+		}
+
+		.left {
+			text-align: right;
+			float: left;
+		}
+
+		.right {
+			float: right;
+		}
+	}
+}
+
+.complex-info-cells {
+	.title {
+		text-align: center;
+		margin-bottom: 25px;
+		color: #999;
+	}
+
+	table {
+		width: 100%;
+		border-radius: 2px;
+		border-spacing: 0;
+		border-collapse: separate;
+		border: 1px solid #BFD4A4;
+
+		td {
+			width: 230px;
+			height: 140px;
+			border: 1px solid #BFD4A4;
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 25px;
+			text-align: center;
+			vertical-align: middle;
+			padding: 20px 30px;
+			box-sizing: border-box;
+		}
+	}
+}
+
+.complex-landing-header {
+	text-align: center;
+
+	.heading {
+		i {
+			font-size: 120px;
+			display: block;
+			margin: 0 auto;
+			width: 120px;
+			height: 120px;
+			color: @color-red;
+		}
+
+		.title {
+			font-size: 50px;
+			line-height: 60px;
+			font-weight: bold;
+		}
+
+		.subtitle {
+			font-size: 50px;
+			line-height: 60px;
 		}
 	}
 }

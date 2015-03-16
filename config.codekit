@@ -31,6 +31,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/plans.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6225,
+		"inputAbbreviatedPath": "\/img\/plans.png",
+		"outputAbbreviatedPath": "\/img\/plans.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/jade\/_layout.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -53,10 +64,21 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/jade\/partials\/footer.jade": {
+	"\/jade\/partials\/footer-light.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
 		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/partials\/footer-light.jade",
+		"outputAbbreviatedPath": "\/footer-light.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/jade\/partials\/footer.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/partials\/footer.jade",
 		"outputAbbreviatedPath": "\/footer.html",
