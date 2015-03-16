@@ -3534,6 +3534,9 @@ code {
   height: 32px;
   display: block;
 }
+.icon-font-phone-full-02:before {
+  content: "\e637";
+}
 .icon-font-soc_metro_samara:before {
   content: "\e631";
 }
@@ -15023,6 +15026,16 @@ ul.circular-switcher li.active {
   height: 105px;
   border: none;
   position: relative;
+  display: block;
+}
+.complex-hero .slider-gallery .frame .slidee li .image img {
+  -webkit-transition: .5s;
+          transition: .5s;
+}
+.complex-hero .slider-gallery .frame .slidee li:hover .image img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .complex-phone {
   text-align: center;
@@ -15132,5 +15145,41 @@ ul.circular-switcher li.active {
 .complex-landing-header .heading .subtitle {
   font-size: 50px;
   line-height: 60px;
+}
+.complex-cat .title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.complex-cat .item {
+  text-align: left;
+  margin-bottom: 40px;
+  display: block;
+}
+.complex-cat .item:hover {
+  text-decoration: none;
+}
+.complex-cat .item .title {
+  display: block;
+  text-align: left;
+  margin-bottom: 7px;
+}
+.complex-cat .item .subtitle {
+  display: block;
+  color: #666;
+}
+.complex-cat .item .image {
+  display: block;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.complex-cat .item .image img {
+  -webkit-transition: .5s;
+          transition: .5s;
+}
+.complex-cat .item:hover .image img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=kv.css.map */

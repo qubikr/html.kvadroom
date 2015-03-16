@@ -260,6 +260,19 @@
 						height: @item-height;
 						border: none;
 						position: relative;
+						display: block;
+
+						img {
+							transition: .5s;
+						}
+					}
+
+					&:hover {
+						.image {
+							img {
+								transform: scale(1.1);
+							}
+						}
 					}
 				}
 			}
@@ -399,3 +412,50 @@
 	}
 }
 
+
+.complex-cat {
+	.title {
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.item {
+		text-align: left;
+		margin-bottom: 40px;
+		display: block;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		.title {
+			display: block;
+			text-align: left;
+			margin-bottom: 7px;
+		}
+
+		.subtitle {
+			display: block;
+			color: #666;
+		}
+
+		.image {
+			display: block;
+			margin-bottom: 20px;
+			overflow: hidden;
+
+			img {
+				transition: .5s;
+			}
+		}
+
+		&:hover {
+			.image {
+				img {
+					transform: scale(1.1); 
+				}
+			}
+		}
+	}
+}
