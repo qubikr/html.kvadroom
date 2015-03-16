@@ -14834,6 +14834,12 @@ ul.circular-switcher li.active {
   display: inline-block;
   margin: 0 15px;
 }
+.page-complex hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  height: 0;
+  background: none;
+}
 .complex-button {
   border: 2px solid #BFD4A4;
   border-radius: 5px;
