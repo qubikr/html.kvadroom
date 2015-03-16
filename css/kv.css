@@ -14794,4 +14794,156 @@ ul.circular-switcher li.active {
 .req-page .captcha-holder .link-dotted:hover .dotted {
   border-color: #ff0000;
 }
+.bg-paper {
+  background-color: #FCFAF2;
+}
+.bg-paper .wrapper {
+  background-color: transparent;
+}
+.bg-paper .header {
+  background-color: transparent;
+}
+.page-complex .title-block {
+  margin-top: 36px;
+  text-align: center;
+}
+.page-complex .title-block .subtitle {
+  font-weight: 16px;
+  color: #333;
+  line-height: 25px;
+  margin-bottom: 8px;
+}
+.page-complex .title-block h1 {
+  margin-right: 0 !important;
+  margin-bottom: .3em;
+  font-size: 50px;
+  color: #000;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+.page-complex .offer-transport-params {
+  text-align: center;
+}
+.page-complex .offer-transport-params .item {
+  float: none;
+  display: inline-block;
+  margin: 0 15px;
+}
+.complex-hero {
+  border-bottom: 1px solid #ccc;
+}
+.complex-hero .viewport {
+  margin-bottom: 30px;
+  position: relative;
+}
+.complex-hero .viewport img {
+  display: block;
+}
+.complex-hero .viewport footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 25px 250px 25px 30px;
+  box-sizing: border-box;
+  text-align: left;
+  min-height: 120px;
+  font-weight: bold;
+}
+.complex-hero .viewport footer a {
+  color: #ffd000;
+}
+.complex-hero .viewport footer .marker {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 160px;
+  padding: 25px 0;
+  text-align: center;
+  font-weight: bold;
+  display: table-cell;
+  font-size: 13px;
+  line-height: 15px;
+}
+.complex-hero .viewport footer .marker .label {
+  position: relative;
+  height: 100%;
+  padding: 0 30px;
+}
+.complex-hero .viewport footer .marker .label:before {
+  border-left: 1px solid #666;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.complex-hero .slider-gallery {
+  margin-bottom: 30px;
+  position: relative;
+}
+.complex-hero .slider-gallery .left,
+.complex-hero .slider-gallery .right {
+  opacity: .3;
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  -webkit-transition: .2s;
+          transition: .2s;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.complex-hero .slider-gallery .left.left,
+.complex-hero .slider-gallery .right.left {
+  left: 70px;
+}
+.complex-hero .slider-gallery .left.right,
+.complex-hero .slider-gallery .right.right {
+  right: 70px;
+}
+.complex-hero .slider-gallery .left:hover,
+.complex-hero .slider-gallery .right:hover {
+  opacity: .5;
+}
+.complex-hero .slider-gallery .left.disabled,
+.complex-hero .slider-gallery .right.disabled {
+  opacity: 0;
+  cursor: default;
+}
+.complex-hero .slider-gallery .frame {
+  width: 648px;
+  margin: 0 auto;
+  height: 105px;
+  padding: 0;
+}
+.complex-hero .slider-gallery .frame .slidee {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+.complex-hero .slider-gallery .frame .slidee li {
+  float: left;
+  margin: 0 11px;
+  width: 140px;
+  height: 100%;
+  position: relative;
+}
+.complex-hero .slider-gallery .frame .slidee li .image {
+  overflow: hidden;
+  width: 140px;
+  height: 105px;
+  border: none;
+  position: relative;
+}
 /*# sourceMappingURL=kv.css.map */

@@ -1,0 +1,174 @@
+.bg-paper {
+	background-color: #FCFAF2;
+
+	.wrapper {
+		background-color: transparent;
+	}
+
+	.header {
+		background-color: transparent;
+	}
+}
+
+.page-complex {
+	.title-block {
+		margin-top: 36px;
+		text-align: center;
+
+		.subtitle {
+			font-weight: 16px;
+			color: #333;
+			line-height: 25px;
+			margin-bottom: 8px;
+		}
+
+		h1 {
+			margin-right: 0 !important;
+			margin-bottom: .3em;
+			font-size: 50px;
+			color: #000;
+			line-height: 60px;
+			text-transform: uppercase;
+		}
+	}
+
+	.offer-transport-params {
+		text-align: center;
+
+		.item {
+			float: none;
+			display: inline-block;
+			margin: 0 15px;
+		}
+	}
+}
+
+.complex-hero {
+	border-bottom: 1px solid #ccc;
+
+	.viewport {
+		margin-bottom: 30px;
+		position: relative;
+
+		img {
+			display: block;
+		}
+
+		footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(51, 51, 51, .9);
+			color: #fff;
+			padding: 25px 250px 25px 30px;
+			box-sizing: border-box;
+			text-align: left;
+			min-height: 120px;
+			font-weight: bold;
+
+			a {
+				color: @color-yellow;
+			}
+
+			.marker {
+				box-sizing: border-box;
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 100%;
+				width: 160px;
+				padding: 25px 0;
+				text-align: center;
+				font-weight: bold;
+				display: table-cell;
+				font-size: 13px;
+				line-height: 15px;
+
+				.label {
+					position: relative;
+					height: 100%;
+					padding: 0 30px;
+
+					&:before {
+						border-left: 1px solid #666;
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.slider-gallery {
+		@item-width: 140px;
+		@item-height: 105px;
+		@item-margin: 11px;
+
+		margin-bottom: 30px;
+		position: relative;
+
+		.left,
+		.right {
+			opacity: .3;
+			position: absolute;
+			top: 50%;
+			margin-top: -16px;
+			transition: .2s;
+			cursor: pointer;
+
+			.no-text-selection;
+
+			&.left {
+				left: 70px;
+			}
+
+			&.right {
+				right: 70px;
+			}
+
+			&:hover {
+				opacity: .5;
+			}
+
+			&.disabled {
+				opacity: 0;
+				cursor: default;
+			}
+		}
+
+		.frame {
+			width: (@item-width + (@item-margin * 2)) * 4;
+			margin: 0 auto;
+			height: @item-height;
+			padding: 0;
+
+			.slidee {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				list-style: none;
+
+				li {
+					float: left;
+					margin: 0 @item-margin;
+					width: @item-width;
+					height: 100%;
+					position: relative;
+
+					.image {
+						overflow: hidden;
+						width: @item-width;
+						height: @item-height;
+						border: none;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+extend _layout
+
+block content
+	.page-complex
+		.title-block
+			.subtitle Жилой комплекс
+			h1 Дом на изумрудной
+				
+			include partials/transport-items
+
+		.complex-hero
+			.viewport
+				img(src="img/big-complex-house.png", title="Дом на изумрудной")
+
+				footer
+					.text
+						|«Дом на Изумрудной» расположен в Северо-Восточном округе Москвы, 
+						|в районе Лосиноостровский, на ул. Изумрудная, 65. 
+						|Дом со всех сторон окружен зелеными насаждениям, 
+						|которые, за счет продуманного ландшафтного...&nbsp;
+						a(href="#") Читать полностью
+
+					.marker
+						.label
+							|Проверено
+							br
+							|5 марта 2015 года
+
+			.slider-gallery
+				.left: i.icon-font.icon-font-arr-left
+				.right: i.icon-font.icon-font-arr-right
+				.frame
+					ul.slidee
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?1")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?2")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?3")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?4")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?5")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?6")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?7")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?8")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?9")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?10")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?11")
+						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?12")
+
+	script(src="js/complex.js")
