@@ -1,0 +1,56 @@
+.req-page {
+  padding: 40px 0;
+
+  .icon-kvadroom-logo {
+    display: block;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .form-input-text {
+    float: left;
+    width: 140px;
+  }
+
+  .button {
+    float: left;
+    width: 100px;
+    height: 42px;
+    margin-left: -1px;
+  }
+
+  .foot {
+    margin-top: 80px;
+  }
+
+  .err {
+    color: @color-red;
+  }
+
+  .captcha-holder {
+    position: relative;
+
+    .link-dotted {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      bottom: -40px;
+      font-size: 13px;
+      color: @color-gray-dark;
+
+      .dotted {
+        border-color: @color-gray-dark;
+      }
+
+      &:hover {
+        color: @color-red;
+
+        .dotted {
+          border-color: @color-red;
+        }
+      }
+    }
+  }
+}

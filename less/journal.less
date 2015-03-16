@@ -1,0 +1,143 @@
+@journal-height: 400px;
+@journal-slide-width: 620px;
+
+
+.journal-plain {
+  @journal-image-height: 465px;
+  @journal-image-width: 620px;
+
+  padding-top: 20px;
+
+  .journal-plain-header {
+    color: @color-red;
+    font-size: 27px;
+    text-align: left;
+    margin: 0 0 20px;
+
+    .journal-plain-header-link {
+      color: @color-red;
+    }
+
+    .journal-plain-header-link:hover {
+
+    }
+  }
+
+  .journal-plain-preview {
+    width: @journal-image-width;
+    height: @journal-image-height;
+  }
+
+  .journal-plain-topics {
+    .journal-plain-topic {
+      display: block;
+      margin-bottom: 1.5em;
+      text-decoration: none;
+    }
+
+    .journal-plain-topic-active {
+      color: @color-red;
+    }
+  }
+
+  .journal-plain-slides-slide {
+    width: @journal-image-width;
+    height: @journal-image-height;
+    position: relative;
+    display: block;
+    color: @color-black;
+    text-decoration: none;
+
+    .pinterest-link {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: none;
+    }
+
+    .loading-dots-invert {
+      top: 50%;
+      left: 50%;
+      margin: -20px 0 0 -13px;
+    }
+
+    .animation-easeOutQuad(700ms);
+
+    .journal-plain-slides-slide-link {
+      display: block;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      width: @journal-image-width;
+      height: @journal-image-height;
+    }
+
+    .journal-plain-slides-slide-image,
+    .journal-plain-slides-slide-image-new {
+      display: block;
+      position: absolute;
+    }
+
+    .journal-plain-slides-slide-image-new {
+      display: none;
+    }
+
+    .journal-plain-slides-slide-info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: #efefef;
+      background: rgba(255, 255, 255, 0.8);
+      display: block;
+
+      .animation-easeOutQuad(200ms);
+
+      .journal-plain-slides-slide-info-inner {
+        padding: 20px 30px 18px;
+        display: block;
+      }
+
+      .journal-plain-slides-slide-date {
+        color: @color-black;
+        font-size: 0.9em;
+        display: block;
+      }
+
+      .journal-plain-slides-slide-name {
+        font-size: 1.1em;
+        font-weight: bold;
+        line-height: 1.4em;
+        display: block;
+        margin: 0 0 0.3em;
+        color: @color-black;
+
+        .animation-easeOutQuad(200ms);
+      }
+
+      .journal-plain-slides-slide-description {
+        color: @color-black;
+        overflow: hidden;
+        height: 0px;
+        display: block;
+
+        .animation-easeOutQuad(200ms);
+
+        .journal-plain-slides-slide-description-content {
+          display: block;
+        }
+      }
+    }
+
+    .journal-plain-slides-slide-link:hover,
+    .journal-plain-slides-slide-link_active {
+      .journal-plain-slides-slide-info {
+        filter: '';
+        background-color: @color-cyan-lighten-miaximun;
+      }
+
+      .journal-plain-slides-slide-description {
+
+      }
+    }
+  }
+}

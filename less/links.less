@@ -1,0 +1,78 @@
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: @link-color;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: @link-color-hover;
+}
+
+
+.link-dotted {
+  text-decoration: none !important;
+}
+
+.link-dotted .dotted {
+  border-bottom: 1px dotted transparent;
+  display: inline-block;
+  line-height: 100%;
+}
+
+.link-dotted:hover .dotted {
+  border-color: @link-color-hover;
+}
+
+
+
+a.link-gray:link,
+a.link-gray:visited {
+  color: @color-gray-light;
+}
+
+a.link-gray:hover,
+a.link-gray:active {
+  text-decoration: underline;
+  color: @color-gray-light;
+}
+
+
+a.link-blue:link,
+a.link-blue:visited {
+  color: @color-blue;
+}
+
+a.link-blue:hover,
+a.link-blue:active {
+  text-decoration: underline;
+  color: @color-red;
+}
+
+
+a.link-red-light:link,
+a.link-red-light:visited {
+  color: @color-red-light;
+}
+
+a.link-red-light:hover,
+a.link-red-light:active {
+  text-decoration: underline;
+  color: @color-red;
+}
+
+
+a.link-red:link,
+a.link-red:visited {
+  color: @color-red;
+}
+
+a.link-red:hover,
+a.link-red:active {
+  text-decoration: underline;
+  color: @color-black;
+}

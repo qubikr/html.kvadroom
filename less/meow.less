@@ -1,0 +1,144 @@
+.meows {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2000000;
+}
+
+.meow {
+  position: relative;
+  margin: 10px 10px 0 0;
+  height: 0;
+
+  .transform(translate(500px, 0));
+  opacity: 0;
+
+  &.animated {
+    .animation-easeOutBack(300ms);
+  }
+
+  .inner {
+    border-radius: 5px;
+    width: 300px;
+    padding: 27px 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background: #3C3E46;
+    background: rgba(60,62,70,0.9);
+    zoom: 1;
+
+    .meow-icon-font {
+      margin-top: -12px;
+      margin-left: -10px;
+      float: left;
+
+      .icon-font {
+        font-size: 45px !important;
+      }
+    }
+
+    .meow-message {
+      display: block;
+
+      &.meow-avoid-icon {
+        margin-left: 45px;
+      }
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: @font-size-small;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .close {
+      color: #fff;
+      top: 4px;
+      right: 4px;
+      position: absolute;
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        top: 5px;
+      }
+
+      .icon-font {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .inner.error {
+    background: #9D191D;
+    background: rgba(157,25,29,0.9);
+  }
+
+  .inner.ok {
+    background: #598100;
+    background: rgba(104,170,42,0.9);
+  }
+
+  .inner:after {
+    display: block;
+    height: 0;
+    clear: both;
+    line-height: 0;
+    content: "\0200";
+    visibility: hidden;
+  }
+}
+
+.meow.meow-ready {
+  .transform(translate(0, 0));
+  opacity: 1;
+}
+
+.meow-expanded {
+  height: auto;
+  overflow: hidden;
+}
+
+/*
+.meow.hover {
+  .inner {
+    background: #3C3E46 !important;
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      display: block;
+      width: 18px;
+      height: 18px;
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      zoom: 1;
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .inner.error {
+    background: #9D191D !important;
+  }
+
+  .inner.ok {
+    background: #598100 !important;
+  }
+}
+*/

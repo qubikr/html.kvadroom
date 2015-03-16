@@ -1,0 +1,127 @@
+.zoomer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: #eee;
+  opacity: 0.75;
+  display: block;
+  z-index: 5;
+  text-decoration: none;
+  line-height: 40px;
+  text-align: center;
+
+  .icon-font {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  &.active {
+    background: @color-green;
+    color: #fff;
+  }
+}
+
+.map-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+  opacity: 1;
+  z-index: 6;
+
+  transition: opacity .3s;
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+.map-transport-times {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px 5px 12px 15px;
+  background-color: rgba(255,255,255,0.95);
+  .no-text-selection;
+
+  .link-dotted {
+    .dotted {
+      border-bottom-color: #333;
+    }
+
+    &:hover {
+      .dotted {
+        border-bottom-color: @color-red;
+      }
+    }
+  }
+
+  .time {
+    position: relative;
+    margin: 0 0 0 10px;
+
+    .icon-font {
+      position: absolute;
+      top: 2px;
+      font-size: 16px;
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+      .animation-easeOutQuad(200ms, opacity);
+
+      &.unactive {
+        opacity: 0.3;
+        top: 2px !important;
+        cursor: default;
+        color: #000 !important;
+      }
+
+      &:after {
+        height: 16px;
+        width: 16px;
+      }
+
+      &:hover {
+        color: @color-red;
+      }
+
+      &:active {
+        top: 3px;
+      }
+
+      &.icon-font-arr-left {
+        left: 0;
+      }
+
+      &.icon-font-arr-right {
+        right: 0;
+      }
+    }
+
+    span {
+      margin: 0 22px;
+    }
+
+    input {
+      display: inline;
+      border: 1px solid #CFCFCF !important;
+      background: none !important;
+      border-radius: 2px;
+      width: 65px !important;
+      padding: 0 2px 1px !important;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+
+      &:hover, &:focus {
+        border-color: #B1B1B1 !important;
+      }
+    }
+
+  }
+}

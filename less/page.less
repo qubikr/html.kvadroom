@@ -1,0 +1,64 @@
+.page {
+  a:link, a:visited {
+    color: #00bfbf;
+    text-decoration: underline;
+  }
+
+  a:hover, a:active {
+    color: @color-red;
+  }
+
+  ul {
+    margin: 1.5em 2em;
+
+    li {
+      list-style-type: none;
+      margin-bottom: 1.25em;
+    }
+
+    li:before {
+      content: '\2014\a0';
+      float: left;
+      margin-left: -1.25em;
+      color: @color-red;
+    }
+  }
+
+  ol {
+    margin: 1.5em 2em;
+
+    li {
+      margin-bottom: 1.25em;
+      color: @color-red;
+
+      span {
+        color: @color-black;
+      }
+    }
+  }
+
+  table {
+    caption {
+      padding: 8px;
+      text-align: center;
+    }
+
+    .caption-red {
+      background: #faf0ed;
+      color: @color-red;
+      text-align: center;
+    }
+
+    .caption-green {
+      background-color: #e8f9e3;
+      text-align: center;
+      color: @color-green;
+    }
+  }
+
+  code {
+    width: 100%;
+    overflow: auto;
+    font-size: @font-size-small;
+  }
+}

@@ -1,0 +1,97 @@
+
+
+.pagination {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  & > li {
+
+    .pagination.mainpage &_img {
+
+    }
+
+    display: inline-block;
+    margin-left: -5px;
+    &.ellipsis:after, &.first:after, &.last:before  {
+      content: '...';
+    }
+    a:not(:hover, .active), span {
+      color: #666;
+    }
+    &.active > * {
+      background: #FFC944;
+      color: #000;
+    }
+    &.active > span {
+      cursor: default;
+    }
+    & > a, & > span {
+      text-decoration: none;
+      padding: 9px 12px;
+      display: inline-block;
+    }
+  }
+}
+
+@-webkit-keyframes bounceShowMore {
+  0%   { bottom: -65px; }
+  50% { bottom: -80px; }
+  100% { bottom: -65px; }
+}
+
+@-moz-keyframes bounceShowMore {
+  0%   { bottom: -65px; }
+  50% { bottom: -80px; }
+  100% { bottom: -65px; }
+}
+
+@-o-keyframes bounceShowMore {
+  0%   { bottom: -65px; }
+  50% { bottom: -80px; }
+  100% { bottom: -65px; }
+}
+
+
+@keyframes bounceShowMore {
+  0%   { bottom: -65px; }
+  50% { bottom: -80px; }
+  100% { bottom: -65px; }
+}
+
+.kv-show-more, .alike-search {
+  position: relative;
+  margin-bottom: 80px;
+
+  .dotted {
+    border-bottom: 1px dotted #000;
+  }
+  &:before {
+    content: '';
+    background: url("../i/pagination-arrow.png");
+    width: 40px;
+    height: 43px;
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    margin-left: -20px;
+    opacity: 0;
+    transition: opacity .2s;
+    -webkit-animation: bounceShowMore 1s  infinite;
+    -moz-animation: bounceShowMore 1s  infinite;
+    -ms-animation: bounceShowMore 1s  infinite;
+    -o-animation: bounceShowMore 1s  infinite;
+    animation: bounceShowMore 1s  infinite;
+  }
+  &:hover:before {
+    opacity: 1;
+    transition: opacity .2s;
+  }
+}
+
+
+
+
+

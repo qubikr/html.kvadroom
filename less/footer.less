@@ -1,0 +1,161 @@
+.footer:not(.footer-new) {
+  background: @footer-bg-color;
+  margin: 55px 0 0;
+
+  .footer-content {
+    padding: 22px 15px;
+    position: relative;
+  }
+}
+
+.footer-hr {
+  margin: 0;
+  border-color: @color-gray-medium;
+}
+
+.footer-nav-block {
+  line-height: 1.6em;
+}
+
+.fotter-nav-block-link {
+  margin-right: 15px;
+  white-space: nowrap;
+  color: @color-gray-dark-x2 !important;
+}
+
+.fotter-nav-block-link-no-margin {
+  white-space: nowrap;
+  color: @color-gray-dark-x2 !important;
+}
+
+.fotter-nav-block-link:hover,
+.fotter-nav-block-link-no-margin:hover {
+  color: @color-red !important;
+}
+
+.footer-nav-section {
+  margin-bottom: 25px;
+}
+
+.footer-nav-section-no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.footer-ipad-placeholder {
+  height: 60px;
+  position: relative;
+}
+
+.footer-ipad-app {
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: -30px;
+
+  .footer-ipad-app-ipad {
+    background: url(../i/ipad.png);
+    width: 152px;
+    height: 137px;
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    right: 147px;
+  }
+
+  .footer-ipad-app-appstore {
+    background: url(../i/app-store.png);
+    width: 135px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+  }
+
+  .footer-ipad-app-text {
+    width: 135px;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    line-height: 1.2em;
+    font-size: 16px;
+  }
+}
+
+.social-likes-delayed {
+  height: 40px;
+  visibility: hidden;
+}
+
+
+
+.footer-new {
+  border-top: 1px solid #ccc;
+  padding: 25px 0;
+  color: #777;
+  margin-top: 55px;
+
+  .footer-content {
+    .clearfix;
+  }
+
+  .social-likes__widget {
+    margin: 0 0 0 20px !important;
+  }
+
+  .social-likes__button {
+    padding: 0;
+  }
+
+  .social-likes__counter {
+    display: none !important;
+  }
+
+  .social-likes__widget_odnoklassniki {
+    margin-left: 12px !important;
+  }
+
+  .social-likes__widget_plusone {
+    margin-left: 13px !important;
+  }
+
+  .item {
+    margin-right: 1.8em;
+  }
+
+  a {
+    color: #666;
+    text-decoration: none;
+
+    &:hover {
+      color: @color-red;
+    }
+  }
+
+  .heading {
+    margin-bottom: 0.5em;
+  }
+  
+  .sub {
+    font-size: 13px;
+  }
+
+  .social-likes-delayed {
+    float: right;
+    margin-top: -5px;
+  }
+
+  .left, 
+  .right {
+    float: left;
+
+    &.left {
+      width: 70%;
+    } 
+
+    &.right {
+      width: 30%;
+    }
+  }
+}
