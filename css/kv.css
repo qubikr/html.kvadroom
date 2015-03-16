@@ -14850,7 +14850,6 @@ ul.circular-switcher li.active {
   box-sizing: border-box;
   text-align: left;
   min-height: 120px;
-  font-weight: bold;
 }
 .complex-hero .viewport footer a {
   color: #ffd000;
@@ -14862,7 +14861,7 @@ ul.circular-switcher li.active {
   top: 0;
   height: 100%;
   width: 160px;
-  padding: 25px 0;
+  padding: 20px 0;
   text-align: center;
   font-weight: bold;
   display: table-cell;
@@ -14872,7 +14871,15 @@ ul.circular-switcher li.active {
 .complex-hero .viewport footer .marker .label {
   position: relative;
   height: 100%;
-  padding: 0 30px;
+  padding: 9px 20px;
+  box-sizing: border-box;
+}
+.complex-hero .viewport footer .marker .label i {
+  display: block;
+  width: 22px;
+  height: 27px;
+  margin: 0 auto 5px;
+  background-image: url(../img/badge-certified.svg);
 }
 .complex-hero .viewport footer .marker .label:before {
   border-left: 1px solid #666;
