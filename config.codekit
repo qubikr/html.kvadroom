@@ -51,6 +51,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/i\/sprite-icons.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9155,
+		"inputAbbreviatedPath": "\/i\/sprite-icons.png",
+		"outputAbbreviatedPath": "\/i\/sprite-icons.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/sprite-icons@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21612,
+		"inputAbbreviatedPath": "\/i\/sprite-icons@2x.png",
+		"outputAbbreviatedPath": "\/i\/sprite-icons@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/i\/stripped.png": {
 		"fileType": 32768,
 		"ignore": 0,

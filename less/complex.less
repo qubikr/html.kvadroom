@@ -406,16 +406,30 @@
 		border: 1px solid #BFD4A4;
 
 		td {
+			border: 1px solid #BFD4A4;
 			width: 230px;
 			height: 140px;
-			border: 1px solid #BFD4A4;
-			font-size: 20px;
-			font-weight: bold;
-			line-height: 25px;
-			text-align: center;
-			vertical-align: middle;
-			padding: 20px 30px;
-			box-sizing: border-box;
+
+			a {
+				width: 1%;
+				height: 140px;
+				display: table-cell;
+				height: height: 140px;
+				padding: 20px 30px;
+				line-height: 25px;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+				vertical-align: middle;
+				box-sizing: border-box;
+				transition: .2s;
+
+				&:hover {
+					background-color: rgba(0, 0, 0, .025);
+					text-decoration: none;
+					color: #333;
+				}
+			}
 		}
 	}
 }
