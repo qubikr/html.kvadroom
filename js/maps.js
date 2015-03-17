@@ -124,7 +124,7 @@ var GeoMap = function(opts){
 			balloon.hide();
 		};
 	};
-
+	
 	this.init = function(){
         if(typeof ymaps != 'undefined'){
         	draw();

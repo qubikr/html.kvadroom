@@ -3534,6 +3534,12 @@ code {
   height: 32px;
   display: block;
 }
+.icon-font-heart_stroke:before {
+  content: "\e659";
+}
+.icon-font-heart:before {
+  content: "\e65a";
+}
 .icon-font-phone-full-02:before {
   content: "\e637";
 }
@@ -14908,6 +14914,10 @@ ul.circular-switcher li.active {
 .complex-hero {
   border-bottom: 1px solid #ccc;
   margin-bottom: 40px;
+}
+.complex-hero .image {
+  height: 530px;
+  background: #eee;
 }
 .complex-hero .viewport {
   margin-bottom: 30px;
