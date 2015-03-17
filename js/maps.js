@@ -93,16 +93,12 @@ var GeoMap = function(opts){
 		map.geoObjects.add(area);
 
 		var bounds = area.geometry.getBounds(),
-			center = [];
-
-		center[0] = bounds[0][0] + ((bounds[1][0] - bounds[0][0]) / 2);
-		center[1] = bounds[0][1] + ((bounds[1][1] - bounds[0][1]) / 2);
-
-		var balloonCoords = [center[0], bounds[1][1]];
-
-		console.log(center, balloonCoords, bounds[1][1]);
-
-		var balloon = new Balloon(balloonCoords, options.content, options.onBalloonReady)
+			center = [
+				bounds[0][0] + ((bounds[1][0] - bounds[0][0]) / 2),
+				bounds[0][1] + ((bounds[1][1] - bounds[0][1]) / 2)
+			],
+			balloonCoords = [center[0], bounds[1][1]],
+			balloon = new Balloon(balloonCoords, options.content, options.onBalloonReady)
 		
 		area.events.add('click', function(){
 			map.panTo(center, {
