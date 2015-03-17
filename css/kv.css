@@ -15543,7 +15543,6 @@ ul.circular-switcher li.active {
   text-align: center;
 }
 .page-complex .title-block .subtitle {
-  font-weight: 16px;
   color: #333;
   line-height: 25px;
   margin-bottom: 8px;
@@ -15956,7 +15955,8 @@ ul.circular-switcher li.active {
 }
 .complex-map .links a {
   padding: 4px 16px;
-  background: #fff;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
   position: relative;
   display: inline-block;
   border-radius: 3px;
@@ -15964,6 +15964,7 @@ ul.circular-switcher li.active {
   transition: .2s;
 }
 .complex-map .links a:hover {
+  background-color: rgba(51, 51, 51, 0.8);
   text-decoration: none;
 }
 .complex-map .map-container {
