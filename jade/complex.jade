@@ -6,13 +6,13 @@ block content
 			.subtitle Жилой комплекс
 			h1 Дом на изумрудной
 				
-			include partials/transport-items
+		include partials/transport-items
 
 		.complex-hero
 			.viewport
 				.image
-					a(href="#")
-						img(src="i/big-complex-house.png", title="Дом на изумрудной")
+					a(href="#", target="_blank")
+						img(src="i/big-complex-house.png", alt="Дом на изумрудной")
 
 				footer
 					.text
@@ -20,7 +20,7 @@ block content
 						|в районе Лосиноостровский, на ул. Изумрудная, 65. 
 						|Дом со всех сторон окружен зелеными насаждениям, 
 						|которые, за счет продуманного ландшафтного...&nbsp;
-						a(href="#") Читать полностью
+						a(href="#", target="_blank") Читать полностью
 
 					.marker
 						.label
@@ -29,40 +29,43 @@ block content
 							br
 							|5 марта 2015 года
 
-			.slider-gallery
-				a.left(href="#"): i.icon-font.icon-font-arr-left
-				a.right(href="#"): i.icon-font.icon-font-arr-right
-				.frame
-					ul.slidee
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?1")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?2")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?3")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?4")
+		.complex-gallery
+			a.left(href="#", target="_blank"): i.icon-font.icon-font-arr-left
+			a.right(href="#", target="_blank"): i.icon-font.icon-font-arr-right
+			.frame
+				ul.slidee
+					li: a(href="#", target="_blank"): span.image: img(src="http://lorempixel.com/140/105/?1")
+					li: a(href="#", target="_blank"): span.image: img(src="http://lorempixel.com/140/105/?2")
+					li: a(href="#", target="_blank"): span.image: img(src="http://lorempixel.com/140/105/?3")
+					li: a(href="#", target="_blank"): span.image: img(src="http://lorempixel.com/140/105/?4")
+
+		hr
+		.divider-30
 
 		.container-24
 			.grid-16
 				nav.complex-categories
 					.title В продаже:
 
-					a(href="#") 
+					a(href="#", target="_blank") 
 						|Квартиры-студии
 						span 234
-					a(href="#")
+					a(href="#", target="_blank")
 						|1-комнатные
 						span 12
-					a(href="#")
+					a(href="#", target="_blank")
 						|2-комнатные
 						span 234
-					a.warn(href="#")
+					a.warn(href="#", target="_blank")
 						|4-комнатные
 						span 2!
-					a(href="#")
+					a(href="#", target="_blank")
 						|5-комнатные
 						span 3
 
 			.grid-8
 				br
-				a.complex-button.plans(href="#"): .inner Посмотреть планировки
+				a.complex-button.plans(href="#", target="_blank"): span.inner Посмотреть планировки
 
 			.clear
 
@@ -70,15 +73,19 @@ block content
 
 		.container-24
 			.grid-12
-				a.complex-button.jumbo(href="#")
+				a.complex-button.jumbo(href="#", target="_blank")
 					span.title 1 м&sup2;
-					span.accent 63 000&nbsp;
+					span.accent
+						span.pre от
+						|63 000&nbsp;
 						span.currency.rub: span: |⃏
 
 			.grid-12
-				a.complex-button.jumbo(href="#") 
+				a.complex-button.jumbo(href="#", target="_blank") 
 					span.title Квартира
-					span.accent 2 400 000&nbsp;
+					span.accent 
+						span.pre от
+						|2 400 000&nbsp;
 						span.currency.rub: span: |⃏
 
 			.clear
@@ -115,15 +122,15 @@ block content
 
 			table
 				tr
-					td: a(href="#") 21 этаж
-					td: a(href="#") Подземный паркинг
-					td: a(href="#") Ипотека, рассрочка
-					td: a(href="#") Круглосуточная охрана
+					td: a(href="#", target="_blank") 21 этаж
+					td: a(href="#", target="_blank") Подземный паркинг
+					td: a(href="#", target="_blank") Ипотека, рассрочка
+					td: a(href="#", target="_blank") Круглосуточная охрана
 				tr
-					td: a(href="#") Индивидуальный проект
-					td: a(href="#") 10 минут от&nbsp;метро
-					td: a(href="#") Уникальный дизайн
-					td: a(href="#") Вежливый консьерж
+					td: a(href="#", target="_blank") Индивидуальный проект
+					td: a(href="#", target="_blank") 10 минут от&nbsp;метро
+					td: a(href="#", target="_blank") Уникальный дизайн
+					td: a(href="#", target="_blank") Вежливый консьерж
 
 		.divider-60
 
@@ -152,19 +159,19 @@ block content
 
 			.container-24
 				.grid-8
-					a.item(href="#")
+					a.item(href="#", target="_blank")
 						span.image: img(src="http://lorempixel.com/300/225/?1")
 						span.title ЖК «Ясные зори»
 						span.subtitle Химки
 
 				.grid-8
-					a.item(href="#")
+					a.item(href="#", target="_blank")
 						span.image: img(src="http://lorempixel.com/300/225/?2")
 						span.title ЖК «Ясные зори»
 						span.subtitle Москва, м. Юго-Западная
 
 				.grid-8
-					a.item(href="#")
+					a.item(href="#", target="_blank")
 						span.image: img(src="http://lorempixel.com/300/225/?3")
 						span.title ЖК «Солнечная долина»
 						span.subtitle Зеленоград
@@ -172,19 +179,19 @@ block content
 				.clear
 
 				.grid-8
-					a.item(href="#")
+					a.item(href="#", target="_blank")
 						span.image: img(src="http://lorempixel.com/300/225/?4")
 						span.title ЖК «Ясные зори»
 						span.subtitle Химки
 
 				.grid-8
-					a.item(href="#")
+					a.item(href="#", target="_blank")
 						span.image: img(src="http://lorempixel.com/300/225/?5")
 						span.title ЖК «Ясные зори»
 						span.subtitle Москва, м. Юго-Западная
 
 				.grid-8
-					a.item(href="#")
+					a.item(href="#", target="_blank")
 						span.image: img(src="http://lorempixel.com/300/225/?6")
 						span.title ЖК «Солнечная долина»
 						span.subtitle Зеленоград

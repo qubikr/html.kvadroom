@@ -14872,6 +14872,7 @@ ul.circular-switcher li.active {
   padding: 21px 0 0 150px;
   height: 90px;
   box-sizing: border-box;
+  display: block;
 }
 .complex-button.jumbo {
   padding: 50px 30px 68px;
@@ -14889,6 +14890,13 @@ ul.circular-switcher li.active {
   font-weight: bold;
   display: block;
   color: #63992E;
+  white-space: nowrap;
+}
+.complex-button.jumbo .accent .pre {
+  font-weight: normal;
+  font-size: 40px;
+  margin-right: .6ex;
+  opacity: .6;
 }
 .complex-categories .title {
   color: #666;
@@ -14911,8 +14919,7 @@ ul.circular-switcher li.active {
   color: #ff0000;
 }
 .complex-hero {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .complex-hero .image {
   height: 530px;
@@ -14975,12 +14982,12 @@ ul.circular-switcher li.active {
   left: 0;
   height: 100%;
 }
-.complex-hero .slider-gallery {
+.complex-gallery {
   margin-bottom: 30px;
   position: relative;
 }
-.complex-hero .slider-gallery .left,
-.complex-hero .slider-gallery .right {
+.complex-gallery .left,
+.complex-gallery .right {
   color: #333;
   border: 2px solid #333;
   border-radius: 40px;
@@ -15002,59 +15009,59 @@ ul.circular-switcher li.active {
   -ms-user-select: none;
   user-select: none;
 }
-.complex-hero .slider-gallery .left i,
-.complex-hero .slider-gallery .right i {
+.complex-gallery .left i,
+.complex-gallery .right i {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -16px;
 }
-.complex-hero .slider-gallery .left.left,
-.complex-hero .slider-gallery .right.left {
+.complex-gallery .left.left,
+.complex-gallery .right.left {
   left: 50px;
 }
-.complex-hero .slider-gallery .left.left i,
-.complex-hero .slider-gallery .right.left i {
+.complex-gallery .left.left i,
+.complex-gallery .right.left i {
   margin-left: -18px;
 }
-.complex-hero .slider-gallery .left.right,
-.complex-hero .slider-gallery .right.right {
+.complex-gallery .left.right,
+.complex-gallery .right.right {
   right: 50px;
 }
-.complex-hero .slider-gallery .left.right i,
-.complex-hero .slider-gallery .right.right i {
+.complex-gallery .left.right i,
+.complex-gallery .right.right i {
   margin-left: -14px;
 }
-.complex-hero .slider-gallery .left:hover,
-.complex-hero .slider-gallery .right:hover {
+.complex-gallery .left:hover,
+.complex-gallery .right:hover {
   opacity: .5;
 }
-.complex-hero .slider-gallery .left.disabled,
-.complex-hero .slider-gallery .right.disabled {
+.complex-gallery .left.disabled,
+.complex-gallery .right.disabled {
   opacity: 0;
   cursor: default;
 }
-.complex-hero .slider-gallery .frame {
+.complex-gallery .frame {
   width: 680px;
   margin: 0 auto;
   height: 105px;
   padding: 0;
 }
-.complex-hero .slider-gallery .frame .slidee {
+.complex-gallery .frame .slidee {
   margin: 0;
   padding: 0;
   height: 100%;
   list-style: none;
   text-align: center;
 }
-.complex-hero .slider-gallery .frame .slidee li {
+.complex-gallery .frame .slidee li {
   margin: 0 11px;
   width: 140px;
   height: 100%;
   position: relative;
   display: inline-block;
 }
-.complex-hero .slider-gallery .frame .slidee li .image {
+.complex-gallery .frame .slidee li .image {
   overflow: hidden;
   width: 140px;
   height: 105px;
@@ -15062,11 +15069,11 @@ ul.circular-switcher li.active {
   position: relative;
   display: block;
 }
-.complex-hero .slider-gallery .frame .slidee li .image img {
+.complex-gallery .frame .slidee li .image img {
   -webkit-transition: .5s;
           transition: .5s;
 }
-.complex-hero .slider-gallery .frame .slidee li:hover .image img {
+.complex-gallery .frame .slidee li:hover .image img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
