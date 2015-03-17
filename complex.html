@@ -9,6 +9,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/easing.js"></script>
     <script src="js/sly.js"></script>
+    <script src="js/maps.js"></script>
   </head>
   <body class="bg-paper">
     <div class="wrapper page-width">
@@ -33,9 +34,9 @@
           <div class="subtitle">Жилой комплекс</div>
           <h1>Дом на изумрудной</h1>
           <div class="offer-transport-params">
-            <div class="item"><a href="/t/elektrogorsk/novostroyki/" title="Новостройки у ст. Электрогорск"><span class="type-icon"><i class="icon-font icon-font-soc_metro metro"></i></span><span class="link">Библиотека им. Ленина</span><span class="postfix">15 мин пешком</span></a></div>
-            <div class="item"><a href="/t/elektrogorsk/novostroyki/" title="Новостройки у ст. Электрогорск"><span class="type-icon"><i class="icon-font icon-font-soc_train train"></i></span><span class="link">Очаково</span></a></div>
-            <div class="item"><a href="#" title="Новостройки по Горьковскому шоссе"><span class="type-icon"><i class="icon-font icon-font-highway highway"></i></span><span class="link">Киевское шоссе</span><span class="postfix">10 км от МКАД</span></a></div>
+            <div class="item"><span><span class="type-icon"><i class="icon-font icon-font-soc_metro metro"></i></span><span class="link">Библиотека им. Ленина</span><span class="postfix">15 мин пешком</span></span></div>
+            <div class="item"><span><span class="type-icon"><i class="icon-font icon-font-soc_train train"></i></span><span class="link">Очаково</span></span></div>
+            <div class="item"><span><span class="type-icon"><i class="icon-font icon-font-highway highway"></i></span><span class="link">Киевское шоссе</span><span class="postfix">10 км от МКАД</span></span></div>
             <div class="clear"></div>
           </div>
         </div>
@@ -53,23 +54,13 @@
               </div>
             </footer>
           </div>
-          <div class="slider-gallery">
-            <div class="left"><i class="icon-font icon-font-arr-left"></i></div>
-            <div class="right"><i class="icon-font icon-font-arr-right"></i></div>
+          <div class="slider-gallery"><a href="#" class="left"><i class="icon-font icon-font-arr-left"></i></a><a href="#" class="right"><i class="icon-font icon-font-arr-right"></i></a>
             <div class="frame">
               <ul class="slidee">
                 <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?1"></span></a></li>
                 <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?2"></span></a></li>
                 <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?3"></span></a></li>
                 <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?4"></span></a></li>
-                <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?5"></span></a></li>
-                <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?6"></span></a></li>
-                <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?7"></span></a></li>
-                <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?8"></span></a></li>
-                <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?9"></span></a></li>
-                <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?10"></span></a></li>
-                <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?11"></span></a></li>
-                <li><a href="#"><span class="image"><img src="http://lorempixel.com/140/105/?12"></span></a></li>
               </ul>
             </div>
           </div>
@@ -105,6 +96,11 @@
             </div>
             <div class="clear"></div>
           </div>
+        </div>
+        <div class="divider-60"></div>
+        <div data-center="[55,25]" data-title="Текст&amp;nbsp;Баллуна" data-area="[[[53.75, 35.80],[53.80, 35.90],[53.75, 36.00],[53.70, 36.00],[53.70, 35.80]]]" class="complex-map">
+          <div id="complex-map" class="map-container"></div>
+          <div class="links"><a href="#" target="_blank">Развернуть карту</a></div>
         </div>
         <div class="divider-60"></div>
         <div class="complex-info-cells">

@@ -28,22 +28,14 @@ block content
 							|5 марта 2015 года
 
 			.slider-gallery
-				.left: i.icon-font.icon-font-arr-left
-				.right: i.icon-font.icon-font-arr-right
+				a.left(href="#"): i.icon-font.icon-font-arr-left
+				a.right(href="#"): i.icon-font.icon-font-arr-right
 				.frame
 					ul.slidee
 						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?1")
 						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?2")
 						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?3")
 						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?4")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?5")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?6")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?7")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?8")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?9")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?10")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?11")
-						li: a(href="#"): span.image: img(src="http://lorempixel.com/140/105/?12")
 
 		.container-24
 			.grid-16
@@ -106,6 +98,13 @@ block content
 					.desc Прямой московский
 
 				.clear
+
+		.divider-60
+
+		.complex-map(data-center="[55,25]", data-title="Текст&nbsp;Баллуна", data-area="[[[53.75, 35.80],[53.80, 35.90],[53.75, 36.00],[53.70, 36.00],[53.70, 35.80]]]")
+			#complex-map.map-container
+			.links
+				a(href="#", target="_blank") Развернуть карту
 
 		.divider-60
 
