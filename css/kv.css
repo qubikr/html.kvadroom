@@ -14844,6 +14844,7 @@ ul.circular-switcher li.active {
   background: none;
 }
 .complex-button {
+  background-image: url(../i/stripped.png);
   border: 2px solid #BFD4A4;
   border-radius: 5px;
   display: block;
@@ -14856,14 +14857,16 @@ ul.circular-switcher li.active {
   color: #000;
 }
 .complex-button.plans {
-  padding: 18px 0 0 150px;
   font-size: 20px;
   font-weight: bold;
   height: 90px;
-  box-sizing: border-box;
-  background-image: url(../img/plans.png);
-  background-size: 147px 90px;
+}
+.complex-button.plans .inner {
+  background-image: url(../i/plans.png);
   background-repeat: no-repeat;
+  padding: 21px 0 0 150px;
+  height: 90px;
+  box-sizing: border-box;
 }
 .complex-button.jumbo {
   padding: 50px 30px 68px;
@@ -14952,7 +14955,7 @@ ul.circular-switcher li.active {
   width: 22px;
   height: 27px;
   margin: 0 auto 5px;
-  background-image: url(../img/badge-certified.svg);
+  background-image: url(../i/badge-certified.svg);
 }
 .complex-hero .viewport footer .marker .label:before {
   border-left: 1px solid #666;
@@ -15070,6 +15073,7 @@ ul.circular-switcher li.active {
   height: 76px;
   font-size: 70px;
   margin: 0 auto 20px;
+  background-image: url(../i/stripped.png);
 }
 .complex-phone .num {
   font-size: 46px;
@@ -15100,6 +15104,7 @@ ul.circular-switcher li.active {
   left: 50%;
   margin-left: -40px;
   margin-top: 6px;
+  background-image: url(../i/stripped.png);
 }
 .complex-phones .phones .left,
 .complex-phones .phones .right {
@@ -15130,6 +15135,7 @@ ul.circular-switcher li.active {
   color: #999;
 }
 .complex-info-cells table {
+  background-image: url(../i/stripped.png);
   width: 100%;
   border-radius: 2px;
   border-spacing: 0;

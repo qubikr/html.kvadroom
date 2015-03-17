@@ -57,6 +57,7 @@
 }
 
 .complex-button {
+	background-image: url(../i/stripped.png);
 	border: 2px solid #BFD4A4;
 	border-radius: 5px;
 	display: block;
@@ -69,14 +70,17 @@
 	}
 
 	&.plans {
-		padding: 18px 0 0 150px;
 		font-size: 20px;
 		font-weight: bold;
 		height: 90px;
-		box-sizing: border-box;
-		background-image: url(../img/plans.png);
-		background-size: 147px 90px;
-		background-repeat: no-repeat;
+
+		.inner {
+			background-image: url(../i/plans.png);
+			background-repeat: no-repeat;
+			padding: 21px 0 0 150px;
+			height: 90px;
+			box-sizing: border-box;
+		}
 	}
 
 	&.jumbo {
@@ -180,7 +184,7 @@
 						width: 22px;
 						height: 27px;
 						margin: 0 auto 5px;
-						background-image: url(../img/badge-certified.svg);
+						background-image: url(../i/badge-certified.svg);
 					}
 
 					&:before {
@@ -313,6 +317,7 @@
 		height: 76px;
 		font-size: 70px;
 		margin: 0 auto 20px;
+		background-image: url(../i/stripped.png);
 	}
 
 	.num {
@@ -348,6 +353,7 @@
 		left: 50%;
 		margin-left: -40px;
 		margin-top: 6px;
+		background-image: url(../i/stripped.png);
 	}
 
 	.phones {
@@ -387,6 +393,7 @@
 	}
 
 	table {
+		background-image: url(../i/stripped.png);
 		width: 100%;
 		border-radius: 2px;
 		border-spacing: 0;

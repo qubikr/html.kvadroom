@@ -29,24 +29,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/big-complex-house.png": {
+	"\/i\/big-complex-house.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 931623,
-		"inputAbbreviatedPath": "\/img\/big-complex-house.png",
-		"outputAbbreviatedPath": "\/img\/big-complex-house.png",
+		"inputAbbreviatedPath": "\/i\/big-complex-house.png",
+		"outputAbbreviatedPath": "\/i\/big-complex-house.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/plans.png": {
+	"\/i\/plans.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 6225,
-		"inputAbbreviatedPath": "\/img\/plans.png",
-		"outputAbbreviatedPath": "\/img\/plans.png",
+		"inputAbbreviatedPath": "\/i\/plans.png",
+		"outputAbbreviatedPath": "\/i\/plans.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
