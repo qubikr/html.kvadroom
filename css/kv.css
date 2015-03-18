@@ -14903,19 +14903,22 @@ ul.circular-switcher li.active {
   display: block;
   margin-bottom: .75em;
 }
-.complex-categories a {
+.complex-categories > a,
+.complex-categories > span {
   display: inline-block;
   margin: 0 2.25ex .75em 0;
   font-weight: bold;
   text-decoration: none;
   font-size: 20px;
 }
-.complex-categories a span {
+.complex-categories > a span,
+.complex-categories > span span {
   font-weight: normal;
   color: #666;
   margin-left: .8ex;
 }
-.complex-categories a.warn span {
+.complex-categories > a.warn span,
+.complex-categories > span.warn span {
   color: #ff0000;
 }
 .complex-hero {
@@ -15103,6 +15106,7 @@ ul.circular-switcher li.active {
 }
 .complex-phones {
   position: relative;
+  display: block;
 }
 .complex-phones .title {
   text-align: center;
@@ -15163,7 +15167,8 @@ ul.circular-switcher li.active {
   width: 230px;
   height: 140px;
 }
-.complex-info-cells table td a {
+.complex-info-cells table td > a,
+.complex-info-cells table td > span {
   width: 1%;
   height: 140px;
   display: table-cell;
@@ -15177,7 +15182,8 @@ ul.circular-switcher li.active {
   -webkit-transition: .2s;
           transition: .2s;
 }
-.complex-info-cells table td a:hover {
+.complex-info-cells table td > a:hover,
+.complex-info-cells table td > span:hover {
   background-color: rgba(0, 0, 0, 0.025);
   text-decoration: none;
   color: #333;
