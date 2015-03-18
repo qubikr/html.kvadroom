@@ -16,7 +16,7 @@ var GeoMap = function(opts){
         });
     };
 
-    var Balloon = function(center, content, onReady){
+    var Balloon = function(center, content, onReady, offsetY, offsetX){
         var _this = this,
             id = _.uniqueId('balloon'),
             $element = $(),
@@ -34,7 +34,8 @@ var GeoMap = function(opts){
             $element = $('#' + id);
 
             $element.css({
-                marginTop: -$element.height()/2
+                marginTop: -(($element.height()/2) - ((offsetY) ? offsetY : 0)),
+                marginLeft: (offsetX) ? offsetX : 0
             });
 
             if(onReady) onReady();
@@ -81,7 +82,7 @@ var GeoMap = function(opts){
 
         map.geoObjects.add(pin);
 
-        var balloon = new Balloon(options.center, options.content, options.onBalloonReady);
+        var balloon = new Balloon(options.center, options.content, options.onBalloonReady, -25, 18);
 
         pin.events.add('click', function(){
             map.panTo(options.center, {
