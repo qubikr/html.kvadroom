@@ -15075,7 +15075,7 @@ ul.circular-switcher li.active {
 .complex-gallery .frame {
   width: 680px;
   margin: 0 auto;
-  height: 105px;
+  height: 100px;
   padding: 0;
 }
 .complex-gallery .frame .slidee {
@@ -15095,7 +15095,7 @@ ul.circular-switcher li.active {
 .complex-gallery .frame .slidee li .image {
   overflow: hidden;
   width: 140px;
-  height: 105px;
+  height: 100px;
   border: none;
   position: relative;
   display: block;
