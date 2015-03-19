@@ -4589,6 +4589,9 @@ code {
   left: -3px;
   position: absolute;
 }
+.header-phones.single .hp-title {
+  margin-right: 0;
+}
 .page a:link,
 .page a:visited {
   color: #00bfbf;
