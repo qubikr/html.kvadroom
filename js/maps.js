@@ -1,6 +1,7 @@
 var GeoMap = function(opts){
     var _this = this,
         map,
+        balloons = [],
         options = $.extend({
             id: 'map',
             center: [55.76, 37.64],
@@ -16,7 +17,7 @@ var GeoMap = function(opts){
         });
     };
 
-    var Balloon = function(center, content, onReady, onCLick, offsetY, offsetX){
+    var Balloon = function(center, content, onReady, onClick, offsetY, offsetX){
         var _this = this,
             id = _.uniqueId('balloon'),
             $element = $(),
@@ -42,7 +43,7 @@ var GeoMap = function(opts){
         });
 
         balloon.events.add('click', function(){
-            if(onCLick) onCLick();
+            if(onClick) onClick();
         });
 
         map.geoObjects.add(balloon);
@@ -51,9 +52,19 @@ var GeoMap = function(opts){
             _this.hide();
         };
 
+        this.getId = function(){
+            return id;
+        };
+
         this.show = function(permanentShow){
             $element.removeClass('disabled');
             map.events.add('click', hideOnClick);
+
+            _.each(balloons, function(balloon){
+                if(balloon.getId() != _this.getId()){
+                    balloon.hide();
+                }
+            });
 
             if(permanent !== true){
                 permanent = permanentShow;
@@ -66,19 +77,27 @@ var GeoMap = function(opts){
                 map.events.remove('click', hideOnClick);
             }
         };
+
+        balloons.push(this);
     };
 
     this.Pin = function(opts){
         var options = $.extend({
             center: [55.76, 37.64],
             content: '',
+            title: '',
             onReady: function(){},
+            onClick: function(){},
             onBalloonReady: function(){},
             onBalloonClick: function(){}
         }, opts);
 
+        var id = _.uniqueId('pin'),
+            title = (options.title) ? '<span class="marker-title">' + options.title + '</span>' : '',
+            $element = $();
+
         var pin = new ymaps.Placemark(options.center, {
-            iconContent: '<span class="maps-marker-icon maps-marker-basic"></span>'
+            iconContent: '<span class="maps-marker-icon maps-marker-basic" id="' + id + '">' + title + '</span>'
         }, {
             iconImageHref: '',
             iconImageSize: [31, 43],
@@ -87,18 +106,34 @@ var GeoMap = function(opts){
 
         map.geoObjects.add(pin);
 
-        var balloon = new Balloon(options.center, options.content, options.onBalloonReady, options.onBalloonClick, -25, 18);
+        var balloon = null;
+
+        if(options.content){
+            balloon = new Balloon(options.center, options.content, options.onBalloonReady, options.onBalloonClick, -25, 18);
+        }
 
         pin.events.add('click', function(){
             map.panTo(options.center, {
                 delay: 0
             });
 
-            balloon.show();
+            options.onClick();
+
+            if(balloon){
+                balloon.show();
+            }
         });
 
         pin.events.add('overlaychange', function(){
             if(options.onReady) options.onReady();
+
+            $element = $('#' + id);
+
+            var $title = $element.find('.marker-title');
+
+            $title.css({
+                bottom: -$title.outerHeight()
+            });
         });
 
         this.pointMap = function(){
@@ -106,19 +141,24 @@ var GeoMap = function(opts){
         };
 
         this.showBalloon = function(permanent){
-            balloon.show(permanent);
+            if(balloon){
+                balloon.show(permanent);
+            }
         };
 
         this.hideBalloon = function(){
-            balloon.hide();
+            if(balloon){
+                balloon.hide();
+            }
         };
     };
 
     this.Area = function(opts){
         var options = $.extend({
-            coords: null,
+            coords: [],
             content: '',
             onReady: function(){},
+            onClick: function(){},
             onBalloonReady: function(){},
             onBalloonClick: function(){}
         }, opts);
@@ -139,19 +179,27 @@ var GeoMap = function(opts){
         map.geoObjects.add(area);
 
         var bounds = area.geometry.getBounds(),
+            balloon = null,
             center = [
                 bounds[0][0] + ((bounds[1][0] - bounds[0][0]) / 2),
                 bounds[0][1] + ((bounds[1][1] - bounds[0][1]) / 2)
-            ],
-            balloonCoords = [center[0], bounds[1][1]],
+            ];
+
+        if(options.content){
+            var balloonCoords = [center[0], bounds[1][1]];
             balloon = new Balloon(balloonCoords, options.content, options.onBalloonReady, options.onBalloonClick);
+        }
 
         area.events.add('click', function(){
             map.panTo(center, {
                 delay: 0
             });
 
-            balloon.show();
+            options.onClick();
+
+            if(balloon){
+                balloon.show();
+            }
         });
 
         area.events.add('overlaychange', function(){
@@ -163,11 +211,15 @@ var GeoMap = function(opts){
         };
 
         this.showBalloon = function(permanent){
-            balloon.show(permanent);
+            if(balloon){
+                balloon.show(permanent);
+            }
         };
 
         this.hideBalloon = function(){
-            balloon.hide();
+            if(balloon){
+                balloon.hide();
+            }
         };
     };
 

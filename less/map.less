@@ -214,6 +214,7 @@
 
 .maps-marker-icon {
   display: block;
+  position: relative;
 
   &.maps-marker-basic {
     width: 31px;
@@ -225,6 +226,17 @@
     width: 19px;
     height: 25px;
     background: url(../i/kvad_marker_basic_small.png);
+  }
+
+  .marker-title {
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    margin: 0 0 -10px -75px;
+    position: absolute;
   }
 }
 
