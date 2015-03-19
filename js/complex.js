@@ -9,6 +9,7 @@ Complex.Map = function(){
                 id: 'complex-map',
                 zoom: data.zoom,
                 center: data.center,
+                fullScreenTrigger: '#fullscreen-trigger',
                 onInit: function (instance) {
                     if(data.area){
                         var area = new map.Area({
@@ -46,6 +47,8 @@ Complex.Map = function(){
 
             map.init();
         }
+
+        this.map = map;
 
         return this;
     };

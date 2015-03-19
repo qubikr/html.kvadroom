@@ -3733,8 +3733,8 @@ code {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?-x4keoc131');
-  src: url('../fonts/icomoon.eot?#iefix-x4keoc131') format('embedded-opentype'), url('../fonts/icomoon.woff?-x4keoc131') format('woff'), url('../fonts/icomoon.ttf?-x4keoc131') format('truetype'), url('../fonts/icomoon.svg?-x4keoc1#icomoon31') format('svg');
+  src: url('../fonts/icomoon.eot?-x4keoc132');
+  src: url('../fonts/icomoon.eot?#iefix-x4keoc132') format('embedded-opentype'), url('../fonts/icomoon.woff?-x4keoc132') format('woff'), url('../fonts/icomoon.ttf?-x4keoc132') format('truetype'), url('../fonts/icomoon.svg?-x4keoc1#icomoon32') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -4857,6 +4857,13 @@ code {
 }
 .header-phones.single .hp-title {
   margin-right: 0;
+}
+.bg-paper .header .kvadroom-logo-link {
+  width: 20px;
+  padding: 0 10px 0 20px;
+}
+.bg-paper .header .kvadroom-logo-link .icon-kvadroom-logo {
+  width: 20px;
 }
 .page a:link,
 .page a:visited {
@@ -7606,6 +7613,18 @@ textarea.error {
   margin-top: 40px;
   color: #333;
   display: block;
+}
+.fantastic-small .image {
+  overflow: hidden;
+  border: none;
+  position: relative;
+  display: block;
+}
+.fantastic-small .image img {
+  transition: .5s;
+}
+.fantastic-small .image:hover img {
+  transform: scale(1.1);
 }
 .fantastic-small span {
   display: block;
@@ -12037,6 +12056,31 @@ yx-axis
 }
 .map-cluster .anchor {
   position: absolute;
+}
+.map-fullscreen {
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9);
+}
+.map-fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+.map-fullscreen-overlay .map-fullscreen-close {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  width: 32px;
+  height: 32px;
+  display: block;
+  text-decoration: none;
+  color: #999;
+}
+.map-fullscreen-overlay .map-fullscreen-close:hover {
+  color: #ccc;
 }
 .zoomer {
   position: absolute;

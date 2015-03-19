@@ -4,13 +4,23 @@ var GeoMap = function(opts){
         balloons = [],
         options = $.extend({
             id: 'map',
+            fullScreenTrigger: false,
             center: [55.76, 37.64],
             zoom: 10,
             layer: 'map',
-            onInit: function(){}
+            onInit: function(){},
+            onFullscreenEnter: function(){},
+            onFullscreenExit: function(){}
         }, opts);
 
     var $map = $('#' + options.id);
+
+    if(options.fullScreenTrigger){
+        $(options.fullScreenTrigger).off('click').on('click', function(e){
+            e.preventDefault();
+            _this.enterFullScreen();
+        });
+    }
 
     var draw = function(){
         map = new ymaps.Map(options.id, {
@@ -237,6 +247,66 @@ var GeoMap = function(opts){
                 balloon.hide();
             }
         };
+    };
+
+    this.enterFullScreen = function(){
+        $('body').append('<div class="map-fullscreen-overlay"><a class="map-fullscreen-close kiv-e" href="#"><i class="icon-font icon-font-cross"></i></a></div>');
+        $('html,body').css('overflow', 'hidden');
+        $(document).off('keyup.map-fullscreen').on('keyup.map-fullscreen', function(e){
+            if(e.keyCode == 27){
+                _this.exitFullScreen();
+            }
+        });
+
+        $map.parent().addClass('map-fullscreen').css({
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            marginLeft: -470,
+            marginTop: -300,
+            width: 940,
+            height: 600,
+            zIndex: 10001
+        });
+
+        $map.css({
+            height: 600
+        });
+
+        map.container.fitToViewport();
+
+        $('.map-fullscreen-close').off('click').on('click', function(e){
+            e.preventDefault();
+            _this.exitFullScreen();
+        });
+
+        if(options.fullScreenTrigger){
+            $(options.fullScreenTrigger).hide();
+        }
+    };
+
+    this.exitFullScreen = function(){
+        $('.map-fullscreen-overlay').remove();
+
+        $map.parent().removeClass('map-fullscreen').css({
+            position: 'static',
+            width: '100%',
+            marginLeft: 0,
+            marginTop: 0,
+            height: 400
+        });
+
+        $map.css({
+            height: 400
+        });
+
+        map.container.fitToViewport();
+
+        $('html,body').css('overflow', 'auto');
+
+        if(options.fullScreenTrigger){
+            $(options.fullScreenTrigger).show();
+        }
     };
 
     this.init = function(){
