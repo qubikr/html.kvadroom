@@ -7,6 +7,7 @@ Complex.Map = function(){
         if(data && data.center) {
             var map = new GeoMap({
                 id: 'complex-map',
+                zoom: data.zoom,
                 center: data.center,
                 onInit: function (instance) {
                     if(data.area){
@@ -15,6 +16,11 @@ Complex.Map = function(){
                             content: (data.title) ? data.title : '',
                             onBalloonReady: function () {
                                 area.showBalloon(true);
+                            },
+                            onBalloonClick: function(){
+                                if(data.url){
+                                    window.open(data.url, '_blank');
+                                }
                             }
                         });
 
@@ -25,6 +31,11 @@ Complex.Map = function(){
                             content: (data.title) ? data.title : '',
                             onBalloonReady: function () {
                                 pin.showBalloon(true);
+                            },
+                            onBalloonClick: function(){
+                                if(data.url){
+                                    window.open(data.url, '_blank');
+                                }
                             }
                         });
 

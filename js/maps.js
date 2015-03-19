@@ -16,12 +16,12 @@ var GeoMap = function(opts){
         });
     };
 
-    var Balloon = function(center, content, onReady, offsetY, offsetX){
+    var Balloon = function(center, content, onReady, onCLick, offsetY, offsetX){
         var _this = this,
             id = _.uniqueId('balloon'),
             $element = $(),
             permanent = false,
-            marker = new ymaps.Placemark(center, {
+            balloon = new ymaps.Placemark(center, {
                 iconContent: '<div class="map-balloon disabled" id="' + id + '"><div class="inner">' + content + '</div></div>'
             }, {
                 iconImageHref: '',
@@ -30,7 +30,7 @@ var GeoMap = function(opts){
                 zIndex: 2
             });
 
-        marker.events.add('overlaychange', function(){
+        balloon.events.add('overlaychange', function(){
             $element = $('#' + id);
 
             $element.css({
@@ -41,7 +41,11 @@ var GeoMap = function(opts){
             if(onReady) onReady();
         });
 
-        map.geoObjects.add(marker);
+        balloon.events.add('click', function(){
+            if(onCLick) onCLick();
+        });
+
+        map.geoObjects.add(balloon);
 
         var hideOnClick = function(){
             _this.hide();
@@ -69,7 +73,8 @@ var GeoMap = function(opts){
             center: [55.76, 37.64],
             content: '',
             onReady: function(){},
-            onBalloonReady: function(){}
+            onBalloonReady: function(){},
+            onBalloonClick: function(){}
         }, opts);
 
         var pin = new ymaps.Placemark(options.center, {
@@ -82,7 +87,7 @@ var GeoMap = function(opts){
 
         map.geoObjects.add(pin);
 
-        var balloon = new Balloon(options.center, options.content, options.onBalloonReady, -25, 18);
+        var balloon = new Balloon(options.center, options.content, options.onBalloonReady, options.onBalloonClick, -25, 18);
 
         pin.events.add('click', function(){
             map.panTo(options.center, {
@@ -111,19 +116,14 @@ var GeoMap = function(opts){
 
     this.Area = function(opts){
         var options = $.extend({
-            coords: [[
-                [55.75, 37.80],
-                [55.80, 37.90],
-                [55.75, 38.00],
-                [55.70, 38.00],
-                [55.70, 37.80]
-            ]],
+            coords: null,
             content: '',
             onReady: function(){},
-            onBalloonReady: function(){}
+            onBalloonReady: function(){},
+            onBalloonClick: function(){}
         }, opts);
 
-        var	area = new ymaps.GeoObject({
+        var area = new ymaps.GeoObject({
             geometry: {
                 type: 'Polygon',
                 coordinates: options.coords,
@@ -144,7 +144,7 @@ var GeoMap = function(opts){
                 bounds[0][1] + ((bounds[1][1] - bounds[0][1]) / 2)
             ],
             balloonCoords = [center[0], bounds[1][1]],
-            balloon = new Balloon(balloonCoords, options.content, options.onBalloonReady);
+            balloon = new Balloon(balloonCoords, options.content, options.onBalloonReady, options.onBalloonClick);
 
         area.events.add('click', function(){
             map.panTo(center, {
