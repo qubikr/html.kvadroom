@@ -10,6 +10,8 @@ var GeoMap = function(opts){
             onInit: function(){}
         }, opts);
 
+    var $map = $('#' + options.id);
+
     var draw = function(){
         map = new ymaps.Map(options.id, {
             center: options.center,
@@ -79,6 +81,16 @@ var GeoMap = function(opts){
         };
 
         balloons.push(this);
+    };
+
+    var fitBounds = function(bounds){
+        var coords = ymaps.util.bounds.getCenterAndZoom(bounds, [ 
+            $map.width(), 
+            $map.height() 
+        ]);
+
+        map.setCenter(coords.center);
+        map.setZoom(coords.zoom);
     };
 
     this.Pin = function(opts){
@@ -208,6 +220,10 @@ var GeoMap = function(opts){
 
         this.pointMap = function(){
             map.setCenter(center);
+        };
+
+        this.fitMap = function(){
+            fitBounds(bounds);
         };
 
         this.showBalloon = function(permanent){
