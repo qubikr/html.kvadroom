@@ -999,18 +999,19 @@
 
   .subtitle {
     color: #666;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 
   .title {
     font-size: 32px;
-    margin-bottom: 22px;
+    margin-bottom: 15px;
     font-weight: bold;
     line-height: 1.1em;
   }
 
   .desc {
     margin-bottom: 20px;
+    line-height: 1.8em;
   }
 
   .num-desc {
@@ -1032,14 +1033,48 @@
     text-align: center;
     position: relative;
     bottom: 0;
+    float: right;
   }
 }
 
-.map-fantastic {
-  height: 200px !important;
-  margin-top: 30px;
+.fantastic-map {
+  margin-top: 20px;
+}
 
-  .map-container {
-    height: 200px !important;
+.fantastic-images {
+  margin-top: 20px;
+
+  .fantastic-image {
+    float: left;
+    width: 140px;
+    height: 100px;   
+    overflow: hidden;
+
+    img {
+      display: block;
+      transition: .4s;
+    }
+
+    &.fai-1 {
+      margin: 0 20px 20px 0;
+    }
+
+    &.fai-2 {
+      margin: 0 0 20px 0;
+    }
+
+    &.fai-3 {
+      margin: 0 20px 0 0;
+    }
+
+    &.fai-4 {
+      margin: 0;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.075);
+      }
+    }
   }
 }

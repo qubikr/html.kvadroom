@@ -2,14 +2,14 @@ var Complex = {};
 
 Complex.Map = function(){
     this.init = function(){
-        var data = $('.complex-map').data();
+        var data = $('.map-landing').data();
 
         if(data && data.center) {
             var map = new GeoMap({
                 id: 'complex-map',
+                fullScreenTrigger: '#fullscreen-trigger',
                 zoom: data.zoom,
                 center: data.center,
-                fullScreenTrigger: '#fullscreen-trigger',
                 onInit: function (instance) {
                     if(data.area){
                         var area = new map.Area({
@@ -47,8 +47,6 @@ Complex.Map = function(){
 
             map.init();
         }
-
-        this.map = map;
 
         return this;
     };
