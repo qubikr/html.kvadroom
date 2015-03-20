@@ -262,7 +262,7 @@ var GeoMap = function(opts){
         if(speed > 0){
             interval = setInterval(function(){
                 map.container.fitToViewport();
-            }, 10);
+            }, 1);
         }
 
         $map.parent().animate({
@@ -284,10 +284,7 @@ var GeoMap = function(opts){
 
         if(!$map.parent().data('originalSize')){
             os = {
-                w: $map.parent().width(),
-                h: $map.parent().height(),
-                t: $map.parent().offset().top,
-                l: $map.parent().offset().left
+                h: $map.parent().height()
             };
 
             $map.parent().data('originalSize', os);
@@ -306,10 +303,10 @@ var GeoMap = function(opts){
         $map.parent().after($dummy);
 
         $map.parent().css({
-            width: os.w,
-            height: os.h,
-            top: os.t - $(document).scrollTop(),
-            left: os.l
+            width: $dummy.width(),
+            height: $dummy.height(),
+            top: $dummy.offset().top - $(document).scrollTop(),
+            left: $dummy.offset().left
         });
 
         if(map && map.container){
@@ -367,7 +364,7 @@ var GeoMap = function(opts){
         var $dummy = $('.map-fs-dummy'),
             interval = setInterval(function(){
                 map.container.fitToViewport();
-            }, 10);
+            }, 1);
 
         $('.map-fullscreen-overlay').removeClass('ready');
 
@@ -385,7 +382,6 @@ var GeoMap = function(opts){
             clearInterval(interval);
             $dummy.remove();
             $('html,body').css('overflow', 'auto');
-
             map.container.fitToViewport();
         });       
 
