@@ -15,7 +15,7 @@ var GeoMap = function(opts){
 
     var $map = $('#' + options.id);
 
-    var fullScreenAnimationDuration = 50;
+    var fullScreenAnimationDuration = 10;
 
     if(options.fullScreenTrigger){
         $(options.fullScreenTrigger).off('click').on('click', function(e){
