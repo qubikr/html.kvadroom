@@ -7201,6 +7201,37 @@ textarea.error {
 .fantastic-map {
   margin-top: 20px;
 }
+.fantastic-images {
+  margin-top: 20px;
+}
+.fantastic-images .fantastic-image {
+  float: left;
+  width: 140px;
+  height: 100px;
+  overflow: hidden;
+}
+.fantastic-images .fantastic-image img {
+  display: block;
+  -webkit-transition: .4s;
+          transition: .4s;
+}
+.fantastic-images .fantastic-image.fai-1 {
+  margin: 0 20px 20px 0;
+}
+.fantastic-images .fantastic-image.fai-2 {
+  margin: 0 0 20px 0;
+}
+.fantastic-images .fantastic-image.fai-3 {
+  margin: 0 20px 0 0;
+}
+.fantastic-images .fantastic-image.fai-4 {
+  margin: 0;
+}
+.fantastic-images .fantastic-image:hover img {
+  -webkit-transform: scale(1.075);
+      -ms-transform: scale(1.075);
+          transform: scale(1.075);
+}
 .journal-plain {
   padding-top: 20px;
 }
@@ -11084,7 +11115,7 @@ yx-axis
 .map-block .map-wrapper .map-container {
   background: #efefef;
 }
-.map-block .map-wrapper .map-view-control-button {
+.map-view-control-button {
   cursor: pointer;
   background: #fff;
   background: rgba(255, 255, 255, 0.8);
@@ -11096,30 +11127,30 @@ yx-axis
   line-height: 40px;
   color: #7b7c7a;
 }
-.map-block .map-wrapper .map-view-control-button .icon-font {
+.map-view-control-button .icon-font {
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -16px 0 0 -16px;
 }
-.map-block .map-wrapper .map-view-control-button:hover {
+.map-view-control-button:hover {
   background: rgba(230, 230, 230, 0.8) !important;
 }
-.map-block .map-wrapper .map-view-control-button-selected {
+.map-view-control-button-selected {
   background: #349d00;
   opacity: 0.9;
   color: #fff;
 }
-.map-block .map-wrapper .map-view-control-button-selected:hover {
+.map-view-control-button-selected:hover {
   background: #349d00 !important;
   color: #fff;
   opacity: 1;
 }
-.map-block .map-wrapper .map-bottom-controls {
+.map-bottom-controls {
   position: absolute;
   bottom: 0;
 }
-.map-block .map-wrapper .map-bottom-controls .map-bottom-controls-button {
+.map-bottom-controls .map-bottom-controls-button {
   background: #fff;
   background: rgba(255, 255, 255, 0.8);
   height: 40px;
@@ -11129,10 +11160,10 @@ yx-axis
   padding: 0 15px;
   text-decoration: none;
 }
-.map-block .map-wrapper .map-bottom-controls .map-bottom-controls-button:hover {
+.map-bottom-controls .map-bottom-controls-button:hover {
   background: #efefef;
 }
-.map-block .map-wrapper .map-bottom-controls .map-bottom-controls-button.active {
+.map-bottom-controls .map-bottom-controls-button.active {
   background: #ff0000;
   background: rgba(255, 0, 0, 0.8);
   color: #ffffff;
@@ -11223,8 +11254,8 @@ yx-axis
   display: block;
   bottom: 0;
   left: 50%;
-  position: absolute;
   margin: 0 0 -10px -75px;
+  position: absolute;
 }
 .maps-popup {
   background: #fff;
@@ -11517,46 +11548,6 @@ yx-axis
   z-index: 2;
   position: relative;
 }
-.complex-map .map-balloon .inner .close {
-  text-decoration: none;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: block;
-  width: 20px;
-  height: 20px;
-  color: #666666;
-  z-index: 10;
-  cursor: pointer;
-}
-.complex-map .map-balloon .inner .close i {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  display: block;
-}
-.complex-map .map-balloon .inner .close i:before {
-  content: "\e612";
-  width: 20px;
-  height: 20px;
-  display: block;
-}
-.complex-map .map-balloon .inner .close:hover {
-  color: #ff0000;
-}
-.complex-map .map-balloon .inner .close:active {
-  top: 9px;
-}
 .complex-map .map-balloon:before {
   content: '';
   position: absolute;
@@ -11572,10 +11563,10 @@ yx-axis
           transform: rotateZ(45deg);
 }
 .map-fantastic {
-  height: 200px;
+  height: 220px;
 }
 .map-fantastic .map-container {
-  height: 200px;
+  height: 220px;
 }
 .zoomer {
   position: absolute;

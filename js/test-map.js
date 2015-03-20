@@ -9,13 +9,17 @@ TestMap.Map = function(){
                 id: 'test-map',
                 fullScreenTrigger: '#fullscreen-trigger',
                 zoom: 4,
+                controls: true,
                 center: data.center,
                 onInit: function (instance) {
                     var marker = new map.Pin({
                         type: 'basic_small',
                         center: [55,25],
                         balloonCloseButton: true,
-                        content: 'Text text text'
+                        content: 'Text text text',
+                        onBalloonReady: function(){
+                        	marker.showBalloon();
+                        }
                     });
 
                     var marker0 = new map.Pin({

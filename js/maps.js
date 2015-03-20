@@ -8,14 +8,14 @@ var GeoMap = function(opts){
             center: [55.76, 37.64],
             zoom: 10,
             layer: 'map',
+            controls: false,
             onInit: function(){},
             onFullscreenEnter: function(){},
             onFullscreenExit: function(){}
         }, opts);
 
-    var $map = $('#' + options.id);
-
-    var fullScreenAnimationDuration = 20;
+    var $map = $('#' + options.id),
+        fullScreenAnimationDuration = 20;
 
     if(options.fullScreenTrigger){
         $(options.fullScreenTrigger).off('click').on('click', function(e){
@@ -29,6 +29,10 @@ var GeoMap = function(opts){
             center: options.center,
             zoom: options.zoom
         });
+
+        if(options.controls === true){
+            createDefaultControls();
+        }
     };
 
     var Balloon = function(parent, center, content, onReady, onClick, offsetY, offsetX, closeButton){
@@ -43,12 +47,11 @@ var GeoMap = function(opts){
             $element = $(),
             permanent = false,
             balloon = new ymaps.Placemark(center, {
-                iconContent: '<div class="map-balloon disabled" id="' + id + '"><div class="inner">' + content + close + '</div></div>'
+                iconContent: '<div class="map-balloon hidden disabled" id="' + id + '"><div class="inner">' + content + close + '</div></div>'
             }, {
                 iconImageHref: '',
                 iconImageSize: 20,
-                iconImageOffset: 10,
-                zIndex: 2
+                iconImageOffset: 10
             });
 
         balloon.events.add('overlaychange', function(){
@@ -59,7 +62,8 @@ var GeoMap = function(opts){
                 marginLeft: (offsetX) ? offsetX : 0
             });
 
-            $element.find('.close').on('click', function(){
+            $element.find('.close').on('click', function(e){
+                e.preventDefault();
                 _this.hide();
             });
 
@@ -81,8 +85,12 @@ var GeoMap = function(opts){
         };
 
         this.show = function(permanentShow){
-            $element.removeClass('disabled');
-            map.events.add('click', hideOnClick);
+            $element.removeClass('hidden');
+           // map.events.add('click', hideOnClick);
+
+            setTimeout(function(){
+                $element.removeClass('disabled');
+            }, 500);
 
             _.each(balloons, function(balloon){
                 if(balloon.getId() != _this.getId()){
@@ -101,8 +109,14 @@ var GeoMap = function(opts){
             parent.options.set('zIndex', 1);
 
             if(permanent !== true){
+                
                 $element.addClass('disabled');
-                map.events.remove('click', hideOnClick);
+
+                setTimeout(function(){
+                    $element.addClass('hidden');
+                }, 500);
+
+                //map.events.remove('click', hideOnClick);
             }
         };
 
@@ -117,6 +131,119 @@ var GeoMap = function(opts){
 
         map.setCenter(options.center);
         map.setZoom(coords.zoom);
+    };
+
+    var createDefaultControls = function(){
+        var zoom_template = '<div class="map-view-control">' +
+            '<div id="map-zoom-in" class="map-view-control-button"><i class="icon-font icon-font-plus"></i></div>' +
+            '<div id="map-zoom-out" class="map-view-control-button"><i class="icon-font icon-font-minus"></i></div>' +
+            '</div>';
+
+        var ZoomLayout = ymaps.templateLayoutFactory.createClass(
+            zoom_template,
+            {
+                build: function () {
+                    ZoomLayout.superclass.build.call(this);
+
+                    $('#map-zoom-in').bind('click', ymaps.util.bind(this.zoomIn, this));
+                    $('#map-zoom-out').bind('click', ymaps.util.bind(this.zoomOut, this));
+                },
+
+                clear: function () {
+                    $('#map-zoom-in').unbind('click');
+                    $('#map-zoom-out').unbind('click');
+
+                    ZoomLayout.superclass.clear.call(this);
+                },
+
+                zoomIn: function () {
+                    this.events.fire('zoomchange', {
+                        oldZoom: map.getZoom(),
+                        newZoom: map.getZoom() + 1
+                    });
+                },
+
+                zoomOut: function () {
+                    this.events.fire('zoomchange', {
+                        oldZoom: map.getZoom(),
+                        newZoom: map.getZoom() - 1
+                    });
+                }
+            });
+
+        var zoomControl = new ymaps.control.SmallZoomControl({
+            layout: ZoomLayout
+        });
+
+        map.controls.add(zoomControl, {
+            left: 0,
+            top: 0
+        });
+
+        map.controls.add(zoomControl);
+
+        function button(options){
+            var opts = $.extend({
+                top: 0,
+                left: 0,
+                right: 0,
+                title: '',
+                icon_class: '',
+                onSelect: function(){
+
+                },
+                onDeselect: function(){
+
+                }
+            }, options);
+
+            var template =  '<div id="map-type" title="$[data.title]" class="map-view-control-button [if state.selected]map-view-control-button-selected[endif]"><i class="icon-font $[data.icon_class]"></i></div>',
+                Layout = ymaps.templateLayoutFactory.createClass(template),
+                button = new ymaps.control.Button({
+                    data: {
+                        title: opts.title,
+                        icon_class: opts.icon_class
+                    }
+                }, {
+                    layout: Layout,
+                    selectOnClick: true
+                });
+
+            button.events
+                .add('select', function () {
+                    opts.onSelect();
+                })
+                .add('deselect', function () {
+                    opts.onDeselect();
+                });
+
+            var params = {};
+
+            if(opts.left !== false){
+                params.left = opts.left;
+            }else{
+                params.right = opts.right;
+            }
+
+            params.top = opts.top;
+
+            map.controls.add(button, params);
+
+            return button;
+        }
+
+        button({
+            top: 80,
+            left: 0,
+            title: 'Режим спутника',
+            icon_class: 'icon-font-map_sputnik',
+            onSelect: function(){
+                map.setType('yandex#satellite');
+            },
+            onDeselect: function(){
+                map.setType('yandex#map');
+            }
+        });
     };
 
     this.Pin = function(opts){
@@ -156,7 +283,7 @@ var GeoMap = function(opts){
                     className: 'maps-marker-basic_small',
                     size: [19, 25],
                     offset: [-10, -25],
-                    balloonOffsetY: -17,
+                    balloonOffsetY: -16,
                     balloonOffsetX: 18
                 };
             } break;
@@ -180,7 +307,7 @@ var GeoMap = function(opts){
 
         pin.events.add('click', function(){
             console.log('xxx');
-            
+
             map.panTo(options.center, {
                 delay: 0
             });
