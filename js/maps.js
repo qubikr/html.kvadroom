@@ -15,7 +15,7 @@ var GeoMap = function(opts){
 
     var $map = $('#' + options.id);
 
-    var fullScreenAnimationDuration = 10;
+    var fullScreenAnimationDuration = 20;
 
     if(options.fullScreenTrigger){
         $(options.fullScreenTrigger).off('click').on('click', function(e){
@@ -101,7 +101,7 @@ var GeoMap = function(opts){
             $map.height() 
         ]);
 
-        map.setCenter(coords.center);
+        map.setCenter(options.center);
         map.setZoom(coords.zoom);
     };
 
@@ -255,7 +255,7 @@ var GeoMap = function(opts){
         var w = 0,
             h = 0,
             $overlay = $('.map-fullscreen-overlay'),
-            margin = 100;
+            margin = 60;
 
         w = $overlay.width() - margin * 2;
         h = $overlay.height() - margin * 2;
