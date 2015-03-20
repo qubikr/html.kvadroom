@@ -15,6 +15,8 @@ var GeoMap = function(opts){
 
     var $map = $('#' + options.id);
 
+    var fullScreenAnimationDuration = 50;
+
     if(options.fullScreenTrigger){
         $(options.fullScreenTrigger).off('click').on('click', function(e){
             e.preventDefault();
@@ -252,10 +254,11 @@ var GeoMap = function(opts){
     var resizeFullscreen = function(speed){
         var w = 0,
             h = 0,
-            $overlay = $('.map-fullscreen-overlay');
+            $overlay = $('.map-fullscreen-overlay'),
+            margin = 100;
 
-        w = $overlay.width() - 200;
-        h = $overlay.height() - 200;
+        w = $overlay.width() - margin * 2;
+        h = $overlay.height() - margin * 2;
 
         var interval = null;
 
@@ -268,8 +271,8 @@ var GeoMap = function(opts){
         $map.parent().animate({
             width: w,
             height: h,
-            top: 100,
-            left: 100
+            top: margin,
+            left: margin
         }, speed, function(){
             clearInterval(interval);
 
@@ -340,7 +343,7 @@ var GeoMap = function(opts){
         }
 
         initResize(function(){
-            resizeFullscreen(400);
+            resizeFullscreen(fullScreenAnimationDuration);
 
             setTimeout(function(){
                 $(window).off('resize.mapFullscreen').on('resize.mapFullscreen', function(){
@@ -350,7 +353,7 @@ var GeoMap = function(opts){
                 setTimeout(function(){
                     $(window).trigger('resize');
                 }, 50);
-            }, 400);
+            }, fullScreenAnimationDuration);
         });        
     };
 
@@ -377,10 +380,12 @@ var GeoMap = function(opts){
             height: $dummy.height(),
             top: $dummy.offset().top - $(document).scrollTop(),
             left: $dummy.offset().left
-        }, 400, function(){
+        }, fullScreenAnimationDuration, function(){
             $map.parent().removeClass('map-fullscreen');
-            clearInterval(interval);
             $dummy.remove();
+            
+            clearInterval(interval);
+            
             $('html,body').css('overflow', 'auto');
             map.container.fitToViewport();
         });       
