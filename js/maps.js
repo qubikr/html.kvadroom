@@ -249,31 +249,89 @@ var GeoMap = function(opts){
         };
     };
 
+    var resizeFullscreen = function(speed){
+        var w = 0,
+            h = 0,
+            $overlay = $('.map-fullscreen-overlay');
+
+        w = $overlay.width() - 200;
+        h = $overlay.height() - 200;
+
+        var interval = null;
+
+        if(speed > 0){
+            interval = setInterval(function(){
+                map.container.fitToViewport();
+            }, 10);
+        }
+
+        $map.parent().animate({
+            width: w,
+            height: h,
+            top: 100,
+            left: 100
+        }, speed, function(){
+            clearInterval(interval);
+
+            if(map && map.container){
+                map.container.fitToViewport();
+            }
+        });
+    };
+
+    var initResize = function(done){
+        var os = {};
+
+        if(!$map.parent().data('originalSize')){
+            os = {
+                w: $map.parent().width(),
+                h: $map.parent().height(),
+                t: $map.parent().offset().top,
+                l: $map.parent().offset().left
+            };
+
+            $map.parent().data('originalSize', os);
+        }else{
+            os = $map.parent().data('originalSize');
+        }
+
+        $map.parent().addClass('map-fullscreen');
+
+        var $dummy = $('<div/>');
+
+        $dummy.addClass('map-fs-dummy').css({
+            height: os.h
+        });
+
+        $map.parent().after($dummy);
+
+        $map.parent().css({
+            width: os.w,
+            height: os.h,
+            top: os.t - $(document).scrollTop(),
+            left: os.l
+        });
+
+        if(map && map.container){
+            map.container.fitToViewport();
+        }
+
+        if(done) done();
+    };
+
     this.enterFullScreen = function(){
         $('body').append('<div class="map-fullscreen-overlay"><a class="map-fullscreen-close kiv-e" href="#"><i class="icon-font icon-font-cross"></i></a></div>');
         $('html,body').css('overflow', 'hidden');
+
+        setTimeout(function(){
+            $('.map-fullscreen-overlay').addClass('ready');
+        }, 50);
+
         $(document).off('keyup.map-fullscreen').on('keyup.map-fullscreen', function(e){
             if(e.keyCode == 27){
                 _this.exitFullScreen();
             }
         });
-
-        $map.parent().addClass('map-fullscreen').css({
-            position: 'fixed',
-            top: '50%',
-            left: '50%',
-            marginLeft: -470,
-            marginTop: -300,
-            width: 940,
-            height: 600,
-            zIndex: 10001
-        });
-
-        $map.css({
-            height: 600
-        });
-
-        map.container.fitToViewport();
 
         $('.map-fullscreen-close').off('click').on('click', function(e){
             e.preventDefault();
@@ -283,30 +341,55 @@ var GeoMap = function(opts){
         if(options.fullScreenTrigger){
             $(options.fullScreenTrigger).hide();
         }
+
+        initResize(function(){
+            resizeFullscreen(400);
+
+            setTimeout(function(){
+                $(window).off('resize.mapFullscreen').on('resize.mapFullscreen', function(){
+                    resizeFullscreen(0);
+                });
+
+                setTimeout(function(){
+                    $(window).trigger('resize');
+                }, 50);
+            }, 400);
+        });        
     };
 
     this.exitFullScreen = function(){
-        $('.map-fullscreen-overlay').remove();
-
-        $map.parent().removeClass('map-fullscreen').css({
-            position: 'static',
-            width: '100%',
-            marginLeft: 0,
-            marginTop: 0,
-            height: 400
-        });
-
-        $map.css({
-            height: 400
-        });
-
-        map.container.fitToViewport();
-
-        $('html,body').css('overflow', 'auto');
-
+        $(window).off('resize.mapFullscreen');
+    
         if(options.fullScreenTrigger){
             $(options.fullScreenTrigger).show();
         }
+
+        var $dummy = $('.map-fs-dummy'),
+            interval = setInterval(function(){
+                map.container.fitToViewport();
+            }, 10);
+
+        $('.map-fullscreen-overlay').removeClass('ready');
+
+        setTimeout(function(){
+            $('.map-fullscreen-overlay').remove();
+        }, 400);
+
+        $map.parent().animate({
+            width: $dummy.width(),
+            height: $dummy.height(),
+            top: $dummy.offset().top - $(document).scrollTop(),
+            left: $dummy.offset().left
+        }, 400, function(){
+            $map.parent().removeClass('map-fullscreen');
+            clearInterval(interval);
+            $dummy.remove();
+            $('html,body').css('overflow', 'auto');
+
+            map.container.fitToViewport();
+        });       
+
+        map.container.fitToViewport();
     };
 
     this.init = function(){
