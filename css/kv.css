@@ -11535,6 +11535,9 @@ yx-axis
           transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   right: -10px;
 }
+.complex-map .map-balloon.closeable {
+  padding-right: 20px;
+}
 .complex-map .map-balloon.disabled {
   opacity: 0;
   -webkit-transform: scale(0);
@@ -11547,6 +11550,46 @@ yx-axis
   border-radius: 3px;
   z-index: 2;
   position: relative;
+}
+.complex-map .map-balloon .close {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #666666;
+  z-index: 10;
+  cursor: pointer;
+  text-decoration: none;
+}
+.complex-map .map-balloon .close i {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  display: block;
+}
+.complex-map .map-balloon .close i:before {
+  content: "\e612";
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.complex-map .map-balloon .close:hover {
+  color: #ff0000;
+}
+.complex-map .map-balloon .close:active {
+  top: 11px;
 }
 .complex-map .map-balloon:before {
   content: '';

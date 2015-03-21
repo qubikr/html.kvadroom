@@ -36,10 +36,12 @@ var GeoMap = function(opts){
     };
 
     var Balloon = function(parent, center, content, onReady, onClick, offsetY, offsetX, closeButton){
-        var close = '';
+        var close = '',
+            closeable = '';
 
         if(closeButton){
             close = '<a class="close" title="Закрыть" href="#"><i></i></a>';
+            closeable = 'closeable';
         }
 
         var _this = this,
@@ -47,7 +49,7 @@ var GeoMap = function(opts){
             $element = $(),
             permanent = false,
             balloon = new ymaps.Placemark(center, {
-                iconContent: '<div class="map-balloon hidden disabled" id="' + id + '"><div class="inner">' + content + close + '</div></div>'
+                iconContent: '<div class="map-balloon hidden disabled ' + closeable + '" id="' + id + '"><div class="inner"><span class="content-inner" style="white-space: nowrap">' + content + '</span>' + close + '</div></div>'
             }, {
                 iconImageHref: '',
                 iconImageSize: 20,
@@ -56,11 +58,6 @@ var GeoMap = function(opts){
 
         balloon.events.add('overlaychange', function(){
             $element = $('#' + id);
-
-            $element.css({
-                marginTop: -(($element.height()/2) - ((offsetY) ? offsetY : 0)),
-                marginLeft: (offsetX) ? offsetX : 0
-            });
 
             $element.find('.close').on('click', function(e){
                 e.preventDefault();
@@ -86,7 +83,21 @@ var GeoMap = function(opts){
 
         this.show = function(permanentShow){
             $element.removeClass('hidden');
-           // map.events.add('click', hideOnClick);
+            $element.css({
+                marginTop: -(($element.height()/2) - ((offsetY) ? offsetY : 0)),
+                marginLeft: (offsetX) ? offsetX : 0,
+                width: 250
+            });
+
+            setTimeout(function(){
+                console.log($element.find('.content-inner').width() + 40);
+
+                $element.css({
+                    width: $element.find('.content-inner').width() + 40
+                });
+            }, 100);
+            
+            map.events.add('click', hideOnClick);
 
             setTimeout(function(){
                 $element.removeClass('disabled');
@@ -116,7 +127,7 @@ var GeoMap = function(opts){
                     $element.addClass('hidden');
                 }, 500);
 
-                //map.events.remove('click', hideOnClick);
+                map.events.remove('click', hideOnClick);
             }
         };
 
@@ -273,7 +284,7 @@ var GeoMap = function(opts){
                     className: 'maps-marker-basic',
                     size: [31, 43],
                     offset: [-21, -49],
-                    balloonOffsetY: -25,
+                    balloonOffsetY: -27,
                     balloonOffsetX: 18
                 };
             } break; 
@@ -283,7 +294,7 @@ var GeoMap = function(opts){
                     className: 'maps-marker-basic_small',
                     size: [19, 25],
                     offset: [-10, -25],
-                    balloonOffsetY: -16,
+                    balloonOffsetY: -17,
                     balloonOffsetX: 18
                 };
             } break;
@@ -306,7 +317,7 @@ var GeoMap = function(opts){
         }
 
         pin.events.add('click', function(){
-            console.log('xxx');
+            console.log('xxx', options.center);
 
             map.panTo(options.center, {
                 delay: 0
