@@ -58,6 +58,8 @@ var GeoMap = function(opts){
                 iconImageOffset: 10
             });
 
+        balloon.options.set('zIndex', -1);
+
         balloon.events.add('overlaychange', function(){
             $element = $('#' + id);
 
@@ -98,7 +100,7 @@ var GeoMap = function(opts){
                     width: $element.find('.content-inner').width() + 40
                 });
             }, 100);
-            
+
             map.events.add('click', hideOnClick);
 
             setTimeout(function(){
@@ -115,18 +117,19 @@ var GeoMap = function(opts){
                 permanent = permanentShow;
             }
 
+            balloon.options.set('zIndex', 100);
             parent.options.set('zIndex', 100);
         };
 
         this.hide = function(){
-            parent.options.set('zIndex', 1);
-
             if(permanent !== true){
-                
+
                 $element.addClass('disabled');
 
                 setTimeout(function(){
                     $element.addClass('hidden');
+                    balloon.options.set('zIndex', -1);
+                    parent.options.set('zIndex', 1);
                 }, 500);
 
                 map.events.remove('click', hideOnClick);
@@ -261,7 +264,7 @@ var GeoMap = function(opts){
 
     this.panCenter = function(){
         var center = [
-            parseFloat(options.center[0]), 
+            parseFloat(options.center[0]),
             parseFloat(options.center[1])
         ];
 
@@ -300,7 +303,7 @@ var GeoMap = function(opts){
                     balloonOffsetY: -27,
                     balloonOffsetX: 18
                 };
-            } break; 
+            } break;
 
             case 'basic_small' : {
                 typeData = {
@@ -311,7 +314,7 @@ var GeoMap = function(opts){
                     balloonOffsetX: 18
                 };
             } break;
-        }
+        };
 
         var pin = new ymaps.Placemark(options.center, {
             iconContent: '<span class="maps-marker-icon ' + typeData.className + '" id="' + id + '">' + title + '</span>'
@@ -331,6 +334,10 @@ var GeoMap = function(opts){
 
         pin.events.add('click', function(){
             options.onClick();
+
+            map.panTo(options.center, {
+                delay: 0
+            });
 
             _this.showBalloon();
         });
