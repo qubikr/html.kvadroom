@@ -44,6 +44,8 @@ var GeoMap = function(opts){
             closeable = 'closeable';
         }
 
+        console.log(close)
+
         var _this = this,
             id = _.uniqueId('balloon'),
             $element = $(),
@@ -257,6 +259,17 @@ var GeoMap = function(opts){
         });
     };
 
+    this.panCenter = function(){
+        var center = [
+            parseFloat(options.center[0]), 
+            parseFloat(options.center[1])
+        ];
+
+        map.panTo(center, {
+            delay: 0
+        });
+    };
+
     this.Pin = function(opts){
         var _this = this;
 
@@ -317,12 +330,6 @@ var GeoMap = function(opts){
         }
 
         pin.events.add('click', function(){
-            console.log('xxx', options.center);
-
-            map.panTo(options.center, {
-                delay: 0
-            });
-
             options.onClick();
 
             _this.showBalloon();
@@ -396,10 +403,6 @@ var GeoMap = function(opts){
         }
 
         area.events.add('click', function(){
-            map.panTo(center, {
-                delay: 0
-            });
-
             options.onClick();
 
             if(balloon){
