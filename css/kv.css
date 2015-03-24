@@ -11472,7 +11472,7 @@ yx-axis
   position: absolute;
 }
 .map-fullscreen {
-  position: fixed;
+  position: fixed !important;
   z-index: 10001;
   overflow: hidden;
 }
@@ -11553,7 +11553,6 @@ yx-axis
 }
 .complex-map .map-balloon.disabled {
   opacity: 0;
-  z-index: -1000;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
@@ -11628,8 +11627,17 @@ yx-axis
 .map-zk {
   height: 200px;
 }
+.map-zk #fullscreen-trigger-jk {
+  opacity: 0;
+}
 .map-zk .map-container {
   height: 200px;
+}
+.map-zk-catalog {
+  height: 550px;
+}
+.map-zk-catalog .map-container {
+  height: 550px;
 }
 .zoomer {
   position: absolute;
@@ -14137,7 +14145,8 @@ ul.circular-switcher li.active {
 .main-filter button i {
   margin: 0 auto;
 }
-.main-filter .search-string {
+.main-filter .search-string,
+.main-filter .search-string-zk {
   cursor: text;
   margin: 0;
   background: #fff;
@@ -14153,27 +14162,38 @@ ul.circular-switcher li.active {
   -ms-user-select: none;
   user-select: none;
 }
-.main-filter .search-string:after {
+.main-filter .search-string:after,
+.main-filter .search-string-zk:after {
   content: "";
   display: table;
   clear: both;
 }
-.main-filter .search-string:hover {
+.main-filter .search-string.search-string-zk input,
+.main-filter .search-string-zk.search-string-zk input {
+  width: 100% !important;
+}
+.main-filter .search-string:hover,
+.main-filter .search-string-zk:hover {
   background: #effffb;
 }
-.main-filter .search-string:hover input {
+.main-filter .search-string:hover input,
+.main-filter .search-string-zk:hover input {
   background: #effffb;
 }
-.main-filter .search-string.focused {
+.main-filter .search-string.focused,
+.main-filter .search-string-zk.focused {
   border-color: #81C0BA;
   background: #fff;
   box-shadow: 0 0 15px rgba(129, 192, 186, 0.5);
 }
-.main-filter .search-string.focused input {
+.main-filter .search-string.focused input,
+.main-filter .search-string-zk.focused input {
   background: #fff;
 }
 .main-filter .search-string span.wagon,
-.main-filter .search-string input.entry {
+.main-filter .search-string-zk span.wagon,
+.main-filter .search-string input.entry,
+.main-filter .search-string-zk input.entry {
   display: block;
   float: left;
   min-width: 25px;
@@ -14185,7 +14205,8 @@ ul.circular-switcher li.active {
   -webkit-transition: 0s;
           transition: 0s;
 }
-.main-filter .search-string input.entry {
+.main-filter .search-string input.entry,
+.main-filter .search-string-zk input.entry {
   height: 32px;
   width: 50px;
   min-width: 50px;
@@ -14194,21 +14215,26 @@ ul.circular-switcher li.active {
   margin-left: 0;
   padding-left: 0;
 }
-.main-filter .search-string span.train {
+.main-filter .search-string span.train,
+.main-filter .search-string-zk span.train {
   padding: 2px 0;
   display: block;
   zoom: 1;
 }
-.main-filter .search-string span.train:after {
+.main-filter .search-string span.train:after,
+.main-filter .search-string-zk span.train:after {
   content: "";
   display: table;
   clear: both;
 }
 .main-filter .search-string span.train,
-.main-filter .search-string input.entry {
+.main-filter .search-string-zk span.train,
+.main-filter .search-string input.entry,
+.main-filter .search-string-zk input.entry {
   vertical-align: bottom;
 }
-.main-filter .search-string span.wagon {
+.main-filter .search-string span.wagon,
+.main-filter .search-string-zk span.wagon {
   position: relative;
   cursor: pointer;
   font-size: 13px;
@@ -14221,18 +14247,21 @@ ul.circular-switcher li.active {
   padding-right: 25px;
   border-radius: 2px;
 }
-.main-filter .search-string span.wagon.removing {
+.main-filter .search-string span.wagon.removing,
+.main-filter .search-string-zk span.wagon.removing {
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
   -webkit-transition: .4s;
           transition: .4s;
 }
-.main-filter .search-string span.wagon:hover {
+.main-filter .search-string span.wagon:hover,
+.main-filter .search-string-zk span.wagon:hover {
   background: #ffd0b3;
   border: 1px solid #ff7107;
 }
-.main-filter .search-string span.wagon:after {
+.main-filter .search-string span.wagon:after,
+.main-filter .search-string-zk span.wagon:after {
   content: '\00d7';
   position: absolute;
   color: #B2A87C;
@@ -14240,7 +14269,8 @@ ul.circular-switcher li.active {
   right: 7px;
   font-size: 20px;
 }
-.main-filter .search-string span.wagon:before {
+.main-filter .search-string span.wagon:before,
+.main-filter .search-string-zk span.wagon:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -14260,44 +14290,55 @@ ul.circular-switcher li.active {
   top: -2px;
   left: 0;
 }
-.main-filter .search-string span.wagon[data-type="underground"] {
+.main-filter .search-string span.wagon[data-type="underground"],
+.main-filter .search-string-zk span.wagon[data-type="underground"] {
   padding-left: 30px;
 }
-.main-filter .search-string span.wagon[data-type="underground"]:before {
+.main-filter .search-string span.wagon[data-type="underground"]:before,
+.main-filter .search-string-zk span.wagon[data-type="underground"]:before {
   top: -3px;
   content: '\e650';
   color: #ff0000;
 }
-.main-filter .search-string span.wagon[data-type="underground"][data-region="190"]:before {
+.main-filter .search-string span.wagon[data-type="underground"][data-region="190"]:before,
+.main-filter .search-string-zk span.wagon[data-type="underground"][data-region="190"]:before {
   content: '\e622' !important;
   color: #2250A3 !important;
 }
-.main-filter .search-string span.wagon[data-type="railway"] {
+.main-filter .search-string span.wagon[data-type="railway"],
+.main-filter .search-string-zk span.wagon[data-type="railway"] {
   padding-left: 30px;
 }
-.main-filter .search-string span.wagon[data-type="railway"]:before {
+.main-filter .search-string span.wagon[data-type="railway"]:before,
+.main-filter .search-string-zk span.wagon[data-type="railway"]:before {
   content: '\e651';
   color: #090;
 }
-.main-filter .search-string span.wagon[data-type="highway"] {
+.main-filter .search-string span.wagon[data-type="highway"],
+.main-filter .search-string-zk span.wagon[data-type="highway"] {
   padding-left: 30px;
 }
-.main-filter .search-string span.wagon[data-type="highway"]:before {
+.main-filter .search-string span.wagon[data-type="highway"]:before,
+.main-filter .search-string-zk span.wagon[data-type="highway"]:before {
   content: '\e60d';
   color: #777;
   top: -1px;
 }
-.main-filter .search-string span.wagon[data-type="map"] {
+.main-filter .search-string span.wagon[data-type="map"],
+.main-filter .search-string-zk span.wagon[data-type="map"] {
   padding-left: 30px;
 }
-.main-filter .search-string span.wagon[data-type="map"]:before {
+.main-filter .search-string span.wagon[data-type="map"]:before,
+.main-filter .search-string-zk span.wagon[data-type="map"]:before {
   content: '\e616';
   color: #ebb300;
 }
-.main-filter .search-string span.wagon.group {
+.main-filter .search-string span.wagon.group,
+.main-filter .search-string-zk span.wagon.group {
   font-weight: bold;
 }
-.main-filter .search-string span.wagon.group:before {
+.main-filter .search-string span.wagon.group:before,
+.main-filter .search-string-zk span.wagon.group:before {
   top: -1px;
 }
 .main-filter .search-selector {
@@ -15069,6 +15110,12 @@ ul.circular-switcher li.active {
 }
 .range-selector .range span {
   margin: 0 22px;
+}
+.filter-string .main-filter {
+  padding: 1px 15px 16px;
+}
+.filter-string .search-selector li {
+  padding: 0 14px !important;
 }
 .req-page {
   padding: 40px 0;

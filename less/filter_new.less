@@ -42,6 +42,7 @@
     & > .dummy {
       height: 0;
       opacity: 0;
+
       & ~ div {
         transition: opacity .5s;
       }
@@ -53,6 +54,7 @@
     height: 200px;
     opacity: 1;
     transition: opacity .5s;
+
     & ~ div {
       opacity: 0;
     }
@@ -566,7 +568,8 @@ ul.circular-switcher {
     }
   }
 
-  .search-string {
+  .search-string,
+  .search-string-zk {
     cursor: text;
     margin: 0;
     background: #fff;
@@ -575,6 +578,12 @@ ul.circular-switcher {
     min-height: 38px;
     width: 880px;
     .clearfix;
+
+    &.search-string-zk {
+      input {
+        width: 100% !important;
+      }
+    }
 
     &:hover {
       background: @bg-input-hover;
@@ -1529,3 +1538,15 @@ ul.circular-switcher {
   }
 }
 
+
+&.filter-string {
+  .main-filter {
+    padding: 1px 15px 16px;
+  }
+
+  .search-selector {
+    li {
+      padding: 0 14px !important;
+    }
+  }
+}
