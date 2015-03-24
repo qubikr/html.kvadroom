@@ -1,0 +1,2623 @@
+{
+    "success": true,
+    "objects": [
+        {
+            "id": "255199",
+            "lon": "37.682903",
+            "lat": "55.762245",
+            "name": "\u0411\u0426 \u00ab\u042f\u0443\u0437\u0430 \u0422\u0430\u0443\u044d\u0440 2 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/yauza-tower-2-bc/"
+        },
+        {
+            "id": "255198",
+            "lon": "37.683514",
+            "lat": "55.762222",
+            "name": "\u0411\u0426 \u00ab\u042f\u0443\u0437\u0430 \u0422\u0430\u0443\u044d\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/yauza-tower-bc/"
+        },
+        {
+            "id": "256016",
+            "lon": "37.735809",
+            "lat": "55.603806",
+            "name": "\u0411\u0426 \u00ab\u042f\u0441\u0435\u043d\u0435\u0432\u0430\u044f 26 (C)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/orehovo-borisovo-yugnoe/yasenevaya-26-bc/"
+        },
+        {
+            "id": "255988",
+            "lon": "37.689789",
+            "lat": "55.860786",
+            "name": "\u0411\u0426 \u00ab\u042f\u0440\u043e\u0441\u043b\u0430\u0432\u0441\u043a\u043e\u0435 51 (C)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/yaroslavskiy/yaroslavskoe-51-bc/"
+        },
+        {
+            "id": "255081",
+            "lon": "37.526783",
+            "lat": "55.766361",
+            "name": "\u0411\u0426 \u00ab\u042f\u0440\u0434 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/yard-bc/"
+        },
+        {
+            "id": "254768",
+            "lon": "37.566227",
+            "lat": "55.734901",
+            "name": "\u0411\u0426 \u00ab\u042f\u043f\u043e\u043d\u0441\u043a\u0438\u0439 \u0414\u043e\u043c (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/yaponskiy-dom-bc/"
+        },
+        {
+            "id": "254897",
+            "lon": "37.627216",
+            "lat": "55.770130",
+            "name": "\u0411\u0426 \u00ab\u042f\u043d-\u0420\u043e\u043d (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/yan-ron-bc/"
+        },
+        {
+            "id": "254907",
+            "lon": "37.583477",
+            "lat": "55.781097",
+            "name": "\u0411\u041f \u00ab\u042f\u043c\u0441\u043a\u043e\u0435 \u043f\u043e\u043b\u0435 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/begovoy/yamskoe-pole-bp/"
+        },
+        {
+            "id": "254879",
+            "lon": "37.584637",
+            "lat": "55.785336",
+            "name": "\u0411\u0426 \u00ab\u042f\u043c\u0441\u043a\u043e\u0435 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/begovoy/yamskoe-plaza-bc/"
+        },
+        {
+            "id": "255209",
+            "lon": "37.584782",
+            "lat": "55.778755",
+            "name": "\u0411\u0426 \u00ab\u042f\u043c\u0441\u043a\u0430\u044f \u0426\u0435\u043d\u0442\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/yamaskaya-centr-bc/"
+        },
+        {
+            "id": "254941",
+            "lon": "37.656342",
+            "lat": "55.758869",
+            "name": "\u0411\u0426 \u00ab\u042f\u043a\u043e\u0432\u043e\u0430\u043f\u043e\u0441\u0442\u043e\u043b\u044c\u0441\u043a\u0438\u0439 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/yakovoapostolskiy-bc/"
+        },
+        {
+            "id": "255574",
+            "lon": "37.464314",
+            "lat": "55.785099",
+            "name": "\u0411\u0426 \u00ab\u042e\u043d\u0438\u043e\u043d \u041f\u0430\u0440\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/horoshevo-mnevniki/union-park-bc/"
+        },
+        {
+            "id": "254886",
+            "lon": "37.774353",
+            "lat": "55.720638",
+            "name": "\u0411\u0426 \u00ab\u042e\u043d\u0438\u043e\u043d (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/riazanskiy/union-bc/"
+        },
+        {
+            "id": "254782",
+            "lon": "37.756546",
+            "lat": "55.754765",
+            "name": "\u0411\u0426 \u00ab\u042e\u043d\u0438\u043a\u043e\u043d (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/perovo/unikon-bc/"
+        },
+        {
+            "id": "255159",
+            "lon": "37.692879",
+            "lat": "55.703430",
+            "name": "\u0411\u0426 \u00ab\u042e\u0436\u043d\u044b\u0439 \u041f\u043e\u0440\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/pechatniki/yuzhniy-port-bc/"
+        },
+        {
+            "id": "254913",
+            "lon": "37.601398",
+            "lat": "55.586910",
+            "name": "\u0411\u0426 \u00ab\u042e\u0436\u043d\u044b\u0439 \u041f\u0430\u0440\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/chertanovo-yugnoe/yuzhniy-park-bc/"
+        },
+        {
+            "id": "255516",
+            "lon": "37.581940",
+            "lat": "55.868385",
+            "name": "\u0411\u0426 \u00ab\u042d\u0442\u0430\u043f (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/otradnoe/etap-bc/"
+        },
+        {
+            "id": "255481",
+            "lon": "37.737469",
+            "lat": "55.795086",
+            "name": "\u0411\u0426 \u00ab\u042d\u0442\u0430\u043b\u043e\u043d (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/preobragenskoe/etalon-bc/"
+        },
+        {
+            "id": "255188",
+            "lon": "37.608528",
+            "lat": "55.774708",
+            "name": "\u0411\u0426 \u00ab\u042d\u0440\u043c\u0438\u0442\u0430\u0436 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/ermitahe-plaza-bc/"
+        },
+        {
+            "id": "255216",
+            "lon": "37.549915",
+            "lat": "55.882195",
+            "name": "\u0411\u0426 \u00ab\u042d\u0440\u0432\u0435\u043d\u0434 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/vostochnoe-degunino/erwend-bc/"
+        },
+        {
+            "id": "255563",
+            "lon": "37.736332",
+            "lat": "55.686100",
+            "name": "\u0411\u0426 \u00ab\u042d\u043c\u0438\u043b\u0438 \u0425\u0430\u0443\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/lublino/emili-house-bc/"
+        },
+        {
+            "id": "255505",
+            "lon": "37.622959",
+            "lat": "55.576550",
+            "name": "\u0411\u0426 \u00ab\u042d\u043b\u0438\u0442 \u041a\u0440\u043e\u0443\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/birulevo-zapadnoe/elit-crous-bc/"
+        },
+        {
+            "id": "255621",
+            "lon": "37.748550",
+            "lat": "55.753731",
+            "name": "\u0411\u041f \u00ab\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0434\u043d\u0430\u044f (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/perovo/elektrodnaya-bp/"
+        },
+        {
+            "id": "255453",
+            "lon": "37.610340",
+            "lat": "55.759323",
+            "name": "\u0411\u0426 \u00ab\u042d\u043a\u043e\u043e\u0444\u0438\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/ecooffice-bc/"
+        },
+        {
+            "id": "254823",
+            "lon": "37.732307",
+            "lat": "55.787914",
+            "name": "\u0411\u0426 \u00ab\u042d\u043a\u043e (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/sokolinaya-gora/eko-bc/"
+        },
+        {
+            "id": "255507",
+            "lon": "37.628712",
+            "lat": "55.783894",
+            "name": "\u0411\u0426 \u00ab\u0429\u0435\u043f\u043a\u0438\u043d\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/shepkinskiy-bc/"
+        },
+        {
+            "id": "255503",
+            "lon": "37.613094",
+            "lat": "55.716911",
+            "name": "\u0411\u0426 \u00ab\u0428\u0443\u0445\u043e\u0432\u0430 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/shuhova-plaza-bc/"
+        },
+        {
+            "id": "255479",
+            "lon": "37.758579",
+            "lat": "55.751148",
+            "name": "\u0411\u0426 \u00ab\u0428\u0442\u0435\u0440\u043d \u042d\u0441\u0442\u0435\u0439\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/perovo/shtern-estate-bc/"
+        },
+        {
+            "id": "255122",
+            "lon": "37.605206",
+            "lat": "55.771774",
+            "name": "\u0411\u0426 \u00ab\u0428\u043a\u043e\u043b\u0430 \u0416\u0443\u0440\u043d\u0430\u043b\u0438\u0441\u0442\u043e\u0432 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/shkola-zhurnalistov-bc/"
+        },
+        {
+            "id": "255042",
+            "lon": "37.604530",
+            "lat": "55.799751",
+            "name": "\u0411\u0426 \u00ab\u0428\u0435\u0440\u0435\u043c\u0435\u0442\u044c\u0435\u0432\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/maryina-rosha/sheremetyevskiy-bc/"
+        },
+        {
+            "id": "255048",
+            "lon": "37.632683",
+            "lat": "55.888790",
+            "name": "\u0411\u0426 \u00ab\u0427\u0435\u0440\u043c\u044f\u043d\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/severnoe-medvedkovo/chermyanskiy-bc/"
+        },
+        {
+            "id": "255270",
+            "lon": "37.468540",
+            "lat": "55.679455",
+            "name": "\u0411\u0426 \u00ab\u0427\u0435\u043c\u043f\u0438\u043e\u043d \u041f\u0430\u0440\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/troparevo-nikulino/champion-park-bc/"
+        },
+        {
+            "id": "254929",
+            "lon": "37.632072",
+            "lat": "55.767841",
+            "name": "\u0411\u0426 \u00ab\u0427\u0430\u0439\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 8 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/chaikaplaza-8-bc/"
+        },
+        {
+            "id": "254924",
+            "lon": "37.596897",
+            "lat": "55.783428",
+            "name": "\u0411\u0426 \u00ab\u0427\u0430\u0439\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 7 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/chaikaplaza-7-bc/"
+        },
+        {
+            "id": "255231",
+            "lon": "37.597767",
+            "lat": "55.739250",
+            "name": "\u0411\u0426 \u00ab\u0427\u0430\u0439\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 6 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/chaikaplaza-6-bc/"
+        },
+        {
+            "id": "255121",
+            "lon": "37.602161",
+            "lat": "55.767921",
+            "name": "\u0411\u0426 \u00ab\u0427\u0430\u0439\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 5 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/chaikaplaza-5-bc/"
+        },
+        {
+            "id": "254928",
+            "lon": "37.629810",
+            "lat": "55.782623",
+            "name": "\u0411\u0426 \u00ab\u0427\u0430\u0439\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 4 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/chaikaplaza-4-bc/"
+        },
+        {
+            "id": "254916",
+            "lon": "37.575539",
+            "lat": "55.770489",
+            "name": "\u0411\u0426 \u00ab\u0427\u0430\u0439\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 2 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/chaikaplaza-2-bc/"
+        },
+        {
+            "id": "254915",
+            "lon": "37.624985",
+            "lat": "55.693523",
+            "name": "\u0411\u0426 \u00ab\u0427\u0430\u0439\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 10 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/chaikaplaza-10-bc/"
+        },
+        {
+            "id": "254770",
+            "lon": "37.642422",
+            "lat": "55.811474",
+            "name": "\u0411\u0426 \u00ab\u0427\u0430\u0439\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 1 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/alekseevskiy/chaikaplaza-1-bc/"
+        },
+        {
+            "id": "255177",
+            "lon": "37.484875",
+            "lat": "55.785503",
+            "name": "\u0411\u0426 \u00ab\u0426\u041a\u0411 \u0421\u0432\u044f\u0437\u044c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/horoshevo-mnevniki/ckb-svyaz-bc/"
+        },
+        {
+            "id": "255611",
+            "lon": "37.687405",
+            "lat": "55.780785",
+            "name": "\u0411\u0426 \u00ab\u0426\u0435\u043d\u0442\u0440\u043e\u0441\u043e\u044e\u0437\u043d\u044b\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/centrosoyuzniy-bc/"
+        },
+        {
+            "id": "254831",
+            "lon": "37.625481",
+            "lat": "55.707729",
+            "name": "\u0411\u0426 \u00ab\u0426\u0435\u043d\u0442\u0440-\u0422  (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/centr-t-bc/"
+        },
+        {
+            "id": "255019",
+            "lon": "37.556496",
+            "lat": "55.754822",
+            "name": "\u0411\u0426 \u00ab\u0426\u0435\u043d\u0442\u0440 \u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u043e\u0439 \u0422\u043e\u0440\u0433\u043e\u0432\u043b\u0438 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/centr-mezhdunarodnoy-torgovli-bc/"
+        },
+        {
+            "id": "255633",
+            "lon": "37.730659",
+            "lat": "55.877930",
+            "name": "\u0411\u0426 \u00ab\u0425\u0430\u043d\u043e\u0439-\u041c\u043e\u0441\u043a\u0432\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/yaroslavskiy/hanoi-moskva-bc/"
+        },
+        {
+            "id": "255490",
+            "lon": "37.760181",
+            "lat": "55.725323",
+            "name": "\u0411\u0426 \u00ab\u0425\u0430\u043c\u0435\u043b\u0435\u043e\u043d (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/riazanskiy/hameleon-bc/"
+        },
+        {
+            "id": "255204",
+            "lon": "37.576717",
+            "lat": "55.730995",
+            "name": "\u0411\u0426 \u00ab\u0424\u044c\u044e\u0436\u043d \u041f\u0430\u0440\u043a (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/fusion-park-bc/"
+        },
+        {
+            "id": "255530",
+            "lon": "37.677071",
+            "lat": "55.777267",
+            "name": "\u0411\u0426 \u00ab\u0424\u043b\u0435\u0448 \u041b\u0430\u043d\u0436 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/flashlounge-bc/"
+        },
+        {
+            "id": "255970",
+            "lon": "37.513165",
+            "lat": "55.745720",
+            "name": "\u0411\u0426 \u00ab\u0424\u0438\u043b\u0438 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/filevskiy-park/fili-plaza-bc/"
+        },
+        {
+            "id": "255060",
+            "lon": "37.566891",
+            "lat": "55.679661",
+            "name": "\u0411\u0426 \u00ab\u0424\u0435\u0440\u0440\u043e \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/akademicheskiy/ferro-plaza-bc/"
+        },
+        {
+            "id": "255028",
+            "lon": "37.625374",
+            "lat": "55.682655",
+            "name": "\u0411\u0426 \u00ab\u0424\u0435\u0440\u0435\u0439\u043d (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/nagatino-sadovniki/fereyn-bc/"
+        },
+        {
+            "id": "254960",
+            "lon": "37.581890",
+            "lat": "55.796646",
+            "name": "\u0411\u041f \u00ab\u0424\u0430\u043a\u0442\u043e\u0440\u0438\u044f (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/savelovskiy/faktoriya-bp/"
+        },
+        {
+            "id": "254832",
+            "lon": "37.615677",
+            "lat": "55.674263",
+            "name": "\u0411\u0426 \u00ab\u0424\u0430\u0432\u043e\u0440\u0438\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/nagorniy/favorit-bc/"
+        },
+        {
+            "id": "255096",
+            "lon": "37.662453",
+            "lat": "55.745480",
+            "name": "\u0411\u0426 \u00ab\u0424\u0430\u0431\u0440\u0438\u043a\u0430 \u0421\u0442\u0430\u043d\u0438\u0441\u043b\u0430\u0432\u0441\u043a\u043e\u0433\u043e (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/fabrika-stanislavskogo-bc/"
+        },
+        {
+            "id": "255149",
+            "lon": "37.607540",
+            "lat": "55.760548",
+            "name": "\u0411\u0426 \u00ab\u0423\u0441\u0430\u0434\u044c\u0431\u0430 \u0426\u0435\u043d\u0442\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/usadba-center-bc/"
+        },
+        {
+            "id": "254974",
+            "lon": "37.518768",
+            "lat": "55.671124",
+            "name": "\u0411\u0426 \u00ab\u0423\u0434\u0430\u043b\u044c\u0446\u043e\u0432\u0430 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/prospekt-vernadskogo/udalcova-plaza-bc/"
+        },
+        {
+            "id": "255011",
+            "lon": "37.410702",
+            "lat": "55.834106",
+            "name": "\u0411\u0426 \u00ab\u0422\u0443\u0448\u0438\u043d\u043e (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/ugnoe-tushino/tushino-bc/"
+        },
+        {
+            "id": "254905",
+            "lon": "37.680847",
+            "lat": "55.762154",
+            "name": "\u0411\u0426 \u00ab\u0422\u0443\u043f\u043e\u043b\u0435\u0432 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/tupolev-plaza-bc/"
+        },
+        {
+            "id": "255847",
+            "lon": "37.623898",
+            "lat": "55.710072",
+            "name": "\u0411\u0426 \u00ab\u0422\u0443\u043b\u044c\u0441\u043a\u0438\u0439 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/tulskiy-bc/"
+        },
+        {
+            "id": "254809",
+            "lon": "37.569901",
+            "lat": "55.762241",
+            "name": "\u0411\u0426 \u00ab\u0422\u0440\u043e\u043f\u0438\u043a\u0430\u043d\u043e (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/tropicano-bc/"
+        },
+        {
+            "id": "255377",
+            "lon": "37.726082",
+            "lat": "55.721649",
+            "name": "\u0411\u041f \u00ab\u0422\u0440\u043e\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/tekstilshiki/troy-bp/"
+        },
+        {
+            "id": "255082",
+            "lon": "37.520737",
+            "lat": "55.798409",
+            "name": "\u0411\u0426 \u00ab\u0422\u0440\u0438\u0443\u043c\u0444 \u041f\u0430\u043b\u0430\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/triump-palace-bc/"
+        },
+        {
+            "id": "254958",
+            "lon": "37.554726",
+            "lat": "55.800793",
+            "name": "\u0411\u0426 \u00ab\u0422\u0440\u0438\u043e (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/aeroport/trio-bc/"
+        },
+        {
+            "id": "255508",
+            "lon": "37.664585",
+            "lat": "55.785374",
+            "name": "\u0411\u0426 \u00ab\u0422\u0440\u0438\u0430\u043d\u0433\u043b \u0425\u0430\u0443\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/triangle-house-bc/"
+        },
+        {
+            "id": "254891",
+            "lon": "37.701511",
+            "lat": "55.735092",
+            "name": "\u0411\u0426 \u00ab\u0422\u0440\u0438-\u0414 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/nijegorodskiy/tri-d-bc/"
+        },
+        {
+            "id": "255314",
+            "lon": "37.596649",
+            "lat": "55.764969",
+            "name": "\u0411\u0426 \u00ab\u0422\u0440\u0435\u0445\u043f\u0440\u0443\u0434\u043d\u044b\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/trehprudniy-bc/"
+        },
+        {
+            "id": "255881",
+            "lon": "37.700901",
+            "lat": "55.864117",
+            "name": "\u0411\u0426 \u00ab\u0422\u0435\u0445\u043d\u043e\u043f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/yaroslavskiy/tehnoplaza-bc/"
+        },
+        {
+            "id": "255772",
+            "lon": "37.577583",
+            "lat": "55.733307",
+            "name": "\u0411\u0426 \u00ab\u0422\u0435\u0445\u043d\u043e\u043f\u0430\u0440\u043a \u0420\u043e\u0441\u0441\u043e\u043b\u0438\u043c\u043e (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/tehnopark-rossolimo-bc/"
+        },
+        {
+            "id": "254953",
+            "lon": "37.483513",
+            "lat": "55.625462",
+            "name": "\u0411\u0426 \u00ab\u0422\u0435\u043f\u043b\u044b\u0439 \u0421\u0442\u0430\u043d (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/tepliy-stan/tepliy-stan-bc/"
+        },
+        {
+            "id": "255432",
+            "lon": "37.505768",
+            "lat": "55.617802",
+            "name": "\u0411\u0426 \u00ab\u0422\u0432\u0438\u043d \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/yasenevo/twin-plaza-bc/"
+        },
+        {
+            "id": "255458",
+            "lon": "37.599331",
+            "lat": "55.760227",
+            "name": "\u0411\u0426 \u00ab\u0422\u0432\u0435\u0440\u0441\u043a\u043e\u0439 \u0431\u0443\u043b\u044c\u0432\u0430\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/tverskoy-bulvar-bc/"
+        },
+        {
+            "id": "255037",
+            "lon": "37.607677",
+            "lat": "55.764751",
+            "name": "\u0411\u0426 \u00ab\u0422\u0432\u0435\u0440\u0441\u043a\u043e\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/tverskoy-bc/"
+        },
+        {
+            "id": "255097",
+            "lon": "37.658699",
+            "lat": "55.741211",
+            "name": "\u0411\u0426 \u00ab\u0422\u0430\u0433\u0430\u043d\u0441\u043a\u0438\u0439 \u041f\u0430\u0441\u0441\u0430\u0436 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/taganskiy-passazh/"
+        },
+        {
+            "id": "255098",
+            "lon": "37.662449",
+            "lat": "55.738560",
+            "name": "\u0411\u0426 \u00ab\u0422\u0430\u0433\u0430\u043d\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/taganskiy-bc/"
+        },
+        {
+            "id": "254956",
+            "lon": "37.517876",
+            "lat": "55.830097",
+            "name": "\u0411\u0426 \u00ab\u0422\u0430\u0432\u043e\u043b\u0433\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/koptevo/tavolga-bc/"
+        },
+        {
+            "id": "255186",
+            "lon": "37.602360",
+            "lat": "55.780685",
+            "name": "\u0411\u0426 \u00ab\u0421\u0443\u0449\u0435\u0432\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/sushevskiy-bc/"
+        },
+        {
+            "id": "255478",
+            "lon": "37.744820",
+            "lat": "55.672417",
+            "name": "\u0411\u0426 \u00ab\u0421\u0443\u0434\u0430\u043a\u043e\u0432\u0430 \u041f\u043b\u0430\u0437\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/lublino/sudakova-plaza-bc/"
+        },
+        {
+            "id": "255628",
+            "lon": "37.687744",
+            "lat": "55.789867",
+            "name": "\u0411\u0426 \u00ab\u0421\u0442\u0440\u043e\u043c\u044b\u043d\u043a\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/sokolniki/strominka-bc/"
+        },
+        {
+            "id": "255013",
+            "lon": "37.584785",
+            "lat": "55.801426",
+            "name": "\u0411\u0426 \u00ab\u0421\u0442\u0440\u0435\u043b\u0435\u0446\u043a\u0430\u044f \u0421\u043b\u043e\u0431\u043e\u0434\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/butirskiy/streleckaya-sloboda-bc/"
+        },
+        {
+            "id": "254800",
+            "lon": "37.503815",
+            "lat": "55.824158",
+            "name": "\u0411\u0426 \u00ab\u0421\u0442\u0430\u0440\u043e\u043f\u0435\u0442\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u0410\u0442\u0440\u0438\u0443\u043c (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/voykovskiy/staropetrovskiy-atrium-bc/"
+        },
+        {
+            "id": "255895",
+            "lon": "37.696934",
+            "lat": "55.780766",
+            "name": "\u0411\u0426 \u00ab\u0421\u0442\u0430\u043d\u043a\u043e\u0440\u043e\u0441\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/stankoross-bc/"
+        },
+        {
+            "id": "255863",
+            "lon": "37.594688",
+            "lat": "55.800671",
+            "name": "\u0411\u041f \u00ab\u0421\u0442\u0430\u043d\u043a\u043e\u043b\u0438\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/butirskiy/stankolit-bp/"
+        },
+        {
+            "id": "255345",
+            "lon": "37.628887",
+            "lat": "55.770069",
+            "name": "\u0411\u0426 \u00ab\u0421\u0440\u0435\u0442\u0435\u043d\u043a\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/sretenka-bc/"
+        },
+        {
+            "id": "255006",
+            "lon": "37.560883",
+            "lat": "55.722527",
+            "name": "\u0411\u0426 \u00ab\u0421\u043f\u0435\u043a\u0442\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/spektr-bc/"
+        },
+        {
+            "id": "254911",
+            "lon": "37.572338",
+            "lat": "55.714355",
+            "name": "\u0411\u041f \u00ab\u0421\u043e\u044e\u0437 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/soyuz-bc/"
+        },
+        {
+            "id": "255154",
+            "lon": "37.769741",
+            "lat": "55.818241",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u0440\u0443\u0441 \u0425\u043e\u043b\u043b (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/golyanovo/sorus-hall-bc/"
+        },
+        {
+            "id": "254963",
+            "lon": "37.542236",
+            "lat": "55.775978",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u043b\u0438\u0434 \u041a\u0430\u043c\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/solid-kama-bc/"
+        },
+        {
+            "id": "255575",
+            "lon": "37.675228",
+            "lat": "55.786827",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u043a\u043e\u043b\u044c\u043d\u0438\u043a\u0438 \u041f\u043b\u0430\u0437\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/sokolniki/sokolniki-plaza-bc/"
+        },
+        {
+            "id": "255289",
+            "lon": "37.688492",
+            "lat": "55.790344",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u043a\u043e\u043b\u044c\u043d\u0438\u043a\u0438 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/sokolniki/sokolniki-bc/"
+        },
+        {
+            "id": "255456",
+            "lon": "37.703598",
+            "lat": "55.782810",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u043a\u043e\u043b\u0438\u043d\u044b\u0439 \u0434\u0432\u043e\u0440\u0438\u043a (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/sokolinaya-gora/sokoliniy-dvorik-bc/"
+        },
+        {
+            "id": "254894",
+            "lon": "37.717808",
+            "lat": "55.782719",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u043a\u043e\u043b\u0438\u043d\u0430\u044f \u0413\u043e\u0440\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/sokolinaya-gora/sokolinaya-gora-bc/"
+        },
+        {
+            "id": "255184",
+            "lon": "37.520767",
+            "lat": "55.807774",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u043a\u043e\u043b \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/aeroport/sokol-plaza-bc/"
+        },
+        {
+            "id": "255279",
+            "lon": "37.508938",
+            "lat": "55.788383",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u043a\u043e\u043b \u0411\u0440\u0438\u0434\u0436 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/sokol-bridge-bc/"
+        },
+        {
+            "id": "254856",
+            "lon": "37.516743",
+            "lat": "55.806927",
+            "name": "\u0411\u0426 \u00ab\u0421\u043e\u043a\u043e\u043b (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/aeroport/sokol-bc/"
+        },
+        {
+            "id": "254869",
+            "lon": "37.581299",
+            "lat": "55.747513",
+            "name": "\u0411\u0426 \u00ab\u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0438\u0439 \u041f\u0430\u0441\u0441\u0430\u0436 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/arbat/smolenskiy-passazh-bc/"
+        },
+        {
+            "id": "254836",
+            "lon": "37.715187",
+            "lat": "55.735348",
+            "name": "\u0411\u0426 \u00ab\u0421\u043c\u0438\u0440\u043d\u043e\u0432\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/nijegorodskiy/smirnovskiy-bc/"
+        },
+        {
+            "id": "254871",
+            "lon": "37.658607",
+            "lat": "55.761711",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u0442\u0438\u0434\u0435\u043b (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/sitidel-bc/"
+        },
+        {
+            "id": "255182",
+            "lon": "37.499920",
+            "lat": "55.821701",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u0442\u0438 \u0425\u0430\u0443\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/voykovskiy/city-house-bc/"
+        },
+        {
+            "id": "255090",
+            "lon": "37.630726",
+            "lat": "55.672260",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u0440\u0438\u0443\u0441 \u041f\u0430\u0440\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/nagatino-sadovniki/sirius-park-bc/"
+        },
+        {
+            "id": "255165",
+            "lon": "37.570107",
+            "lat": "55.678898",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u043d\u0442\u0435\u0441\u0438\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/akademicheskiy/sintesis-bc/"
+        },
+        {
+            "id": "255002",
+            "lon": "37.718338",
+            "lat": "55.760906",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u043d\u0438\u0446\u0430 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/lefortovo/sinica-plaza-bc/"
+        },
+        {
+            "id": "255449",
+            "lon": "37.646111",
+            "lat": "55.728085",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u043d\u0435\u0440\u0433\u0438\u044f (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/sinergiya-bc/"
+        },
+        {
+            "id": "254885",
+            "lon": "37.527142",
+            "lat": "55.689869",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u043b\u044c\u0432\u0435\u0440 \u0425\u0430\u0443\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/ramenki/silver-house-bc/"
+        },
+        {
+            "id": "255191",
+            "lon": "37.643745",
+            "lat": "55.724220",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u0431\u0438\u0440\u0441\u043a\u0438\u0439 \u0410\u043b\u044c\u044f\u043d\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/sibirskiy-allyans-bc/"
+        },
+        {
+            "id": "255433",
+            "lon": "37.615562",
+            "lat": "55.699974",
+            "name": "\u0411\u0426 \u00ab\u0421\u0438\u0431\u0438\u043d\u0442\u0435\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/sibintek-bc/"
+        },
+        {
+            "id": "255461",
+            "lon": "37.715801",
+            "lat": "55.680592",
+            "name": "\u0411\u0426 \u00ab\u0421\u0451\u0440\u0444 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/pechatniki/surf-plaza-bc/"
+        },
+        {
+            "id": "255168",
+            "lon": "37.591282",
+            "lat": "55.703423",
+            "name": "\u0411\u0426 \u00ab\u0421\u0435\u0440\u043f\u0443\u0445\u043e\u0432\u0441\u043a\u043e\u0439 \u0434\u0432\u043e\u0440 3 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/serpuhovskoy-dvor-3-bc/"
+        },
+        {
+            "id": "255167",
+            "lon": "37.618828",
+            "lat": "55.707687",
+            "name": "\u0411\u0426 \u00ab\u0421\u0435\u0440\u043f\u0443\u0445\u043e\u0432\u0441\u043a\u043e\u0439 \u0434\u0432\u043e\u0440 2  (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/serpuhovskoy-dvor-2-bc/"
+        },
+        {
+            "id": "255166",
+            "lon": "37.602993",
+            "lat": "55.706314",
+            "name": "\u0411\u0426 \u00ab\u0421\u0435\u0440\u043f\u0443\u0445\u043e\u0432\u0441\u043a\u043e\u0439 \u0434\u0432\u043e\u0440 1 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/serpuhovskoy-dvor-1-bc/"
+        },
+        {
+            "id": "255260",
+            "lon": "37.651321",
+            "lat": "55.846989",
+            "name": "\u0411\u0426 \u00ab\u0421\u0435\u0440\u0435\u0431\u0440\u044f\u043a\u043e\u0432\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/sviblovo/serebryakova-bc/"
+        },
+        {
+            "id": "255157",
+            "lon": "37.708721",
+            "lat": "55.780933",
+            "name": "\u0411\u0426 \u00ab\u0421\u0435\u043c\u0435\u043d\u043e\u0432\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/sokolinaya-gora/semenovskiy-bc/"
+        },
+        {
+            "id": "255258",
+            "lon": "37.682980",
+            "lat": "55.850334",
+            "name": "\u0411\u0426 \u00ab\u0421\u0435\u0432\u0435\u0440\u044f\u043d\u0438\u043d (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/yaroslavskiy/severyanin-bc/"
+        },
+        {
+            "id": "254759",
+            "lon": "37.584637",
+            "lat": "55.790432",
+            "name": "\u0411\u0426 \u00ab\u0421\u0435\u0432\u0435\u0440\u043d\u043e\u0435 \u0421\u0438\u044f\u043d\u0438\u0435 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/begovoy/severnoe-siyanie-bc/"
+        },
+        {
+            "id": "254750",
+            "lon": "37.532642",
+            "lat": "55.751705",
+            "name": "\u0411\u0426 \u00ab\u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u0411\u0430\u0448\u043d\u044f (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/severnaya-bashnya-bc/"
+        },
+        {
+            "id": "255179",
+            "lon": "37.429550",
+            "lat": "55.824764",
+            "name": "\u0411\u0426 \u00ab\u0421\u0414\u041c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/pokrovskoe-streshnevo/sdm-bc/"
+        },
+        {
+            "id": "254829",
+            "lon": "37.642719",
+            "lat": "55.724800",
+            "name": "\u0411\u0426 \u00ab\u0421\u0432\u044f\u0442\u043e\u0433\u043e\u0440 4 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/svyatogor-4-bc/"
+        },
+        {
+            "id": "255427",
+            "lon": "37.643078",
+            "lat": "55.725624",
+            "name": "\u0411\u0426 \u00ab\u0421\u0432\u044f\u0442\u043e\u0433\u043e\u0440 2 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/svyatogor-2-bc/"
+        },
+        {
+            "id": "255441",
+            "lon": "37.643982",
+            "lat": "55.724918",
+            "name": "\u0411\u0426 \u00ab\u0421\u0432\u044f\u0442\u043e\u0433\u043e\u0440 1 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/svyatogor-1-bc/"
+        },
+        {
+            "id": "254883",
+            "lon": "37.601017",
+            "lat": "55.767639",
+            "name": "\u0411\u0426 \u00ab\u0421\u0430\u043c\u043c\u0438\u0442 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/summit-bc/"
+        },
+        {
+            "id": "254771",
+            "lon": "37.601212",
+            "lat": "55.783367",
+            "name": "\u0411\u0426 \u00ab\u0421\u0430\u043b\u044e\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/salut-bc/"
+        },
+        {
+            "id": "255089",
+            "lon": "37.603508",
+            "lat": "55.773949",
+            "name": "\u0411\u0426 \u00ab\u0421\u0430\u0434\u043e\u0432\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/sadovaya-plaza-bc/"
+        },
+        {
+            "id": "255192",
+            "lon": "37.631451",
+            "lat": "55.772366",
+            "name": "\u0411\u0426 \u00ab\u0421\u0430\u0434\u043e\u0432\u0430\u044f \u0413\u0430\u043b\u0435\u0440\u0435\u044f (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/sadovaya-gallereya-bc/"
+        },
+        {
+            "id": "254940",
+            "lon": "37.654739",
+            "lat": "55.750957",
+            "name": "\u0411\u0426 \u00ab\u0421\u0430\u0434\u043a\u043e (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/sadko-bc/"
+        },
+        {
+            "id": "255469",
+            "lon": "37.590260",
+            "lat": "55.804695",
+            "name": "\u0411\u0426 \u00ab\u0421\u0430\u0432\u0435\u043b\u043e\u0432\u0441\u043a\u0438\u0439 \u0421\u0438\u0442\u0438 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/butirskiy/savelovskiy-city-bc/"
+        },
+        {
+            "id": "255861",
+            "lon": "37.594475",
+            "lat": "55.798595",
+            "name": "\u0411\u0426 \u00ab\u0421\u0430\u0432\u0435\u043b\u043e\u0432\u0433\u0440\u0430\u0434 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/butirskiy/savelovgrad-bc/"
+        },
+        {
+            "id": "254976",
+            "lon": "37.568066",
+            "lat": "55.734188",
+            "name": "\u0411\u0426 \u00ab\u0421\u0430\u0432\u0432\u0438\u043d\u0441\u043a\u0438\u0439 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/savvinskiy-bc/"
+        },
+        {
+            "id": "254989",
+            "lon": "37.755966",
+            "lat": "55.726082",
+            "name": "\u0411\u0426 \u00ab\u0420\u044f\u0437\u0430\u043d\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/riazanskiy/ryazanskiy-bc/"
+        },
+        {
+            "id": "254999",
+            "lon": "37.422630",
+            "lat": "55.695015",
+            "name": "\u0411\u0426 \u00ab\u0420\u044f\u0431\u0438\u043d\u043e\u0432\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/ochakovo-matveevskoe/ryabinovaya-plaza-bc/"
+        },
+        {
+            "id": "255172",
+            "lon": "37.567062",
+            "lat": "55.741749",
+            "name": "\u0411\u0426 \u00ab\u0420\u044d\u0434\u0438\u0441\u0441\u043e\u043d \u0421\u043b\u0430\u0432\u044f\u043d\u0441\u043a\u0430\u044f (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/dorogomilovo/radisson-slavyanskaya-bc/"
+        },
+        {
+            "id": "254995",
+            "lon": "37.438747",
+            "lat": "55.634171",
+            "name": "\u0411\u041f \u00ab\u0420\u0443\u043c\u044f\u043d\u0446\u0435\u0432\u043e (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/novomoskovsky/moskovskij/rumyancevo-bp/"
+        },
+        {
+            "id": "255462",
+            "lon": "37.500999",
+            "lat": "55.742016",
+            "name": "\u0411\u0426 \u00ab\u0420\u0443\u0431\u0438\u043d (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/filevskiy-park/rubin-bc/"
+        },
+        {
+            "id": "255100",
+            "lon": "37.697159",
+            "lat": "55.733238",
+            "name": "\u0411\u0426 \u00ab\u0420\u0422\u0421 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/nijegorodskiy/rts-bc/"
+        },
+        {
+            "id": "255483",
+            "lon": "37.565937",
+            "lat": "55.757736",
+            "name": "\u0411\u0426 \u00ab\u0420\u043e\u0447\u0414\u0435\u043b \u0446\u0435\u043d\u0442\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/rochdel-centr-bc/"
+        },
+        {
+            "id": "254901",
+            "lon": "37.698269",
+            "lat": "55.753506",
+            "name": "\u0411\u0426 \u00ab\u0420\u043e\u0441\u0442\u044d\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/lefortovo/rostek-bc/"
+        },
+        {
+            "id": "255920",
+            "lon": "37.554306",
+            "lat": "55.680447",
+            "name": "\u0411\u0426 \u00ab\u0420\u043e\u0441\u043a\u043e\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/cheremushki/roskos-bc/"
+        },
+        {
+            "id": "254799",
+            "lon": "37.609314",
+            "lat": "55.754604",
+            "name": "\u0411\u0426 \u00ab\u0420\u043e\u043c\u0430\u043d\u043e\u0432 \u0414\u0432\u043e\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/arbat/romanov-dvor-bc/"
+        },
+        {
+            "id": "255205",
+            "lon": "37.587646",
+            "lat": "55.735573",
+            "name": "\u0411\u0426 \u00ab\u0420\u0438\u043d\u043a\u043e \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/rinko-plaza-bc/"
+        },
+        {
+            "id": "255406",
+            "lon": "37.620918",
+            "lat": "55.733940",
+            "name": "\u0411\u0426 \u00ab\u0420\u0438\u043c\u0441\u043a\u0438\u0439 \u0414\u043e\u043c (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/rimskiy-dom-bc/"
+        },
+        {
+            "id": "254833",
+            "lon": "37.646477",
+            "lat": "55.715874",
+            "name": "\u0411\u0426 \u00ab\u0420\u0438\u0432\u0435\u0440\u0441\u0430\u0439\u0434 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/riverside-bc/"
+        },
+        {
+            "id": "254951",
+            "lon": "37.626190",
+            "lat": "55.690701",
+            "name": "\u0411\u0426 \u00ab\u0420\u0438\u0432\u0435\u0440 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/nagatino-sadovniki/river-plaza-bc/"
+        },
+        {
+            "id": "255160",
+            "lon": "37.625977",
+            "lat": "55.615883",
+            "name": "\u0411\u0426 \u00ab\u0420\u0430\u0441\u0442\u043a\u043e\u043c (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/chertanovo-tsentralnoe/rastkom-bc/"
+        },
+        {
+            "id": "255241",
+            "lon": "37.659756",
+            "lat": "55.761284",
+            "name": "\u0411\u0426 \u00ab\u041f\u0443\u0442\u0435\u0439\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/puteyskiy-bc/"
+        },
+        {
+            "id": "255132",
+            "lon": "37.645809",
+            "lat": "55.769077",
+            "name": "\u0411\u0426 \u00ab\u041f\u0443\u043b\u044c\u043c\u0430\u043d (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/pulman-bc/"
+        },
+        {
+            "id": "255174",
+            "lon": "37.425808",
+            "lat": "55.747780",
+            "name": "\u0411\u0426 \u00ab\u041f\u0440\u043e\u0444\u0438\u043a\u043e (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/krilatskoe/profico-bc/"
+        },
+        {
+            "id": "255434",
+            "lon": "37.574574",
+            "lat": "55.692772",
+            "name": "\u0411\u0426 \u00ab\u041f\u0440\u0438\u043d\u0446\u0438\u043f\u0430\u043b \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/akademicheskiy/principal-plaza-bc/"
+        },
+        {
+            "id": "255431",
+            "lon": "37.506939",
+            "lat": "55.618401",
+            "name": "\u0411\u0426 \u00ab\u041f\u0440\u0438\u043d\u0446 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/yasenevo/prince-plaza-bc/"
+        },
+        {
+            "id": "254748",
+            "lon": "37.581936",
+            "lat": "55.787743",
+            "name": "\u0411\u0426 \u00ab\u041f\u0440\u0435\u0441\u0441\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/begovoy/pressa-bc/"
+        },
+        {
+            "id": "255158",
+            "lon": "37.707737",
+            "lat": "55.788898",
+            "name": "\u0411\u0426 \u00ab\u041f\u0440\u0435\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/preobragenskoe/preobrazhenskiy-bc/"
+        },
+        {
+            "id": "254791",
+            "lon": "37.712807",
+            "lat": "55.794857",
+            "name": "\u0411\u0426 \u00ab\u041f\u0420\u0415\u041e 8 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/preobragenskoe/preo-8-bc/"
+        },
+        {
+            "id": "254808",
+            "lon": "37.573017",
+            "lat": "55.757839",
+            "name": "\u0411\u0426 \u00ab\u041f\u0440\u0435\u043c\u044c\u0435\u0440 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/premier-plaza-bc/"
+        },
+        {
+            "id": "255085",
+            "lon": "37.570145",
+            "lat": "55.807716",
+            "name": "\u0411\u0426 \u00ab\u041f\u0440\u0435\u043c\u044c\u0435\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/timiriazevskiy/premier-bc/"
+        },
+        {
+            "id": "255438",
+            "lon": "37.444923",
+            "lat": "55.826649",
+            "name": "\u0411\u0426 \u00ab\u041f\u0440\u0430\u0437\u0434\u043d\u0438\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/pokrovskoe-streshnevo/prazdnik-bc/"
+        },
+        {
+            "id": "255197",
+            "lon": "37.660660",
+            "lat": "55.693382",
+            "name": "\u0411\u0426 \u00ab\u041f\u043e\u0440\u0442 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/port-plaza-bc/"
+        },
+        {
+            "id": "255105",
+            "lon": "37.650955",
+            "lat": "55.720695",
+            "name": "\u0411\u0426 \u00ab\u041f\u043e\u043b\u043b\u0430\u0440\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/pollars-bc/"
+        },
+        {
+            "id": "255134",
+            "lon": "37.652683",
+            "lat": "55.760254",
+            "name": "\u0411\u0426 \u00ab\u041f\u043e\u043a\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u0414\u0432\u043e\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/pokrovskiy-dvor-bc/"
+        },
+        {
+            "id": "255110",
+            "lon": "37.626751",
+            "lat": "55.727253",
+            "name": "\u0411\u0426 \u00ab\u041f\u043b\u0435\u0445\u0430\u043d\u043e\u0432 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/plehanov-plaza-bc/"
+        },
+        {
+            "id": "254841",
+            "lon": "37.571449",
+            "lat": "55.776272",
+            "name": "\u0411\u0426 \u00ab\u041f\u0435\u0442\u0440\u043e\u0432\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/begovoy/petrovskiy-bc/"
+        },
+        {
+            "id": "255224",
+            "lon": "37.730255",
+            "lat": "55.737988",
+            "name": "\u0411\u0426 \u00ab\u041f\u0435\u0440\u0441\u043e\u043d\u0430 \u0413\u0440\u0430\u0442\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/lefortovo/persona-grata-bc/"
+        },
+        {
+            "id": "255410",
+            "lon": "37.800259",
+            "lat": "55.746025",
+            "name": "\u0411\u0426 \u00ab\u041f\u0435\u0440\u043e\u0432\u0441\u043a\u0438\u0439 (C)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/novogireevo/perovskiy-bc/"
+        },
+        {
+            "id": "255217",
+            "lon": "37.623795",
+            "lat": "55.736576",
+            "name": "\u0411\u0426 \u00ab\u041f\u0435\u0440\u0435\u0434\u043d\u0438\u0439 \u0414\u0432\u043e\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/peredniy-dvor-bc/"
+        },
+        {
+            "id": "255480",
+            "lon": "37.807381",
+            "lat": "55.791504",
+            "name": "\u0411\u0426 \u00ab\u041f\u0435\u0440\u0432\u043e\u043c\u0430\u0439\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/vostochnoe-izmaylovo/pervomayskiy-bc/"
+        },
+        {
+            "id": "254878",
+            "lon": "37.586792",
+            "lat": "55.775032",
+            "name": "\u0411\u0426 \u00ab\u041f\u0430\u0440\u0443\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/parus-bc/"
+        },
+        {
+            "id": "255489",
+            "lon": "37.506367",
+            "lat": "55.738033",
+            "name": "\u0411\u0426 \u00ab\u041f\u0430\u0440\u043a \u041f\u043e\u0431\u0435\u0434\u044b (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/filevskiy-park/park-pobedi-bc/"
+        },
+        {
+            "id": "254949",
+            "lon": "37.590816",
+            "lat": "55.771107",
+            "name": "\u0411\u0426 \u00ab\u041f\u0430\u043d\u043e\u0440\u0430\u043c\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/panorama-bc/"
+        },
+        {
+            "id": "255597",
+            "lon": "37.694023",
+            "lat": "55.778316",
+            "name": "\u0411\u0426 \u00ab\u041f\u0430\u043b\u044c\u043c\u0438\u0440\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/palmira-bc/"
+        },
+        {
+            "id": "254914",
+            "lon": "37.628971",
+            "lat": "55.720009",
+            "name": "\u0411\u0426 \u00ab\u041f\u0430\u0432\u043b\u043e\u0432\u0441\u043a\u0438\u0439 2 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/pavlovskiy-2-bc/"
+        },
+        {
+            "id": "255020",
+            "lon": "37.628174",
+            "lat": "55.719936",
+            "name": "\u0411\u0426 \u00ab\u041f\u0430\u0432\u043b\u043e\u0432\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/pavlovskiy-bc/"
+        },
+        {
+            "id": "255412",
+            "lon": "37.646347",
+            "lat": "55.726418",
+            "name": "\u0411\u0426 \u00ab\u041f\u0430\u0432\u0435\u043b\u0435\u0446\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/paveleckiy-bc/"
+        },
+        {
+            "id": "254754",
+            "lon": "37.635811",
+            "lat": "55.730103",
+            "name": "\u0411\u0426 \u00ab\u041f\u0430\u0432\u0435\u043b\u0435\u0446\u043a\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/paveleckaya-plaza-bc/"
+        },
+        {
+            "id": "255170",
+            "lon": "37.440826",
+            "lat": "55.673767",
+            "name": "\u0411\u0426 \u00ab\u041e\u0447\u0430\u043a\u043e\u0432\u043e (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/ochakovo-matveevskoe/ochakovo-bc/"
+        },
+        {
+            "id": "255050",
+            "lon": "37.598900",
+            "lat": "55.856339",
+            "name": "\u0411\u0426 \u00ab\u041e\u0442\u0440\u0430\u0434\u043d\u044b\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/otradnoe/otradniy-bc/"
+        },
+        {
+            "id": "255093",
+            "lon": "37.649788",
+            "lat": "55.772324",
+            "name": "\u0411\u0426 \u00ab\u041e\u0440\u043b\u0438\u043a\u043e\u0432 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/orlikov-plaza-bc/"
+        },
+        {
+            "id": "255138",
+            "lon": "37.626083",
+            "lat": "55.735008",
+            "name": "\u0411\u0426 \u00ab\u041e\u0440\u0434\u044b\u043d\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/ordinskiy-bc/"
+        },
+        {
+            "id": "254862",
+            "lon": "37.390530",
+            "lat": "55.803593",
+            "name": "\u0411\u041f \u00ab\u041e\u0440\u0431\u0438\u0442\u0430-2 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/strogino/orbita-2-bp/"
+        },
+        {
+            "id": "254986",
+            "lon": "37.653290",
+            "lat": "55.708469",
+            "name": "\u0411\u0426 \u00ab\u041e\u043c\u0435\u0433\u0430 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/omega-plaza-bc/"
+        },
+        {
+            "id": "255378",
+            "lon": "37.654247",
+            "lat": "55.709877",
+            "name": "\u0411\u0426 \u00ab\u041e\u043c\u0435\u0433\u0430 2 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/omega-2-bc/"
+        },
+        {
+            "id": "254850",
+            "lon": "37.481274",
+            "lat": "55.837105",
+            "name": "\u0411\u0426 \u00ab\u041e\u043b\u0438\u043c\u043f\u0438\u044f \u041f\u0430\u0440\u043a (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/voykovskiy/olympiya-park-bc/"
+        },
+        {
+            "id": "255222",
+            "lon": "37.624687",
+            "lat": "55.783894",
+            "name": "\u0411\u0426 \u00ab\u041e\u043b\u0438\u043c\u043f\u0438\u043a \u0425\u043e\u043b\u043b (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/olympic-hall-bc/"
+        },
+        {
+            "id": "255190",
+            "lon": "37.631954",
+            "lat": "55.780315",
+            "name": "\u0411\u0426 \u00ab\u041e\u043b\u0438\u043c\u043f\u0438\u043a \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/olympic-plaza-bc/"
+        },
+        {
+            "id": "254945",
+            "lon": "37.532104",
+            "lat": "55.765228",
+            "name": "\u0411\u0426 \u00ab\u041e\u043b\u0438\u043c\u043f (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/olimp-bc/"
+        },
+        {
+            "id": "255943",
+            "lon": "37.428970",
+            "lat": "55.716702",
+            "name": "\u0411\u041f \u00ab\u041e\u043a\u0442\u044f\u0431\u0440\u044c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/mogayskiy/october-bp/"
+        },
+        {
+            "id": "255413",
+            "lon": "37.534008",
+            "lat": "55.749477",
+            "name": "\u0411\u0426 \u00ab\u041e\u043a\u043e (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/oko-bc/"
+        },
+        {
+            "id": "255040",
+            "lon": "37.599892",
+            "lat": "55.792088",
+            "name": "\u0411\u0426 \u00ab\u041e\u043a\u0435\u0430\u043d \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/maryina-rosha/ocean-plaza-bc/"
+        },
+        {
+            "id": "255859",
+            "lon": "37.620159",
+            "lat": "55.728333",
+            "name": "\u0411\u0426 \u00ab\u041e\u0430\u0437\u0438\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/oazis-bc/"
+        },
+        {
+            "id": "254777",
+            "lon": "37.553234",
+            "lat": "55.775982",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0440\u0434\u0441\u0442\u0430\u0440 \u0422\u0430\u0443\u044d\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/nordstar-tower-bc/"
+        },
+        {
+            "id": "254847",
+            "lon": "37.547653",
+            "lat": "55.881882",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0440\u0434 \u0425\u0430\u0443\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/vostochnoe-degunino/nord-house-bc/"
+        },
+        {
+            "id": "255022",
+            "lon": "37.641850",
+            "lat": "55.754211",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0435\u0432 \u041a\u043e\u0432\u0447\u0435\u0433 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/noev-kovcheg-bc/"
+        },
+        {
+            "id": "254932",
+            "lon": "37.671497",
+            "lat": "55.773830",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u044c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/nov-bc/"
+        },
+        {
+            "id": "254893",
+            "lon": "37.603413",
+            "lat": "55.792088",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u043e\u0441\u0443\u0449\u0435\u0432\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/maryina-rosha/novosushevskiy-bc/"
+        },
+        {
+            "id": "254827",
+            "lon": "37.650986",
+            "lat": "55.723244",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u043e\u0441\u043f\u0430\u0441\u0441\u043a\u0438\u0439 \u0414\u0432\u043e\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/novospasskiy-dvor-bc/"
+        },
+        {
+            "id": "254781",
+            "lon": "37.607178",
+            "lat": "55.777767",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u043e\u0441\u043b\u043e\u0431\u043e\u0434\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/novoslobodskiy-bc/"
+        },
+        {
+            "id": "255409",
+            "lon": "37.695354",
+            "lat": "55.741123",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u043e\u0440\u043e\u0433\u043e\u0436\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/novorogozhskiy-bc/"
+        },
+        {
+            "id": "254790",
+            "lon": "37.681519",
+            "lat": "55.722301",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u043e\u043e\u0441\u0442\u0430\u043f\u043e\u0432\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/ugnoportoviy/novoostapovskiy-bc/"
+        },
+        {
+            "id": "255588",
+            "lon": "37.625454",
+            "lat": "55.700844",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u043e\u0434\u0430\u043d\u0438\u043b\u043e\u0432\u0441\u043a\u0438\u0439 \u0414\u043e\u043c (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/novodanilovskiy-dom/"
+        },
+        {
+            "id": "255115",
+            "lon": "37.582577",
+            "lat": "55.757900",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u0438\u043d\u0441\u043a\u0438\u0439 \u041f\u0430\u0441\u0441\u0430\u0436 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/novinskiy-passazh-bc/"
+        },
+        {
+            "id": "255146",
+            "lon": "37.582348",
+            "lat": "55.751137",
+            "name": "\u0411\u0426 \u00ab\u041d\u043e\u0432\u0438\u043d\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/arbat/novinskiy-bc/"
+        },
+        {
+            "id": "255211",
+            "lon": "37.624172",
+            "lat": "55.758053",
+            "name": "\u0411\u0426 \u00ab\u041d\u0438\u043a\u043e\u043b\u044c\u0441\u043a\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/nikolskaya-plaza-bc/"
+        },
+        {
+            "id": "255214",
+            "lon": "37.654701",
+            "lat": "55.746872",
+            "name": "\u0411\u0426 \u00ab\u041d\u0438\u043a\u043e\u043b\u043e\u044f\u043c\u0441\u043a\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/nikoloyamskaya-plaza-bc/"
+        },
+        {
+            "id": "255554",
+            "lon": "37.559673",
+            "lat": "55.847969",
+            "name": "\u0411\u0426 \u00ab\u041d\u0438\u0436\u043d\u0438\u0435 \u041b\u0438\u0445\u043e\u0431\u043e\u0440\u044b (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/timiriazevskiy/nizhnie-lihobori-bc/"
+        },
+        {
+            "id": "254839",
+            "lon": "37.711643",
+            "lat": "55.734200",
+            "name": "\u0411\u0426 \u00ab\u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/nijegorodskiy/nizhegorodskiy-bc/"
+        },
+        {
+            "id": "255193",
+            "lon": "37.671318",
+            "lat": "55.772190",
+            "name": "\u0411\u0426 \u00ab\u041d\u0435\u043c\u0435\u0446\u043a\u0430\u044f \u0421\u043b\u043e\u0431\u043e\u0434\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/nemeckaya-sloboda-bc/"
+        },
+        {
+            "id": "255317",
+            "lon": "37.622360",
+            "lat": "55.766449",
+            "name": "\u0411\u0426 \u00ab\u041d\u0435\u0433\u043b\u0438\u043d\u043d\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/neglinnaya-plaza-bc/"
+        },
+        {
+            "id": "255283",
+            "lon": "37.622070",
+            "lat": "55.765064",
+            "name": "\u0411\u0426 \u00ab\u041d\u0435\u0433\u043b\u0438\u043d\u043a\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/neglinka-bc/"
+        },
+        {
+            "id": "255293",
+            "lon": "37.613205",
+            "lat": "55.663967",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430\u0445\u0438\u043c\u043e\u0432\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/nagorniy/nahimovskiy-bc/"
+        },
+        {
+            "id": "254978",
+            "lon": "37.586998",
+            "lat": "55.670559",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430\u0445\u0438\u043c\u043e\u0432 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/kotlovka/nahimov-bc/"
+        },
+        {
+            "id": "255328",
+            "lon": "37.785175",
+            "lat": "55.717804",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430\u0441\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/riazanskiy/naska-plaza-bc/"
+        },
+        {
+            "id": "254987",
+            "lon": "37.661312",
+            "lat": "55.682640",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430\u0433\u0430\u0442\u0438\u043d\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/nagatino-sadovniki/nagatinskiy-bc/"
+        },
+        {
+            "id": "254952",
+            "lon": "37.630127",
+            "lat": "55.679066",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430\u0432\u0438\u0433\u0430\u0442\u043e\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/nagatino-sadovniki/navigator-bc/"
+        },
+        {
+            "id": "255880",
+            "lon": "37.647396",
+            "lat": "55.816769",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430 \u042f\u0440\u043e\u0441\u043b\u0430\u0432\u0441\u043a\u043e\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/alekseevskiy/na-yaroskavskoy-bc/"
+        },
+        {
+            "id": "254979",
+            "lon": "37.636169",
+            "lat": "55.651257",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430 \u041a\u043e\u0442\u043b\u044f\u043a\u043e\u0432\u0441\u043a\u043e\u043c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/moskvorechie-saburovo/na-kotlyakovskom-bc/"
+        },
+        {
+            "id": "255116",
+            "lon": "37.552612",
+            "lat": "55.761406",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430 \u0417\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u043a\u0435 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/na-zvenigorodke-bc/"
+        },
+        {
+            "id": "255034",
+            "lon": "37.574776",
+            "lat": "55.815228",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430 \u0414\u043c\u0438\u0442\u0440\u043e\u0432\u0441\u043a\u043e\u043c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/timiriazevskiy/na-dmitrovskom-bc/"
+        },
+        {
+            "id": "255567",
+            "lon": "37.579762",
+            "lat": "55.843510",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430 \u0413\u043e\u0441\u0442\u0438\u043d\u0438\u0447\u043d\u043e\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/marfino/na-gostinichnoy-bc/"
+        },
+        {
+            "id": "255686",
+            "lon": "37.611420",
+            "lat": "55.765766",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430 \u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u0414\u043c\u0438\u0442\u0440\u043e\u0432\u043a\u0435 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/na-bolshoy-dmitrovke-bc/"
+        },
+        {
+            "id": "255595",
+            "lon": "37.691082",
+            "lat": "55.779922",
+            "name": "\u0411\u0426 \u00ab\u041d\u0430 \u0411\u0430\u043a\u0443\u043d\u0438\u043d\u0441\u043a\u043e\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/na-bakuninskoy-bc/"
+        },
+        {
+            "id": "255133",
+            "lon": "37.645538",
+            "lat": "55.768795",
+            "name": "\u0411\u0426 \u00ab\u041c\u044f\u0441\u043d\u0438\u0446\u043a\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/myasnitskaya-plaza-bc/"
+        },
+        {
+            "id": "255731",
+            "lon": "37.632435",
+            "lat": "55.761543",
+            "name": "\u0411\u0426 \u00ab\u041c\u044f\u0441\u043d\u0438\u0446\u043a\u0430\u044f 11 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/myasnitskaya-11-bc/"
+        },
+        {
+            "id": "255181",
+            "lon": "37.483177",
+            "lat": "55.860508",
+            "name": "\u0411\u0426 \u00ab\u041c\u0443\u0440\u0430\u0432\u0435\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/hovrino/muravey-bc/"
+        },
+        {
+            "id": "255457",
+            "lon": "37.610306",
+            "lat": "55.753036",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u0445\u043e\u0432\u0430\u044f (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/arbat/mohovaya-bc/"
+        },
+        {
+            "id": "254895",
+            "lon": "37.626682",
+            "lat": "55.719467",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u0441\u0444\u0438\u043d\u0430\u043d\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/mosfinans-bc/"
+        },
+        {
+            "id": "255206",
+            "lon": "37.560093",
+            "lat": "55.731373",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u0428\u0435\u043b\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/moskovskiy-shelk-bc/"
+        },
+        {
+            "id": "255393",
+            "lon": "37.719418",
+            "lat": "55.710918",
+            "name": "\u0411\u041f \u00ab\u041c\u043e\u0441\u043a\u0432\u0438\u0447 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/pechatniki/moskvich-bp/"
+        },
+        {
+            "id": "254980",
+            "lon": "37.594364",
+            "lat": "55.686470",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u0441\u043a\u0432\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/kotlovka/moskva-bc/"
+        },
+        {
+            "id": "255126",
+            "lon": "37.618061",
+            "lat": "55.764706",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u0440\u0441\u043a\u043e\u0439 \u0414\u043e\u043c (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/morskoy-dom-bc/"
+        },
+        {
+            "id": "255117",
+            "lon": "37.586857",
+            "lat": "55.773342",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u043d\u043e\u043c\u0430\u0445 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/monomah-bc/"
+        },
+        {
+            "id": "254801",
+            "lon": "37.560078",
+            "lat": "55.783627",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u043d\u0430\u0440\u0445 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/begovoy/monarh-bc/"
+        },
+        {
+            "id": "255151",
+            "lon": "37.571224",
+            "lat": "55.826523",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u043b\u043e\u0434\u0451\u0436\u043d\u044b\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/timiriazevskiy/molodezhniy-bc/"
+        },
+        {
+            "id": "254993",
+            "lon": "37.404198",
+            "lat": "55.705887",
+            "name": "\u0411\u0426 \u00ab\u041c\u043e\u0436\u0430\u0439\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/mogayskiy/mozhayskiy-bc/"
+        },
+        {
+            "id": "254877",
+            "lon": "37.624851",
+            "lat": "55.768459",
+            "name": "\u0411\u0426 \u00ab\u041c\u0438\u043b\u043b\u0435\u043d\u0438\u0443\u043c \u0425\u0430\u0443\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/millenium-house-bc/"
+        },
+        {
+            "id": "255063",
+            "lon": "37.715172",
+            "lat": "55.618801",
+            "name": "\u0411\u0426 \u00ab\u041c\u0438\u043b\u0430\u043d (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/orehovo-borisovo-severnoe/milan-bc/"
+        },
+        {
+            "id": "254756",
+            "lon": "37.497734",
+            "lat": "55.821293",
+            "name": "\u0411\u0426 \u00ab\u041c\u0435\u0442\u0440\u043e\u043f\u043e\u043b\u0438\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/voykovskiy/metropolis-bc/"
+        },
+        {
+            "id": "254807",
+            "lon": "37.539478",
+            "lat": "55.750492",
+            "name": "\u0411\u0426 \u00ab\u041c\u0435\u0440\u043a\u0443\u0440\u0438\u0439 \u0421\u0438\u0442\u0438 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/merkuriy-city-bc/"
+        },
+        {
+            "id": "255161",
+            "lon": "37.621307",
+            "lat": "55.621647",
+            "name": "\u0411\u0426 \u00ab\u041c\u0435\u0440\u0438\u0434\u0438\u043e (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/chertanovo-tsentralnoe/meridio-bc/"
+        },
+        {
+            "id": "255435",
+            "lon": "37.665371",
+            "lat": "55.773464",
+            "name": "\u0411\u0426 \u00ab\u041c\u0435\u043b\u044c\u043d\u0438\u043a\u043e\u0444\u0444 \u0425\u0430\u0443\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/melnikoff-house-bc/"
+        },
+        {
+            "id": "254985",
+            "lon": "37.547657",
+            "lat": "55.731049",
+            "name": "\u0411\u0426 \u00ab\u041c\u0435\u043b\u044c\u043d\u0438\u043a\u043e\u0432 \u041f\u043b\u0430\u0437\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/dorogomilovo/melnikov-plaza-bc/"
+        },
+        {
+            "id": "255452",
+            "lon": "37.632957",
+            "lat": "55.773441",
+            "name": "\u0411\u0426 \u00ab\u041c\u0435\u043b\u0438\u043e\u0440\u0430 \u041f\u043b\u0435\u0439\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/meliora-place-bc/"
+        },
+        {
+            "id": "255936",
+            "lon": "37.526085",
+            "lat": "55.763763",
+            "name": "\u0411\u0426 \u00ab\u041c\u0435\u043b\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/mela-bc/"
+        },
+        {
+            "id": "255087",
+            "lon": "37.598099",
+            "lat": "55.781445",
+            "name": "\u0411\u0426 \u00ab\u041c\u0435\u0439\u0435\u0440\u0445\u043e\u043b\u044c\u0434 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/meyerhold-bc/"
+        },
+        {
+            "id": "255208",
+            "lon": "37.600662",
+            "lat": "55.772160",
+            "name": "\u0411\u0426 \u00ab\u041c\u0430\u044f\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/mayakovskaya-plaza-bc/"
+        },
+        {
+            "id": "255484",
+            "lon": "37.612015",
+            "lat": "55.809204",
+            "name": "\u0411\u0426 \u00ab\u041c\u0430\u0440\u044c\u0438\u043d\u0430 \u0420\u043e\u0449\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/maryina-rosha/marina-rosha-bc/"
+        },
+        {
+            "id": "255460",
+            "lon": "37.617237",
+            "lat": "55.764301",
+            "name": "\u0411\u0426 \u00ab\u041c\u0430\u0440\u043e\u043a\u043a\u043e (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/marocco-bc/"
+        },
+        {
+            "id": "255032",
+            "lon": "37.595169",
+            "lat": "55.818676",
+            "name": "\u0411\u0426 \u00ab\u041c\u0430\u043b\u0430\u0445\u0438\u0442 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/butirskiy/malahit-bc/"
+        },
+        {
+            "id": "254818",
+            "lon": "37.532707",
+            "lat": "55.766010",
+            "name": "\u0411\u0426 \u00ab\u041c\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u043b\u044c \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/magistral-plaza-bc/"
+        },
+        {
+            "id": "255557",
+            "lon": "37.516930",
+            "lat": "55.770390",
+            "name": "\u0411\u0426 \u00ab\u041c\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u043b\u044c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/magistral-bc/"
+        },
+        {
+            "id": "255324",
+            "lon": "37.567726",
+            "lat": "55.730034",
+            "name": "\u0411\u0426 \u00ab\u041b\u0443\u0447 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/luch-bc/"
+        },
+        {
+            "id": "255352",
+            "lon": "37.632610",
+            "lat": "55.756546",
+            "name": "\u0411\u0426 \u00ab\u041b\u0443\u0431\u044f\u043d\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/lubyanskiy-bc/"
+        },
+        {
+            "id": "254896",
+            "lon": "37.584595",
+            "lat": "55.751205",
+            "name": "\u0411\u0426 \u00ab\u041b\u043e\u0442\u0442\u0435 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/arbat/lotte-plaza-bc/"
+        },
+        {
+            "id": "255474",
+            "lon": "37.598606",
+            "lat": "55.664131",
+            "name": "\u0411\u0426 \u00ab\u041b\u043e\u0442\u043e\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/zuzino/lotos-bc/"
+        },
+        {
+            "id": "254964",
+            "lon": "37.568981",
+            "lat": "55.852943",
+            "name": "\u0411\u0426 \u00ab\u041b\u0438\u0445\u043e\u0431\u043e\u0440\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/beskudnikovskiy/lihoborskiy-bc/"
+        },
+        {
+            "id": "254802",
+            "lon": "37.527599",
+            "lat": "55.792553",
+            "name": "\u0411\u0426 \u00ab\u041b\u0438\u043d\u043a\u043e\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/linkor-bc/"
+        },
+        {
+            "id": "254852",
+            "lon": "37.705639",
+            "lat": "55.790878",
+            "name": "\u0411\u0426 \u00ab\u041b\u0435\u0444\u043e\u0440\u0442 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/preobragenskoe/lefort-bc/"
+        },
+        {
+            "id": "255195",
+            "lon": "37.516541",
+            "lat": "55.681709",
+            "name": "\u0411\u0426 \u00ab\u041b\u0435\u0442\u043e (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/lomonosovskiy/leto-bc/"
+        },
+        {
+            "id": "255608",
+            "lon": "37.667999",
+            "lat": "55.779083",
+            "name": "\u0411\u0426 \u00ab\u041b\u0435\u0441\u0441\u043e\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/lessor-bc/"
+        },
+        {
+            "id": "254761",
+            "lon": "37.558971",
+            "lat": "55.742035",
+            "name": "\u0411\u0426 \u00ab\u041b\u0435\u0433\u0438\u043e\u043d 3 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/dorogomilovo/legion-3-bc/"
+        },
+        {
+            "id": "258925",
+            "lon": "37.633022",
+            "lat": "55.741604",
+            "name": "\u0411\u0426 \u00ab\u041b\u0435\u0433\u0438\u043e\u043d 2 (\u0410)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/legion-2-bc/"
+        },
+        {
+            "id": "254920",
+            "lon": "37.621468",
+            "lat": "55.736294",
+            "name": "\u0411\u0426 \u00ab\u041b\u0435\u0433\u0438\u043e\u043d 1 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/legion-1-bc/"
+        },
+        {
+            "id": "254813",
+            "lon": "37.623451",
+            "lat": "55.768108",
+            "name": "\u0411\u0426 \u00ab\u041b\u0435\u0433\u0435\u043d\u0434\u0430 \u0426\u0432\u0435\u0442\u043d\u043e\u0433\u043e (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/legenda-cvetnogo-bc/"
+        },
+        {
+            "id": "254835",
+            "lon": "37.628239",
+            "lat": "55.730667",
+            "name": "\u0411\u0426 \u00ab\u041b\u0430\u0439\u0442 \u0425\u0430\u0443\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/lighthouse-bc/"
+        },
+        {
+            "id": "254826",
+            "lon": "37.502876",
+            "lat": "55.718040",
+            "name": "\u0411\u0426 \u00ab\u041a\u0443\u0442\u0443\u0437\u043e\u0432 \u0425\u043e\u043b\u043b (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/ramenki/kutuzov-hall-bc/"
+        },
+        {
+            "id": "254744",
+            "lon": "37.449654",
+            "lat": "55.727852",
+            "name": "\u0411\u0426 \u00ab\u041a\u0443\u0442\u0443\u0437\u043e\u0432 \u0422\u0430\u0443\u044d\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/fili-davidkovo/kutuzov-tower-bc/"
+        },
+        {
+            "id": "255592",
+            "lon": "37.784088",
+            "lat": "55.740101",
+            "name": "\u0411\u0426 \u00ab\u041a\u0443\u0441\u043a\u043e\u0432\u043e (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/novogireevo/kuskovo-bc/"
+        },
+        {
+            "id": "255583",
+            "lon": "37.410667",
+            "lat": "55.738605",
+            "name": "\u0411\u0426 \u00ab\u041a\u0443\u043d\u0446\u0435\u0432\u043e \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/kuntsevo/kuntsevo-plaza-bc/"
+        },
+        {
+            "id": "254912",
+            "lon": "37.549976",
+            "lat": "55.806034",
+            "name": "\u0411\u0426 \u00ab\u041a\u0443\u043b\u043e\u043d (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/savelovskiy/kulon-bc/"
+        },
+        {
+            "id": "255376",
+            "lon": "37.723938",
+            "lat": "55.712563",
+            "name": "\u0411\u0426 \u00ab\u041a\u0443\u0431 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/pechatniki/cube-bc/"
+        },
+        {
+            "id": "255220",
+            "lon": "37.597145",
+            "lat": "55.737137",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u044b\u043c\u0441\u043a\u0438\u0439 \u041c\u043e\u0441\u0442 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/krimskiy-most-bc/"
+        },
+        {
+            "id": "254876",
+            "lon": "37.609154",
+            "lat": "55.729321",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u044b\u043c\u0441\u043a\u0438\u0439 \u0412\u0430\u043b (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/krimskiy-val-bc/"
+        },
+        {
+            "id": "255322",
+            "lon": "37.404274",
+            "lat": "55.762283",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u044b\u043b\u0430\u0442\u0441\u043a\u0438\u0439 2 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/krilatskoe/krilatskiy-2-bc/"
+        },
+        {
+            "id": "255175",
+            "lon": "37.405907",
+            "lat": "55.763554",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u044b\u043b\u0430\u0442\u0441\u043a\u0438\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/krilatskoe/krilatskiy-bc/"
+        },
+        {
+            "id": "255079",
+            "lon": "37.424164",
+            "lat": "55.770477",
+            "name": "\u0411\u041f \u00ab\u041a\u0440\u044b\u043b\u0430\u0442\u0441\u043a\u0438\u0435 \u0425\u043e\u043b\u043c\u044b (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/krilatskoe/krilatskie-holmi-bp/"
+        },
+        {
+            "id": "254762",
+            "lon": "37.526176",
+            "lat": "55.656174",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u0443\u0433\u043e\u0437\u043e\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/konkovo/krugozor-bc/"
+        },
+        {
+            "id": "255591",
+            "lon": "37.797279",
+            "lat": "55.745247",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u043e\u043d\u0430-\u041c\u0430\u0440\u043a\u0435\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/novogireevo/krona-market-bc/"
+        },
+        {
+            "id": "254874",
+            "lon": "37.629135",
+            "lat": "55.746765",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u0438\u0441\u0442\u0430\u043b\u043b \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/kristall-plaza-bc/"
+        },
+        {
+            "id": "254977",
+            "lon": "37.609226",
+            "lat": "55.740486",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u0430\u0441\u043d\u044b\u0439 \u041e\u043a\u0442\u044f\u0431\u0440\u044c (C)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/krasniy-oktyabr-bc/"
+        },
+        {
+            "id": "254844",
+            "lon": "37.693867",
+            "lat": "55.814503",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u0430\u0441\u043d\u044b\u0439 \u0411\u043e\u0433\u0430\u0442\u044b\u0440\u044c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/bogorodskoe/krasniy-bogatir-bc/"
+        },
+        {
+            "id": "254992",
+            "lon": "37.659801",
+            "lat": "55.786022",
+            "name": "\u0411\u0426 \u00ab\u041a\u0440\u0430\u0441\u043d\u043e\u0441\u0435\u043b\u044c\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/krasnoselskiy-bc/"
+        },
+        {
+            "id": "255057",
+            "lon": "37.702801",
+            "lat": "55.722576",
+            "name": "\u0411\u0426 \u00ab\u041a\u043e\u043d\u0442\u0430\u043a\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/nijegorodskiy/kontakt-bc/"
+        },
+        {
+            "id": "254840",
+            "lon": "37.610321",
+            "lat": "55.723534",
+            "name": "\u0411\u0426 \u00ab\u041a\u043e\u043d\u043a\u043e\u0440\u0434 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/concord-bc/"
+        },
+        {
+            "id": "255091",
+            "lon": "37.606167",
+            "lat": "55.778755",
+            "name": "\u0411\u0426 \u00ab\u041a\u043e\u043d\u0434\u043e\u0440 \u0422\u0440\u0435\u0439\u0434 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/kondor-trade-bc/"
+        },
+        {
+            "id": "255078",
+            "lon": "37.505524",
+            "lat": "55.743507",
+            "name": "\u0411\u0426 \u00ab\u041a\u043e\u043d\u0432\u0435\u043d\u0442 \u041f\u043b\u044e\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/filevskiy-park/convent-plus-bc/"
+        },
+        {
+            "id": "255589",
+            "lon": "37.645229",
+            "lat": "55.639484",
+            "name": "\u0411\u0426 \u00ab\u041a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/moskvorechie-saburovo/komplekt-bc/"
+        },
+        {
+            "id": "255419",
+            "lon": "37.372086",
+            "lat": "55.766762",
+            "name": "\u0411\u0426 \u00ab\u041a\u043e\u043b\u0438\u0437\u0435\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/kuntsevo/kolizey-bc/"
+        },
+        {
+            "id": "255501",
+            "lon": "37.708782",
+            "lat": "55.792957",
+            "name": "\u0411\u0426 \u00ab\u041a\u043e\u043b\u0438\u0431\u0440\u0438\u0441 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/preobragenskoe/kolibris-bc/"
+        },
+        {
+            "id": "255102",
+            "lon": "37.646278",
+            "lat": "55.728970",
+            "name": "\u0411\u0426 \u00ab\u041a\u043e\u0436\u0435\u0432\u043d\u0438\u043a\u0438 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/kozhevniki-plaza-bc/"
+        },
+        {
+            "id": "255454",
+            "lon": "37.647694",
+            "lat": "55.721214",
+            "name": "\u0411\u041f \u00ab\u041a\u043e\u0436\u0435\u0432\u043d\u0438\u043a\u0438 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/kozhevniki-bp/"
+        },
+        {
+            "id": "255897",
+            "lon": "37.696571",
+            "lat": "55.778667",
+            "name": "\u0411\u0426 \u00ab\u041a\u041d\u041a (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/knk-bc/"
+        },
+        {
+            "id": "254842",
+            "lon": "37.635582",
+            "lat": "55.754025",
+            "name": "\u0411\u0426 \u00ab\u041a\u0438\u0442\u0430\u0439 \u0413\u043e\u0440\u043e\u0434 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/kitay-gorod-bc/"
+        },
+        {
+            "id": "255233",
+            "lon": "37.598545",
+            "lat": "55.738499",
+            "name": "\u0411\u0426 \u00ab\u041a\u0435\u0441\u043a\u043e \u0425\u0430\u0443\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/kesco-house-bc/"
+        },
+        {
+            "id": "255234",
+            "lon": "37.641479",
+            "lat": "55.776348",
+            "name": "\u0411\u0426 \u00ab\u041a\u0435\u0441\u043a\u043e \u0416\u0438\u0432\u0430\u0440\u0435\u0432 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/kesko-zhivarev-bc/"
+        },
+        {
+            "id": "255108",
+            "lon": "37.637527",
+            "lat": "55.722046",
+            "name": "\u0411\u0426 \u00ab\u041a\u0432\u0430\u0440\u0442\u0430\u043b \u0421\u0438\u0442\u0438 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/kvartal-city-bc/"
+        },
+        {
+            "id": "255546",
+            "lon": "37.447437",
+            "lat": "55.710052",
+            "name": "\u0411\u0426 \u00ab\u041a\u0432\u0430\u0434\u0440\u0430\u0442 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/mogayskiy/kvadrat-bc/"
+        },
+        {
+            "id": "255039",
+            "lon": "37.593288",
+            "lat": "55.792812",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u0441\u043a\u0430\u0434 \u041c\u0435\u0431\u0435\u043b\u044c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/maryina-rosha/kaskad-mebel-bc/"
+        },
+        {
+            "id": "254934",
+            "lon": "37.588261",
+            "lat": "55.773094",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u0441\u043a\u0430\u0434 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/kaskad-bc/"
+        },
+        {
+            "id": "254902",
+            "lon": "37.591267",
+            "lat": "55.694195",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u0440\u044c\u0435\u0440 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uzao/akademicheskiy/karyer-bc/"
+        },
+        {
+            "id": "255564",
+            "lon": "37.737343",
+            "lat": "55.730373",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u0440\u0430\u0447\u0430\u0440\u043e\u0432\u043e (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/nijegorodskiy/karacharovo-bc/"
+        },
+        {
+            "id": "255367",
+            "lon": "37.586773",
+            "lat": "55.750149",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u0440\u0430\u043a\u043e\u0440\u0443\u043c \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/arbat/karakorum-plaza-bc/"
+        },
+        {
+            "id": "255119",
+            "lon": "37.590942",
+            "lat": "55.771587",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u043f\u0438\u0442\u0430\u043b \u0422\u0430\u0443\u044d\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/capital-tower-bc/"
+        },
+        {
+            "id": "254834",
+            "lon": "37.701427",
+            "lat": "55.722145",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u043f\u0438\u0442\u0430\u043b (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/nijegorodskiy/kapital-bc/"
+        },
+        {
+            "id": "255055",
+            "lon": "37.625664",
+            "lat": "55.806583",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u043b\u0438\u0431\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/ostankinskiy/kalibr-bc/"
+        },
+        {
+            "id": "254930",
+            "lon": "37.444077",
+            "lat": "55.850288",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u043b\u0435\u0439\u0434\u043e\u0441\u043a\u043e\u043f (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/ugnoe-tushino/kaleidoscop-bc/"
+        },
+        {
+            "id": "254819",
+            "lon": "37.649597",
+            "lat": "55.777390",
+            "name": "\u0411\u0426 \u00ab\u041a\u0430\u043b\u0430\u043d\u0447\u0435\u0432\u0441\u043a\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/kalanchevskaya-plaza-bc/"
+        },
+        {
+            "id": "255049",
+            "lon": "37.651348",
+            "lat": "55.864216",
+            "name": "\u0411\u0426 \u00ab\u0418\u0441\u043a\u0440\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/babushkinskiy/iskra-bc/"
+        },
+        {
+            "id": "255238",
+            "lon": "37.371037",
+            "lat": "55.829659",
+            "name": "\u0411\u0426 \u00ab\u0418\u0440\u0431\u0438\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/mitino/irbis-bc/"
+        },
+        {
+            "id": "255580",
+            "lon": "37.525307",
+            "lat": "55.765820",
+            "name": "\u0411\u0426 \u00ab\u0418\u043d\u0442\u0435\u0440\u044c\u0435\u0440 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/horoshevskiy/interyer-bc/"
+        },
+        {
+            "id": "254766",
+            "lon": "37.702354",
+            "lat": "55.752541",
+            "name": "\u0411\u0426 \u00ab\u0418\u043d\u0442\u0435\u0433\u0440\u0430\u043b (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/lefortovo/integral-bc/"
+        },
+        {
+            "id": "255129",
+            "lon": "37.624863",
+            "lat": "55.770557",
+            "name": "\u0411\u0426 \u00ab\u0418\u043d\u0436\u0435\u043d\u0435\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/ingener-bc/"
+        },
+        {
+            "id": "255203",
+            "lon": "37.628201",
+            "lat": "55.718807",
+            "name": "\u0411\u0426 \u00ab\u0418\u043d\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/ina-bc/"
+        },
+        {
+            "id": "254857",
+            "lon": "37.610119",
+            "lat": "55.733952",
+            "name": "\u0411\u0426 \u00ab\u0418\u043c\u043f\u0435\u0440\u0441\u043a\u0438\u0439 \u0434\u043e\u043c (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/imperskiy-dom-bc/"
+        },
+        {
+            "id": "254805",
+            "lon": "37.540253",
+            "lat": "55.748207",
+            "name": "\u0411\u0426 \u00ab\u0418\u043c\u043f\u0435\u0440\u0438\u044f \u0422\u0430\u0443\u044d\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/imperia-tower-bc/"
+        },
+        {
+            "id": "255347",
+            "lon": "37.729313",
+            "lat": "55.788967",
+            "name": "\u0411\u0426 \u00ab\u0418\u0431\u0440\u0430\u0433\u0438\u043c\u043e\u0432\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/vao/sokolinaya-gora/ibragimova-bc/"
+        },
+        {
+            "id": "255247",
+            "lon": "37.682289",
+            "lat": "55.746304",
+            "name": "\u0411\u0426 \u00ab\u0417\u043e\u043b\u043e\u0442\u044b\u0435 \u0412\u043e\u0440\u043e\u0442\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/zolotie-vorota-bc/"
+        },
+        {
+            "id": "255095",
+            "lon": "37.682472",
+            "lat": "55.749035",
+            "name": "\u0411\u0426 \u00ab\u0417\u043e\u043b\u043e\u0442\u043e\u0440\u043e\u0436\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/lefortovo/zolotorozhskiy-bc/"
+        },
+        {
+            "id": "254935",
+            "lon": "37.580475",
+            "lat": "55.782448",
+            "name": "\u0411\u0426 \u00ab\u0417\u043e\u043b\u043e\u0442\u043e\u0439 \u0412\u0435\u043a (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/begovoy/zolotoy-vek-bc/"
+        },
+        {
+            "id": "254837",
+            "lon": "37.688492",
+            "lat": "55.707687",
+            "name": "\u0411\u0426 \u00ab\u0417\u043e\u043b\u043e\u0442\u043e\u0435 \u041a\u043e\u043b\u044c\u0446\u043e (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/pechatniki/zolotoe-kolco-bc/"
+        },
+        {
+            "id": "254820",
+            "lon": "37.607521",
+            "lat": "55.748894",
+            "name": "\u0411\u0426 \u00ab\u0417\u043d\u0430\u043c\u0435\u043d\u043a\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/znamenka-bc/"
+        },
+        {
+            "id": "258924",
+            "lon": "37.443550",
+            "lat": "55.784271",
+            "name": "\u0411\u0426 \u00ab\u0417\u0435\u043d\u0438\u0442-\u0418\u043d\u0442\u0435\u0440 3 (\u0410)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/horoshevo-mnevniki/zenith-inter-3-bc/"
+        },
+        {
+            "id": "255624",
+            "lon": "37.669750",
+            "lat": "55.769409",
+            "name": "\u0411\u0426 \u00ab\u0417\u0435\u043d\u0438\u0442-\u0418\u043d\u0442\u0435\u0440 2 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/zenith-inter-2-bc/"
+        },
+        {
+            "id": "255603",
+            "lon": "37.664303",
+            "lat": "55.769192",
+            "name": "\u0411\u0426 \u00ab\u0417\u0435\u043d\u0438\u0442-\u0418\u043d\u0442\u0435\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/zenith-inter-bc/"
+        },
+        {
+            "id": "255080",
+            "lon": "37.380360",
+            "lat": "55.790165",
+            "name": "\u0411\u0426 \u00ab\u0417\u0435\u043d\u0438\u0442 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/strogino/zenith-plaza-bc/"
+        },
+        {
+            "id": "255646",
+            "lon": "37.655239",
+            "lat": "55.751167",
+            "name": "\u0411\u0426 \u00ab\u0417\u0435\u043c\u043b\u044f\u043d\u043e\u0439 \u0412\u0430\u043b (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/zemlyanoy-val-bc/"
+        },
+        {
+            "id": "254825",
+            "lon": "37.555809",
+            "lat": "55.764450",
+            "name": "\u0411\u0426 \u00ab\u0417\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0438\u0439 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/zvenigorodskiy-bc/"
+        },
+        {
+            "id": "254860",
+            "lon": "37.389057",
+            "lat": "55.712540",
+            "name": "\u0411\u041f \u00ab\u0417\u0430\u043f\u0430\u0434\u043d\u044b\u0435 \u0412\u043e\u0440\u043e\u0442\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/mogayskiy/zapadnie-vorota-bp/"
+        },
+        {
+            "id": "254996",
+            "lon": "37.853317",
+            "lat": "55.678349",
+            "name": "\u0411\u0426 \u00ab\u0416\u0443\u043b\u0435\u0431\u0438\u043d\u043e (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/vihino-julebino/zhulebino-bc/"
+        },
+        {
+            "id": "255753",
+            "lon": "37.617081",
+            "lat": "55.762226",
+            "name": "\u0411\u0426 \u00ab\u0416\u0435\u043d\u0435\u0432\u0441\u043a\u0438\u0439 \u0434\u043e\u043c (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/zhenevskiy-dom-bc/"
+        },
+        {
+            "id": "255805",
+            "lon": "37.659267",
+            "lat": "55.746838",
+            "name": "\u0411\u0426 \u00ab\u0415\u0444\u0438\u043c\u0438\u044f \u0446\u0435\u043d\u0442\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/taganskiy/efimiya-center-bc/"
+        },
+        {
+            "id": "255281",
+            "lon": "37.622013",
+            "lat": "55.708748",
+            "name": "\u0411\u0426 \u00ab\u0415\u0440\u0435\u0432\u0430\u043d \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/erevan-plaza-bc/"
+        },
+        {
+            "id": "254789",
+            "lon": "37.677452",
+            "lat": "55.718102",
+            "name": "\u0411\u0426 \u00ab\u0415\u041f\u041a (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/ugnoportoviy/epk-bc/"
+        },
+        {
+            "id": "254804",
+            "lon": "37.561634",
+            "lat": "55.743923",
+            "name": "\u0411\u0426 \u00ab\u0415\u0432\u0440\u043e\u043f\u0430 \u0411\u0438\u043b\u0434\u0438\u043d\u0433 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/dorogomilovo/europa-building-bc/"
+        },
+        {
+            "id": "255229",
+            "lon": "37.598297",
+            "lat": "55.782829",
+            "name": "\u0411\u0426 \u00ab\u0415\u0432\u0440\u043e\u043f\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/europa-bc/"
+        },
+        {
+            "id": "255636",
+            "lon": "37.579018",
+            "lat": "55.785381",
+            "name": "\u0411\u0426 \u00ab\u0414\u0443\u043a\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/begovoy/duks-bc/"
+        },
+        {
+            "id": "255004",
+            "lon": "37.590553",
+            "lat": "55.768250",
+            "name": "\u0411\u0426 \u00ab\u0414\u0443\u043a\u0430\u0442 \u041f\u043b\u0435\u0439\u0441 3 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/ducat-place-3-bc/"
+        },
+        {
+            "id": "254887",
+            "lon": "37.588932",
+            "lat": "55.768696",
+            "name": "\u0411\u0426 \u00ab\u0414\u0443\u043a\u0430\u0442 \u041f\u043b\u0435\u0439\u0441 2 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/ducat-place-2-bc/"
+        },
+        {
+            "id": "255622",
+            "lon": "37.443348",
+            "lat": "55.562710",
+            "name": "\u0411\u0426 \u00ab\u0414\u0443\u0431\u0440\u043e\u0432\u043a\u0430 \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/novomoskovsky/sosenskoe/sosenki/dubrovka-plaza-bc/"
+        },
+        {
+            "id": "255169",
+            "lon": "37.502228",
+            "lat": "55.673294",
+            "name": "\u0411\u0426 \u00ab\u0414\u0440\u0443\u0436\u0431\u0430 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/prospekt-vernadskogo/druzhba-bc/"
+        },
+        {
+            "id": "255610",
+            "lon": "37.621658",
+            "lat": "55.727470",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u0445\u043e\u0434\u043d\u044b\u0439 \u0434\u043e\u043c \u0428\u0435\u0440\u0432\u0443\u0434 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/zamoskvorechie/dohodniy-dom-shervud-bc/"
+        },
+        {
+            "id": "255545",
+            "lon": "37.442146",
+            "lat": "55.685883",
+            "name": "\u0411\u041f \u00ab\u0414\u043e\u0440\u043e\u0445\u043eff (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/ochakovo-matveevskoe/dorohoff-bp/"
+        },
+        {
+            "id": "254938",
+            "lon": "37.418575",
+            "lat": "55.712803",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u0440\u043e\u0433\u043e\u0431\u0443\u0436\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/mogayskiy/dorogobuzhskiy-bc/"
+        },
+        {
+            "id": "254948",
+            "lon": "37.598785",
+            "lat": "55.707317",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u043d\u0441\u043a\u043e\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/donskoy-bc/"
+        },
+        {
+            "id": "255219",
+            "lon": "37.614326",
+            "lat": "55.739456",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u043c\u0443\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/domus-bc/"
+        },
+        {
+            "id": "254773",
+            "lon": "37.648537",
+            "lat": "55.772083",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u043c\u043d\u0438\u043a\u043e\u0432 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/domnikov-bc/"
+        },
+        {
+            "id": "255278",
+            "lon": "37.649479",
+            "lat": "55.761612",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u043c \u0427\u0430\u043f\u043b\u044b\u0433\u0438\u043d\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/dom-chapligina-bc/"
+        },
+        {
+            "id": "255301",
+            "lon": "37.596268",
+            "lat": "55.741642",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u043c \u0427\u0430\u0439\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/hamovniki/dom-chaykovskogo-bc/"
+        },
+        {
+            "id": "255237",
+            "lon": "37.577579",
+            "lat": "55.749615",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u043c \u043d\u0430 \u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u043e\u0439 \u043d\u0430\u0431\u0435\u0440\u0435\u0436\u043d\u043e\u0439 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/arbat/dom-na-smolenskoy-naberezhnoy-bc/"
+        },
+        {
+            "id": "255539",
+            "lon": "37.616913",
+            "lat": "55.727539",
+            "name": "\u0411\u0426 \u00ab\u0414\u043e\u0431\u0440\u044b\u043d\u044f (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/dobrinya-bc/"
+        },
+        {
+            "id": "255398",
+            "lon": "37.560322",
+            "lat": "55.856033",
+            "name": "\u0411\u0426 \u00ab\u0414\u043c\u0438\u0442\u0440\u043e\u0432\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/zapadnoe-degunino/dmitrovskiy-bc/"
+        },
+        {
+            "id": "255405",
+            "lon": "37.649555",
+            "lat": "55.722740",
+            "name": "\u0411\u0426 \u00ab\u0414\u0438\u043e\u0434 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/diod-bc/"
+        },
+        {
+            "id": "254926",
+            "lon": "37.490501",
+            "lat": "55.804249",
+            "name": "\u0411\u0426 \u00ab\u0414\u0438\u0430\u043f\u0430\u0437\u043e\u043d (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/szao/shukino/diapazon-bc/"
+        },
+        {
+            "id": "254760",
+            "lon": "37.582329",
+            "lat": "55.803818",
+            "name": "\u0411\u0426 \u00ab\u0414\u0438\u0430\u0433\u043e\u043d\u0430\u043b\u044c \u0425\u0430\u0443\u0441 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/butirskiy/diagonal-house-bc/"
+        },
+        {
+            "id": "255471",
+            "lon": "37.757935",
+            "lat": "55.726498",
+            "name": "\u0411\u0426 \u00ab\u0414\u0436\u043e\u0443\u043b\u044c (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uvao/riazanskiy/dzhooul-bc/"
+        },
+        {
+            "id": "255455",
+            "lon": "37.653584",
+            "lat": "55.725571",
+            "name": "\u0411\u041f \u00ab\u0414\u0435\u0440\u0431\u0435\u043d\u0451\u0432\u0441\u043a\u0438\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/derbenevskiy-bp/"
+        },
+        {
+            "id": "255103",
+            "lon": "37.653988",
+            "lat": "55.723843",
+            "name": "\u0411\u0426 \u00ab\u0414\u0435\u0440\u0431\u0435\u043d\u0435\u0432\u0441\u043a\u0430\u044f \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/danilovskiy/derbenevskaya-plaza-bc/"
+        },
+        {
+            "id": "254776",
+            "lon": "37.676510",
+            "lat": "55.766266",
+            "name": "\u0411\u0426 \u00ab\u0414\u0435\u043c\u0438\u0434\u043e\u0432 \u0414\u0432\u043e\u0440 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/demidov-dvor-bc/"
+        },
+        {
+            "id": "255223",
+            "lon": "37.662003",
+            "lat": "55.753872",
+            "name": "\u0411\u0426 \u00ab\u0414\u0435\u043b\u044c\u0442\u0430 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/delta-plaza-bc/"
+        },
+        {
+            "id": "254931",
+            "lon": "37.649677",
+            "lat": "55.871113",
+            "name": "\u0411\u0426 \u00ab\u0414\u0435\u0436\u043d\u0435\u0432 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/yugnoe-medvedkovo/dezhnev-plaza-bc/"
+        },
+        {
+            "id": "255534",
+            "lon": "37.602936",
+            "lat": "55.768295",
+            "name": "\u0411\u0426 \u00ab\u0414\u0435\u0433\u0442\u044f\u0440\u043d\u044b\u0439 \u041f\u043b\u0435\u0439\u0441 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/degtyarniy-place-bc/"
+        },
+        {
+            "id": "254778",
+            "lon": "37.599743",
+            "lat": "55.796276",
+            "name": "\u0411\u0426 \u00ab\u0414\u0432\u0438\u043d\u0446\u0435\u0432 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/maryina-rosha/dvincev-bc/"
+        },
+        {
+            "id": "255065",
+            "lon": "37.625351",
+            "lat": "55.695835",
+            "name": "\u0411\u0426 \u00ab\u0414\u0430\u043d\u0438\u043b\u043e\u0432\u0441\u043a\u0438\u0439 \u0424\u043e\u0440\u0442 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/danilovsky-fort-bc/"
+        },
+        {
+            "id": "254772",
+            "lon": "37.624500",
+            "lat": "55.698528",
+            "name": "\u0411\u0426 \u00ab\u0414\u0430\u043d\u0438\u043b\u043e\u0432\u0441\u043a\u0430\u044f \u041c\u0430\u043d\u0443\u0444\u0430\u043a\u0442\u0443\u0440\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/donskoy/danilovskaya-manufaktura-bc/"
+        },
+        {
+            "id": "254746",
+            "lon": "37.623325",
+            "lat": "55.778336",
+            "name": "\u0411\u0426 \u00ab\u0414\u0430\u0439\u043c\u043e\u043d\u0434 \u0425\u043e\u043b\u043b (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/meshanskiy/diamond-hall-bc/"
+        },
+        {
+            "id": "254917",
+            "lon": "37.638512",
+            "lat": "55.769341",
+            "name": "\u0411\u0426 \u00ab\u0414\u0430\u0435\u0432 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/krasnoselskiy/daev-plaza-bc/"
+        },
+        {
+            "id": "255862",
+            "lon": "37.593914",
+            "lat": "55.804497",
+            "name": "\u0411\u0426 \u00ab\u0413\u0443\u043b\u044c\u0434\u0435\u043d (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/butirskiy/gulden-bc/"
+        },
+        {
+            "id": "255226",
+            "lon": "37.399445",
+            "lat": "55.726238",
+            "name": "\u0411\u0426 \u00ab\u0413\u0440\u0430\u043d\u0434 \u0421\u0435\u0442\u0443\u043d\u044c \u041f\u043b\u0430\u0437\u0430 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/zao/mogayskiy/grand-setun-plaza-bc/"
+        },
+        {
+            "id": "254793",
+            "lon": "37.625854",
+            "lat": "55.753510",
+            "name": "\u0411\u0426 \u00ab\u0413\u043e\u0441\u0442\u0438\u043d\u044b\u0439 \u0414\u0432\u043e\u0440 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/gostiniy-dvor-bc/"
+        },
+        {
+            "id": "255556",
+            "lon": "37.577457",
+            "lat": "55.843311",
+            "name": "\u0411\u0426 \u00ab\u0413\u043e\u0441\u0442\u0438\u043d\u0438\u0447\u043d\u044b\u0439 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/marfino/gostinichniy-bc/"
+        },
+        {
+            "id": "254890",
+            "lon": "37.616486",
+            "lat": "55.756783",
+            "name": "\u0411\u0426 \u00ab\u0413\u043e\u0441\u0442\u0438\u043d\u0438\u0446\u0430 \u041c\u043e\u0441\u043a\u0432\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/tverskoy/gostinica-moskva-bc/"
+        },
+        {
+            "id": "254821",
+            "lon": "37.483978",
+            "lat": "55.831856",
+            "name": "\u0411\u0426 \u00ab\u0413\u043e\u0440\u043e\u0434 \u042f\u0445\u0442 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/voykovskiy/gorod-yacht-bc/"
+        },
+        {
+            "id": "254855",
+            "lon": "37.539124",
+            "lat": "55.747356",
+            "name": "\u0411\u0426 \u00ab\u0413\u043e\u0440\u043e\u0434 \u0421\u0442\u043e\u043b\u0438\u0446 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/gorod-stolic-bc/"
+        },
+        {
+            "id": "255142",
+            "lon": "37.612408",
+            "lat": "55.739948",
+            "name": "\u0411\u0426 \u00ab\u0413\u043e\u043b\u0443\u0442\u0432\u0438\u043d\u0441\u043a\u0430\u044f \u0421\u043b\u043e\u0431\u043e\u0434\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/golutvinskaya-sloboda-bc/"
+        },
+        {
+            "id": "255450",
+            "lon": "37.509911",
+            "lat": "55.836891",
+            "name": "\u0411\u0426 \u00ab\u0413\u043e\u043b\u043e\u0432\u0438\u043d\u0441\u043a\u0438\u0435 \u041f\u0440\u0443\u0434\u044b (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/koptevo/golovinskie-prudi-bc/"
+        },
+        {
+            "id": "254882",
+            "lon": "37.605255",
+            "lat": "55.761570",
+            "name": "\u0411\u0426 \u00ab\u0413\u043d\u0435\u0437\u0434\u043d\u0438\u043a\u043e\u0432\u0441\u043a\u0438\u0439 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/presnenskiy/gnezdikovskiy-bc/"
+        },
+        {
+            "id": "255162",
+            "lon": "37.604053",
+            "lat": "55.622738",
+            "name": "\u0411\u0426 \u00ab\u0413\u043b\u043e\u0431\u0430\u043b \u0421\u0438\u0442\u0438 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/uao/chertanovo-severnoe/global-city-bc/"
+        },
+        {
+            "id": "255043",
+            "lon": "37.635845",
+            "lat": "55.811993",
+            "name": "\u0411\u0426 \u00ab\u0413\u0438\u043f\u0440\u043e\u043c\u0435\u0437 (B+)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/svao/ostankinskiy/gipromez-bc/"
+        },
+        {
+            "id": "255321",
+            "lon": "37.614536",
+            "lat": "55.738083",
+            "name": "\u0411\u0426 \u00ab\u0413\u0438\u043c\u0435\u043d\u0435\u0439 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/yakimanka/gimeney-bc/"
+        },
+        {
+            "id": "254846",
+            "lon": "37.541439",
+            "lat": "55.898598",
+            "name": "\u0411\u0426 \u00ab\u0413\u0435\u0444\u0435\u0441\u0442 (B)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/sao/dmitrovskiy/gefest-bc/"
+        },
+        {
+            "id": "255131",
+            "lon": "37.642193",
+            "lat": "55.765785",
+            "name": "\u0411\u0426 \u00ab\u0413\u0435\u043e\u0440\u0433 \u041f\u043b\u0430\u0437\u0430 (A)\u00bb",
+            "url": "http://www.kvadroom.ru/moscow/tsao/basmanniy/georg-plaza-bc/"
+        }
+    ]
+}

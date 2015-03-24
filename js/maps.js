@@ -368,10 +368,6 @@ var GeoMap = function(opts){
 
         var balloon = null;
 
-        if(options.content){
-            balloon = new Balloon(pin, options.center, options.content, options.onBalloonReady, options.onBalloonClick, typeData.balloonOffsetY, typeData.balloonOffsetX, options.balloonCloseButton);
-        }
-
         pin.events.add('click', function(){
             options.onClick();
 
@@ -396,7 +392,6 @@ var GeoMap = function(opts){
 
         if(clusterer && options.avoidClusterer !== true){
             clusterer.add(pin);
-            map.geoObjects.add(clusterer);
         }else{
             map.geoObjects.add(pin);
         }
@@ -406,8 +401,13 @@ var GeoMap = function(opts){
         };
 
         this.showBalloon = function(permanent){
-            if(balloon){
-                balloon.show(permanent);
+            if(options.content){
+                if(!balloon){
+                    balloon = new Balloon(pin, options.center, options.content, function(){
+                        options.onBalloonReady();
+                        balloon.show(permanent);
+                    }, options.onBalloonClick, typeData.balloonOffsetY, typeData.balloonOffsetX, options.balloonCloseButton);
+                }
             }
         };
 
@@ -638,24 +638,24 @@ var GeoMap = function(opts){
     this.createClusterer = function(){
         var IconsDefault = [
             {
-                href: '/i/kvad_map_circ_small.png',
+                href: 'i/kvad_map_circ_small.png',
                 size: [43, 43],
                 offset: [-21.5, -21.5]
             },
             {
-                href: '/i/kvad_map_circ_large.png',
+                href: 'i/kvad_map_circ_large.png',
                 size: [60, 60],
                 offset:  [-10, -25],
             }
         ];
 
         var IconsMaxZoom = [{
-                href: '/i/kvad_marker_list.png',
+                href: 'i/kvad_marker_list.png',
                 size: [31, 43],
                 offset: [-15.5, -21.5]
             },
             {
-                href: '/i/kvad_marker_list.png',
+                href: 'i/kvad_marker_list.png',
                 size: [31, 43],
                 offset: [-15.5, -21.5]
             }];

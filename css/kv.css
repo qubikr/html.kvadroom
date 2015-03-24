@@ -15113,6 +15113,7 @@ ul.circular-switcher li.active {
 }
 .filter-string .main-filter {
   padding: 1px 15px 16px;
+  background-image: none;
 }
 .filter-string .search-selector li {
   padding: 0 14px !important;
