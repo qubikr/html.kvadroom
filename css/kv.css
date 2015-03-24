@@ -6296,12 +6296,12 @@ textarea.error {
 }
 .all-specials-link {
   position: absolute;
-  left: -16px;
+  left: -12px;
   top: 0;
   text-indent: -99999px;
 }
 .all-specials-link.right {
-  right: -16px;
+  right: -12px;
   left: auto;
   top: 0;
 }
@@ -7089,6 +7089,9 @@ textarea.error {
 .specials-one-wide:hover .photos img {
   margin: 0 20px;
 }
+.sp-labels {
+  display: block;
+}
 .sp-labels .sp-labels-item {
   zoom: 1;
   padding: 0px 4px;
@@ -7158,6 +7161,16 @@ textarea.error {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+.fantastic-small .sp-labels {
+  text-align: right;
+}
+.fantastic-small .sp-labels .sp-labels-item {
+  display: inline-block;
+  margin: 0 0 2px 9px;
+  font-size: 9px;
+  line-height: 1.9em;
+  float: none;
 }
 .fantastic-small span {
   display: block;
@@ -11540,16 +11553,10 @@ yx-axis
 }
 .complex-map .map-balloon.disabled {
   opacity: 0;
+  z-index: -1000;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
-}
-.complex-map .map-balloon .inner {
-  background: #fff;
-  padding: 20px;
-  border-radius: 3px;
-  z-index: 2;
-  position: relative;
 }
 .complex-map .map-balloon .close {
   position: absolute;
@@ -11591,6 +11598,13 @@ yx-axis
 .complex-map .map-balloon .close:active {
   top: 11px;
 }
+.complex-map .map-balloon .inner {
+  background: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  z-index: 2;
+  position: relative;
+}
 .complex-map .map-balloon:before {
   content: '';
   position: absolute;
@@ -11610,6 +11624,12 @@ yx-axis
 }
 .map-fantastic .map-container {
   height: 220px;
+}
+.map-zk {
+  height: 200px;
+}
+.map-zk .map-container {
+  height: 200px;
 }
 .zoomer {
   position: absolute;

@@ -2,8 +2,10 @@ var GeoMap = function(opts){
     var _this = this,
         map,
         balloons = [],
+        pins = [],
         options = $.extend({
             id: 'map',
+            clusterer: false,
             fullScreenTrigger: false,
             center: [55.76, 37.64],
             zoom: 10,
@@ -14,8 +16,13 @@ var GeoMap = function(opts){
             onFullscreenExit: function(){}
         }, opts);
 
+    this.getMap = function(){
+        return map;
+    };
+
     var $map = $('#' + options.id),
-        fullScreenAnimationDuration = 20;
+        fullScreenAnimationDuration = 20,
+        clusterer = null;
 
     if(options.fullScreenTrigger){
         $(options.fullScreenTrigger).off('click').on('click', function(e){
@@ -23,6 +30,22 @@ var GeoMap = function(opts){
             _this.enterFullScreen();
         });
     }
+
+    this.setLoading = function(){
+        $map.parent().KVLoadingElement({
+            invert: true,
+            overlay: true,
+            big: true,
+            append: true,
+            zIndex_overlay: 1000
+        });
+
+        $map.parent().find('loading-dots').addClass('loading-dots-invert');
+    };
+
+    this.unsetLoading = function(){
+        $map.parent().KVLoadingElement('stop');
+    };
 
     var draw = function(){
         map = new ymaps.Map(options.id, {
@@ -33,18 +56,21 @@ var GeoMap = function(opts){
         if(options.controls === true){
             createDefaultControls();
         }
+
+        if(options.clusterer === true){
+            _this.createClusterer();
+        }
     };
 
     var Balloon = function(parent, center, content, onReady, onClick, offsetY, offsetX, closeButton){
         var close = '',
-            closeable = '';
+            closeable = '',
+            showed = false;
 
         if(closeButton){
             close = '<a class="close" title="Закрыть" href="#"><i></i></a>';
             closeable = 'closeable';
         }
-
-        console.log(close)
 
         var _this = this,
             id = _.uniqueId('balloon'),
@@ -86,12 +112,15 @@ var GeoMap = function(opts){
         };
 
         this.show = function(permanentShow){
+            if(showed) return;
+
             $element.removeClass('hidden');
             $element.css({
                 marginTop: -(($element.height()/2) - ((offsetY) ? offsetY : 0)),
                 marginLeft: (offsetX) ? offsetX : 0,
                 width: 250
             });
+            showed = true;
 
             setTimeout(function(){
                 console.log($element.find('.content-inner').width() + 40);
@@ -117,19 +146,19 @@ var GeoMap = function(opts){
                 permanent = permanentShow;
             }
 
-            balloon.options.set('zIndex', 100);
-            parent.options.set('zIndex', 100);
+            balloon.options.set('zIndex', 1000);
+            parent.options.set('zIndex', 1000);
         };
 
         this.hide = function(){
             if(permanent !== true){
+                if(!showed) return;
+                showed = false;
 
                 $element.addClass('disabled');
 
                 setTimeout(function(){
                     $element.addClass('hidden');
-                    balloon.options.set('zIndex', -1);
-                    parent.options.set('zIndex', 1);
                 }, 500);
 
                 map.events.remove('click', hideOnClick);
@@ -151,7 +180,7 @@ var GeoMap = function(opts){
 
     var createDefaultControls = function(){
         var zoom_template = '<div class="map-view-control">' +
-            '<div id="map-zoom-in" class="map-view-control-button"><i class="icon-font icon-font-plus"></i></div>' +
+            '<div id="map-zoom-in" data-big="x" class="map-view-control-button"><i class="icon-font icon-font-plus"></i></div>' +
             '<div id="map-zoom-out" class="map-view-control-button"><i class="icon-font icon-font-minus"></i></div>' +
             '</div>';
 
@@ -242,7 +271,6 @@ var GeoMap = function(opts){
             }
 
             params.top = opts.top;
-
             map.controls.add(button, params);
 
             return button;
@@ -260,6 +288,14 @@ var GeoMap = function(opts){
                 map.setType('yandex#map');
             }
         });
+    };
+
+    this.fitCluster = function(){
+        if(clusterer){
+            map.setBounds(clusterer.getBounds(), {
+                checkZoomRange: true
+            });
+        }
     };
 
     this.panCenter = function(){
@@ -280,8 +316,10 @@ var GeoMap = function(opts){
             center: [55.76, 37.64],
             content: '',
             title: '',
+            avoidClusterer: false,
+            zIndex: false,
             type: 'basic',
-            balloonCloseButton: false,
+            balloonCloseButton: true,
             onReady: function(){},
             onClick: function(){},
             onBalloonReady: function(){},
@@ -314,7 +352,7 @@ var GeoMap = function(opts){
                     balloonOffsetX: 18
                 };
             } break;
-        };
+        }
 
         var pin = new ymaps.Placemark(options.center, {
             iconContent: '<span class="maps-marker-icon ' + typeData.className + '" id="' + id + '">' + title + '</span>'
@@ -324,7 +362,9 @@ var GeoMap = function(opts){
             iconImageOffset: typeData.offset
         });
 
-        map.geoObjects.add(pin);
+        if(options.zIndex) {
+            pin.options.set('zIndex', options.zIndex);
+        }
 
         var balloon = null;
 
@@ -354,6 +394,13 @@ var GeoMap = function(opts){
             });
         });
 
+        if(clusterer && options.avoidClusterer !== true){
+            clusterer.add(pin);
+            map.geoObjects.add(clusterer);
+        }else{
+            map.geoObjects.add(pin);
+        }
+
         this.pointMap = function(){
             map.setCenter(options.center);
         };
@@ -375,7 +422,7 @@ var GeoMap = function(opts){
         var options = $.extend({
             coords: [],
             content: '',
-            balloonCloseButton: false,
+            balloonCloseButton: true,
             onReady: function(){},
             onClick: function(){},
             onBalloonReady: function(){},
@@ -572,6 +619,10 @@ var GeoMap = function(opts){
             top: $dummy.offset().top - $(document).scrollTop(),
             left: $dummy.offset().left
         }, fullScreenAnimationDuration, function(){
+            $map.parent().css({
+                top: 0,
+                left: 0
+            });
             $map.parent().removeClass('map-fullscreen');
             $dummy.remove();
 
@@ -582,6 +633,79 @@ var GeoMap = function(opts){
         });
 
         map.container.fitToViewport();
+    };
+
+    this.createClusterer = function(){
+        var IconsDefault = [
+            {
+                href: '/i/kvad_map_circ_small.png',
+                size: [43, 43],
+                offset: [-21.5, -21.5]
+            },
+            {
+                href: '/i/kvad_map_circ_large.png',
+                size: [60, 60],
+                offset:  [-10, -25],
+            }
+        ];
+
+        var IconsMaxZoom = [{
+                href: '/i/kvad_marker_list.png',
+                size: [31, 43],
+                offset: [-15.5, -21.5]
+            },
+            {
+                href: '/i/kvad_marker_list.png',
+                size: [31, 43],
+                offset: [-15.5, -21.5]
+            }];
+
+        function isMaxZoomThere(){
+            var max_zoom = map.zoomRange.getCurrent()[1],
+                current_zoom = map.getZoom();
+
+            return current_zoom >= max_zoom;
+        }
+
+        function getIcons(){
+            if(isMaxZoomThere()){
+                return IconsMaxZoom;
+            }else{
+                return IconsDefault;
+            }
+        }
+
+        function getTemplate(size){
+            var tmpl;
+
+            if(isMaxZoomThere()){
+                tmpl = '<div class="map-cluster"><div class="anchor" style="width: ' + size[0] + 'px; height: ' + size[1] + 'px"></div></div>';
+            }else{
+                tmpl = '<div class="map-cluster">$[properties.geoObjects.length]</div>';
+            }
+
+            return ymaps.templateLayoutFactory.createClass(tmpl);
+        }
+
+        clusterer = new ymaps.Clusterer({
+            clusterIcons: getIcons(),
+            clusterNumbers: [15],
+            clusterIconContentLayout: getTemplate(),
+            clusterDisableClickZoom: false,
+            openBalloonOnClick: false
+        });       
+
+        map.geoObjects.add(clusterer);
+
+        clusterer.createCluster = function(center, geoObjects){
+            var cluster = ymaps.Clusterer.prototype.createCluster.call(this, center, geoObjects),
+                icons = getIcons();
+
+            cluster.options.set('icons', icons);
+            cluster.options.set('iconContentLayout', getTemplate(icons[0].size));
+
+            return cluster;
+        };
     };
 
     this.init = function(){
