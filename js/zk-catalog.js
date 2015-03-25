@@ -189,7 +189,6 @@ ZKCatalog.Map = function(){
 									parseFloat(data.data.lat),
 									parseFloat(data.data.lon)
 								],
-								balloonCloseButton: true,
 								content: '<a href="' + data.data.url + '">' + data.data.name + '</a>'
 							});
 						}
@@ -204,8 +203,7 @@ ZKCatalog.Map = function(){
 										parseFloat(item.lat),
 										parseFloat(item.lon)
 									],
-									balloonCloseButton: true,
-                                    zoomRelatedIcon: false,
+                                    zoomRelatedIcon: true,
                                     zoomRelatedIconFactor: 12,
 									content: '<a href="' + item.url + '">' + item.name + '</a>'
 								});
