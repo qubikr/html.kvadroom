@@ -436,11 +436,11 @@ var GeoMap = function(opts){
 
 			_this.hideBalloon();
 
-			clearInterval(changeOverlay);
+            clearTimeout(changeOverlay);
 
-			changeOverlay = setTimeout(function(){
-				_this.changeStyle(options.type);
-			}, 1);
+            changeOverlay = setTimeout(function () {
+                _this.changeStyle(options.type);
+            }, 100);
 		});
 
 		if(clusterer && options.avoidClusterer !== true){
@@ -465,16 +465,14 @@ var GeoMap = function(opts){
 			}
 
 			if(options.title){
-				$element.find('.marker-title').css({
+                var $title = $element.find('.marker-title');
+
+				$title.css({
 					bottom: -$title.outerHeight()
 				});
 			}
 
-			setTimeout(function(){
-				console.log(typeData)
-				$element.attr('class', 'maps-marker-icon ' + typeData.className);
-			}, 2100);
-
+            $('.maps-marker-icon').filter('[id="' + id + '"]').attr('class', 'maps-marker-icon ' + typeData.className);
 		};
 
 		this.pointMap = function(){
