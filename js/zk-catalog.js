@@ -212,7 +212,16 @@ ZKCatalog.Map = function(){
 
 						instance.fitCluster();
 
-                        $('.zk-catalog-block').KVLoadingElement('stop');
+                        setTimeout(function(){
+                            $('.filter-string').addClass('active');
+                            $('.zk-catalog-block').KVLoadingElement('stop');
+
+                            setTimeout(function(){
+                                $('#fullscreen-trigger').css({
+                                    opacity: 1
+                                });
+                            }, 500);
+                        }, 1000);
 					});
 				}
 			});

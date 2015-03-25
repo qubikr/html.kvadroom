@@ -8199,7 +8199,7 @@ textarea.error {
   border-right: none;
 }
 .breadcrumbs-new .row .item.item2:last-child:before {
-  display: none !important;
+  display: inline-block !important;
 }
 .offers {
   margin-bottom: 0px;
@@ -15119,6 +15119,18 @@ ul.circular-switcher li.active {
 }
 .range-selector .range span {
   margin: 0 22px;
+}
+.filter-string {
+  height: 0 !important;
+  opacity: 0;
+  -webkit-transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.filter-string.active {
+  height: 102px !important;
+  opacity: 1;
 }
 .filter-string .main-filter {
   padding: 1px 15px 16px;
