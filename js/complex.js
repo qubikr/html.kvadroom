@@ -15,6 +15,7 @@ Complex.Map = function(){
                         var area = new map.Area({
                             coords: data.area,
                             content: (data.title) ? data.title : '',
+                            balloonCloseable: false,
                             onBalloonReady: function () {
                                 area.showBalloon(true);
                             },
@@ -30,6 +31,7 @@ Complex.Map = function(){
                         var pin = new map.Pin({
                             center: data.center,
                             content: (data.title) ? data.title : '',
+                            balloonCloseable: false,
                             onBalloonReady: function () {
                                 pin.showBalloon(true);
                             },

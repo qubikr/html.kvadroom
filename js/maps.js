@@ -1,724 +1,810 @@
 var GeoMap = function(opts){
-    var _this = this,
-        map,
-        balloons = [],
-        pins = [],
-        options = $.extend({
-            id: 'map',
-            clusterer: false,
-            fullScreenTrigger: false,
-            center: [55.76, 37.64],
-            zoom: 10,
-            layer: 'map',
-            controls: false,
-            onInit: function(){},
-            onFullscreenEnter: function(){},
-            onFullscreenExit: function(){}
-        }, opts);
+	var _this = this,
+		map,
+		balloons = [],
+		pins = [],
+		options = $.extend({
+			id: 'map',
+			clusterer: false,
+			fullScreenTrigger: false,
+			center: [55.76, 37.64],
+			zoom: 10,
+			layer: 'map',
+			controls: false,
+			onInit: function(){},
+			onFullscreenEnter: function(){},
+			onFullscreenExit: function(){}
+		}, opts);
 
-    this.getMap = function(){
-        return map;
-    };
+	this.getMap = function(){
+		return map;
+	};
 
-    var $map = $('#' + options.id),
-        fullScreenAnimationDuration = 20,
-        clusterer = null;
+	var $map = $('#' + options.id),
+		fullScreenAnimationDuration = 20,   
+		clusterer = null;
 
-    if(options.fullScreenTrigger){
-        $(options.fullScreenTrigger).off('click').on('click', function(e){
-            e.preventDefault();
-            _this.enterFullScreen();
-        });
-    }
+	if(options.fullScreenTrigger){
+		$(options.fullScreenTrigger).off('click').on('click', function(e){
+			e.preventDefault();
+			_this.enterFullScreen();
+		});
+	}
 
-    this.setLoading = function(){
-        $map.parent().KVLoadingElement({
-            invert: true,
-            overlay: true,
-            big: true,
-            append: true,
-            zIndex_overlay: 1000
-        });
+	this.setLoading = function(){
+		$map.parent().KVLoadingElement({
+			invert: true,
+			overlay: true,
+			big: true,
+			append: true,
+			zIndex_overlay: 1000
+		});
 
-        $map.parent().find('loading-dots').addClass('loading-dots-invert');
-    };
+		$map.parent().find('loading-dots').addClass('loading-dots-invert');
+	};
 
-    this.unsetLoading = function(){
-        $map.parent().KVLoadingElement('stop');
-    };
+	this.unsetLoading = function(){
+		$map.parent().KVLoadingElement('stop');
+	};
 
-    var draw = function(){
-        map = new ymaps.Map(options.id, {
-            center: options.center,
-            zoom: options.zoom
-        });
+	var draw = function(){
+		map = new ymaps.Map(options.id, {
+			center: options.center,
+			zoom: options.zoom
+		});
 
-        if(options.controls === true){
-            createDefaultControls();
-        }
+		if(options.controls === true){
+			createDefaultControls();
+		}
 
-        if(options.clusterer === true){
-            _this.createClusterer();
-        }
-    };
+		if(options.clusterer === true){
+			_this.createClusterer();
+		}
+	};
 
-    var Balloon = function(parent, center, content, onReady, onClick, offsetY, offsetX, closeButton){
-        var close = '',
-            closeable = '',
-            showed = false;
+	var Balloon = function(opts){
+		var options = $.extend({
+			parent: null,
+			center: [0,0],
+			content: '',
+            closeable: true,
+			offsetX: 0,
+			offsetY: 0,
+			onReady: function(){},
+			onClick: function(){}
+		}, opts);
 
-        if(closeButton){
-            close = '<a class="close" title="Закрыть" href="#"><i></i></a>';
-            closeable = 'closeable';
-        }
+		var close = '',
+			closeable = '',
+			showed = false;
 
-        var _this = this,
-            id = _.uniqueId('balloon'),
-            $element = $(),
-            permanent = false,
-            balloon = new ymaps.Placemark(center, {
-                iconContent: '<div class="map-balloon hidden disabled ' + closeable + '" id="' + id + '"><div class="inner"><span class="content-inner" style="white-space: nowrap">' + content + '</span>' + close + '</div></div>'
-            }, {
-                iconImageHref: '',
-                iconImageSize: 20,
-                iconImageOffset: 10
-            });
+		this.isShowed = function(){
+			return showed;
+		};
 
-        balloon.options.set('zIndex', -1);
+		if(options.closeable){
+			close = '<a class="close" title="Закрыть" href="#"><i></i></a>';
+			closeable = 'closeable';
+		}
 
-        balloon.events.add('overlaychange', function(){
-            $element = $('#' + id);
+		var _this = this,
+			id = _.uniqueId('balloon'),
+			$element = $(),
+			permanent = false,
+			balloon = new ymaps.Placemark(options.center, {
+				iconContent: '<div class="map-balloon hidden disabled ' + closeable + '" id="' + id + '"><div class="inner"><span class="content-inner" style="white-space: nowrap">' + options.content + '</span>' + close + '</div></div>'
+			}, {
+				iconImageHref: '',
+				iconImageSize: 0,
+				iconImageOffset: 0
+			});
 
-            $element.find('.close').on('click', function(e){
-                e.preventDefault();
-                _this.hide();
-            });
+		balloon.options.set('zIndex', -1);
 
-            if(onReady) onReady();
-        });
+		balloon.events.add('overlaychange', function(){
+			$element = $('#' + id);
 
-        balloon.events.add('click', function(){
-            if(onClick) onClick();
-        });
+			$element.find('.close').on('click', function(e){
+				e.preventDefault();
+				_this.hide();
+			});
 
-        map.geoObjects.add(balloon);
+            options.onReady();
+		});
 
-        var hideOnClick = function(){
-            _this.hide();
+		balloon.events.add('click', function(){
+            options.onClick();
+		});
+
+		map.geoObjects.add(balloon);
+
+		var hideOnClick = function(){
+			_this.hide();
+		};
+
+        this.setOption = function(name, val){
+            options[name] = val;
         };
 
-        this.getId = function(){
-            return id;
-        };
+		this.getId = function(){
+			return id;
+		};
 
-        this.show = function(permanentShow){
-            if(showed) return;
-
-            $element.removeClass('hidden');
+        this.setPosition = function(){
             $element.css({
-                marginTop: -(($element.height()/2) - ((offsetY) ? offsetY : 0)),
-                marginLeft: (offsetX) ? offsetX : 0,
+                marginTop: -(($element.height()/2) - ((options.offsetY) ? options.offsetY : 0)),
+                marginLeft: (options.offsetX) ? options.offsetX : 0,
                 width: 250
             });
-            showed = true;
-
-            setTimeout(function(){
-                console.log($element.find('.content-inner').width() + 40);
-
-                $element.css({
-                    width: $element.find('.content-inner').width() + 40
-                });
-            }, 100);
-
-            map.events.add('click', hideOnClick);
-
-            setTimeout(function(){
-                $element.removeClass('disabled');
-            }, 500);
-
-            _.each(balloons, function(balloon){
-                if(balloon.getId() != _this.getId()){
-                    balloon.hide();
-                }
-            });
-
-            if(permanent !== true){
-                permanent = permanentShow;
-            }
-
-            balloon.options.set('zIndex', 1000);
-            parent.options.set('zIndex', 1000);
         };
 
-        this.hide = function(){
-            if(permanent !== true){
-                if(!showed) return;
-                showed = false;
+		this.show = function(permanentShow){
+			if(showed) return;
 
-                $element.addClass('disabled');
+			$element.removeClass('hidden');
 
-                setTimeout(function(){
-                    $element.addClass('hidden');
-                }, 500);
+            this.setPosition();
 
-                map.events.remove('click', hideOnClick);
-            }
-        };
+			showed = true;
 
-        balloons.push(this);
-    };
+			setTimeout(function(){
+				$element.css({
+					width: $element.find('.content-inner').width() + 40
+				});
+			}, 100);
 
-    var fitBounds = function(bounds){
-        var coords = ymaps.util.bounds.getCenterAndZoom(bounds, [
-            $map.width(),
-            $map.height()
-        ]);
+			map.events.add('click', hideOnClick);
 
-        map.setCenter(options.center);
-        map.setZoom(coords.zoom);
-    };
+			setTimeout(function(){
+				$element.removeClass('disabled');
+			}, 500);
 
-    var createDefaultControls = function(){
-        var zoom_template = '<div class="map-view-control">' +
-            '<div id="map-zoom-in" data-big="x" class="map-view-control-button"><i class="icon-font icon-font-plus"></i></div>' +
-            '<div id="map-zoom-out" class="map-view-control-button"><i class="icon-font icon-font-minus"></i></div>' +
-            '</div>';
+			_.each(balloons, function(balloon){
+				if(balloon.getId() != _this.getId()){
+					balloon.hide();
+				}
+			});
 
-        var ZoomLayout = ymaps.templateLayoutFactory.createClass(
-            zoom_template,
-            {
-                build: function () {
-                    ZoomLayout.superclass.build.call(this);
+			if(permanent !== true){
+				permanent = permanentShow;
+			}
 
-                    $('#map-zoom-in').bind('click', ymaps.util.bind(this.zoomIn, this));
-                    $('#map-zoom-out').bind('click', ymaps.util.bind(this.zoomOut, this));
-                },
+			balloon.options.set('zIndex', 1000000);
+			options.parent.options.set('zIndex', 1000000);
+		};
 
-                clear: function () {
-                    $('#map-zoom-in').unbind('click');
-                    $('#map-zoom-out').unbind('click');
+		this.hide = function(){
+			if(permanent !== true){
+				if(!showed) return;
+				showed = false;
 
-                    ZoomLayout.superclass.clear.call(this);
-                },
+				$element.addClass('disabled');
 
-                zoomIn: function () {
-                    this.events.fire('zoomchange', {
-                        oldZoom: map.getZoom(),
-                        newZoom: map.getZoom() + 1
-                    });
-                },
+				setTimeout(function(){
+					$element.addClass('hidden');
+				}, 500);
 
-                zoomOut: function () {
-                    this.events.fire('zoomchange', {
-                        oldZoom: map.getZoom(),
-                        newZoom: map.getZoom() - 1
-                    });
-                }
-            });
+				map.events.remove('click', hideOnClick);
+			}
+		};
 
-        var zoomControl = new ymaps.control.SmallZoomControl({
-            layout: ZoomLayout
-        });
+		balloons.push(this);
+	};
 
-        map.controls.add(zoomControl, {
-            left: 0,
-            top: 0
-        });
+	var fitBounds = function(bounds){
+		var coords = ymaps.util.bounds.getCenterAndZoom(bounds, [
+			$map.width(),
+			$map.height()
+		]);
 
-        map.controls.add(zoomControl);
+		map.setCenter(options.center);
+		map.setZoom(coords.zoom);
+	};
 
-        function button(options){
-            var opts = $.extend({
-                top: 0,
-                left: 0,
-                right: 0,
-                title: '',
-                icon_class: '',
-                onSelect: function(){
+	var createDefaultControls = function(){
+		var zoom_template = '<div class="map-view-control">' +
+			'<div id="map-zoom-in" data-big="x" class="map-view-control-button"><i class="icon-font icon-font-plus"></i></div>' +
+			'<div id="map-zoom-out" class="map-view-control-button"><i class="icon-font icon-font-minus"></i></div>' +
+			'</div>';
 
-                },
-                onDeselect: function(){
+		var ZoomLayout = ymaps.templateLayoutFactory.createClass(
+			zoom_template,
+			{
+				build: function () {
+					ZoomLayout.superclass.build.call(this);
 
-                }
-            }, options);
+					$('#map-zoom-in').bind('click', ymaps.util.bind(this.zoomIn, this));
+					$('#map-zoom-out').bind('click', ymaps.util.bind(this.zoomOut, this));
+				},
 
-            var template =  '<div id="map-type" title="$[data.title]" class="map-view-control-button [if state.selected]map-view-control-button-selected[endif]"><i class="icon-font $[data.icon_class]"></i></div>',
-                Layout = ymaps.templateLayoutFactory.createClass(template),
-                button = new ymaps.control.Button({
-                    data: {
-                        title: opts.title,
-                        icon_class: opts.icon_class
-                    }
-                }, {
-                    layout: Layout,
-                    selectOnClick: true
-                });
+				clear: function () {
+					$('#map-zoom-in').unbind('click');
+					$('#map-zoom-out').unbind('click');
 
-            button.events
-                .add('select', function () {
-                    opts.onSelect();
-                })
-                .add('deselect', function () {
-                    opts.onDeselect();
-                });
+					ZoomLayout.superclass.clear.call(this);
+				},
 
-            var params = {};
+				zoomIn: function () {
+					this.events.fire('zoomchange', {
+						oldZoom: map.getZoom(),
+						newZoom: map.getZoom() + 1
+					});
+				},
 
-            if(opts.left !== false){
-                params.left = opts.left;
-            }else{
-                params.right = opts.right;
-            }
+				zoomOut: function () {
+					this.events.fire('zoomchange', {
+						oldZoom: map.getZoom(),
+						newZoom: map.getZoom() - 1
+					});
+				}
+			});
 
-            params.top = opts.top;
-            map.controls.add(button, params);
+		var zoomControl = new ymaps.control.SmallZoomControl({
+			layout: ZoomLayout
+		});
 
-            return button;
-        }
+		map.controls.add(zoomControl, {
+			left: 0,
+			top: 0
+		});
 
-        button({
-            top: 80,
-            left: 0,
-            title: 'Режим спутника',
-            icon_class: 'icon-font-map_sputnik',
-            onSelect: function(){
-                map.setType('yandex#satellite');
-            },
-            onDeselect: function(){
-                map.setType('yandex#map');
-            }
-        });
-    };
+		map.controls.add(zoomControl);
 
-    this.fitCluster = function(){
-        if(clusterer){
-            map.setBounds(clusterer.getBounds(), {
-                checkZoomRange: true
-            });
-        }
-    };
+		function button(options){
+			var opts = $.extend({
+				top: 0,
+				left: 0,
+				right: 0,
+				title: '',
+				icon_class: '',
+				onSelect: function(){
 
-    this.panCenter = function(){
-        var center = [
-            parseFloat(options.center[0]),
-            parseFloat(options.center[1])
-        ];
+				},
+				onDeselect: function(){
 
-        map.panTo(center, {
-            delay: 0
-        });
-    };
+				}
+			}, options);
 
-    this.Pin = function(opts){
-        var _this = this;
+			var template =  '<div id="map-type" title="$[data.title]" class="map-view-control-button [if state.selected]map-view-control-button-selected[endif]"><i class="icon-font $[data.icon_class]"></i></div>',
+				Layout = ymaps.templateLayoutFactory.createClass(template),
+				button = new ymaps.control.Button({
+					data: {
+						title: opts.title,
+						icon_class: opts.icon_class
+					}
+				}, {
+					layout: Layout,
+					selectOnClick: true
+				});
 
-        var options = $.extend({
-            center: [55.76, 37.64],
-            content: '',
-            title: '',
-            avoidClusterer: false,
-            zIndex: false,
-            type: 'basic',
-            balloonCloseButton: true,
-            onReady: function(){},
-            onClick: function(){},
-            onBalloonReady: function(){},
-            onBalloonClick: function(){}
-        }, opts);
+			button.events
+				.add('select', function () {
+					opts.onSelect();
+				})
+				.add('deselect', function () {
+					opts.onDeselect();
+				});
 
-        var id = _.uniqueId('pin'),
-            title = (options.title) ? '<span class="marker-title">' + options.title + '</span>' : '',
-            $element = $();
+			var params = {};
 
-        var typeData = {};
+			if(opts.left !== false){
+				params.left = opts.left;
+			}else{
+				params.right = opts.right;
+			}
 
-        switch(options.type){
-            case 'basic' : {
-                typeData = {
-                    className: 'maps-marker-basic',
-                    size: [31, 43],
-                    offset: [-21, -49],
-                    balloonOffsetY: -27,
-                    balloonOffsetX: 18
-                };
-            } break;
+			params.top = opts.top;
+			map.controls.add(button, params);
 
-            case 'basic_small' : {
-                typeData = {
-                    className: 'maps-marker-basic_small',
-                    size: [19, 25],
-                    offset: [-10, -25],
-                    balloonOffsetY: -17,
-                    balloonOffsetX: 18
-                };
-            } break;
-        }
+			return button;
+		}
 
-        var pin = new ymaps.Placemark(options.center, {
-            iconContent: '<span class="maps-marker-icon ' + typeData.className + '" id="' + id + '">' + title + '</span>'
-        }, {
-            iconImageHref: '',
-            iconImageSize: typeData.size,
-            iconImageOffset: typeData.offset
-        });
+		button({
+			top: 80,
+			left: 0,
+			title: 'Режим спутника',
+			icon_class: 'icon-font-map_sputnik',
+			onSelect: function(){
+				map.setType('yandex#satellite');
+			},
+			onDeselect: function(){
+				map.setType('yandex#map');
+			}
+		});
+	};
 
-        if(options.zIndex) {
-            pin.options.set('zIndex', options.zIndex);
-        }
+	this.fitCluster = function(){
+		if(clusterer){
+			map.setBounds(clusterer.getBounds(), {
+				checkZoomRange: true
+			});
+		}
+	};
 
-        var balloon = null;
+	this.panCenter = function(){
+		var center = [
+			parseFloat(options.center[0]),
+			parseFloat(options.center[1])
+		];
 
-        pin.events.add('click', function(){
-            options.onClick();
+		map.panTo(center, {
+			delay: 0
+		});
+	};
 
-            map.panTo(options.center, {
-                delay: 0
-            });
+	this.Pin = function(opts){
+		var _this = this;
 
-            _this.showBalloon();
-        });
+		var options = $.extend({
+			center: [55.76, 37.64],
+			content: '',
+			title: '',
+			avoidClusterer: false,
+			zIndex: false,
+            zoomRelatedIcon: false,
+            zoomRelatedIconFactor: 12,
+			type: 'basic',
+			balloonCloseable: true,
+			onReady: function(){},
+			onClick: function(){},
+			onBalloonReady: function(){},
+			onBalloonClick: function(){}
+		}, opts);
 
-        pin.events.add('overlaychange', function(){
-            if(options.onReady) options.onReady();
+		var id = _.uniqueId('pin'),
+			title = (options.title) ? '<span class="marker-title">' + options.title + '</span>' : '',
+			$element = $();
 
-            $element = $('#' + id);
+		var getTypeData = function(typeName){
+			var typeData;
 
-            var $title = $element.find('.marker-title');
-
-            $title.css({
-                bottom: -$title.outerHeight()
-            });
-        });
-
-        if(clusterer && options.avoidClusterer !== true){
-            clusterer.add(pin);
-        }else{
-            map.geoObjects.add(pin);
-        }
-
-        this.pointMap = function(){
-            map.setCenter(options.center);
-        };
-
-        this.showBalloon = function(permanent){
-            if(options.content){
-                if(!balloon){
-                    balloon = new Balloon(pin, options.center, options.content, function(){
-                        options.onBalloonReady();
-                        balloon.show(permanent);
-                    }, options.onBalloonClick, typeData.balloonOffsetY, typeData.balloonOffsetX, options.balloonCloseButton);
+            if(typeName == 'basic_small' && options.zoomRelatedIcon){
+                if(map.getZoom() <= options.zoomRelatedIconFactor){
+                    typeName = 'dot';
                 }
             }
-        };
 
-        this.hideBalloon = function(){
-            if(balloon){
-                balloon.hide();
-            }
-        };
-    };
+			switch(typeName){
+				case 'basic_small' : {
+					typeData = {
+						className: 'maps-marker-basic_small',
+						size: [19, 25],
+						offset: [-10, -25],
+						balloonOffsetY: -17,
+						balloonOffsetX: 18
+					};
+				} break;
 
-    this.Area = function(opts){
-        var options = $.extend({
-            coords: [],
-            content: '',
-            balloonCloseButton: true,
-            onReady: function(){},
-            onClick: function(){},
-            onBalloonReady: function(){},
-            onBalloonClick: function(){}
-        }, opts);
+				case 'dot' : {
+					typeData = {
+						className: 'maps-marker-dot',
+						size: [12, 12],
+						offset: [-6, -6],
+						balloonOffsetY: -18,
+						balloonOffsetX: 18
+					};
+				} break;
 
-        var area = new ymaps.GeoObject({
-            geometry: {
-                type: 'Polygon',
-                coordinates: options.coords,
-                fillRule: 'nonZero'
-            }
-        }, {
-            fillColor: 'rgba(255, 0, 0, 0.1)',
-            strokeColor: 'rgba(255, 0, 0, 1)',
-            opacity: 1,
-            strokeWidth: 2
-        });
+				default:
+				case 'basic' : {
+					typeData = {
+						className: 'maps-marker-basic',
+						size: [31, 43],
+						offset: [-21, -49],
+						balloonOffsetY: -27,
+						balloonOffsetX: 18
+					};
+				} break;
+			}
 
-        map.geoObjects.add(area);
+			return typeData;
+		};
 
-        var bounds = area.geometry.getBounds(),
-            balloon = null,
-            center = [
-                bounds[0][0] + ((bounds[1][0] - bounds[0][0]) / 2),
-                bounds[0][1] + ((bounds[1][1] - bounds[0][1]) / 2)
-            ];
+		var typeData = getTypeData(options.type);
 
-        if(options.content){
-            var balloonCoords = [center[0], bounds[1][1]];
-            balloon = new Balloon(area, balloonCoords, options.content, options.onBalloonReady, options.onBalloonClick, 0, 0, options.balloonCloseButton);
-        }
+		var pin = new ymaps.Placemark(options.center, {
+			iconContent: '<span class="maps-marker-icon ' + typeData.className + '" id="' + id + '">' + title + '</span>'
+		}, {
+			iconImageHref: '',
+			iconImageSize: typeData.size,
+			iconImageOffset: typeData.offset
+		});
 
-        area.events.add('click', function(){
-            options.onClick();
+		if(options.zIndex) {
+			pin.options.set('zIndex', options.zIndex);
+		}
 
-            if(balloon){
-                balloon.show();
-            }
-        });
+		var balloon = null;
 
-        area.events.add('overlaychange', function(){
-            if(options.onReady) options.onReady();
-        });
+		pin.events.add('click', function(){
+			options.onClick();
 
-        this.pointMap = function(){
-            map.setCenter(center);
-        };
+			map.panTo(options.center, {
+				delay: 0
+			});
 
-        this.fitMap = function(){
-            fitBounds(bounds);
-        };
+			_this.showBalloon();
+		});
 
-        this.showBalloon = function(permanent){
-            if(balloon){
-                balloon.show(permanent);
-            }
-        };
+		pin.events.add('overlaychange', function(){
+			if(options.onReady) options.onReady();
 
-        this.hideBalloon = function(){
-            if(balloon){
-                balloon.hide();
-            }
-        };
-    };
+			$element = $('#' + id);
 
-    var resizeFullscreen = function(speed){
-        var w = 0,
-            h = 0,
-            $overlay = $('.map-fullscreen-overlay'),
-            margin = 60;
+			if(options.title){
+				$element.find('.marker-title').css({
+					bottom: -$title.outerHeight()
+				});
+			}
 
-        w = $overlay.width() - margin * 2;
-        h = $overlay.height() - margin * 2;
+            _this.changeStyle(options.type);
+		});
 
-        var interval = null;
+		if(clusterer && options.avoidClusterer !== true){
+			clusterer.add(pin);
+		}else{
+			map.geoObjects.add(pin);
+		}
 
-        if(speed > 0){
-            interval = setInterval(function(){
-                map.container.fitToViewport();
-            }, 1);
-        }
+		this.changeStyle = function(styleName){
+			var typeData = getTypeData(styleName);
 
-        $map.parent().animate({
-            width: w,
-            height: h,
-            top: margin,
-            left: margin
-        }, speed, function(){
-            clearInterval(interval);
+			$element.attr('class', 'maps-marker-icon ' + typeData.className);
 
-            if(map && map.container){
-                map.container.fitToViewport();
-            }
-        });
-    };
+			pin.properties.set({
+				iconImageSize: typeData.size,
+				iconImageOffset: typeData.offset
+			});
 
-    var initResize = function(done){
-        var os = {};
+			if(balloon){
+				balloon.setOption('offsetX', typeData.balloonOffsetX);
+				balloon.setOption('offsetY', typeData.balloonOffsetY);
+				balloon.setPosition();
+			}
+		};
 
-        if(!$map.parent().data('originalSize')){
-            os = {
-                h: $map.parent().height()
-            };
+		this.pointMap = function(){
+			map.setCenter(options.center);
+		};
 
-            $map.parent().data('originalSize', os);
-        }else{
-            os = $map.parent().data('originalSize');
-        }
+		this.showBalloon = function(permanent){
+			if(options.content){
+				if(!balloon){
+					balloon = new Balloon({
+						parent: pin,
+						center: options.center,
+						content: options.content,
+						closeable: options.balloonCloseable,
+						offsetX: typeData.balloonOffsetX,
+						offsetY: typeData.balloonOffsetY,
+						onReady: function(){
+							options.onBalloonReady();
+							balloon.show();
+						},
+						onClick: options.onBalloonClick
+					});
+				}
+			}
+		};
 
-        $map.parent().addClass('map-fullscreen');
+		this.hideBalloon = function(){
+			if(balloon){
+				balloon.hide();
+			}
+		};
+	};
 
-        var $dummy = $('<div/>');
+	this.Area = function(opts){
+		var options = $.extend({
+			coords: [],
+			content: '',
+            balloonCloseable: true,
+			onReady: function(){},
+			onClick: function(){},
+			onBalloonReady: function(){},
+			onBalloonClick: function(){}
+		}, opts);
 
-        $dummy.addClass('map-fs-dummy').css({
-            height: os.h
-        });
+		var area = new ymaps.GeoObject({
+			geometry: {
+				type: 'Polygon',
+				coordinates: options.coords,
+				fillRule: 'nonZero'
+			}
+		}, {
+			fillColor: 'rgba(255, 0, 0, 0.1)',
+			strokeColor: 'rgba(255, 0, 0, 1)',
+			opacity: 1,
+			strokeWidth: 2
+		});
 
-        $map.parent().after($dummy);
+		map.geoObjects.add(area);
 
-        $map.parent().css({
-            width: $dummy.width(),
-            height: $dummy.height(),
-            top: $dummy.offset().top - $(document).scrollTop(),
-            left: $dummy.offset().left
-        });
+		var bounds = area.geometry.getBounds(),
+			balloon = null,
+			center = [
+				bounds[0][0] + ((bounds[1][0] - bounds[0][0]) / 2),
+				bounds[0][1] + ((bounds[1][1] - bounds[0][1]) / 2)
+			];
 
-        if(map && map.container){
-            map.container.fitToViewport();
-        }
+		if(options.content){
+			var balloonCoords = [center[0], bounds[1][1]];
 
-        if(done) done();
-    };
-
-    this.enterFullScreen = function(){
-        $('body').append('<div class="map-fullscreen-overlay"><a class="map-fullscreen-close kiv-e" href="#"><i class="icon-font icon-font-cross"></i></a></div>');
-        $('html,body').css('overflow', 'hidden');
-
-        setTimeout(function(){
-            $('.map-fullscreen-overlay').addClass('ready');
-        }, 50);
-
-        $(document).off('keyup.map-fullscreen').on('keyup.map-fullscreen', function(e){
-            if(e.keyCode == 27){
-                _this.exitFullScreen();
-            }
-        });
-
-        $('.map-fullscreen-close').off('click').on('click', function(e){
-            e.preventDefault();
-            _this.exitFullScreen();
-        });
-
-        if(options.fullScreenTrigger){
-            $(options.fullScreenTrigger).hide();
-        }
-
-        initResize(function(){
-            resizeFullscreen(fullScreenAnimationDuration);
-
-            setTimeout(function(){
-                $(window).off('resize.mapFullscreen').on('resize.mapFullscreen', function(){
-                    resizeFullscreen(0);
-                });
-
-                setTimeout(function(){
-                    $(window).trigger('resize');
-                }, 50);
-            }, fullScreenAnimationDuration);
-        });
-    };
-
-    this.exitFullScreen = function(){
-        $(window).off('resize.mapFullscreen');
-
-        if(options.fullScreenTrigger){
-            $(options.fullScreenTrigger).show();
-        }
-
-        var $dummy = $('.map-fs-dummy'),
-            interval = setInterval(function(){
-                map.container.fitToViewport();
-            }, 1);
-
-        $('.map-fullscreen-overlay').removeClass('ready');
-
-        setTimeout(function(){
-            $('.map-fullscreen-overlay').remove();
-        }, 400);
-
-        $map.parent().animate({
-            width: $dummy.width(),
-            height: $dummy.height(),
-            top: $dummy.offset().top - $(document).scrollTop(),
-            left: $dummy.offset().left
-        }, fullScreenAnimationDuration, function(){
-            $map.parent().css({
-                top: 0,
-                left: 0
+            balloon = new Balloon({
+                parent: area,
+                center: balloonCoords,
+                content: options.content,
+                closeable: options.balloonCloseable,
+                onReady: options.onBalloonReady,
+                onClick: options.onBalloonClick
             });
-            $map.parent().removeClass('map-fullscreen');
-            $dummy.remove();
+		}
 
-            clearInterval(interval);
+		area.events.add('click', function(){
+			options.onClick();
 
-            $('html,body').css('overflow', 'auto');
-            map.container.fitToViewport();
-        });
+			if(balloon){
+				balloon.show();
+			}
+		});
 
-        map.container.fitToViewport();
-    };
+		area.events.add('overlaychange', function(){
+			if(options.onReady) options.onReady();
+		});
 
-    this.createClusterer = function(){
-        var IconsDefault = [
-            {
-                href: 'i/kvad_map_circ_small.png',
-                size: [43, 43],
-                offset: [-21.5, -21.5]
-            },
-            {
-                href: 'i/kvad_map_circ_large.png',
-                size: [60, 60],
-                offset:  [-10, -25],
-            }
-        ];
+		this.pointMap = function(){
+			map.setCenter(center);
+		};
 
-        var IconsMaxZoom = [{
-                href: 'i/kvad_marker_list.png',
-                size: [31, 43],
-                offset: [-15.5, -21.5]
-            },
-            {
-                href: 'i/kvad_marker_list.png',
-                size: [31, 43],
-                offset: [-15.5, -21.5]
-            }];
+		this.fitMap = function(){
+			fitBounds(bounds);
+		};
 
-        function isMaxZoomThere(){
-            var max_zoom = map.zoomRange.getCurrent()[1],
-                current_zoom = map.getZoom();
+		this.showBalloon = function(permanent){
+			if(balloon){
+				balloon.show(permanent);
+			}
+		};
 
-            return current_zoom >= max_zoom;
-        }
+		this.hideBalloon = function(){
+			if(balloon){
+				balloon.hide();
+			}
+		};
+	};
 
-        function getIcons(){
-            if(isMaxZoomThere()){
-                return IconsMaxZoom;
-            }else{
-                return IconsDefault;
-            }
-        }
+	var resizeFullscreen = function(speed){
+		var w = 0,
+			h = 0,
+			$overlay = $('.map-fullscreen-overlay'),
+			margin = 60;
 
-        function getTemplate(size){
-            var tmpl;
+		w = $overlay.width() - margin * 2;
+		h = $overlay.height() - margin * 2;
 
-            if(isMaxZoomThere()){
-                tmpl = '<div class="map-cluster"><div class="anchor" style="width: ' + size[0] + 'px; height: ' + size[1] + 'px"></div></div>';
-            }else{
-                tmpl = '<div class="map-cluster">$[properties.geoObjects.length]</div>';
-            }
+		var interval = null;
 
-            return ymaps.templateLayoutFactory.createClass(tmpl);
-        }
+		if(speed > 0){
+			interval = setInterval(function(){
+				map.container.fitToViewport();
+			}, 1);
+		}
 
-        clusterer = new ymaps.Clusterer({
-            clusterIcons: getIcons(),
-            clusterNumbers: [15],
-            clusterIconContentLayout: getTemplate(),
-            clusterDisableClickZoom: false,
-            openBalloonOnClick: false
-        });       
+		$map.parent().animate({
+			width: w,
+			height: h,
+			top: margin,
+			left: margin
+		}, speed, function(){
+			clearInterval(interval);
 
-        map.geoObjects.add(clusterer);
+			if(map && map.container){
+				map.container.fitToViewport();
+			}
+		});
+	};
 
-        clusterer.createCluster = function(center, geoObjects){
-            var cluster = ymaps.Clusterer.prototype.createCluster.call(this, center, geoObjects),
-                icons = getIcons();
+	var initResize = function(done){
+		var os = {};
 
-            cluster.options.set('icons', icons);
-            cluster.options.set('iconContentLayout', getTemplate(icons[0].size));
+		if(!$map.parent().data('originalSize')){
+			os = {
+				h: $map.parent().height()
+			};
 
-            return cluster;
-        };
-    };
+			$map.parent().data('originalSize', os);
+		}else{
+			os = $map.parent().data('originalSize');
+		}
 
-    this.init = function(){
-        if(typeof ymaps != 'undefined'){
-            draw();
-            options.onInit(_this);
-        }else{
-            $.getScript("http://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-RU", function() {
-                ymaps.ready(function(){
-                    draw();
-                    options.onInit(_this);
-                });
-            });
-        }
-    };
+		$map.parent().addClass('map-fullscreen');
+
+		var $dummy = $('<div/>');
+
+		$dummy.addClass('map-fs-dummy').css({
+			height: os.h
+		});
+
+		$map.parent().after($dummy);
+
+		$map.parent().css({
+			width: $dummy.width(),
+			height: $dummy.height(),
+			top: $dummy.offset().top - $(document).scrollTop(),
+			left: $dummy.offset().left
+		});
+
+		if(map && map.container){
+			map.container.fitToViewport();
+		}
+
+		if(done) done();
+	};
+
+	this.enterFullScreen = function(){
+		$('body').append('<div class="map-fullscreen-overlay"><a class="map-fullscreen-close kiv-e" href="#"><i class="icon-font icon-font-cross"></i></a></div>');
+		$('html,body').css('overflow', 'hidden');
+
+		setTimeout(function(){
+			$('.map-fullscreen-overlay').addClass('ready');
+		}, 50);
+
+		$(document).off('keyup.map-fullscreen').on('keyup.map-fullscreen', function(e){
+			if(e.keyCode == 27){
+				_this.exitFullScreen();
+			}
+		});
+
+		$('.map-fullscreen-close').off('click').on('click', function(e){
+			e.preventDefault();
+			_this.exitFullScreen();
+		});
+
+		if(options.fullScreenTrigger){
+			$(options.fullScreenTrigger).hide();
+		}
+
+		initResize(function(){
+			resizeFullscreen(fullScreenAnimationDuration);
+
+			setTimeout(function(){
+				$(window).off('resize.mapFullscreen').on('resize.mapFullscreen', function(){
+					resizeFullscreen(0);
+				});
+
+				setTimeout(function(){
+					$(window).trigger('resize');
+				}, 50);
+			}, fullScreenAnimationDuration);
+		});
+	};
+
+	this.exitFullScreen = function(){
+		$(window).off('resize.mapFullscreen');
+
+		if(options.fullScreenTrigger){
+			$(options.fullScreenTrigger).show();
+		}
+
+		var $dummy = $('.map-fs-dummy'),
+			interval = setInterval(function(){
+				map.container.fitToViewport();
+			}, 1);
+
+		$('.map-fullscreen-overlay').removeClass('ready');
+
+		setTimeout(function(){
+			$('.map-fullscreen-overlay').remove();
+		}, 400);
+
+		$map.parent().animate({
+			width: $dummy.width(),
+			height: $dummy.height(),
+			top: $dummy.offset().top - $(document).scrollTop(),
+			left: $dummy.offset().left
+		}, fullScreenAnimationDuration, function(){
+			$map.parent().css({
+				top: 0,
+				left: 0
+			});
+			$map.parent().removeClass('map-fullscreen');
+			$dummy.remove();
+
+			clearInterval(interval);
+
+			$('html,body').css('overflow', 'auto');
+			map.container.fitToViewport();
+		});
+
+		map.container.fitToViewport();
+	};
+
+	this.createClusterer = function(){
+		var IconsDefault = [
+			{
+				href: '/i/kvad_map_circ_small_red.png',
+				size: [43, 43],
+				offset: [-21.5, -21.5]
+			},
+			{
+				href: '/i/kvad_map_circ_large_red.png',
+				size: [60, 60],
+				offset:  [-10, -25]
+			}
+		];
+
+		var IconsMaxZoom = [{
+				href: '/i/kvad_marker_list.png',
+				size: [31, 43],
+				offset: [-15.5, -21.5]
+			},
+			{
+				href: '/i/kvad_marker_list.png',
+				size: [31, 43],
+				offset: [-15.5, -21.5]
+			}];
+
+		function isMaxZoomThere(){
+			var max_zoom = map.zoomRange.getCurrent()[1],
+				current_zoom = map.getZoom();
+
+			return current_zoom >= max_zoom;
+		}
+
+		function getIcons(){
+			if(isMaxZoomThere()){
+				return IconsMaxZoom;
+			}else{
+				return IconsDefault;
+			}
+		}
+
+		function getTemplate(size){
+			var tmpl;
+
+			if(isMaxZoomThere()){
+				tmpl = '<div class="map-cluster"><div class="anchor" style="width: ' + size[0] + 'px; height: ' + size[1] + 'px"></div></div>';
+			}else{
+				tmpl = '<div class="map-cluster">$[properties.geoObjects.length]</div>';
+			}
+
+			return ymaps.templateLayoutFactory.createClass(tmpl);
+		}
+
+		clusterer = new ymaps.Clusterer({
+			clusterIcons: getIcons(),
+			clusterNumbers: [15],
+			clusterIconContentLayout: getTemplate(),
+			clusterDisableClickZoom: false,
+			openBalloonOnClick: false,
+			zoomMargin: 50,
+			margin: 15
+		});       
+
+		map.geoObjects.add(clusterer);
+
+		clusterer.createCluster = function(center, geoObjects){
+			var cluster = ymaps.Clusterer.prototype.createCluster.call(this, center, geoObjects),
+				icons = getIcons();
+
+			cluster.options.set('icons', icons);
+			cluster.options.set('iconContentLayout', getTemplate(icons[0].size));
+
+			return cluster;
+		};
+	};
+
+	this.init = function(){
+		if(typeof ymaps != 'undefined'){
+			draw();
+			options.onInit(_this);
+		}else{
+			$.getScript("http://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-RU", function() {
+				ymaps.ready(function(){
+					draw();
+					options.onInit(_this);
+				});
+			});
+		}
+	};
 };

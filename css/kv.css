@@ -11260,6 +11260,11 @@ yx-axis
   height: 25px;
   background: url(../i/kvad_marker_basic_small.png);
 }
+.maps-marker-icon.maps-marker-dot {
+  width: 12px;
+  height: 12px;
+  background: url(../i/kvad_marker_dot.png);
+}
 .maps-marker-icon .marker-title {
   font-size: 20px;
   font-weight: bold;
@@ -11634,10 +11639,14 @@ yx-axis
   height: 200px;
 }
 .map-zk-catalog {
-  height: 550px;
+  height: 600px;
+  margin-bottom: 40px;
 }
 .map-zk-catalog .map-container {
-  height: 550px;
+  height: 600px;
+}
+.map-zk-catalog #fullscreen-trigger {
+  opacity: 0;
 }
 .zoomer {
   position: absolute;

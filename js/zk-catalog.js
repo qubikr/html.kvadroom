@@ -35,7 +35,7 @@ ZKCatalog.Search = function(){
 		});
 
 		ractive.on( 'goUrl', function ( event ) {
-			window.open(event.context.url, '_blank');
+			document.location.href = event.context.url;
 		});
 
 		function draw(query, data){
@@ -43,21 +43,68 @@ ZKCatalog.Search = function(){
 			ractive.set('query', query);
 		}
 
+		var clickOutside = new UIClickOutside($('#search-result'), function(){
+            ractive.set('items', []);
+			ractive.set('query', '');
+        });
+
+        clickOutside.bind();
+
+        $(document).on('keydown.searchResultNavigate', function(e){
+        	var $li = $('#search-result .search-selector li'),
+        		$ac = $li.filter('.active');
+
+        	if($ac.length > 0){
+        		switch(e.keyCode){
+	        		case 40 : {
+	        			if($ac.next().length > 0){
+		        			$ac.next().addClass('active');
+		        			$ac.removeClass('active');
+		        		}
+	        		} break;
+
+	        		case 38 : {
+						if($ac.prev().length > 0){
+		        			$ac.prev().addClass('active');
+		        			$ac.removeClass('active');
+		        		}
+	        		} break;
+
+	        		case 13 : {
+	        			$ac.click();
+	        		} break;
+	        	}
+        	}else{
+        		$li.filter(':first').addClass('active');
+        	}
+        });
+
+		function filterStr(str){
+            str = $.trim(str);
+            str = str.replace(/[\.,\/#!$%\^&\*;:"'(){}=_`~()]/g, '');
+            str.replace(/\s{2,}/g, ' ');
+
+            return str;
+		}
+
 		function search(query){
-			if(query && query.length > 2){
+			if(query && query.length > 1){
 				ZKCatalog.data.getObjects(function(data){
 					if(data.success){
 						var items = data.objects;
 
-						var ni = _.filter(items, function(item){ 
-							var name = item.name.toLowerCase();
-							var word = query.toLowerCase();
+						var ni = _.filter(items, function(item){
+                            if(item.name && item.name.length > 2) {
+                                var name = item.name.toLowerCase(),
+                                	word = query.toLowerCase();
 
-							console.log(name.search(word))
+                                word = filterStr(word);
+                                name = filterStr(name);
 
-							if(name.search(word) > 0){
-								return item;
-							}
+                                if (name.search(word) > 0 && name && name.length > 2) {
+                                    return item;
+                                }
+                            }
 						});
 
 						draw(query, ni);
@@ -82,7 +129,7 @@ ZKCatalog.Search = function(){
 	};
 };
 
-ZKCatalog.Data = function(){
+ZKCatalog.Data = function(region_id, type_id){
 	var objects = null,
 		object = null;
 
@@ -90,7 +137,7 @@ ZKCatalog.Data = function(){
 		if(object) return done(object);
 
 		$.ajax({
-			url: 'json/zk.json',
+			url: 'json/zk.json?r_id=' + region_id,
 			data: {},
 			dataType: 'json',
 			success: function(data){
@@ -104,7 +151,7 @@ ZKCatalog.Data = function(){
 		if(objects) return done(objects);
 
 		$.ajax({
-			url: 'json/zk_objects.json',
+			url: 'json/zk_objects.json?r_id=' + region_id + '&type_id=' + type_id,
 			data: {},
 			dataType: 'json',
 			success: function(data){
@@ -116,6 +163,11 @@ ZKCatalog.Data = function(){
 };
 
 ZKCatalog.Map = function(){
+    $('.zk-catalog-block').KVLoadingElement({
+        overlay: true,
+        invert: true
+    });
+
 	this.init = function(){
 		var data = $('.map-zk-catalog').data();
 
@@ -144,8 +196,6 @@ ZKCatalog.Map = function(){
 					});
 
 					ZKCatalog.data.getObjects(function(data){
-						console.log(data)
-
 						if(data.success){
 							_.each(data.objects, function(item){
 								new map.Pin({
@@ -155,12 +205,16 @@ ZKCatalog.Map = function(){
 										parseFloat(item.lon)
 									],
 									balloonCloseButton: true,
+                                    zoomRelatedIcon: false,
+                                    zoomRelatedIconFactor: 12,
 									content: '<a href="' + item.url + '">' + item.name + '</a>'
 								});
 							});
 						}
 
 						instance.fitCluster();
+
+                        $('.zk-catalog-block').KVLoadingElement('stop');
 					});
 				}
 			});
@@ -173,7 +227,9 @@ ZKCatalog.Map = function(){
 };
 
 ZKCatalog.init = function(){
-	this.data = new this.Data();
+	var $o = $('.map-zk-catalog');
+
+	this.data = new this.Data($o.data('region_id'), $o.data('type_id'));
 	this.map = new this.Map().init();
 	this.search = new this.Search().init();
 };

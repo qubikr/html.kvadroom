@@ -8,6 +8,8 @@
     <script src="js/_.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.KVSearchString.js"></script>
+    <script src="js/jquery.KVLoadingElement.js"></script>
+    <script src="js/clickuotside.js"></script>
     <script src="js/ractive.js"></script>
     <script src="js/bloodhound.js"></script>
     <script src="js/easing.js"></script>
@@ -52,20 +54,22 @@
           <li class="item"><a href="#" class="link kiv-e"><span>Бизнес-центры в Новой Москве</span></a></li>
         </ul>
       </div>
-      <div class="main-filter-container filter-string">
-        <div class="main-filter">
-          <div class="row">
-            <p class="search-string-zk">
-              <input tabindex="1" placeholder="Введите метро, район, названия ЖК, город..." class="entry">
-            </p>
-            <div id="search-result">			</div>
+      <div class="zk-catalog-block">
+        <div class="main-filter-container filter-string">
+          <div class="main-filter">
+            <div class="row">
+              <p class="search-string-zk">
+                <input tabindex="1" placeholder="Введите метро, район, названия ЖК, город..." class="entry">
+              </p>
+              <div id="search-result">			</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="divider-30"></div>
-      <div data-center="[55,25]" data-title="Текст&amp;nbsp;Баллуна" data-zoom="10" data-url="http://ya.ru" data-area="[[[55.75, 37.80],[55.80, 37.90],[55.75, 38.00],[55.70, 38.00],[55.70, 37.80]]]" class="complex-map map-zk-catalog">
-        <div id="map-zk-catalog" class="map-container"></div>
-        <div class="links"><a id="fullscreen-trigger" href="#" target="_blank">Развернуть карту</a></div>
+        <div class="divider-30"></div>
+        <div data-center="[55,25]" data-title="Текст&amp;nbsp;Баллуна" data-zoom="10" data-url="http://ya.ru" data-area="[[[55.75, 37.80],[55.80, 37.90],[55.75, 38.00],[55.70, 38.00],[55.70, 37.80]]]" class="complex-map map-zk-catalog">
+          <div id="map-zk-catalog" class="map-container"></div>
+          <div class="links"><a id="fullscreen-trigger" href="#" target="_blank">Развернуть карту</a></div>
+        </div>
       </div>
       <div class="divider-50"></div>
       <div class="bottom-seo-block">

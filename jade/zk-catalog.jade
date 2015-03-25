@@ -6,18 +6,19 @@ block content
 
 	include partials/breadcrumbs
 
-	.main-filter-container.filter-string
-		.main-filter
-			.row
-				p.search-string-zk
-					input.entry(tabindex='1', placeholder='Введите метро, район, названия ЖК, город...')
-				#search-result			
+	.zk-catalog-block
+		.main-filter-container.filter-string
+			.main-filter
+				.row
+					p.search-string-zk
+						input.entry(tabindex='1', placeholder='Введите метро, район, названия ЖК, город...')
+					#search-result			
 
-	.divider-30
+		.divider-30
 
-	.complex-map.map-zk-catalog(data-center="[55,25]", data-title="Текст&nbsp;Баллуна", data-zoom="10", data-url="http://ya.ru" data-area="[[[55.75, 37.80],[55.80, 37.90],[55.75, 38.00],[55.70, 38.00],[55.70, 37.80]]]")
-		#map-zk-catalog.map-container
-		.links: a#fullscreen-trigger(href="#", target="_blank") Развернуть карту
+		.complex-map.map-zk-catalog(data-center="[55,25]", data-title="Текст&nbsp;Баллуна", data-zoom="10", data-url="http://ya.ru" data-area="[[[55.75, 37.80],[55.80, 37.90],[55.75, 38.00],[55.70, 38.00],[55.70, 37.80]]]")
+			#map-zk-catalog.map-container
+			.links: a#fullscreen-trigger(href="#", target="_blank") Развернуть карту
 
 	.divider-50
 	include partials/bottom-seo-block
