@@ -175,7 +175,7 @@ ZKCatalog.Map = function(){
 			var map = new GeoMap({
 				id: 'map-zk-catalog',
 				fullScreenTrigger: '#fullscreen-trigger',
-				zoom: 5,
+				zoom: 10,
 				clusterer: true,
 				controls: true,
 				center: data.center,

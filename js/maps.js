@@ -370,7 +370,7 @@ var GeoMap = function(opts){
 						className: 'maps-marker-basic_small',
 						size: [19, 25],
 						offset: [-10, -25],
-						balloonOffsetY: -17,
+						balloonOffsetY: -15,
 						balloonOffsetX: 18
 					};
 				} break;
@@ -380,8 +380,8 @@ var GeoMap = function(opts){
 						className: 'maps-marker-dot',
 						size: [12, 12],
 						offset: [-6, -6],
-						balloonOffsetY: -18,
-						balloonOffsetX: 18
+						balloonOffsetY: -1,
+						balloonOffsetX: 12
 					};
 				} break;
 
@@ -414,7 +414,8 @@ var GeoMap = function(opts){
 			pin.options.set('zIndex', options.zIndex);
 		}
 
-		var balloon = null;
+		var balloon = null,
+			changeOverlay = null;
 
 		pin.events.add('click', function(){
 			options.onClick();
@@ -429,15 +430,17 @@ var GeoMap = function(opts){
 		pin.events.add('overlaychange', function(){
 			if(options.onReady) options.onReady();
 
-			$element = $('#' + id);
-
-			if(options.title){
-				$element.find('.marker-title').css({
-					bottom: -$title.outerHeight()
-				});
+			if($element.length == 0){
+				$element = $('#' + id);
 			}
 
-            _this.changeStyle(options.type);
+			_this.hideBalloon();
+
+			clearInterval(changeOverlay);
+
+			changeOverlay = setTimeout(function(){
+				_this.changeStyle(options.type);
+			}, 1);
 		});
 
 		if(clusterer && options.avoidClusterer !== true){
@@ -449,9 +452,8 @@ var GeoMap = function(opts){
 		this.changeStyle = function(styleName){
 			var typeData = getTypeData(styleName);
 
-			$element.attr('class', 'maps-marker-icon ' + typeData.className);
-
-			pin.properties.set({
+			pin.options.set({
+				iconImageHref: '',
 				iconImageSize: typeData.size,
 				iconImageOffset: typeData.offset
 			});
@@ -461,6 +463,18 @@ var GeoMap = function(opts){
 				balloon.setOption('offsetY', typeData.balloonOffsetY);
 				balloon.setPosition();
 			}
+
+			if(options.title){
+				$element.find('.marker-title').css({
+					bottom: -$title.outerHeight()
+				});
+			}
+
+			setTimeout(function(){
+				console.log(typeData)
+				$element.attr('class', 'maps-marker-icon ' + typeData.className);
+			}, 2100);
+
 		};
 
 		this.pointMap = function(){
@@ -483,6 +497,8 @@ var GeoMap = function(opts){
 						},
 						onClick: options.onBalloonClick
 					});
+				}else{
+					balloon.show();
 				}
 			}
 		};
