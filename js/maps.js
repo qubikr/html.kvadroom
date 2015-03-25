@@ -63,6 +63,8 @@ var GeoMap = function(opts){
 	};
 
 	var Balloon = function(opts){
+        var _this = this;
+
 		var options = $.extend({
 			parent: null,
 			center: [0,0],
@@ -89,7 +91,6 @@ var GeoMap = function(opts){
 
 		var _this = this,
 			id = _.uniqueId('balloon'),
-			$element = $(),
 			permanent = false,
 			balloon = new ymaps.Placemark(options.center, {
 				iconContent: '<div class="map-balloon hidden disabled ' + closeable + '" id="' + id + '"><div class="inner"><span class="content-inner" style="white-space: nowrap">' + options.content + '</span>' + close + '</div></div>'
@@ -102,9 +103,7 @@ var GeoMap = function(opts){
 		balloon.options.set('zIndex', -1);
 
 		balloon.events.add('overlaychange', function(){
-			$element = $('#' + id);
-
-			$element.find('.close').on('click', function(e){
+            _this.getElement().find('.close').on('click', function(e){
 				e.preventDefault();
 				_this.hide();
 			});
@@ -117,6 +116,10 @@ var GeoMap = function(opts){
 		});
 
 		map.geoObjects.add(balloon);
+
+        this.getElement = function(){
+            return $('#' + id);
+        };
 
 		var hideOnClick = function(){
 			_this.hide();
@@ -131,8 +134,8 @@ var GeoMap = function(opts){
 		};
 
         this.setPosition = function(){
-            $element.css({
-                marginTop: -(($element.height()/2) - ((options.offsetY) ? options.offsetY : 0)),
+            _this.getElement().css({
+                marginTop: -((_this.getElement().height()/2) - ((options.offsetY) ? options.offsetY : 0)),
                 marginLeft: (options.offsetX) ? options.offsetX : 0,
                 width: 250
             });
@@ -141,22 +144,22 @@ var GeoMap = function(opts){
 		this.show = function(permanentShow){
 			if(showed) return;
 
-			$element.removeClass('hidden');
+            _this.getElement().removeClass('hidden');
 
             this.setPosition();
 
 			showed = true;
 
 			setTimeout(function(){
-				$element.css({
-					width: $element.find('.content-inner').width() + 40
+                _this.getElement().css({
+					width: _this.getElement().find('.content-inner').width() + 40
 				});
 			}, 100);
 
 			map.events.add('click', hideOnClick);
 
 			setTimeout(function(){
-				$element.removeClass('disabled');
+                _this.getElement().removeClass('disabled');
 			}, 500);
 
 			_.each(balloons, function(balloon){
@@ -178,10 +181,10 @@ var GeoMap = function(opts){
 				if(!showed) return;
 				showed = false;
 
-				$element.addClass('disabled');
+                _this.getElement().addClass('disabled');
 
 				setTimeout(function(){
-					$element.addClass('hidden');
+                    _this.getElement().addClass('hidden');
 				}, 500);
 
 				map.events.remove('click', hideOnClick);
@@ -352,8 +355,7 @@ var GeoMap = function(opts){
 		}, opts);
 
 		var id = _.uniqueId('pin'),
-			title = (options.title) ? '<span class="marker-title">' + options.title + '</span>' : '',
-			$element = $();
+			title = (options.title) ? '<span class="marker-title">' + options.title + '</span>' : '';
 
 		var getTypeData = function(typeName){
 			var typeData;
@@ -430,10 +432,6 @@ var GeoMap = function(opts){
 		pin.events.add('overlaychange', function(){
 			if(options.onReady) options.onReady();
 
-			if($element.length == 0){
-				$element = $('#' + id);
-			}
-
 			_this.hideBalloon();
 
             clearTimeout(changeOverlay);
@@ -448,6 +446,10 @@ var GeoMap = function(opts){
 		}else{
 			map.geoObjects.add(pin);
 		}
+
+        this.getElement = function(){
+            return $('.maps-marker-icon').filter('[id="' + id + '"]');
+        };
 
 		this.changeStyle = function(styleName){
 			var typeData = getTypeData(styleName);
@@ -465,14 +467,14 @@ var GeoMap = function(opts){
 			}
 
 			if(options.title){
-                var $title = $element.find('.marker-title');
+                var $title = _this.getElement().find('.marker-title');
 
 				$title.css({
 					bottom: -$title.outerHeight()
 				});
 			}
 
-            $('.maps-marker-icon').filter('[id="' + id + '"]').attr('class', 'maps-marker-icon ' + typeData.className);
+            this.getElement().attr('class', 'maps-marker-icon ' + typeData.className);
 		};
 
 		this.pointMap = function(){
@@ -492,6 +494,7 @@ var GeoMap = function(opts){
 						onReady: function(){
 							options.onBalloonReady();
 							balloon.show();
+                            _this.changeStyle(options.type);
 						},
 						onClick: options.onBalloonClick
 					});
