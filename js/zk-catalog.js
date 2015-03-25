@@ -215,12 +215,9 @@ ZKCatalog.Map = function(){
                         setTimeout(function(){
                             $('.filter-string').addClass('active');
                             $('.zk-catalog-block').KVLoadingElement('stop');
-
-                            setTimeout(function(){
-                                $('#fullscreen-trigger').css({
-                                    opacity: 1
-                                });
-                            }, 500);
+                            $('#fullscreen-trigger').css({
+                                opacity: 1
+                            });
                         }, 1000);
 					});
 				}
