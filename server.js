@@ -2,7 +2,6 @@ var express = require('express');
 var serveStatic = require('serve-static');
 var basicAuth = require('connect-basic-auth');
 var md5 = require('MD5');
-
 var app = express();
 
 app
@@ -12,9 +11,10 @@ app
 
 		if(result){
 			app.use(serveStatic(__dirname + '/public'));
-			
+
 			next();
 		}else{
+			next();
 			return res.status(500).send('Password wrong!');
 		}
 	 
@@ -24,4 +24,4 @@ app.all('*', function(req, res, next) {
 	req.requireAuthorization(req, res, next);
 });
 
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
