@@ -41,6 +41,7 @@ block content
 
 					li.all: a(href='#') Все объявления
 						span.counter 124
+
 			.grid-6
 				h3.title.color-red Снять посуточно
 				ul
@@ -61,6 +62,7 @@ block content
 					li.all
 						a(href='#') Все объявления
 							span.counter 124
+
 			.grid-6
 				h3.title.color-red Коммерческая
 				ul
@@ -81,6 +83,7 @@ block content
 					li.all
 						a(href='#') Все объявления
 							span.counter 124
+
 			.grid-6
 				h3.title.color-red Коммерческая
 				ul
@@ -103,5 +106,20 @@ block content
 							span.counter 124
 			.clear
 
+		.divider-40
 
-			
+		.complex-map.test-map(data-center="[55,25]", data-title="Текст&nbsp;Баллуна", data-zoom="10", data-url="http://ya.ru" data-area="[[[55.75, 37.80],[55.80, 37.90],[55.75, 38.00],[55.70, 38.00],[55.70, 37.80]]]")
+			#test-map.map-container
+			.links: a#fullscreen-trigger(href="#", target="_blank") Развернуть карту
+
+		script(src="js/test-map.js")
+
+		.divider-40
+		.container-24
+			.grid-16
+				include partials/offers
+				include partials/pagination
+				include partials/show-more-button
+			.grid-8
+				include partials/yd
+			.clear			
