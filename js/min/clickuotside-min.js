@@ -1,0 +1,1 @@
+var UIClickOutside=function(t,i){var n=$(t);this.bind=function(){$(document).on("mouseup.UIClickOutside",function(t){n.is(t.target)||0!==n.has(t.target).length||i&&i(t.target)})},this.unbind=function(){$(document).off("mouseup.UIClickOutside")}};

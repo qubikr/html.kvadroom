@@ -6,29 +6,8 @@ ZKCatalog.Search = function(){
 
 		var ractive = new Ractive({
 			el: '#search-result',
-			template: '<ul class="search-selector {{#if items.length > 0}}active{{/if}}">{{#items}}<li on-click="goUrl">{{{hl(name, query)}}}</li>{{/items}}</ul>',
+			template: '<ul class="search-selector {{#if items.length > 0}}active{{/if}}">{{#items}}<li on-click="goUrl">{{{name}}}</li>{{/items}}</ul>',
 			data: {
-				hl: function(content, what) {
-					what = $.trim(what);
-					what = what.replace(/[\.,\/#!$%\^&\*;:"'(){}=_`~()]/g, '');
-					what.replace(/\s{2,}/g, ' ');
-					
-					var whatArr = what.split(' ');
-
-					whatArr.sort(function(a, b){
-						return b.length - a.length;
-					});
-
-					for(var i = 0, l = whatArr.length; i < l; i++){
-						var pattern = new RegExp(whatArr[i], 'gi');
-				
-						content = content.replace(pattern, function(matched){
-							return '<span>' + matched + '</span>';
-						});
-					}
-					
-					return content;
-				},
 				query: '',
 				items: []
 			}
@@ -38,14 +17,16 @@ ZKCatalog.Search = function(){
 			document.location.href = event.context.url;
 		});
 
-		function draw(query, data){
-			ractive.set('items', data);
+		function draw(query, items){
 			ractive.set('query', query);
+			ractive.set('items', items);
+			
+			$('#search-result .search-selector li:first').addClass('active');
 		}
 
 		var clickOutside = new UIClickOutside($('#search-result'), function(){
-            ractive.set('items', []);
 			ractive.set('query', '');
+            ractive.set('items', []);
         });
 
         clickOutside.bind();
@@ -81,10 +62,29 @@ ZKCatalog.Search = function(){
 
 		function filterStr(str){
             str = $.trim(str);
-            str = str.replace(/[\.,\/#!$%\^&\*;:"'(){}=_`~()]/g, '');
+            str = str.replace(/[^а-яА-ЯёЁa-zA-Z0-9 ]/gi, '');
             str.replace(/\s{2,}/g, ' ');
 
             return str;
+		}
+
+		function hl(what, content){
+			var whatArr = what.split(' '),
+				result = '';
+
+			whatArr.sort(function(a, b){
+				return b.length - a.length;
+			});
+
+			for(var i = 0, l = whatArr.length; i < l; i++){
+				var pattern = new RegExp(whatArr[i], 'gi');
+		
+				result = content.replace(pattern, function(matched){
+					return '<span>' + matched + '</span>';
+				});
+			}
+			
+			return result;
 		}
 
 		function search(query){
@@ -100,20 +100,23 @@ ZKCatalog.Search = function(){
 
                                 word = filterStr(word);
                                 name = filterStr(name);
-
+             
                                 if (name.search(word) > 0 && name && name.length > 2) {
-                                    return item;
+                                    return {
+                                    	name: item.name,
+                                    	url: item.url
+                                    }
                                 }
                             }
 						});
 
 						draw(query, ni);
 					}else{
-						draw(query, {});
+						draw(query, []);
 					}
 				});
 			}else{
-				draw(query, {});
+				draw(query, []);
 			} 
 		}
 
@@ -218,7 +221,7 @@ ZKCatalog.Map = function(){
                             $('#fullscreen-trigger').css({
                                 opacity: 1
                             });
-                        }, 1000);
+                        }, 500);
 					});
 				}
 			});

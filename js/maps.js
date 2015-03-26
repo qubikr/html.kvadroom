@@ -795,7 +795,8 @@ var GeoMap = function(opts){
 			clusterDisableClickZoom: false,
 			openBalloonOnClick: false,
 			zoomMargin: 50,
-			margin: 15
+            gridSize: 64,
+			margin: 24
 		});       
 
 		map.geoObjects.add(clusterer);
