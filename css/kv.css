@@ -9668,6 +9668,39 @@ a.is-online:hover {
 .offer .offer-actions {
   padding-top: 6px;
 }
+.attention-block {
+  display: block;
+  background-color: #FFE14D;
+  padding: 30px 30px 30px 123px;
+  position: relative;
+  text-decoration: none !important;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.attention-block:hover {
+  background-color: #f9db47;
+}
+.attention-block .title {
+  display: block;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 25px;
+  margin-bottom: .2em;
+}
+.attention-block .text {
+  display: block;
+  color: #665A31;
+}
+.attention-block i {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  width: 94px;
+  height: 82px;
+  display: block;
+  background-repeat: no-repeat;
+}
 .hideF {
   opacity: 0 !important;
 }

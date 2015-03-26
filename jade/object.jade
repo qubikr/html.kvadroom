@@ -1,0 +1,344 @@
+extend _layout
+
+block content
+	.divider-30
+	.page-title: .w100.h75: body: tr: td: h1.page-title-header.h1-35 Бизнес-центры  Москвы и Подмосковья
+
+	include partials/breadcrumbs
+	include partials/filter-opener
+
+	.divider-20
+	
+	.offer
+		.offer-header-combo
+			span.params-link
+				a(href='/moscow/kupit-kvartiru/', title='Продажа квартир в Москве') Москва
+
+			.offer-transport-params
+				.item: a(href='/m/oktyabrskoe-pole/kupit-kvartiru/', title='Продажа квартир у метро Октябрьское поле')
+					span.type-icon: i.icon-font.icon-font-soc_metro.metro
+					span.link Октябрьское поле
+
+				.item: a(href='/m/oktyabrskoe-pole/kupit-kvartiru/', title='Продажа квартир у метро Октябрьское поле')
+					span.type-icon: i.icon-font.icon-font-soc_train.train
+					span.link Белорусская
+
+				.item: a(href='/m/oktyabrskoe-pole/kupit-kvartiru/', title='Продажа квартир у метро Октябрьское поле')
+					span.type-icon: i.icon-font.icon-font-highway.highway
+					span.link Ленинградское шоссе
+
+				.clear
+
+		.container-24
+			.grid-16
+				h1.h1-28 Продается 2‑комнатная квартира, 44.8 м², улица Народного Ополчения, 23к1
+
+				.offer-price-block
+					.offer-price-widget
+						.item.rur.active(data-type='rur')
+							.primary 9 350 000
+							.switcher.sw-rur
+								span.currency.rur(data-type='rur')
+									span.rub
+										span ⃏
+								span.currency.usd(data-type='usd')
+									| $
+								span.currency.eur(data-type='eur')
+									| €
+							.secondary
+								| 208 705 
+								span.currency.rub
+									span ⃏
+								| /м²
+
+						.item.usd(data-type='usd')
+							.primary 162 927
+							.switcher.sw-usd
+								span.currency.rur(data-type='rur')
+									span.rub
+										span ⃏
+								span.currency.usd(data-type='usd')
+									| $
+								span.currency.eur(data-type='eur')
+									| €
+
+							.secondary
+								| 3 637 
+								span.currency
+									span $
+								| /м²
+
+						.item.eur(data-type='eur')
+							.primary 148 969
+							.switcher.sw-eur
+								span.currency.rur(data-type='rur')
+									span.rub
+										span ⃏
+								span.currency.usd(data-type='usd')
+									| $
+								span.currency.eur(data-type='eur')
+									| €
+
+							.secondary
+								| 3 325 
+								span.currency
+									span €
+								| /м²
+
+					span.clear
+			.grid-8
+				.offer-actions.offer-title-actions
+					.offer-actions
+						// noindex
+						a.tooltip.offer-action-icon.kiv.kiv-e.process-abuse(rel='nofollow', href='#stayhere', data-offer_id='104343166', data-hasqtip='25', oldtitle='Пожаловаться на объявление', title='')
+							i.icon-font.icon-font-complaint
+
+						a.tooltip.offer-action-icon.kiv.kiv-e.process-share(rel='nofollow', href='#stayhere', data-offer_id='104343166', data-hasqtip='26', oldtitle='Поделиться', title='')
+							i.icon-font.icon-font-share
+
+						a.tooltip.offer-action-icon.kiv.kiv-e.process-pdf(rel='nofollow', href='http://www.kvadroom.ru/obyavleniya/prodaetsiya-2-komnatnaya-kvartira-horoshevo-mnevniki/104343166.pdf', target='_blank', data-hasqtip='27', oldtitle='Скачать PDF', title='')
+							i.icon-font.icon-font-pdf
+
+						a.tooltip.offer-action-icon.kiv.kiv-e(rel='nofollow', class='http://www.kvadroom.ru/obyavleniya/prodaetsiya-2-komnatnaya-kvartira-horoshevo-mnevniki/104343166.print', href='http://www.kvadroom.ru/obyavleniya/prodaetsiya-2-komnatnaya-kvartira-horoshevo-mnevniki/104343166.print', target='_blank', data-hasqtip='28', oldtitle='Распечатать', title='')
+							i.icon-font.icon-font-print.process-print-page
+
+						a.tooltip.offer-action-icon.kiv.kiv-e.process-favorite(rel='nofollow', href='#stayhere', data-favorite='false', data-offer_id='104343166', data-hasqtip='29', oldtitle='Добавить в избранное', title='')
+							i.icon-font.icon-font-star-big
+
+						// /noindex
+						.clear
+				.divider-30
+
+			span.clear
+		.divider-20
+		.divider-10
+		.container-24
+			.grid-16
+				.gallery(data-offer_id='104343166', data-param='a', data-section='all', data-size='b')
+					.gallery-container
+						i.bt
+						i.br
+						i.bb
+						i.bl
+
+						a.tgb-gallery(href='http://www.kvadroom.ru/go77.php?o_id=740', rel='nofollow', target='_blank')
+							span.tgb-gallery-close
+								i.icon-font.icon-font-cross
+
+							span.tgb-gallery-image
+								img(src='http://imgb.kvadroom.ru/i/foto_special_text/new_740.jpg', alt='ЖК VESNA. Идет заселение!')
+
+							span.tgb-gallery-text
+								span.tgb-gallery-title ЖК VESNA. Идет заселение!
+								| Квартиры в Апрелевке от 70 000р./кв.м. Рассрочка 0%! Ипотека 11,8%
+
+							span.clear
+
+						a.fullscreen-button(href='#stayhere', style='display: inline;')
+							i.icon-font.icon-font-fulscreen
+
+						a.gallery-arrow-left(href='#stayhere', style='display: inline;')
+							span.overlay
+
+						a.gallery-arrow-right(href='#stayhere', style='display: inline;')
+							span.overlay
+
+						.gallery-slides-holder
+							.gallery-slider-ruller(style='width: 4340px;')
+								.gallery-slide
+									a.gallery-image(href='http://img2.kvadroom.ru/i/offer/104/343/166/125239204_1200_900.jpg', rel='gallery', title='', itemscope='', itemtype='http://schema.org/ImageObject', data-index='1')
+										span.gallery-slide-blured(style='background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239204_620_465.jpg)')
+										img(itemprop='contentUrl', src='http://img2.kvadroom.ru/i/offer/104/343/166/125239204_620_465.jpg', alt='Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 1')
+								
+								.gallery-slide
+									a.gallery-image(href='http://img2.kvadroom.ru/i/offer/104/343/166/125239207_1200_900.jpg', rel='gallery', title='', itemscope='', itemtype='http://schema.org/ImageObject', data-index='2')
+										span.gallery-slide-blured(style='background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239207_620_465.jpg)')
+										img(itemprop='contentUrl', src='http://img2.kvadroom.ru/i/offer/104/343/166/125239207_620_465.jpg', alt='Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 2')
+								
+								.gallery-slide
+									a.gallery-image(href='http://img2.kvadroom.ru/i/offer/104/343/166/125239217_1200_900.jpg', rel='gallery', title='', itemscope='', itemtype='http://schema.org/ImageObject', data-index='3')
+										span.gallery-slide-blured(style='background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239217_620_465.jpg)')
+										img(itemprop='contentUrl', src='http://img2.kvadroom.ru/i/offer/104/343/166/125239217_620_465.jpg', alt='Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 3')
+								
+								.gallery-slide
+									a.gallery-image(href='http://img2.kvadroom.ru/i/offer/104/343/166/125239218_1200_900.jpg', rel='gallery', title='', itemscope='', itemtype='http://schema.org/ImageObject', data-index='4')
+										span.gallery-slide-blured(style='background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239218_620_465.jpg)')
+										img(itemprop='contentUrl', src='http://img2.kvadroom.ru/i/offer/104/343/166/125239218_620_465.jpg', alt='Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 4')
+								
+								.gallery-slide
+									a.gallery-image(href='http://img2.kvadroom.ru/i/offer/104/343/166/125239220_1200_900.jpg', rel='gallery', title='', itemscope='', itemtype='http://schema.org/ImageObject', data-index='5')
+										span.gallery-slide-blured(style='background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239220_620_465.jpg)')
+										img(itemprop='contentUrl', src='http://img2.kvadroom.ru/i/offer/104/343/166/125239220_620_465.jpg', alt='Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 5')
+								
+								.gallery-slide
+									a.gallery-image(href='http://img2.kvadroom.ru/i/offer/104/343/166/125239204_1200_900.jpg', title='', itemscope='', itemtype='http://schema.org/ImageObject', data-index='1')
+										span.gallery-slide-blured(style='background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239204_620_465.jpg)')
+										img(itemprop='contentUrl', src='http://img2.kvadroom.ru/i/offer/104/343/166/125239204_620_465.jpg', alt='Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 1')
+					
+					.gallery-counter(style='visibility: visible; opacity: 1;')
+						a.gallery-counter-arrow.gallery-counter-arrow-left.kiv.kiv-e(href='#stayhere', rel='nofollow'): i.icon-font.icon-font-arr-left
+
+						span.gallery-counter-text
+							span.gallery-counter-current 1
+							| из 
+							span.gallery-counter-total 5
+
+						a.gallery-counter-arrow.gallery-counter-arrow-right.kiv.kiv-e(href='#stayhere', rel='nofollow'): i.icon-font.icon-font-arr-right
+
+				a.attention-block(href="#")
+					i
+					span.title Подключить презентацию
+					span.text Презентация создается автоматически на основе загруженных фотографий.
+
+				.divider-40
+
+				.map-block.map-block-offer
+					.map-wrapper
+						a.tgb-gallery(href='#', rel='nofollow', target='_blank')
+							span.tgb-gallery-close: i.icon-font.icon-font-cross
+
+							span.tgb-gallery-image: img(src='http://imgc.kvadroom.ru/i/foto_special_text/new_736.jpg', alt='Выдаем ключи! г.Химки')
+
+							span.tgb-gallery-text
+								span.tgb-gallery-title Выдаем ключи! 
+								| sг.Химки Готовые квартиры от застройщика! Развитая инфр-ра. 8км от МКАД
+
+							span.clear
+
+						#map-offer-104343166.map-container.offer-map-init(data-offer_id='104343166', data-map_layer='map', data-info_name=' улица Народного Ополчения, 23к1', data-info_type='Продается 2-комнатная квартира, 44.8 м²', data-type_id='0', data-info_price='9 350 000', data-info_image='false', data-rub='9 350 000', data-usd='162 927', data-eur='148 969', data-info_size='44.8 м²', data-info_url='http://www.kvadroom.ru/obyavleniya/prodaetsiya-2-komnatnaya-kvartira-horoshevo-mnevniki/104343166.html', data-lat='55.778735', data-lng='37.478253', data-marker='true', data-text='')
+							.map-static-container.tooltip(data-hasqtip='30', oldtitle='Кликните для включения интерактивного режима карты', title='', aria-describedby='qtip-30')
+								i.marker
+								img(width='620', height='460', src='http://static-maps.yandex.ru/1.x/?ll=37.478253,55.778735&size=600,450&z=16&l=map')
+
+				.clear
+				.divider-40
+
+				.form-contact-agent.new
+					// noindex
+					a.process-abuse.process-abuse-form(rel='nofollow', href='#stayhere', data-offer_id='104343166')
+						i.icon-font.icon-font-complaint
+						span Пожаловаться
+
+					// /noindex
+					.form-contact-agent-header: p.name Светлана Егоровна
+
+					.form-contact-agent-phone
+						.form-contact-agent-phone-number
+							.form-contact-agent-phone-number-items
+								.form-contact-agent-phone-number-item.form-contact-agent-phone-number-item-dummy
+									img.al-agency2-phone-1(style='visibility: visible; height: 18px;', onload="this.style.visibility = 'visible'", alt='Телефон', src='http://samara.kvadroom.ru/srv/phone_o_id.php?o_id=104343166&p222=1&res=24')
+							
+							.form-contact-agent-phone-number-item-show.kiv
+								a#request-your-price.show-phone.yellow-small-button.right.kiv.mtm5(href='#stayhere', data-phone_img_url='http://samara.kvadroom.ru/srv/phone_o_id.php?o_id=104343166&p=2&p222=1&res=24', data-client-id='7984524', data-o-id='104343166')
+									span.kiv-e Показать телефон
+
+							.clear
+
+					.clear
+
+					.telephone-text Пожалуйста, скажите, что вы нашли это объявление на Квадруме
+
+					form#form-contact-agent(action='#stayhere', method='post')
+						input#form-contact-agent-input-id(type='hidden', value='104343166')
+						#form-contact-agent-input-message-holder(style='margin-bottom: 20px;')
+							textarea#form-contact-agent-input-message.textarea.form-input-focus(name='text', rows='3', placeholder='Сообщение автору')
+						div
+							.form-input-text.left.w40
+								input#form-contact-agent-your-price.form-input-focus(name='price', type='text', value='', placeholder='Предложите свою цену')
+
+							.checkbox-group
+								input#currency-selector-1(type='radio', name='form-contact-agent-currency-selector', value='rub', checked='')
+								label(for='currency-selector-1'): i.icon-font.icon-font-ruble_helv
+
+								input#currency-selector-2(type='radio', name='form-contact-agent-currency-selector', value='usd')
+								label(for='currency-selector-2') $
+
+								input#currency-selector-3(type='radio', name='form-contact-agent-currency-selector', value='eur')
+								label(for='currency-selector-3') €
+
+								.clear
+
+						#addifional-fields(style='display: none; padding-top: 20px')
+							label.form-label
+								span.form-input-text
+									input#form-contact-agent-input-name.form-input-focus(name='name', type='text', placeholder='Ваше имя', value='')
+
+							br
+							.container-10-p
+								.grid-50
+									label.form-label
+										span.form-input-text
+											input#form-contact-agent-input-phone.form-input-focus(name='phone', type='text', placeholder='Контактный телефон', value='')
+								.grid-50
+									label.form-label
+										span.form-input-text
+											input#form-contact-agent-input-e-mail.form-input-focus(name='email', type='text', placeholder='Электронная почта', value='')
+								.clear
+							br
+						.container-10-p
+							.grid-30(style='line-height: 1em')
+								.captcha-holder.captcha-block(style='display: none')
+									a#captcha-link(tabindex='100000', href='#')
+										img#captcha-img(alt='Код с картинки', src='/i/blank.png', data-src='/action/captcha/?r=1108667904')
+
+							.grid-30(style='line-height: 1em')
+								.captcha-block.form-input-text(style='display: none')
+									input#form-contact-agent-input-captcha.form-input-focus(name='cp', type='text', value='', placeholder='Код с картинки')
+
+							.grid-40(style='line-height: 1em')
+								.submit-block(style='display: none')
+									input.button.button-cyan-dark.right.kiv.kiv-e(type='submit', value='Отправить')
+
+							.clear
+						.clear
+
+				.offer-meta-info
+					span.offer-meta-info-item 58 просмотров
+					span.offer-meta-info-item Обновлено 13 марта
+					span.offer-meta-info-item Создано 13 марта
+
+			.grid-8
+				.offer-tabs-widget
+					.tab-content-offer.primary.static
+						h3 Общая информация
+						ul.offer-params-list
+							li 2-комнатная квартира
+							li Наследство
+							li: span.nowrap Общая 44.8 м², жил 29.5 м², кух 6.4 м²
+							li Хороший ремонт
+							li Изолированные комнаты
+							li 7 этаж (всего 9)
+							li Раздельный санузел
+							li Балкон
+							li Лоджии нет
+							li Телефон
+							li Интернет
+
+						h3 Здание
+						ul.offer-params-list
+							li Панельный дом
+							li Домофон
+							li Пассажирский лифт
+							li Мусоропровод
+
+						h3 Что есть рядом
+						ul.offer-params-list
+							li Детская площадка
+							li Супермаркет
+							li Салон красоты
+
+						h3 Условия
+						ul.offer-params-list
+							li.class.font-bold.color-green Возможен торг
+							li.class.font-bold.color-green Ипотека
+							li Альтернатива
+
+					.tab-content-offer.secondary.static
+						h3 Описание
+						| Предлагаем к продаже двухкомнатную квартиру в отличном состоянии. Стеклопакеты, отциклёван паркет, заменены радиаторы, остеклен балкон, кондиционер. Изолированные комнаты, раздельный санузел. Дом находится в удобном московском районе. Вся инфраструктура в шаговой доступности и с хорошим сообщением до станций метро Полежаевская, Октябрьское поле, Крылатское, Сокол. Рядом Серебряный бор. Один взрослый собственник. Более трех лет в собственности.
+				
+				a.color-gray.author-widget-trigger(href='#', data-off_text='Детальная информация', data-on_text='Описание', style='display: none;') Описание
+			.clear
+
+
+	// script(src="js/zk-object.js")

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kvadroom HTML</title>
+    <link rel="stylesheet" type="text/css" href="css/kv.css">
+    <script src="js/_.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.KVSearchString.js"></script>
+    <script src="js/jquery.KVLoadingElement.js"></script>
+    <script src="js/clickuotside.js"></script>
+    <script src="js/ractive.js"></script>
+    <script src="js/bloodhound.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/sly.js"></script>
+    <script src="js/maps.js"></script>
+  </head>
+  <body>
+    <div class="wrapper page-width">
+      <div class="valutes-bar"><span class="sect"><span class="title">USD</span><span class="subtitle">ЦБ РФ</span><span class="value">33.4343</span><span class="value positive">+33.434</span></span><span class="sect"><span class="title">EUR</span><span class="subtitle">ЦБ РФ</span><span class="value">45.5175</span><span class="value positive">+45.518</span></span><span class="sect-right"><span class="title">Ипотека:</span><span class="div"></span><span class="subtitle">Сбербанк</span><span class="value">14,5%</span><span class="div2x"></span><span class="subtitle">ВТБ 24</span><span class="value">15,95%</span><span class="div2x"></span><span class="subtitle">Газпромбанк</span><span class="value">19,6%</span></span></div>
+      <div class="header-placeholder">
+        <header class="page-width header"><i class="scroll-shadow"></i><a rel="nofollow" href="#stayhere" class="nav-main-button"><span class="nav-main-button-holder"><span class="nav-main-button-icon icon-font icon-font-menu-3lines"></span></span></a>
+          <div class="nav-main-container"><a rel="nofollow" href="#stayhere" class="nav-main-container-button"><span class="nav-main-container-icon icon-font icon-font-menu-3lines"></span></a></div><a href="/" class="kvadroom-logo-link kiv kiv-e kvadroom-logo-link-short"><span class="icon icon-kvadroom-logo"><i>Квадрум</i></span></a>
+          <div class="user-block">
+            <div class="user-block-autherized-info"><a href="#stayhere" title="Алексей" class="user-block-autherized-info-link kiv"><span class="user-block-autherized-info-avatar"><img src="http://imgb.kvadroom.ru/i/billing/13681903-small.jpg" width="40" height="40" style="opacity: 1;" alt="Алексей" class="user-block-autherized-info-avatar-image"></span><span class="user-block-autherized-info-name"><span class="user-block-autherized-info-name-text kiv-e">Алексей</span><i class="arrow-triangle-down"></i></span></a>
+              <div class="user-menu">
+                <nav class="nav-user-menu"><a href="http://my.kvadroom.ru/my_money.html" class="nav-user-menu-link kiv"><span class="kiv-e">История платежей</span></a><a href="http://my.kvadroom.ru/my_company_adv.html" class="nav-user-menu-link kiv"><span class="kiv-e">Мои объявления</span></a><a href="http://my.kvadroom.ru/support.php" class="nav-user-menu-link kiv"><span class="kiv-e">Сообщения</span></a><a href="http://my.kvadroom.ru/my_info.php" class="nav-user-menu-link kiv"><span class="kiv-e">Настройка</span></a><a href="http://samara.kvadroom.ru/?action=LOGOUT&amp;from=http://www.bproject.kvadroom.ru%2F" class="nav-user-menu-link kiv"><span class="kiv-e">Выйти из системы</span></a></nav>
+              </div>
+            </div>
+            <div class="user-block-icons"><a href="http://my.kvadroom.ru/my_company_adv.html" rel="nofollow" class="user-block-icons-item kiv kiv-e"><span class="user-block-icons-icon-symbol icon-font icon-font-advert"></span><span class="user-block-icons-icon-text">5</span></a><a href="http://www.bproject.kvadroom.ru/favorites/" rel="nofollow" class="user-block-icons-item kiv kiv-e"><span class="user-block-icons-icon-symbol icon-font favorites-icon-anchor icon-font-star-full"></span><span class="user-block-icons-icon-text">18</span></a><a href="http://my.kvadroom.ru/support.php" rel="nofollow" class="user-block-icons-item kiv kiv-e"><span class="user-block-icons-icon-symbol icon-font icon-font-mail"></span><span class="user-block-icons-icon-text">2</span></a><a href="http://my.kvadroom.ru/my_money.html" rel="nofollow" class="user-block-icons-item kiv kiv-e"><span class="user-block-icons-icon-symbol icon-font icon-font-money"></span><span class="user-block-icons-icon-text">1624.01 <span class="rub"><i>⃏</i></span></span></a></div>
+          </div>
+          <div class="right-side"><a rel="nofollow" href="http://my.kvadroom.ru/add/?d=www.bproject" class="button-make-ad kiv kiv-e">Разместить бесплатно</a></div>
+          <div class="open-filter open-filter-new"><span>Изменить условия поиска</span></div>
+        </header>
+      </div>
+      <div class="divider-30"></div>
+      <div class="page-title">
+        <div class="w100 h75">
+          <body>
+            <tr>
+              <td>
+                <h1 class="page-title-header h1-35">Бизнес-центры  Москвы и Подмосковья</h1>
+              </td>
+            </tr>
+          </body>
+        </div>
+      </div>
+      <div class="breadcrumbs-new">
+        <ul class="row">
+          <li class="item ico"><a href="/" class="link"><i class="icon-font icon-font-home"></i></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>Москва</span></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>Северо-Западный</span></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>Хорошево-Мневники</span></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>Продажа квартир</span></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>2-комнатные</span></a></li>
+        </ul>
+      </div>
+      <div class="open-filter open-filter-new"><span>Изменить условия поиска</span></div>
+      <div class="divider-20"></div>
+      <div class="offer">
+        <div class="offer-header-combo"><span class="params-link"><a href="/moscow/kupit-kvartiru/" title="Продажа квартир в Москве">Москва</a></span>
+          <div class="offer-transport-params">
+            <div class="item"><a href="/m/oktyabrskoe-pole/kupit-kvartiru/" title="Продажа квартир у метро Октябрьское поле"><span class="type-icon"><i class="icon-font icon-font-soc_metro metro"></i></span><span class="link">Октябрьское поле</span></a></div>
+            <div class="item"><a href="/m/oktyabrskoe-pole/kupit-kvartiru/" title="Продажа квартир у метро Октябрьское поле"><span class="type-icon"><i class="icon-font icon-font-soc_train train"></i></span><span class="link">Белорусская</span></a></div>
+            <div class="item"><a href="/m/oktyabrskoe-pole/kupit-kvartiru/" title="Продажа квартир у метро Октябрьское поле"><span class="type-icon"><i class="icon-font icon-font-highway highway"></i></span><span class="link">Ленинградское шоссе</span></a></div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="container-24">
+          <div class="grid-16">
+            <h1 class="h1-28">Продается 2‑комнатная квартира, 44.8 м², улица Народного Ополчения, 23к1</h1>
+            <div class="offer-price-block">
+              <div class="offer-price-widget">
+                <div data-type="rur" class="item rur active">
+                  <div class="primary">9 350 000</div>
+                  <div class="switcher sw-rur"><span data-type="rur" class="currency rur"><span class="rub"><span>⃏</span></span></span><span data-type="usd" class="currency usd">$</span><span data-type="eur" class="currency eur">€</span></div>
+                  <div class="secondary">208 705 <span class="currency rub"><span>⃏</span></span>/м²</div>
+                </div>
+                <div data-type="usd" class="item usd">
+                  <div class="primary">162 927</div>
+                  <div class="switcher sw-usd"><span data-type="rur" class="currency rur"><span class="rub"><span>⃏</span></span></span><span data-type="usd" class="currency usd">$</span><span data-type="eur" class="currency eur">€</span></div>
+                  <div class="secondary">3 637 <span class="currency"><span>$</span></span>/м²</div>
+                </div>
+                <div data-type="eur" class="item eur">
+                  <div class="primary">148 969</div>
+                  <div class="switcher sw-eur"><span data-type="rur" class="currency rur"><span class="rub"><span>⃏</span></span></span><span data-type="usd" class="currency usd">$</span><span data-type="eur" class="currency eur">€</span></div>
+                  <div class="secondary">3 325 <span class="currency"><span>€</span></span>/м²</div>
+                </div>
+              </div><span class="clear"></span>
+            </div>
+          </div>
+          <div class="grid-8">
+            <div class="offer-actions offer-title-actions">
+              <div class="offer-actions">
+                <!-- noindex--><a rel="nofollow" href="#stayhere" data-offer_id="104343166" data-hasqtip="25" oldtitle="Пожаловаться на объявление" title="" class="tooltip offer-action-icon kiv kiv-e process-abuse"><i class="icon-font icon-font-complaint"></i></a><a rel="nofollow" href="#stayhere" data-offer_id="104343166" data-hasqtip="26" oldtitle="Поделиться" title="" class="tooltip offer-action-icon kiv kiv-e process-share"><i class="icon-font icon-font-share"></i></a><a rel="nofollow" href="http://www.kvadroom.ru/obyavleniya/prodaetsiya-2-komnatnaya-kvartira-horoshevo-mnevniki/104343166.pdf" target="_blank" data-hasqtip="27" oldtitle="Скачать PDF" title="" class="tooltip offer-action-icon kiv kiv-e process-pdf"><i class="icon-font icon-font-pdf"></i></a><a rel="nofollow" href="http://www.kvadroom.ru/obyavleniya/prodaetsiya-2-komnatnaya-kvartira-horoshevo-mnevniki/104343166.print" target="_blank" data-hasqtip="28" oldtitle="Распечатать" title="" class="tooltip offer-action-icon kiv kiv-e http://www.kvadroom.ru/obyavleniya/prodaetsiya-2-komnatnaya-kvartira-horoshevo-mnevniki/104343166.print"><i class="icon-font icon-font-print process-print-page"></i></a><a rel="nofollow" href="#stayhere" data-favorite="false" data-offer_id="104343166" data-hasqtip="29" oldtitle="Добавить в избранное" title="" class="tooltip offer-action-icon kiv kiv-e process-favorite"><i class="icon-font icon-font-star-big"></i></a>
+                <!-- /noindex-->
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="divider-30"></div>
+          </div><span class="clear"></span>
+        </div>
+        <div class="divider-20"></div>
+        <div class="divider-10"></div>
+        <div class="container-24">
+          <div class="grid-16">
+            <div data-offer_id="104343166" data-param="a" data-section="all" data-size="b" class="gallery">
+              <div class="gallery-container"><i class="bt"></i><i class="br"></i><i class="bb"></i><i class="bl"></i><a href="http://www.kvadroom.ru/go77.php?o_id=740" rel="nofollow" target="_blank" class="tgb-gallery"><span class="tgb-gallery-close"><i class="icon-font icon-font-cross"></i></span><span class="tgb-gallery-image"><img src="http://imgb.kvadroom.ru/i/foto_special_text/new_740.jpg" alt="ЖК VESNA. Идет заселение!"></span><span class="tgb-gallery-text"><span class="tgb-gallery-title">ЖК VESNA. Идет заселение!</span>Квартиры в Апрелевке от 70 000р./кв.м. Рассрочка 0%! Ипотека 11,8%</span><span class="clear"></span></a><a href="#stayhere" style="display: inline;" class="fullscreen-button"><i class="icon-font icon-font-fulscreen"></i></a><a href="#stayhere" style="display: inline;" class="gallery-arrow-left"><span class="overlay"></span></a><a href="#stayhere" style="display: inline;" class="gallery-arrow-right"><span class="overlay"></span></a>
+                <div class="gallery-slides-holder">
+                  <div style="width: 4340px;" class="gallery-slider-ruller">
+                    <div class="gallery-slide"><a href="http://img2.kvadroom.ru/i/offer/104/343/166/125239204_1200_900.jpg" rel="gallery" title="" itemscope="" itemtype="http://schema.org/ImageObject" data-index="1" class="gallery-image"><span style="background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239204_620_465.jpg)" class="gallery-slide-blured"></span><img itemprop="contentUrl" src="http://img2.kvadroom.ru/i/offer/104/343/166/125239204_620_465.jpg" alt="Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 1"></a></div>
+                    <div class="gallery-slide"><a href="http://img2.kvadroom.ru/i/offer/104/343/166/125239207_1200_900.jpg" rel="gallery" title="" itemscope="" itemtype="http://schema.org/ImageObject" data-index="2" class="gallery-image"><span style="background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239207_620_465.jpg)" class="gallery-slide-blured"></span><img itemprop="contentUrl" src="http://img2.kvadroom.ru/i/offer/104/343/166/125239207_620_465.jpg" alt="Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 2"></a></div>
+                    <div class="gallery-slide"><a href="http://img2.kvadroom.ru/i/offer/104/343/166/125239217_1200_900.jpg" rel="gallery" title="" itemscope="" itemtype="http://schema.org/ImageObject" data-index="3" class="gallery-image"><span style="background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239217_620_465.jpg)" class="gallery-slide-blured"></span><img itemprop="contentUrl" src="http://img2.kvadroom.ru/i/offer/104/343/166/125239217_620_465.jpg" alt="Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 3"></a></div>
+                    <div class="gallery-slide"><a href="http://img2.kvadroom.ru/i/offer/104/343/166/125239218_1200_900.jpg" rel="gallery" title="" itemscope="" itemtype="http://schema.org/ImageObject" data-index="4" class="gallery-image"><span style="background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239218_620_465.jpg)" class="gallery-slide-blured"></span><img itemprop="contentUrl" src="http://img2.kvadroom.ru/i/offer/104/343/166/125239218_620_465.jpg" alt="Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 4"></a></div>
+                    <div class="gallery-slide"><a href="http://img2.kvadroom.ru/i/offer/104/343/166/125239220_1200_900.jpg" rel="gallery" title="" itemscope="" itemtype="http://schema.org/ImageObject" data-index="5" class="gallery-image"><span style="background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239220_620_465.jpg)" class="gallery-slide-blured"></span><img itemprop="contentUrl" src="http://img2.kvadroom.ru/i/offer/104/343/166/125239220_620_465.jpg" alt="Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 5"></a></div>
+                    <div class="gallery-slide"><a href="http://img2.kvadroom.ru/i/offer/104/343/166/125239204_1200_900.jpg" title="" itemscope="" itemtype="http://schema.org/ImageObject" data-index="1" class="gallery-image"><span style="background-image: url(http://img2.kvadroom.ru/i/offer/104/343/166/125239204_620_465.jpg)" class="gallery-slide-blured"></span><img itemprop="contentUrl" src="http://img2.kvadroom.ru/i/offer/104/343/166/125239204_620_465.jpg" alt="Продается 2‑комнатная квартира, 44.8 м²,  улица Народного Ополчения, 23к1 — фото 1"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div style="visibility: visible; opacity: 1;" class="gallery-counter"><a href="#stayhere" rel="nofollow" class="gallery-counter-arrow gallery-counter-arrow-left kiv kiv-e"><i class="icon-font icon-font-arr-left"></i></a><span class="gallery-counter-text"><span class="gallery-counter-current">1</span>из <span class="gallery-counter-total">5</span></span><a href="#stayhere" rel="nofollow" class="gallery-counter-arrow gallery-counter-arrow-right kiv kiv-e"><i class="icon-font icon-font-arr-right"></i></a></div>
+            </div><a href="#" class="attention-block"><i></i><span class="title">Подключить презентацию</span><span class="text">Презентация создается автоматически на основе загруженных фотографий.</span></a>
+            <div class="divider-40"></div>
+            <div class="map-block map-block-offer">
+              <div class="map-wrapper"><a href="#" rel="nofollow" target="_blank" class="tgb-gallery"><span class="tgb-gallery-close"><i class="icon-font icon-font-cross"></i></span><span class="tgb-gallery-image"><img src="http://imgc.kvadroom.ru/i/foto_special_text/new_736.jpg" alt="Выдаем ключи! г.Химки"></span><span class="tgb-gallery-text"><span class="tgb-gallery-title">Выдаем ключи! </span>sг.Химки Готовые квартиры от застройщика! Развитая инфр-ра. 8км от МКАД</span><span class="clear"></span></a>
+                <div id="map-offer-104343166" data-offer_id="104343166" data-map_layer="map" data-info_name=" улица Народного Ополчения, 23к1" data-info_type="Продается 2-комнатная квартира, 44.8 м²" data-type_id="0" data-info_price="9 350 000" data-info_image="false" data-rub="9 350 000" data-usd="162 927" data-eur="148 969" data-info_size="44.8 м²" data-info_url="http://www.kvadroom.ru/obyavleniya/prodaetsiya-2-komnatnaya-kvartira-horoshevo-mnevniki/104343166.html" data-lat="55.778735" data-lng="37.478253" data-marker="true" data-text="" class="map-container offer-map-init">
+                  <div data-hasqtip="30" oldtitle="Кликните для включения интерактивного режима карты" title="" aria-describedby="qtip-30" class="map-static-container tooltip"><i class="marker"></i><img width="620" height="460" src="http://static-maps.yandex.ru/1.x/?ll=37.478253,55.778735&amp;size=600,450&amp;z=16&amp;l=map"></div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <div class="divider-40"></div>
+            <div class="form-contact-agent new">
+              <!-- noindex--><a rel="nofollow" href="#stayhere" data-offer_id="104343166" class="process-abuse process-abuse-form"><i class="icon-font icon-font-complaint"></i><span>Пожаловаться</span></a>
+              <!-- /noindex-->
+              <div class="form-contact-agent-header">
+                <p class="name">Светлана Егоровна</p>
+              </div>
+              <div class="form-contact-agent-phone">
+                <div class="form-contact-agent-phone-number">
+                  <div class="form-contact-agent-phone-number-items">
+                    <div class="form-contact-agent-phone-number-item form-contact-agent-phone-number-item-dummy"><img style="visibility: visible; height: 18px;" onload="this.style.visibility = 'visible'" alt="Телефон" src="http://samara.kvadroom.ru/srv/phone_o_id.php?o_id=104343166&amp;p222=1&amp;res=24" class="al-agency2-phone-1"></div>
+                  </div>
+                  <div class="form-contact-agent-phone-number-item-show kiv"><a id="request-your-price" href="#stayhere" data-phone_img_url="http://samara.kvadroom.ru/srv/phone_o_id.php?o_id=104343166&amp;p=2&amp;p222=1&amp;res=24" data-client-id="7984524" data-o-id="104343166" class="show-phone yellow-small-button right kiv mtm5"><span class="kiv-e">Показать телефон</span></a></div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <div class="clear"></div>
+              <div class="telephone-text">Пожалуйста, скажите, что вы нашли это объявление на Квадруме</div>
+              <form id="form-contact-agent" action="#stayhere" method="post">
+                <input id="form-contact-agent-input-id" type="hidden" value="104343166">
+                <div id="form-contact-agent-input-message-holder" style="margin-bottom: 20px;">
+                  <textarea id="form-contact-agent-input-message" name="text" rows="3" placeholder="Сообщение автору" class="textarea form-input-focus"></textarea>
+                </div>
+                <div>
+                  <div class="form-input-text left w40">
+                    <input id="form-contact-agent-your-price" name="price" type="text" value="" placeholder="Предложите свою цену" class="form-input-focus">
+                  </div>
+                  <div class="checkbox-group">
+                    <input id="currency-selector-1" type="radio" name="form-contact-agent-currency-selector" value="rub" checked="">
+                    <label for="currency-selector-1"><i class="icon-font icon-font-ruble_helv"></i></label>
+                    <input id="currency-selector-2" type="radio" name="form-contact-agent-currency-selector" value="usd">
+                    <label for="currency-selector-2">$</label>
+                    <input id="currency-selector-3" type="radio" name="form-contact-agent-currency-selector" value="eur">
+                    <label for="currency-selector-3">€</label>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                <div id="addifional-fields" style="display: none; padding-top: 20px">
+                  <label class="form-label"><span class="form-input-text">
+                      <input id="form-contact-agent-input-name" name="name" type="text" placeholder="Ваше имя" value="" class="form-input-focus"></span></label><br>
+                  <div class="container-10-p">
+                    <div class="grid-50">
+                      <label class="form-label"><span class="form-input-text">
+                          <input id="form-contact-agent-input-phone" name="phone" type="text" placeholder="Контактный телефон" value="" class="form-input-focus"></span></label>
+                    </div>
+                    <div class="grid-50">
+                      <label class="form-label"><span class="form-input-text">
+                          <input id="form-contact-agent-input-e-mail" name="email" type="text" placeholder="Электронная почта" value="" class="form-input-focus"></span></label>
+                    </div>
+                    <div class="clear"></div>
+                  </div><br>
+                </div>
+                <div class="container-10-p">
+                  <div style="line-height: 1em" class="grid-30">
+                    <div style="display: none" class="captcha-holder captcha-block"><a id="captcha-link" tabindex="100000" href="#"><img id="captcha-img" alt="Код с картинки" src="/i/blank.png" data-src="/action/captcha/?r=1108667904"></a></div>
+                  </div>
+                  <div style="line-height: 1em" class="grid-30">
+                    <div style="display: none" class="captcha-block form-input-text">
+                      <input id="form-contact-agent-input-captcha" name="cp" type="text" value="" placeholder="Код с картинки" class="form-input-focus">
+                    </div>
+                  </div>
+                  <div style="line-height: 1em" class="grid-40">
+                    <div style="display: none" class="submit-block">
+                      <input type="submit" value="Отправить" class="button button-cyan-dark right kiv kiv-e">
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+              </form>
+            </div>
+            <div class="offer-meta-info"><span class="offer-meta-info-item">58 просмотров</span><span class="offer-meta-info-item">Обновлено 13 марта</span><span class="offer-meta-info-item">Создано 13 марта</span></div>
+          </div>
+          <div class="grid-8">
+            <div class="offer-tabs-widget">
+              <div class="tab-content-offer primary static">
+                <h3>Общая информация</h3>
+                <ul class="offer-params-list">
+                  <li>2-комнатная квартира</li>
+                  <li>Наследство</li>
+                  <li><span class="nowrap">Общая 44.8 м², жил 29.5 м², кух 6.4 м²</span></li>
+                  <li>Хороший ремонт</li>
+                  <li>Изолированные комнаты</li>
+                  <li>7 этаж (всего 9)</li>
+                  <li>Раздельный санузел</li>
+                  <li>Балкон</li>
+                  <li>Лоджии нет</li>
+                  <li>Телефон</li>
+                  <li>Интернет</li>
+                </ul>
+                <h3>Здание</h3>
+                <ul class="offer-params-list">
+                  <li>Панельный дом</li>
+                  <li>Домофон</li>
+                  <li>Пассажирский лифт</li>
+                  <li>Мусоропровод</li>
+                </ul>
+                <h3>Что есть рядом</h3>
+                <ul class="offer-params-list">
+                  <li>Детская площадка</li>
+                  <li>Супермаркет</li>
+                  <li>Салон красоты</li>
+                </ul>
+                <h3>Условия</h3>
+                <ul class="offer-params-list">
+                  <li class="class font-bold color-green">Возможен торг</li>
+                  <li class="class font-bold color-green">Ипотека</li>
+                  <li>Альтернатива</li>
+                </ul>
+              </div>
+              <div class="tab-content-offer secondary static">
+                <h3>Описание</h3>Предлагаем к продаже двухкомнатную квартиру в отличном состоянии. Стеклопакеты, отциклёван паркет, заменены радиаторы, остеклен балкон, кондиционер. Изолированные комнаты, раздельный санузел. Дом находится в удобном московском районе. Вся инфраструктура в шаговой доступности и с хорошим сообщением до станций метро Полежаевская, Октябрьское поле, Крылатское, Сокол. Рядом Серебряный бор. Один взрослый собственник. Более трех лет в собственности.
+              </div>
+            </div><a href="#" data-off_text="Детальная информация" data-on_text="Описание" style="display: none;" class="color-gray author-widget-trigger">Описание</a>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <!-- script(src="js/zk-object.js")-->
+      <footer class="footer footer-new">
+        <div class="footer-content">
+          <div class="left">
+            <div class="heading"><span class="item">&copy; 2005 – 2015 Квадрум <sup>®</sup></span><a rel="nofollow" target="_blank" href="http://help.kvadroom.ru/" class="item kiv-e">Помощь</a><a rel="nofollow" target="_blank" href="http://my.kvadroom.ru/add/" class="item kiv-e bold">Разместить объявление</a></div>
+            <div class="sub"><a rel="nofollow" target="_blank" href="http://help.kvadroom.ru/legal/agreement/" class="item kiv-e">Пользовательское соглашение</a><a rel="nofollow" target="_blank" href="http://help.kvadroom.ru/legal/privacy/" class="item kiv-e">Политика конфиденциальности</a><a target="_blank" href="http://reg.kvadroom.ru/" class="item kiv-e">Недвижимость в регионах</a></div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

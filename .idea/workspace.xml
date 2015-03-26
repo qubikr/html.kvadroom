@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="207113dc-19c3-4e98-a265-72223dc44aae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/min/maps-min.js" afterPath="$PROJECT_DIR$/js/min/maps-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/maps.js" afterPath="$PROJECT_DIR$/js/maps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/min/zk-catalog-min.js" afterPath="$PROJECT_DIR$/js/min/zk-catalog-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/zk-catalog.js" afterPath="$PROJECT_DIR$/js/zk-catalog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jade/partials/breadcrumbs.jade" afterPath="$PROJECT_DIR$/jade/partials/breadcrumbs.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.codekit" afterPath="$PROJECT_DIR$/config.codekit" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/kv.css" afterPath="$PROJECT_DIR$/css/kv.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/offer.less" afterPath="$PROJECT_DIR$/less/offer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zk-catalog.html" afterPath="$PROJECT_DIR$/zk-catalog.html" />
     </list>
     <ignored path="Quad.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="maps.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="maps.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/maps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5508982" vertical-offset="7366" max-vertical-offset="8550">
-              <caret line="797" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="827" selection-end-column="2" />
+            <state vertical-scroll-proportion="-3.2962964" vertical-offset="7366" max-vertical-offset="8550">
+              <caret line="760" column="38" selection-start-line="760" selection-start-column="38" selection-end-line="760" selection-end-column="38" />
               <folding>
                 <element signature="e#1258#4180#0" expanded="false" />
                 <element signature="e#4216#4382#0" expanded="false" />
@@ -87,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="complex.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="complex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/complex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state vertical-scroll-proportion="0.2132107" vertical-offset="0" max-vertical-offset="1196">
               <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="52" />
               <folding />
             </state>
@@ -112,10 +114,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2554" max-vertical-offset="3765">
               <caret line="209" column="38" selection-start-line="209" selection-start-column="38" selection-end-line="209" selection-end-column="38" />
-              <folding>
-                <marker date="1427293035000" expanded="true" signature="118:157" placeholder="{...}" />
-                <marker date="1427293035000" expanded="true" signature="129:133" placeholder="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -335,22 +334,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/complex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/test-map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/zk_objects.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625" vertical-offset="16245" max-vertical-offset="39420">
@@ -383,21 +366,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/zk-catalog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2554" max-vertical-offset="3765">
-          <caret line="209" column="38" selection-start-line="209" selection-start-column="38" selection-end-line="209" selection-end-column="38" />
-          <folding>
-            <marker date="1427293035000" expanded="true" signature="118:157" placeholder="{...}" />
-            <marker date="1427293035000" expanded="true" signature="129:133" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/maps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5508982" vertical-offset="7366" max-vertical-offset="8550">
-          <caret line="797" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="827" selection-end-column="2" />
+        <state vertical-scroll-proportion="-3.2962964" vertical-offset="7366" max-vertical-offset="8550">
+          <caret line="760" column="38" selection-start-line="760" selection-start-column="38" selection-end-line="760" selection-end-column="38" />
           <folding>
             <element signature="e#1258#4180#0" expanded="false" />
             <element signature="e#4216#4382#0" expanded="false" />
@@ -407,6 +379,30 @@
             <marker date="1427288933000" expanded="true" signature="1996:2015" placeholder="..." />
             <marker date="1427288933000" expanded="true" signature="16810:16817" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zk-catalog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2554" max-vertical-offset="3765">
+          <caret line="209" column="38" selection-start-line="209" selection-start-column="38" selection-end-line="209" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/test-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/complex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2132107" vertical-offset="0" max-vertical-offset="1196">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
