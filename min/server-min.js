@@ -1,1 +1,0 @@
-var connect=require("connect"),serveStatic=require("serve-static"),md5=require("MD5");connect().use(connect.basicAuth(function(e,c){var r="7f58b698ca4937b2e3df346979f0f5e8";return r==md5(md5(e))&&r==md5(md5(c))})).use(serveStatic(__dirname)).listen(process.env.PORT||5e3);
