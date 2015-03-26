@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="207113dc-19c3-4e98-a265-72223dc44aae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jade/partials/breadcrumbs.jade" afterPath="$PROJECT_DIR$/jade/partials/breadcrumbs.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.codekit" afterPath="$PROJECT_DIR$/config.codekit" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/kv.css" afterPath="$PROJECT_DIR$/css/kv.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/offer.less" afterPath="$PROJECT_DIR$/less/offer.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zk-catalog.html" afterPath="$PROJECT_DIR$/zk-catalog.html" />
     </list>
     <ignored path="Quad.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -286,7 +282,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="2560" height="1342" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />

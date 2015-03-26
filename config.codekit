@@ -56,6 +56,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/filter.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/filter.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/footer-light.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -285,6 +294,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
+	"\/jade\/no-objects.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/no-objects.jade",
+		"outputAbbreviatedPath": "\/no-objects.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
 	"\/jade\/object.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -336,6 +356,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/partials\/filter-string.jade",
 		"outputAbbreviatedPath": "\/filter-string.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/jade\/partials\/filter.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/partials\/filter.jade",
+		"outputAbbreviatedPath": "\/filter.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0

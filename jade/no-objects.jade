@@ -1,0 +1,104 @@
+extend _layout
+
+block content
+	.page-title: .w100.h75: body: tr: td: h1.h1-28.page-title-header
+		|Продажа 2-комнатных квартир с балконами по ипотеке без торга в Москве и области с фото
+
+	.divider-10
+	include partials/breadcrumbs
+	include partials/filter
+
+	.divider-20
+
+	mixin listItem(title, count)
+		li: a(href='#') #{title}
+			if count > 0
+				span.counter #{count}
+
+	h2.big-header-centered
+		| Увы, по этому запросу объявлегний пока нет.
+		br
+		| Вот что есть по Красноярскому краю:
+
+	.menu-verticals
+		.container-24
+			.grid-6
+				h3.title.color-red Купить
+				ul
+					+listItem('Новостройки', 12)
+					+listItem('Квартиры-студии', 2)
+					+listItem('1-комнатные', 2)
+					+listItem('2-комнатные', 0)
+					+listItem('3-комнатные', 0)
+					+listItem('4-комнатные', 213)
+					+listItem('Большие', 2)
+					+listItem('Комнаты', 7)
+					+listItem('Дома', 2)
+					+listItem('Дачи', 3)
+					+listItem('Коттеджи', 42)
+					+listItem('Участки', 2)
+					+listItem('Гаражи', 2)
+
+					li.all: a(href='#') Все объявления
+						span.counter 124
+			.grid-6
+				h3.title.color-red Снять посуточно
+				ul
+					+listItem('Новостройки', 2)
+					+listItem('Квартиры-студии', 2)
+					+listItem('1-комнатные', 2)
+					+listItem('2-комнатные', 2)
+					+listItem('3-комнатные', 2)
+					+listItem('4-комнатные', 2)
+					+listItem('Большие', 2)
+					+listItem('Комнаты', 2)
+					+listItem('Дома', 2)
+					+listItem('Дачи', 2)
+					+listItem('Коттеджи', 2)
+					+listItem('Участки', 2)
+					+listItem('Гаражи', 2)
+
+					li.all
+						a(href='#') Все объявления
+							span.counter 124
+			.grid-6
+				h3.title.color-red Коммерческая
+				ul
+					+listItem('Новостройки', 2)
+					+listItem('Квартиры-студии', 2)
+					+listItem('1-комнатные', 2)
+					+listItem('2-комнатные', 2)
+					+listItem('3-комнатные', 2)
+					+listItem('4-комнатные', 2)
+					+listItem('Большие', 2)
+					+listItem('Комнаты', 2)
+					+listItem('Дома', 2)
+					+listItem('Дачи', 2)
+					+listItem('Коттеджи', 2)
+					+listItem('Участки', 2)
+					+listItem('Гаражи', 2)
+
+					li.all
+						a(href='#') Все объявления
+							span.counter 124
+			.grid-6
+				h3.title.color-red Коммерческая
+				ul
+					+listItem('Новостройки', 2)
+					+listItem('Квартиры-студии', 2)
+					+listItem('1-комнатные', 2)
+					+listItem('2-комнатные', 2)
+					+listItem('3-комнатные', 2)
+					+listItem('4-комнатные', 2)
+					+listItem('Большие', 2)
+					+listItem('Комнаты', 2)
+					+listItem('Дома', 2)
+					+listItem('Дачи', 2)
+					+listItem('Коттеджи', 2)
+					+listItem('Участки', 2)
+					+listItem('Гаражи', 2)
+
+					li.all
+						a(href='#') Все объявления
+							span.counter 124
+			.clear
