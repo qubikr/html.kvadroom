@@ -15188,16 +15188,11 @@ ul.circular-switcher li.active {
   margin: 0 22px;
 }
 .filter-string {
-  height: 0 !important;
-  opacity: 0;
   -webkit-transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
           transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
   -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
           transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-.filter-string.active {
-  height: 102px !important;
-  opacity: 1;
+  margin-bottom: 20px;
 }
 .filter-string .main-filter {
   padding: 1px 15px 16px;
