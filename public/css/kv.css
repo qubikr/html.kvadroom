@@ -3412,6 +3412,27 @@ table.table-content tbody tr:hover td {
 .menu-verticals ul li.all a:hover {
   color: #ff0000;
 }
+.my-lovely {
+  background-color: #FBF3E4;
+  display: block;
+  padding: 15px 20px 15px 50px;
+  font-size: 13px;
+  line-height: 1.3em;
+  position: relative;
+  text-decoration: none !important;
+  color: #333 !important;
+  -webkit-transition: background-color 0.15s;
+          transition: background-color 0.15s;
+}
+.my-lovely:hover {
+  background-color: #f4ecdd;
+}
+.my-lovely i.icon-font {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  color: #4AA3A7;
+}
 .page-width {
   width: 940px;
 }
@@ -3567,6 +3588,9 @@ code {
   width: 32px;
   height: 32px;
   display: block;
+}
+.icon-font-commers:before {
+  content: "\e65b";
 }
 .icon-font-heart_stroke:before {
   content: "\e659";
