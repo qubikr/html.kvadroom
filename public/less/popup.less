@@ -15,6 +15,14 @@
     .animation-easeOutQuad(200ms);
   }
 
+  .kv-select {
+    width: 100%;
+
+    .form-input-select-dropdown-option {
+      display: block;
+    }
+  }
+
   .popup-holder {
     position: fixed;
     top: 0;
@@ -65,6 +73,17 @@
 
       &:hover {
         color: @color-red;
+      }
+
+      &.mini {
+        top: 10px;
+        right: 10px;
+
+        i {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+        }
       }
     }
 
@@ -125,7 +144,8 @@
 
 .popup-regret,
 .popup-ad-on,
-.popup-ad-off {
+.popup-ad-off,
+.popup-login_plz {
   text-align: center;
 
   .icon-font {
@@ -157,6 +177,26 @@
     h2 {
       width: 375px;
       margin: 50px auto 50px;
+    }
+  }
+
+  &.popup-login_plz {
+    h2 {
+      width: auto;
+      margin: 50px auto 80px;
+      min-height: 140px;
+    }
+
+    .button {
+      height: 50px;
+      line-height: 50px;
+      padding: 0;
+      margin: 0 3px;
+      width: 195px;
+
+      &.button-bordered {
+        transform: translateY(1px);
+      }
     }
   }
 
@@ -229,4 +269,12 @@
     opacity: 1;
     .scale(1);
   }
+}
+
+.kvadroom-popup-logo {
+  background-image: url(../i/kvadroom-popup-logo.svg);
+  width: 376px;
+  height: 40px;
+  display: block;
+  margin: 20px auto 20px;
 }

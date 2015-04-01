@@ -3413,16 +3413,20 @@ table.table-content tbody tr:hover td {
   color: #ff0000;
 }
 .my-lovely {
+  width: 250px;
+  box-sizing: border-box;
   background-color: #FBF3E4;
   display: block;
   padding: 15px 20px 15px 50px;
   font-size: 13px;
   line-height: 1.3em;
+  float: right;
   position: relative;
   text-decoration: none !important;
   color: #333 !important;
   -webkit-transition: background-color 0.15s;
           transition: background-color 0.15s;
+  margin-bottom: 20px;
 }
 .my-lovely:hover {
   background-color: #f4ecdd;
@@ -3563,8 +3567,8 @@ code {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?-x4keoc132');
-  src: url('../fonts/icomoon.eot?#iefix-x4keoc132') format('embedded-opentype'), url('../fonts/icomoon.woff?-x4keoc132') format('woff'), url('../fonts/icomoon.ttf?-x4keoc132') format('truetype'), url('../fonts/icomoon.svg?-x4keoc1#icomoon32') format('svg');
+  src: url('../fonts/icomoon.eot?-x4keoc133');
+  src: url('../fonts/icomoon.eot?#iefix-x4keoc133') format('embedded-opentype'), url('../fonts/icomoon.woff?-x4keoc133') format('woff'), url('../fonts/icomoon.ttf?-x4keoc133') format('truetype'), url('../fonts/icomoon.svg?-x4keoc1#icomoon33') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -4002,6 +4006,12 @@ code {
   background-image: url(../i/sprite-icons.png);
   background-repeat: no-repeat;
 }
+.icon-1apr {
+  background-image: url(../i/sprite-icons-1apr.png) !important;
+}
+.kvadroom-logo-link-1apr .icon {
+  background-image: url(../i/sprite-icons-1apr.png) !important;
+}
 .icon-kvadroom-logo {
   background-position: 0 0;
   width: 158px;
@@ -4046,6 +4056,9 @@ code {
   .icon {
     background-image: url(../i/sprite-icons@2x.png);
     background-size: 500px 500px;
+  }
+  .icon-1apr {
+    background-image: url(../i/sprite-icons@2x-1apr.png) !important;
   }
 }
 .header-placeholder {
@@ -4856,6 +4869,14 @@ code {
 }
 .button-yellow:hover {
   background: #ffd92f;
+}
+.button-bordered {
+  border: 1px solid #ccc;
+  background: transparent;
+  box-sizing: border-box;
+}
+.button-bordered:hover {
+  background: rgba(0, 0, 0, 0.04);
 }
 .form-contact-agent {
   background: #bff7f3;
@@ -7250,6 +7271,15 @@ textarea.error {
   margin-bottom: 20px;
   line-height: 1.8em;
 }
+.fantastic-small .link {
+  display: inline;
+  color: #4AA8F0;
+  border-bottom: 1px solid #4AA8F0;
+}
+.fantastic-small .link:hover {
+  border-color: #ff0000;
+  color: #ff0000;
+}
 .fantastic-small .num-desc {
   font-size: 13px;
   color: #666;
@@ -7268,6 +7298,9 @@ textarea.error {
   position: relative;
   bottom: 0;
   float: right;
+}
+.fantastic-small .button.button-wider {
+  float: none !important;
 }
 .fantastic-map {
   margin-top: 20px;
@@ -11356,6 +11389,53 @@ yx-axis
   height: 12px;
   background: url(../i/kvad_marker_dot.png);
 }
+.maps-marker-icon.maps-marker-dot-full {
+  width: 12px;
+  height: 12px;
+  background: url(../i/kvad_map_circ_full_dot.png);
+}
+.maps-marker-icon.maps-marker-circle-small {
+  width: 28px;
+  height: 28px;
+  background: url(../i/kvad_map_circ_full_x-small_red.png);
+}
+.maps-marker-icon.maps-marker-circle-small .counter {
+  display: inline-block;
+  line-height: 29px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 12px;
+}
+.maps-marker-icon.maps-marker-circle-medium {
+  width: 43px;
+  height: 43px;
+  background: url(../i/kvad_map_circ_full_small_red.png);
+}
+.maps-marker-icon.maps-marker-circle-medium .counter {
+  display: inline-block;
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+}
+.maps-marker-icon.maps-marker-circle-big {
+  width: 60px;
+  height: 60px;
+  background: url(../i/kvad_map_circ_full_large_red.png);
+}
+.maps-marker-icon.maps-marker-circle-big .counter {
+  display: inline-block;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 17px;
+}
 .maps-marker-icon .marker-title {
   font-size: 20px;
   font-weight: bold;
@@ -13085,6 +13165,12 @@ yx-axis
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /* easeOutQuad */
 }
+.popup .kv-select {
+  width: 100%;
+}
+.popup .kv-select .form-input-select-dropdown-option {
+  display: block;
+}
 .popup .popup-holder {
   position: fixed;
   top: 0;
@@ -13137,6 +13223,15 @@ yx-axis
 .popup .window .close:hover {
   color: #ff0000;
 }
+.popup .window .close.mini {
+  top: 10px;
+  right: 10px;
+}
+.popup .window .close.mini i {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
 .popup .button-bottom {
   background: #F8F8F8;
   position: absolute;
@@ -13182,12 +13277,14 @@ yx-axis
 }
 .popup-regret,
 .popup-ad-on,
-.popup-ad-off {
+.popup-ad-off,
+.popup-login_plz {
   text-align: center;
 }
 .popup-regret .icon-font,
 .popup-ad-on .icon-font,
-.popup-ad-off .icon-font {
+.popup-ad-off .icon-font,
+.popup-login_plz .icon-font {
   position: absolute;
   top: 87px;
   left: 50%;
@@ -13199,7 +13296,8 @@ yx-axis
 }
 .popup-regret h2,
 .popup-ad-on h2,
-.popup-ad-off h2 {
+.popup-ad-off h2,
+.popup-login_plz h2 {
   font-size: 20px;
   text-align: center;
   width: 340px;
@@ -13208,22 +13306,52 @@ yx-axis
 }
 .popup-regret .button,
 .popup-ad-on .button,
-.popup-ad-off .button {
+.popup-ad-off .button,
+.popup-login_plz .button {
   color: #333;
   margin-bottom: 5px;
 }
 .popup-regret.popup-ad-off h2,
 .popup-ad-on.popup-ad-off h2,
 .popup-ad-off.popup-ad-off h2,
+.popup-login_plz.popup-ad-off h2,
 .popup-regret.popup-ad-on h2,
 .popup-ad-on.popup-ad-on h2,
-.popup-ad-off.popup-ad-on h2 {
+.popup-ad-off.popup-ad-on h2,
+.popup-login_plz.popup-ad-on h2 {
   width: 375px;
   margin: 50px auto 50px;
 }
+.popup-regret.popup-login_plz h2,
+.popup-ad-on.popup-login_plz h2,
+.popup-ad-off.popup-login_plz h2,
+.popup-login_plz.popup-login_plz h2 {
+  width: auto;
+  margin: 50px auto 80px;
+  min-height: 140px;
+}
+.popup-regret.popup-login_plz .button,
+.popup-ad-on.popup-login_plz .button,
+.popup-ad-off.popup-login_plz .button,
+.popup-login_plz.popup-login_plz .button {
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  margin: 0 3px;
+  width: 195px;
+}
+.popup-regret.popup-login_plz .button.button-bordered,
+.popup-ad-on.popup-login_plz .button.button-bordered,
+.popup-ad-off.popup-login_plz .button.button-bordered,
+.popup-login_plz.popup-login_plz .button.button-bordered {
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+}
 .popup-regret .info-text,
 .popup-ad-on .info-text,
-.popup-ad-off .info-text {
+.popup-ad-off .info-text,
+.popup-login_plz .info-text {
   padding: 25px 0 0 0;
   font-size: 13px;
   color: #666;
@@ -13295,6 +13423,13 @@ yx-axis
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+.kvadroom-popup-logo {
+  background-image: url(../i/kvadroom-popup-logo.svg);
+  width: 376px;
+  height: 40px;
+  display: block;
+  margin: 20px auto 20px;
 }
 .notifications {
   position: fixed;
@@ -14081,6 +14216,7 @@ ul.circular-switcher li.active {
   border: 1px solid #9BD0CD;
   left: 0;
   bottom: -3px;
+  border-radius: 2px;
 }
 .main-filter input[type="checkbox"].custom + label:before:active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);

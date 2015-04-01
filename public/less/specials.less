@@ -1028,6 +1028,17 @@
     line-height: 1.8em;
   }
 
+  .link {
+    display: inline;
+    color: #4AA8F0;
+    border-bottom: 1px solid #4AA8F0;
+
+    &:hover {
+      border-color: @color-red;
+      color: @color-red;
+    }
+  }
+
   .num-desc {
      font-size: 13px;
      color: #666;
@@ -1048,6 +1059,10 @@
     position: relative;
     bottom: 0;
     float: right;
+
+    &.button-wider {
+      float: none !important;
+    }
   }
 }
 
