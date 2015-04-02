@@ -79,7 +79,7 @@ MapLinks.Map = function(){
                             to = setTimeout(function(){
                                 clearTimeout(to);
                                 pin.showBalloon();
-                            }, 400);
+                            }, 300);
                         });
 
                         pin.getGeoObject().events.add('mouseleave', function(){
@@ -88,7 +88,7 @@ MapLinks.Map = function(){
                             to = setTimeout(function(){
                                 clearTimeout(to);
                                 pin.hideBalloon();
-                            }, 400);
+                            }, 300);
                         });
 
                         collection.add(pin);
