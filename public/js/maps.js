@@ -407,43 +407,53 @@ var GeoMap = function(opts){
                     };
                 } break;
 
-                case 'circle_dot' : {
-                    typeData = {
-                        className: 'maps-marker-dot-full',
-                        size: [12, 12],
-                        offset: [-6, -6],
-                        balloonOffsetY: -1,
-                        balloonOffsetX: 16
-                    };
-                } break;
-
                 case 'circle_small' : {
                     typeData = {
                         className: 'maps-marker-circle-small',
-                        size: [28, 28],
-                        offset: [-14, -14],
+                        size: [25, 25],
+                        offset: [-12, -12],
                         balloonOffsetY: -1,
-                        balloonOffsetX: 18
+                        balloonOffsetX: 16
                     };
                 } break;
 
                 case 'circle_medium' : {
                     typeData = {
                         className: 'maps-marker-circle-medium',
-                        size: [43, 43],
-                        offset: [-21, -21],
+                        size: [35, 35],
+                        offset: [-17, -17],
                         balloonOffsetY: -1,
-                        balloonOffsetX: 25
+                        balloonOffsetX: 21
                     };
                 } break;
 
                 case 'circle_big' : {
                     typeData = {
                         className: 'maps-marker-circle-big',
-                        size: [60, 60],
-                        offset: [-30, -30],
+                        size: [45, 45],
+                        offset: [-22, -22],
                         balloonOffsetY: -1,
-                        balloonOffsetX: 34
+                        balloonOffsetX: 26
+                    };
+                } break;
+
+                case 'circle_jumbo' : {
+                    typeData = {
+                        className: 'maps-marker-circle-jumbo',
+                        size: [55, 55],
+                        offset: [-27, -27],
+                        balloonOffsetY: -1,
+                        balloonOffsetX: 31
+                    };
+                } break;
+
+                case 'circle_titan' : {
+                    typeData = {
+                        className: 'maps-marker-circle-titan',
+                        size: [70, 70],
+                        offset: [-35, -35],
+                        balloonOffsetY: -1,
+                        balloonOffsetX: 39
                     };
                 } break;
 
@@ -809,14 +819,14 @@ var GeoMap = function(opts){
     this.createClusterer = function(){
         var IconsDefault = [
             {
-                href: '/i/kvad_map_circ_small_red.png',
-                size: [43, 43],
-                offset: [-21.5, -21.5]
+                href: '/i/kvad_cluster_white_35px.png',
+                size: [35, 35],
+                offset: [-17, -17]
             },
             {
-                href: '/i/kvad_map_circ_large_red.png',
-                size: [60, 60],
-                offset:  [-10, -25]
+                href: '/i/kvad_cluster_white_55px.png',
+                size: [55, 55],
+                offset:  [-27, -27]
             }
         ];
 
@@ -846,13 +856,15 @@ var GeoMap = function(opts){
             }
         }
 
-        function getTemplate(size){
+        function getTemplate(big, size){
             var tmpl;
+
+            console.log(size)
 
             if(isMaxZoomThere()){
                 tmpl = '<div class="map-cluster"><div class="anchor" style="width: ' + size[0] + 'px; height: ' + size[1] + 'px"></div></div>';
             }else{
-                tmpl = '<div class="map-cluster">$[properties.geoObjects.length]</div>';
+                tmpl = '<div class="' + ((big) ? 'map-cluster-big' : 'map-cluster') + '">$[properties.geoObjects.length]</div>';
             }
 
             return ymaps.templateLayoutFactory.createClass(tmpl);
@@ -865,7 +877,7 @@ var GeoMap = function(opts){
             clusterDisableClickZoom: false,
             openBalloonOnClick: false,
             zoomMargin: 50,
-            gridSize: 64,
+            gridSize: 55,
             margin: 24
         });
 
@@ -876,7 +888,10 @@ var GeoMap = function(opts){
                 icons = getIcons();
 
             cluster.options.set('icons', icons);
-            cluster.options.set('iconContentLayout', getTemplate(icons[0].size));
+            cluster.options.set(
+                'iconContentLayout', 
+                getTemplate(geoObjects.length > 15, icons[0].size)
+            );
 
             return cluster;
         };

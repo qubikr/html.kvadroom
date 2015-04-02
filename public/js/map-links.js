@@ -31,19 +31,27 @@ MapLinks.Map = function(){
                         c = Math.round(c);
 
                         if(c == 1){
-                            markerType = 'circle_dot';
+                            markerType = 'dot';
                         }
 
-                        if(c > 1 && c < 50){
+                        if(c > 1 && c < 10){
                             markerType = 'circle_small';
                         }
 
-                        if(c >= 50 && c < 100){
+                        if(c >= 10 && c < 50){
                             markerType = 'circle_medium';
                         }
 
-                        if(c >= 100){
+                        if(c >= 50 && c < 100){
                             markerType = 'circle_big';
+                        }
+
+                        if(c >= 100 && c < 1000){
+                            markerType = 'circle_jumbo';
+                        }
+
+                        if(c >= 1000){
+                            markerType = 'circle_titan';
                         }
 
                         if(!markerType){
