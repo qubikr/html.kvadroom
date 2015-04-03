@@ -459,6 +459,7 @@ var GeoMap = function(opts){
             zoomRelatedIcon: false,
             zoomRelatedIconFactor: 12,
             type: 'basic',
+            avoidPanningAndBalloon: false, // Click will invoke immediately (by default it invokes after map panning animation have completed) - good for pin clicks
             balloonCloseable: true,
             onReady: function(){},
             onClick: function(){},
@@ -500,6 +501,10 @@ var GeoMap = function(opts){
 
         pin.events.add('click', function(){
             options.onClick();
+
+            if(options.avoidPanningAndBalloon === true){
+                return;
+            }
 
             map.panTo(options.center, {
                 delay: 0
@@ -829,7 +834,6 @@ var GeoMap = function(opts){
     };
 
     this.getIconTypeNameByCount = function(count){
-        console.log(count)
         if(count == 1){
             return 'dot';
         }
@@ -909,6 +913,10 @@ var GeoMap = function(opts){
 
         var count = 0;
 
+        if(!geoObjects){
+            geoObjects = [];
+        }
+
         if(options.clustererCountOfItems){
             _.each(geoObjects, function(item){
                 count += item.options.get('counter');
@@ -924,8 +932,8 @@ var GeoMap = function(opts){
             clusterDisableClickZoom: false,
             openBalloonOnClick: false,
             zoomMargin: 50,
-            gridSize: 55,
-            margin: 24
+            gridSize: 50,
+            margin: 50
         });
 
         map.geoObjects.add(clusterer);
@@ -945,6 +953,7 @@ var GeoMap = function(opts){
             var icons = getIcons(count);
 
             cluster.options.set('icons', icons);
+
             cluster.options.set(
                 'iconContentLayout', 
                 getTemplate(count, icons[0].size)

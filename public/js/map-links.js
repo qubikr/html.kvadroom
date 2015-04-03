@@ -31,36 +31,11 @@ MapLinks.Map = function(){
 
                         c = Math.round(c);
 
-                        if(c == 1){
-                            markerType = 'dot';
-                        }
-
-                        if(c > 1 && c < 10){
-                            markerType = 'circle_small';
-                        }
-
-                        if(c >= 10 && c < 1000){
-                            markerType = 'circle_medium';
-                        }
-
-                        if(c >= 1000 && c < 10000){
-                            markerType = 'circle_big';
-                        }
-
-                        if(c >= 10000 && c < 100000){
-                            markerType = 'circle_jumbo';
-                        }
-
-                        if(c >= 100000){
-                            markerType = 'circle_titan';
-                        }
-
-                        if(!markerType){
-                            console.log('x', item)
-                        }
+                        markerType = map.getIconTypeNameByCount(c);
 
                         var pin = new map.Pin({
                             type: markerType,
+                            avoidPanningAndBalloon: true,
                             center: [
                                 item[0],
                                 item[1]
@@ -94,6 +69,8 @@ MapLinks.Map = function(){
 
                         //collection.add(pin);
                     });
+
+                    instance.fitCluster();
 
                     //collection.draw();
                     //collection.fitBounds();

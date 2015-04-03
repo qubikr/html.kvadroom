@@ -183,19 +183,19 @@ ZKCatalog.Map = function(){
 				controls: true,
 				center: data.center,
 				onInit: function (instance) {
-					ZKCatalog.data.getCurrentObject(function(data){
-						if(data.success){
-							var marker = new map.Pin({
-								type: 'basic',
-								avoidClusterer: true,
-								center: [
-									parseFloat(data.data.lat),
-									parseFloat(data.data.lon)
-								],
-								content: '<a href="' + data.data.url + '">' + data.data.name + '</a>'
-							});
-						}
-					});
+					// ZKCatalog.data.getCurrentObject(function(data){
+					// 	if(data.success){
+					// 		var marker = new map.Pin({
+					// 			type: 'basic',
+					// 			avoidClusterer: true,
+					// 			center: [
+					// 				parseFloat(data.data.lat),
+					// 				parseFloat(data.data.lon)
+					// 			],
+					// 			content: '<a href="' + data.data.url + '">' + data.data.name + '</a>'
+					// 		});
+					// 	}
+					// });
 
 					ZKCatalog.data.getObjects(function(data){
 						if(data.success){

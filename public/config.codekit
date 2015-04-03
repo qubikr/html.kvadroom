@@ -2,6 +2,15 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "18493",
 "files": {
+	"\/complex.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/complex.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/kv.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -33,57 +42,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/i\/kvad_cluster_white_25px.png": {
+	"\/i\/kvad_dot_white_12px.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 612,
-		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_25px.png",
-		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_25px.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/i\/kvad_cluster_white_35px.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 903,
-		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_35px.png",
-		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_35px.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/i\/kvad_cluster_white_45px.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1186,
-		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_45px.png",
-		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_45px.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/i\/kvad_cluster_white_55px.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1448,
-		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_55px.png",
-		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_55px.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/i\/kvad_cluster_white_70px.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1999,
-		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_70px.png",
-		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_70px.png",
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/i\/kvad_dot_white_12px.png",
+		"outputAbbreviatedPath": "\/i\/kvad_dot_white_12px.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
