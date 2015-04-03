@@ -1,5 +1,5 @@
 var GeoMap = function(opts){
-	var _this = this,
+    var _this = this,
         map,
         balloons = [],
         pins = [],
@@ -63,21 +63,21 @@ var GeoMap = function(opts){
     };
 
     this.Collection = function(){
-    	var collection = new ymaps.GeoObjectCollection();
+        var collection = new ymaps.GeoObjectCollection();
 
-    	this.add = function(obj){
-    		collection.add(obj.getGeoObject());
-    	};
+        this.add = function(obj){
+            collection.add(obj.getGeoObject());
+        };
 
-    	this.fitBounds = function(){
-    		map.setBounds(collection.getBounds());
+        this.fitBounds = function(){
+            map.setBounds(collection.getBounds());
 
-    		console.log(collection.getBounds())
-    	};
+            console.log(collection.getBounds())
+        };
 
-    	this.draw = function(){
-			map.geoObjects.add(collection);
-    	};
+        this.draw = function(){
+            map.geoObjects.add(collection);
+        };
     };
 
     var Balloon = function(opts){
@@ -352,6 +352,99 @@ var GeoMap = function(opts){
         });
     };
 
+    var getMarkerIconByType = function(typeName){
+        switch(typeName){
+            case 'basic_small' : {
+                return {
+                    className: 'maps-marker-basic_small',
+                    href: '/i/kvad_marker_dot.png',
+                    size: [19, 25],
+                    offset: [-10, -25],
+                    balloonOffsetY: -15,
+                    balloonOffsetX: 18
+                };
+            } break;
+
+            case 'dot' : {
+                return {
+                    className: 'maps-marker-dot',
+                    href: '/i/kvad_marker_dot.png',
+                    size: [12, 12],
+                    offset: [-6, -6],
+                    balloonOffsetY: -1,
+                    balloonOffsetX: 12
+                };
+            } break;
+
+            case 'circle_small' : {
+                return {
+                    className: 'maps-marker-circle-small',
+                    href: '/i/kvad_cluster_white_25px.png',
+                    size: [25, 25],
+                    offset: [-12, -12],
+                    balloonOffsetY: -1,
+                    balloonOffsetX: 16
+                };
+            } break;
+
+            case 'circle_medium' : {
+                return {
+                    className: 'maps-marker-circle-medium',
+                    href: '/i/kvad_cluster_white_35px.png',
+                    size: [35, 35],
+                    offset: [-17, -17],
+                    balloonOffsetY: -1,
+                    balloonOffsetX: 21
+                };
+            } break;
+
+            case 'circle_big' : {
+                return {
+                    className: 'maps-marker-circle-big',
+                    href: '/i/kvad_cluster_white_45px.png',
+                    size: [45, 45],
+                    offset: [-22, -22],
+                    balloonOffsetY: -1,
+                    balloonOffsetX: 26
+                };
+            } break;
+
+            case 'circle_jumbo' : {
+                return {
+                    className: 'maps-marker-circle-jumbo',
+                    href: '/i/kvad_cluster_white_55px.png',
+                    size: [55, 55],
+                    offset: [-27, -27],
+                    balloonOffsetY: -1,
+                    balloonOffsetX: 31
+                };
+            } break;
+
+            case 'circle_titan' : {
+                return {
+                    className: 'maps-marker-circle-titan',
+                    href: '/i/kvad_cluster_white_70px.png',
+                    size: [70, 70],
+                    offset: [-35, -35],
+                    balloonOffsetY: -1,
+                    balloonOffsetX: 39
+                };
+            } break;
+
+            default:
+            case 'basic' : {
+                return {
+                    className: 'maps-marker-basic',
+                    href: '/i/kvad_marker_basic.png',
+                    size: [31, 43],
+                    offset: [-21, -49],
+                    balloonOffsetY: -27,
+                    balloonOffsetX: 18
+                };
+            } break;
+        }
+    };
+
     this.Pin = function(opts){
         var _this = this;
 
@@ -378,98 +471,13 @@ var GeoMap = function(opts){
             counter = (options.counter && options.counter > 1) ? '<i class="counter">' + options.counter + '</i>' : '';
 
         var getTypeData = function(typeName){
-            var typeData;
-
             if(typeName == 'basic_small' && options.zoomRelatedIcon){
                 if(map.getZoom() <= options.zoomRelatedIconFactor){
                     typeName = 'dot';
                 }
             }
 
-            switch(typeName){
-                case 'basic_small' : {
-                    typeData = {
-                        className: 'maps-marker-basic_small',
-                        size: [19, 25],
-                        offset: [-10, -25],
-                        balloonOffsetY: -15,
-                        balloonOffsetX: 18
-                    };
-                } break;
-
-                case 'dot' : {
-                    typeData = {
-                        className: 'maps-marker-dot',
-                        size: [12, 12],
-                        offset: [-6, -6],
-                        balloonOffsetY: -1,
-                        balloonOffsetX: 12
-                    };
-                } break;
-
-                case 'circle_small' : {
-                    typeData = {
-                        className: 'maps-marker-circle-small',
-                        size: [25, 25],
-                        offset: [-12, -12],
-                        balloonOffsetY: -1,
-                        balloonOffsetX: 16
-                    };
-                } break;
-
-                case 'circle_medium' : {
-                    typeData = {
-                        className: 'maps-marker-circle-medium',
-                        size: [35, 35],
-                        offset: [-17, -17],
-                        balloonOffsetY: -1,
-                        balloonOffsetX: 21
-                    };
-                } break;
-
-                case 'circle_big' : {
-                    typeData = {
-                        className: 'maps-marker-circle-big',
-                        size: [45, 45],
-                        offset: [-22, -22],
-                        balloonOffsetY: -1,
-                        balloonOffsetX: 26
-                    };
-                } break;
-
-                case 'circle_jumbo' : {
-                    typeData = {
-                        className: 'maps-marker-circle-jumbo',
-                        size: [55, 55],
-                        offset: [-27, -27],
-                        balloonOffsetY: -1,
-                        balloonOffsetX: 31
-                    };
-                } break;
-
-                case 'circle_titan' : {
-                    typeData = {
-                        className: 'maps-marker-circle-titan',
-                        size: [70, 70],
-                        offset: [-35, -35],
-                        balloonOffsetY: -1,
-                        balloonOffsetX: 39
-                    };
-                } break;
-
-                default:
-                case 'basic' : {
-                    typeData = {
-                        className: 'maps-marker-basic',
-                        size: [31, 43],
-                        offset: [-21, -49],
-                        balloonOffsetY: -27,
-                        balloonOffsetX: 18
-                    };
-                } break;
-            }
-
-            return typeData;
+            return getMarkerIconByType(typeName);
         };
 
         var typeData = getTypeData(options.type);
@@ -479,7 +487,8 @@ var GeoMap = function(opts){
         }, {
             iconImageHref: '',
             iconImageSize: typeData.size,
-            iconImageOffset: typeData.offset
+            iconImageOffset: typeData.offset,
+            counter: options.counter
         });
 
         if(options.zIndex) {
@@ -514,17 +523,17 @@ var GeoMap = function(opts){
         if(clusterer && options.avoidClusterer !== true){
             clusterer.add(pin);
         }else{
-        	if(options.avoidMap !== true){
-            	map.geoObjects.add(pin);
-        	}
+            if(options.avoidMap !== true){
+                map.geoObjects.add(pin);
+            }
         }
 
         this.getGeoObject = function(){
-        	return pin;
+            return pin;
         };
 
         this.getBalloon = function(){
-        	return balloon;
+            return balloon;
         };
 
         this.getElement = function(){
@@ -771,6 +780,7 @@ var GeoMap = function(opts){
 
                 setTimeout(function(){
                     $(window).trigger('resize');
+                    options.onFullscreenEnter();
                 }, 50);
             }, fullScreenAnimationDuration);
         });
@@ -804,6 +814,7 @@ var GeoMap = function(opts){
                 top: 0,
                 left: 0
             });
+
             $map.parent().removeClass('map-fullscreen');
             $dummy.remove();
 
@@ -811,35 +822,63 @@ var GeoMap = function(opts){
 
             $('html,body').css('overflow', 'auto');
             map.container.fitToViewport();
+            options.onFullscreenExit();
         });
 
         map.container.fitToViewport();
     };
 
-    this.createClusterer = function(){
-        var IconsDefault = [
-            {
-                href: '/i/kvad_cluster_white_35px.png',
-                size: [35, 35],
-                offset: [-17, -17]
-            },
-            {
-                href: '/i/kvad_cluster_white_55px.png',
-                size: [55, 55],
-                offset:  [-27, -27]
-            }
-        ];
+    this.getIconTypeNameByCount = function(count){
+        console.log(count)
+        if(count == 1){
+            return 'dot';
+        }
 
-        var IconsMaxZoom = [{
-            href: '/i/kvad_marker_list.png',
-            size: [31, 43],
-            offset: [-15.5, -21.5]
-        },
+        if(count > 1 && count < 10){
+            return 'circle_small';
+        }
+
+        if(count >= 10 && count < 1000){
+            return 'circle_medium';
+        }
+
+        if(count >= 1000 && count < 10000){
+            return 'circle_big';
+        }
+
+        if(count >= 10000 && count < 100000){
+            return 'circle_jumbo';
+        }
+
+        if(count >= 100000){
+            return 'circle_titan';
+        }
+
+        return 'default';
+    };
+
+    this.createClusterer = function(center, geoObjects){
+        var getIconsDefault = function(count){
+            var data = getMarkerIconByType(_this.getIconTypeNameByCount(count));
+
+            return [
+                data,
+                data
+            ];
+        };
+
+        var IconsMaxZoom = [
             {
                 href: '/i/kvad_marker_list.png',
                 size: [31, 43],
                 offset: [-15.5, -21.5]
-            }];
+            },
+            {
+                href: '/i/kvad_marker_list.png',
+                size: [31, 43],
+                offset: [-15.5, -21.5]
+            }
+        ];
 
         function isMaxZoomThere(){
             var max_zoom = map.zoomRange.getCurrent()[1],
@@ -848,32 +887,40 @@ var GeoMap = function(opts){
             return current_zoom >= max_zoom;
         }
 
-        function getIcons(){
+        function getIcons(count){
             if(isMaxZoomThere()){
                 return IconsMaxZoom;
             }else{
-                return IconsDefault;
+                return getIconsDefault(count);
             }
         }
 
-        function getTemplate(big, size){
+        function getTemplate(count, size){
             var tmpl;
-
-            console.log(size)
 
             if(isMaxZoomThere()){
                 tmpl = '<div class="map-cluster"><div class="anchor" style="width: ' + size[0] + 'px; height: ' + size[1] + 'px"></div></div>';
             }else{
-                tmpl = '<div class="' + ((big) ? 'map-cluster-big' : 'map-cluster') + '">$[properties.geoObjects.length]</div>';
+                tmpl = '<div class="' + ((count > 15) ? 'map-cluster-big' : 'map-cluster') + '">' + count + '</div>';
             }
 
             return ymaps.templateLayoutFactory.createClass(tmpl);
         }
 
+        var count = 0;
+
+        if(options.clustererCountOfItems){
+            _.each(geoObjects, function(item){
+                count += item.options.get('counter');
+            });
+        }else{
+            count = geoObjects.length;
+        }
+
         clusterer = new ymaps.Clusterer({
-            clusterIcons: getIcons(),
+            clusterIcons: getIcons(count),
             clusterNumbers: [15],
-            clusterIconContentLayout: getTemplate(),
+            clusterIconContentLayout: getTemplate(count),
             clusterDisableClickZoom: false,
             openBalloonOnClick: false,
             zoomMargin: 50,
@@ -885,12 +932,22 @@ var GeoMap = function(opts){
 
         clusterer.createCluster = function(center, geoObjects){
             var cluster = ymaps.Clusterer.prototype.createCluster.call(this, center, geoObjects),
-                icons = getIcons();
+                count = 0;
+
+            if(options.clustererCountOfItems){
+                _.each(geoObjects, function(item){
+                    count += item.options.get('counter');
+                });
+            }else{
+                count = geoObjects.length;
+            }
+
+            var icons = getIcons(count);
 
             cluster.options.set('icons', icons);
             cluster.options.set(
                 'iconContentLayout', 
-                getTemplate(geoObjects.length > 15, icons[0].size)
+                getTemplate(count, icons[0].size)
             );
 
             return cluster;

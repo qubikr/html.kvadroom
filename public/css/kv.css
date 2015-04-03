@@ -11370,12 +11370,6 @@ yx-axis
   text-align: center;
   font-size: 23px;
 }
-.map-cluster {
-  font-size: 14px;
-}
-.map-cluster-big {
-  font-size: 18px;
-}
 .maps-marker-icon {
   display: block;
   position: relative;
@@ -11406,7 +11400,6 @@ yx-axis
   text-align: center;
   color: #333;
   font-style: normal;
-  font-size: 12px;
 }
 .maps-marker-icon.maps-marker-circle-medium {
   width: 35px;
@@ -11419,7 +11412,6 @@ yx-axis
   text-align: center;
   color: #333;
   font-style: normal;
-  font-size: 14px;
 }
 .maps-marker-icon.maps-marker-circle-big {
   width: 45px;
@@ -11432,7 +11424,6 @@ yx-axis
   text-align: center;
   color: #333;
   font-style: normal;
-  font-size: 16px;
 }
 .maps-marker-icon.maps-marker-circle-jumbo {
   width: 55px;
@@ -11445,7 +11436,6 @@ yx-axis
   text-align: center;
   color: #333;
   font-style: normal;
-  font-size: 18px;
 }
 .maps-marker-icon.maps-marker-circle-titan {
   width: 70px;
@@ -11458,7 +11448,6 @@ yx-axis
   text-align: center;
   color: #333;
   font-style: normal;
-  font-size: 19px;
 }
 .maps-marker-icon .marker-title {
   font-size: 20px;
