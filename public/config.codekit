@@ -42,17 +42,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/i\/kvad_dot_white_12px.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
-		"inputAbbreviatedPath": "\/i\/kvad_dot_white_12px.png",
-		"outputAbbreviatedPath": "\/i\/kvad_dot_white_12px.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/i\/kvad_map_aim.png": {
 		"fileType": 32768,
 		"ignore": 0,

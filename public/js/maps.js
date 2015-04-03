@@ -11,6 +11,7 @@ var GeoMap = function(opts){
             zoom: 10,
             layer: 'map',
             controls: false,
+            onZoomChanged: function(zoom){},
             onInit: function(){},
             onFullscreenEnter: function(){},
             onFullscreenExit: function(){}
@@ -53,6 +54,15 @@ var GeoMap = function(opts){
             zoom: options.zoom
         });
 
+        map.events.add('boundschange', function(e){
+            var oldZoom = e.get('oldZoom'),
+                newZoom = e.get('newZoom');
+
+            if(newZoom != oldZoom){
+                options.onZoomChanged(newZoom);
+            }
+        });
+
         if(options.controls === true){
             createDefaultControls();
         }
@@ -75,6 +85,10 @@ var GeoMap = function(opts){
             console.log(collection.getBounds())
         };
 
+        this.clear = function(){
+            collection.removeAll();
+        };
+
         this.draw = function(){
             map.geoObjects.add(collection);
         };
@@ -87,6 +101,7 @@ var GeoMap = function(opts){
             parent: null,
             center: [0,0],
             content: '',
+            iconSize: [],
             closeable: true,
             offsetX: 0,
             offsetY: 0,
@@ -151,10 +166,12 @@ var GeoMap = function(opts){
         };
 
         this.setPosition = function(){
+            var left = ((options.offsetX) ? options.offsetX : 0);
+
             _this.getElement().css({
-                marginTop: -((_this.getElement().height()/2) - ((options.offsetY) ? options.offsetY : 0)),
-                marginLeft: (options.offsetX) ? options.offsetX : 0,
-                width: 250
+                marginTop: -((_this.getElement().height() / 2) + options.iconSize[0] / 2) ,
+                width: 250,
+                left: left
             });
         };
 
@@ -341,6 +358,12 @@ var GeoMap = function(opts){
         }
     };
 
+    this.clearClusterer = function(){
+        if(clusterer){
+            clusterer.removeAll();
+        }
+    };
+
     this.panCenter = function(){
         var center = [
             parseFloat(options.center[0]),
@@ -381,7 +404,7 @@ var GeoMap = function(opts){
                     className: 'maps-marker-circle-small',
                     href: '/i/kvad_cluster_white_25px.png',
                     size: [25, 25],
-                    offset: [-12, -12],
+                    offset: [-25, -25],
                     balloonOffsetY: -1,
                     balloonOffsetX: 16
                 };
@@ -392,7 +415,7 @@ var GeoMap = function(opts){
                     className: 'maps-marker-circle-medium',
                     href: '/i/kvad_cluster_white_35px.png',
                     size: [35, 35],
-                    offset: [-17, -17],
+                    offset: [-35, -35],
                     balloonOffsetY: -1,
                     balloonOffsetX: 21
                 };
@@ -403,7 +426,7 @@ var GeoMap = function(opts){
                     className: 'maps-marker-circle-big',
                     href: '/i/kvad_cluster_white_45px.png',
                     size: [45, 45],
-                    offset: [-22, -22],
+                    offset: [-45, -45],
                     balloonOffsetY: -1,
                     balloonOffsetX: 26
                 };
@@ -414,7 +437,7 @@ var GeoMap = function(opts){
                     className: 'maps-marker-circle-jumbo',
                     href: '/i/kvad_cluster_white_55px.png',
                     size: [55, 55],
-                    offset: [-27, -27],
+                    offset: [-55, -55],
                     balloonOffsetY: -1,
                     balloonOffsetX: 31
                 };
@@ -425,7 +448,7 @@ var GeoMap = function(opts){
                     className: 'maps-marker-circle-titan',
                     href: '/i/kvad_cluster_white_70px.png',
                     size: [70, 70],
-                    offset: [-35, -35],
+                    offset: [-70, -70],
                     balloonOffsetY: -1,
                     balloonOffsetX: 39
                 };
@@ -585,6 +608,7 @@ var GeoMap = function(opts){
                         closeable: options.balloonCloseable,
                         offsetX: typeData.balloonOffsetX,
                         offsetY: typeData.balloonOffsetY,
+                        iconSize: typeData.size,
                         onReady: function($balloon){
                             options.onBalloonReady($balloon);
                             balloon.show();
@@ -753,7 +777,8 @@ var GeoMap = function(opts){
     };
 
     this.enterFullScreen = function(){
-        $('body').append('<div class="map-fullscreen-overlay"><a class="map-fullscreen-close kiv-e" href="#"><i class="icon-font icon-font-cross"></i></a></div>');
+        $map.parent().after('<div class="map-fullscreen-overlay"><a class="map-fullscreen-close kiv-e" href="#"><i class="icon-font icon-font-cross"></i></a></div>');
+
         $('html,body').css('overflow', 'hidden');
 
         setTimeout(function(){
@@ -871,18 +896,18 @@ var GeoMap = function(opts){
             ];
         };
 
-        var IconsMaxZoom = [
-            {
-                href: '/i/kvad_marker_list.png',
-                size: [31, 43],
-                offset: [-15.5, -21.5]
-            },
-            {
-                href: '/i/kvad_marker_list.png',
-                size: [31, 43],
-                offset: [-15.5, -21.5]
-            }
-        ];
+        // var IconsMaxZoom = [
+        //     {
+        //         href: '/i/kvad_marker_list.png',
+        //         size: [31, 43],
+        //         offset: [-15.5, -21.5]
+        //     },
+        //     {
+        //         href: '/i/kvad_marker_list.png',
+        //         size: [31, 43],
+        //         offset: [-15.5, -21.5]
+        //     }
+        // ];
 
         function isMaxZoomThere(){
             var max_zoom = map.zoomRange.getCurrent()[1],
@@ -892,21 +917,23 @@ var GeoMap = function(opts){
         }
 
         function getIcons(count){
-            if(isMaxZoomThere()){
-                return IconsMaxZoom;
-            }else{
-                return getIconsDefault(count);
-            }
+            // if(isMaxZoomThere()){
+            //     return IconsMaxZoom;
+            // }else{
+            //     return getIconsDefault(count);
+            // }
+
+            return getIconsDefault(count);
         }
 
         function getTemplate(count, size){
-            var tmpl;
+            // if(isMaxZoomThere()){
+            //     tmpl = '<div class="map-cluster"><div class="anchor" style="width: ' + size[0] + 'px; height: ' + size[1] + 'px"></div></div>';
+            // }else{
+            //     tmpl = '<div class="' + ((count > 15) ? 'map-cluster-big' : 'map-cluster') + '">' + count + '</div>';
+            // }
 
-            if(isMaxZoomThere()){
-                tmpl = '<div class="map-cluster"><div class="anchor" style="width: ' + size[0] + 'px; height: ' + size[1] + 'px"></div></div>';
-            }else{
-                tmpl = '<div class="' + ((count > 15) ? 'map-cluster-big' : 'map-cluster') + '">' + count + '</div>';
-            }
+            var tmpl = '<div class="' + ((count > 15) ? 'map-cluster-big' : 'map-cluster') + '">' + count + '</div>';
 
             return ymaps.templateLayoutFactory.createClass(tmpl);
         }
