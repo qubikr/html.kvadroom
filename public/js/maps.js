@@ -11,6 +11,7 @@ var GeoMap = function(opts){
             zoom: 10,
             layer: 'map',
             controls: false,
+            disableClickZoomCluster: true,
             onZoomChanged: function(zoom){},
             onInit: function(){},
             onFullscreenEnter: function(){},
@@ -100,8 +101,8 @@ var GeoMap = function(opts){
         var options = $.extend({
             parent: null,
             center: [0,0],
-            content: '',
             iconSize: [],
+            content: '',
             closeable: true,
             offsetX: 0,
             offsetY: 0,
@@ -169,7 +170,7 @@ var GeoMap = function(opts){
             var left = ((options.offsetX) ? options.offsetX : 0);
 
             _this.getElement().css({
-                marginTop: -((_this.getElement().height() / 2) + options.iconSize[0] / 2) ,
+                marginTop: -(((_this.getElement().height() / 2) + options.iconSize[0] / 2) - ((options.offsetY) ? options.offsetY : 0)),
                 width: 250,
                 left: left
             });
@@ -377,24 +378,13 @@ var GeoMap = function(opts){
 
     var getMarkerIconByType = function(typeName){
         switch(typeName){
-            case 'basic_small' : {
-                return {
-                    className: 'maps-marker-basic_small',
-                    href: '/i/kvad_marker_dot.png',
-                    size: [19, 25],
-                    offset: [-10, -25],
-                    balloonOffsetY: -15,
-                    balloonOffsetX: 18
-                };
-            } break;
-
             case 'dot' : {
                 return {
                     className: 'maps-marker-dot',
                     href: '/i/kvad_marker_dot.png',
                     size: [12, 12],
-                    offset: [-6, -6],
-                    balloonOffsetY: -1,
+                    offset: [-12, -12],
+                    balloonOffsetY: 0,
                     balloonOffsetX: 12
                 };
             } break;
@@ -405,7 +395,7 @@ var GeoMap = function(opts){
                     href: '/i/kvad_cluster_white_25px.png',
                     size: [25, 25],
                     offset: [-25, -25],
-                    balloonOffsetY: -1,
+                    balloonOffsetY: 0,
                     balloonOffsetX: 16
                 };
             } break;
@@ -416,7 +406,7 @@ var GeoMap = function(opts){
                     href: '/i/kvad_cluster_white_35px.png',
                     size: [35, 35],
                     offset: [-35, -35],
-                    balloonOffsetY: -1,
+                    balloonOffsetY: 0,
                     balloonOffsetX: 21
                 };
             } break;
@@ -427,7 +417,7 @@ var GeoMap = function(opts){
                     href: '/i/kvad_cluster_white_45px.png',
                     size: [45, 45],
                     offset: [-45, -45],
-                    balloonOffsetY: -1,
+                    balloonOffsetY: 0,
                     balloonOffsetX: 26
                 };
             } break;
@@ -438,7 +428,7 @@ var GeoMap = function(opts){
                     href: '/i/kvad_cluster_white_55px.png',
                     size: [55, 55],
                     offset: [-55, -55],
-                    balloonOffsetY: -1,
+                    balloonOffsetY: 0,
                     balloonOffsetX: 31
                 };
             } break;
@@ -449,8 +439,19 @@ var GeoMap = function(opts){
                     href: '/i/kvad_cluster_white_70px.png',
                     size: [70, 70],
                     offset: [-70, -70],
-                    balloonOffsetY: -1,
+                    balloonOffsetY: 0,
                     balloonOffsetX: 39
+                };
+            } break;
+
+            case 'basic_small' : {
+                return {
+                    className: 'maps-marker-basic_small',
+                    href: '/i/kvad_marker_dot.png',
+                    size: [19, 25],
+                    offset: [-10, -25],
+                    balloonOffsetY: -6,
+                    balloonOffsetX: 25
                 };
             } break;
 
@@ -461,8 +462,8 @@ var GeoMap = function(opts){
                     href: '/i/kvad_marker_basic.png',
                     size: [31, 43],
                     offset: [-21, -49],
-                    balloonOffsetY: -27,
-                    balloonOffsetX: 18
+                    balloonOffsetY: -18,
+                    balloonOffsetX: 28
                 };
             } break;
         }
@@ -946,7 +947,7 @@ var GeoMap = function(opts){
 
         if(options.clustererCountOfItems){
             _.each(geoObjects, function(item){
-                count += item.options.get('counter');
+                count += parseInt(item.options.get('counter'));
             });
         }else{
             count = geoObjects.length;
@@ -960,7 +961,9 @@ var GeoMap = function(opts){
             openBalloonOnClick: false,
             zoomMargin: 50,
             gridSize: 50,
-            margin: 50
+            margin: 50,
+            clusterDisableClickZoom: options.disableClickZoomCluster,
+            title: 'asdsadasd'
         });
 
         map.geoObjects.add(clusterer);
@@ -969,9 +972,15 @@ var GeoMap = function(opts){
             var cluster = ymaps.Clusterer.prototype.createCluster.call(this, center, geoObjects),
                 count = 0;
 
+            if(options.disableClickZoomCluster){
+                cluster.events.add('click', function(){
+                    map.setZoom(map.getZoom() + 1);
+                });
+            }
+
             if(options.clustererCountOfItems){
                 _.each(geoObjects, function(item){
-                    count += item.options.get('counter');
+                    count += parseInt(item.options.get('counter'));
                 });
             }else{
                 count = geoObjects.length;

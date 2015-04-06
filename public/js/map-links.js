@@ -41,8 +41,6 @@ MapLinks.Map = function(){
                                 markerType,
                                 zoomRelatedIcon = false;
 
-                            
-
                             c = Math.round(c);
 
                             markerType = map.getIconTypeNameByCount(c);
@@ -88,14 +86,6 @@ MapLinks.Map = function(){
                     }
 
                     load();
-
-                    setTimeout(function(){
-                        instance.clearClusterer();
-
-                        setTimeout(function(){
-                            load();
-                        }, 2000)
-                    }, 4000);
                    
 
                     //collection.draw();
