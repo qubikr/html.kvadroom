@@ -8573,6 +8573,12 @@ textarea.error {
   display: block;
   text-decoration: none;
 }
+.offers-row.wide .sp-labels {
+  padding-top: 23px !important;
+}
+.offers-row.wide .offer-params li {
+  margin-right: 0 !important;
+}
 .offers-row.fade-view {
   opacity: .4;
 }
