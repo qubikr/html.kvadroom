@@ -336,7 +336,7 @@
 
   &.wide {
     .sp-labels {
-      padding-top: 23px !important;
+      padding-top: 21px !important;
     }
 
     .offer-params li {
@@ -823,13 +823,23 @@
 }
 
 .offer-action-icon {
-  color: @color-cyan-dark !important;
+  color: #999 !important;
   text-decoration: none !important;
+
+  .icon-font-star-full {
+    color: @color-cyan-dk !important;
+  }
 }
 
 .offer-action-icon.active,
 .offer-action-icon:hover {
-  color: @color-red !important;
+  color: @color-cyan-dk !important;
+}
+
+.offer-action-icon:hover {
+  .icon-font-eye {
+    color: @color-red !important;
+  }
 }
 
 .offer-row-closed {
@@ -909,22 +919,28 @@
 }
 
 .is-online {
-  color: #fff;
   display: block;
-  padding: 1px 8px;
   font-size: 13px;
   margin-top:10px;
-  background: #81D235;
   float: right;
+  position: relative;
+  padding-right: 15px;
+
+  &:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -4px;
+    background: #81D235;
+    border-radius: 5px;
+  }
 
   a& {
-    display: inline-block;
     text-decoration: none;
-    color: #fff;
-
-    &:hover {
-      background: #81D235 - 15;
-    }
   }
 }
 

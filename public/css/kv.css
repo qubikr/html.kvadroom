@@ -3593,6 +3593,15 @@ code {
   height: 32px;
   display: block;
 }
+.icon-font-compare-check:before {
+  content: "\e65c";
+}
+.icon-font-compare-lines:before {
+  content: "\e65d";
+}
+.icon-font-compare-plus:before {
+  content: "\e65e";
+}
 .icon-font-commers:before {
   content: "\e65b";
 }
@@ -4267,15 +4276,21 @@ code {
   padding-right: 0;
 }
 .header .user-block-icons-icon-symbol {
-  color: #1cd0c3;
+  color: #999;
   display: inline-block;
   position: absolute !important;
   left: 14px;
   top: 50%;
   margin-top: -17px;
 }
+.header .user-block-icons-icon-text {
+  color: #999;
+}
 .header .user-block-icons-item:hover .user-block-icons-icon-symbol {
-  color: #ff0000;
+  color: #00bfbf;
+}
+.header .user-block-icons-item:hover .user-block-icons-icon-text {
+  color: #333;
 }
 .header .right-side {
   width: 208px;
@@ -7173,13 +7188,12 @@ textarea.error {
 }
 .sp-labels .sp-labels-item {
   zoom: 1;
-  padding: 0px 4px;
+  padding: 1px 4px 0;
   margin: 0 2px 2px 0;
-  font-size: 8px;
-  line-height: 1.8em;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.2ex;
+  font-size: 11px;
+  line-height: 1.6em;
+  font-weight: normal;
+  letter-spacing: 0.1ex;
   color: #fff;
   float: left;
 }
@@ -7189,16 +7203,16 @@ textarea.error {
   clear: both;
 }
 .sp-labels .sp-labels-item.green {
-  background: #78AC1D;
+  background: #33A6CC;
 }
 .sp-labels .sp-labels-item.red {
-  background: #FF2B00;
+  background: #FF5533;
 }
 .sp-labels .sp-labels-item.orange {
   background: #FF9500;
 }
 .sp-labels .sp-labels-item.cyan {
-  background: #5CB27D;
+  background: #3083BF;
 }
 .sp-labels .sp-labels-item.gray {
   background: #eee;
@@ -8574,7 +8588,7 @@ textarea.error {
   text-decoration: none;
 }
 .offers-row.wide .sp-labels {
-  padding-top: 23px !important;
+  padding-top: 21px !important;
 }
 .offers-row.wide .offer-params li {
   margin-right: 0 !important;
@@ -8990,11 +9004,17 @@ textarea.error {
   margin-left: 12px;
 }
 .offer-action-icon {
-  color: #24d1c5 !important;
+  color: #999 !important;
   text-decoration: none !important;
+}
+.offer-action-icon .icon-font-star-full {
+  color: #00bfbf !important;
 }
 .offer-action-icon.active,
 .offer-action-icon:hover {
+  color: #00bfbf !important;
+}
+.offer-action-icon:hover .icon-font-eye {
   color: #ff0000 !important;
 }
 .offer-row-closed {
@@ -9065,21 +9085,27 @@ textarea.error {
   top: 22px;
 }
 .is-online {
-  color: #fff;
   display: block;
-  padding: 1px 8px;
   font-size: 13px;
   margin-top: 10px;
-  background: #81D235;
   float: right;
+  position: relative;
+  padding-right: 15px;
+}
+.is-online:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -4px;
+  background: #81D235;
+  border-radius: 5px;
 }
 a.is-online {
-  display: inline-block;
   text-decoration: none;
-  color: #fff;
-}
-a.is-online:hover {
-  background: #72c326;
 }
 .price-prefix {
   color: #999999;
