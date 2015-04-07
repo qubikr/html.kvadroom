@@ -42,6 +42,72 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/i\/kvad_cluster_white_25px.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 659,
+		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_25px.png",
+		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_25px.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/kvad_cluster_white_35px.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 880,
+		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_35px.png",
+		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_35px.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/kvad_cluster_white_45px.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1265,
+		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_45px.png",
+		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_45px.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/kvad_cluster_white_55px.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1655,
+		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_55px.png",
+		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_55px.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/kvad_cluster_white_70px.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1997,
+		"inputAbbreviatedPath": "\/i\/kvad_cluster_white_70px.png",
+		"outputAbbreviatedPath": "\/i\/kvad_cluster_white_70px.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/kvad_dot_white_12px.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 300,
+		"inputAbbreviatedPath": "\/i\/kvad_dot_white_12px.png",
+		"outputAbbreviatedPath": "\/i\/kvad_dot_white_12px.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/i\/kvad_map_aim.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -291,6 +357,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/complex.jade",
 		"outputAbbreviatedPath": "\/complex.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/jade\/full-size-offers.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/full-size-offers.jade",
+		"outputAbbreviatedPath": "\/full-size-offers.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
@@ -1834,15 +1911,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/no-objects.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/no-objects.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/object.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -1857,15 +1925,6 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/search.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/test-map.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/test-map.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
