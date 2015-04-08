@@ -4283,6 +4283,9 @@ code {
   top: 50%;
   margin-top: -17px;
 }
+.header .user-block-icons-icon-symbol.icon-font-star-full {
+  color: #00bfbf !important;
+}
 .header .user-block-icons-icon-text {
   color: #999;
 }
@@ -7190,11 +7193,12 @@ textarea.error {
   zoom: 1;
   padding: 1px 4px 0;
   margin: 0 2px 2px 0;
-  font-size: 11px;
-  line-height: 1.6em;
-  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.8em;
+  font-weight: bold;
   letter-spacing: 0.1ex;
   color: #fff;
+  text-transform: uppercase;
   float: left;
 }
 .sp-labels .sp-labels-item:after {
@@ -7260,7 +7264,7 @@ textarea.error {
 }
 .fantastic-small .sp-labels .sp-labels-item {
   display: inline-block;
-  margin: 0 0 2px 9px;
+  margin: 0 0 0px 9px;
   font-size: 9px;
   line-height: 1.9em;
   float: none;
@@ -8978,9 +8982,6 @@ textarea.error {
   font-size: 13px;
   text-align: left;
 }
-.offers-row-sp .offer-params li:first-of-type {
-  margin-right: -70px;
-}
 .offers-row:last-child {
   border-bottom: none;
 }
@@ -9009,6 +9010,36 @@ textarea.error {
 }
 .offer-action-icon .icon-font-star-full {
   color: #00bfbf !important;
+}
+.offer-action-icon.process-compare {
+  margin-left: 9px;
+  position: relative;
+}
+.offer-action-icon.process-compare:before {
+  content: "\e65e";
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  zoom: 1;
+  display: block;
+}
+.offer-action-icon.process-compare.enabled {
+  color: #00bfbf !important;
+}
+.offer-action-icon.process-compare.enabled:before {
+  content: '\e65c';
 }
 .offer-action-icon.active,
 .offer-action-icon:hover {

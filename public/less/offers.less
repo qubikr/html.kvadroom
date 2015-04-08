@@ -786,7 +786,7 @@
 }
 
 .offers-row-sp .offer-params li:first-of-type {
-  margin-right: -70px;
+  // margin-right: -70px;
 }
 
 .offers-row:last-child {
@@ -828,6 +828,29 @@
 
   .icon-font-star-full {
     color: @color-cyan-dk !important;
+  }
+
+  &.process-compare {
+    margin-left: 9px;
+    position: relative;
+
+    &:before {
+      content: "\e65e";
+      display: block;
+      top: 0;
+      left: 0;
+      position: absolute;
+
+      .icon-font;
+    }
+
+    &.enabled {
+      color: @color-cyan-dk !important;
+
+      &:before {
+        content: '\e65c';
+      }
+    }
   }
 }
 
