@@ -1,7 +1,11 @@
 function makeOffersWider(){
 	var $rows = $('.offers-row').not('.wide');
 
-	$('.grid-16.offers').addClass('grid-24').removeClass('grid-16');
+	$('.grid-16.offers')
+		.addClass('grid-24')
+		.removeClass('grid-16')
+		.next('.grid-8')
+			.hide();
 
 	$rows.each(function(){
 		var $item = $(this);
@@ -16,6 +20,12 @@ function makeOffersWider(){
 				.removeClass('grid-12 omega')
 				.addClass('grid-16')
 				.after($threeCol);
+
+		if($item.is('.offer-row-closed')){
+			$item.find('.grid-14')
+				.removeClass('grid-14')
+				.addClass('grid-22');
+		}
 
 		$item
 			.find('>.grid-16')
@@ -34,7 +44,11 @@ function makeOffersWider(){
 function makeOffersNarrower(){
 	var $rows = $('.offers-row').filter('.wide');
 
-	$('.grid-24.offers').addClass('grid-16').removeClass('grid-24');
+	$('.grid-24.offers')
+		.addClass('grid-16')
+		.removeClass('grid-24')
+		.next('.grid-8')
+			.show();
 
 	$rows.each(function(){
 		var $item = $(this);
@@ -44,6 +58,12 @@ function makeOffersNarrower(){
 			.find('>.grid-16')
 				.removeClass('grid-16')
 				.addClass('grid-12 omega');
+
+		if($item.is('.offer-row-closed')){
+			$item.find('.grid-22')
+				.removeClass('grid-22')
+				.addClass('grid-14');
+		}
 
 		var $spLabels = $item.find('.sp-labels');
 
@@ -66,6 +86,8 @@ function makeOffersNarrower(){
 					.addClass('grid-8');
 	});
 }
+
+
 
 $(window).on('scroll', function(){
 	var st = $(window).scrollTop(),

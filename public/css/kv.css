@@ -3593,6 +3593,9 @@ code {
   height: 32px;
   display: block;
 }
+.icon-font-bell:before {
+  content: "\e65f";
+}
 .icon-font-compare-check:before {
   content: "\e65c";
 }
@@ -4282,9 +4285,6 @@ code {
   left: 14px;
   top: 50%;
   margin-top: -17px;
-}
-.header .user-block-icons-icon-symbol.icon-font-star-full {
-  color: #00bfbf !important;
 }
 .header .user-block-icons-icon-text {
   color: #999;
