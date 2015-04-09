@@ -11,7 +11,9 @@ var GeoMap = function(opts){
             zoom: 10,
             layer: 'map',
             controls: false,
-            disableClickZoomCluster: true,
+            minClusterSize: 2,
+            disableClickZoomCluster: false,
+            goToFirstRelevantClusterUrl: false,
             onZoomChanged: function(zoom){},
             onInit: function(){},
             onFullscreenEnter: function(){},
@@ -49,6 +51,10 @@ var GeoMap = function(opts){
         $map.parent().KVLoadingElement('stop');
     };
 
+    var createCopyrightBlock = function(){
+        $map.append('<div class="map-copyright"><div>&copy; Квадрум <a target="_blank" href="http://help.kvadroom.ru/legal/maps/">Условия использования</a></div></div>');
+    };
+
     var draw = function(){
         map = new ymaps.Map(options.id, {
             center: options.center,
@@ -71,6 +77,8 @@ var GeoMap = function(opts){
         if(options.clusterer === true){
             _this.createClusterer();
         }
+
+        createCopyrightBlock();
     };
 
     this.Collection = function(){
@@ -483,6 +491,7 @@ var GeoMap = function(opts){
             zoomRelatedIcon: false,
             zoomRelatedIconFactor: 12,
             type: 'basic',
+            url: '',
             avoidPanningAndBalloon: false, // Click will invoke immediately (by default it invokes after map panning animation have completed) - good for pin clicks
             balloonCloseable: true,
             onReady: function(){},
@@ -513,7 +522,8 @@ var GeoMap = function(opts){
             iconImageHref: '',
             iconImageSize: typeData.size,
             iconImageOffset: typeData.offset,
-            counter: options.counter
+            counter: options.counter,
+            url: options.url
         });
 
         if(options.zIndex) {
@@ -960,10 +970,10 @@ var GeoMap = function(opts){
             clusterDisableClickZoom: false,
             openBalloonOnClick: false,
             zoomMargin: 50,
-            gridSize: 50,
-            margin: 50,
-            clusterDisableClickZoom: options.disableClickZoomCluster,
-            title: 'asdsadasd'
+            gridSize: 55,
+            margin: 55,
+            minClusterSize: options.minClusterSize,
+            clusterDisableClickZoom: options.disableClickZoomCluster
         });
 
         map.geoObjects.add(clusterer);
@@ -972,10 +982,31 @@ var GeoMap = function(opts){
             var cluster = ymaps.Clusterer.prototype.createCluster.call(this, center, geoObjects),
                 count = 0;
 
-            if(options.disableClickZoomCluster){
-                cluster.events.add('click', function(){
-                    map.setZoom(map.getZoom() + 1);
-                });
+            if(options.disableClickZoomCluster){           
+                if(options.goToFirstRelevantClusterUrl){
+                    cluster.events.add('click', function(){
+                        var max = 0,
+                            iteration = 0,
+                            maxIterationNumber = 0;
+
+                        _.each(geoObjects, function(item){
+                            var c = parseInt(item.options.get('counter'));
+
+                            if(c > max){
+                                c = max;
+                                maxIterationNumber = iteration;
+                            }
+
+                            iteration++;
+                        });
+
+                        document.location.href = geoObjects[maxIterationNumber].options.get('url');
+                    });
+                }else{
+                    cluster.events.add('click', function(){
+                        map.setZoom(map.getZoom() + 1);
+                    });
+                }
             }
 
             if(options.clustererCountOfItems){
@@ -984,7 +1015,7 @@ var GeoMap = function(opts){
                 });
             }else{
                 count = geoObjects.length;
-            }
+            }            
 
             var icons = getIcons(count);
 
