@@ -1,0 +1,42 @@
+extend _layout
+
+block content
+	.page-title: .w100.h75: body: tr: td: h1.h1-28.page-title-header
+		|Продажа 2-комнатных квартир с балконами по ипотеке без торга в Москве и области с фото
+
+	.divider-10
+	include partials/breadcrumbs
+	include partials/filter
+
+	.divider-20
+
+	.container-24
+		.grid-16
+			.offers-2
+				.heading 
+					.title 12 535 объявлений
+					.actions
+						a.active(href="#") Новые
+						a(href="#") Видео
+						a(href="#") Много фото
+						span.group
+							a(href="#") Дешевле
+							a(href="#") Дороже
+						a(href="#") ...
+
+				.list
+					.item
+						a.photo
+							img(src="http://lorempixel.com/240/180/")
+							span.info
+								span.icon
+								span.text
+								span.div
+								span.icon
+								span.text
+
+
+			include partials/pagination
+			include partials/show-more-button
+		.grid-8
+		.clear

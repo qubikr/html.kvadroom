@@ -9146,6 +9146,62 @@ a.is-online {
 .pp-to {
   display: none;
 }
+.offers-2 .heading {
+  margin: 0 0 25px;
+  zoom: 1;
+}
+.offers-2 .heading:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.offers-2 .heading .title {
+  float: left;
+  line-height: 26px;
+  font-size: 19px;
+}
+.offers-2 .heading .actions {
+  float: right;
+}
+.offers-2 .heading .actions a {
+  background: #F7F7F7;
+  border: 1px solid #DEDEDE;
+  font-size: 13px;
+  color: #666;
+  line-height: 24px;
+  height: 26px;
+  display: inline-block;
+  padding: 0 8px;
+  margin: 0 0 5px 10px;
+  text-decoration: none;
+  -webkit-transition: .1s;
+          transition: .1s;
+  box-sizing: border-box;
+}
+.offers-2 .heading .actions a:hover {
+  background: #ededed;
+  border-color: #d4d4d4;
+}
+.offers-2 .heading .actions a:active {
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+}
+.offers-2 .heading .actions a.active {
+  background: #FFF2B3;
+  border-color: #FFBF00;
+  color: #000;
+}
+.offers-2 .heading .actions a.active:hover {
+  background: #f5e8a9;
+  border-color: #faba00;
+}
+.offers-2 .heading .actions .group {
+  margin: 0 0 0 10px;
+}
+.offers-2 .heading .actions .group a {
+  margin: 0 0 0 -1px;
+}
 .offer-title-params {
   padding-top: 8px;
 }
