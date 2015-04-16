@@ -9206,6 +9206,65 @@ a.is-online {
 .offers-2 .heading .actions .group a {
   margin: 0 0 0 -1px;
 }
+.offers-2 .list .item {
+  font-size: 0;
+}
+.offers-2 .list .item .photo {
+  width: 240px;
+  height: 180px;
+  display: inline-block;
+  position: relative;
+}
+.offers-2 .list .item .photo img {
+  display: block;
+}
+.offers-2 .list .item .photo .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  line-height: 14px;
+  height: 30px;
+}
+.offers-2 .list .item .photo .info .ico {
+  display: inline-block;
+  height: 30px;
+  speak: none;
+  position: relative;
+  padding-left: 35px;
+}
+.offers-2 .list .item .photo .info .ico:after {
+  font-family: 'icomoon';
+  font-size: 55px;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -27.5px 0 0 -27.5px;
+}
+.offers-2 .list .item .photo .info .ico.video:after {
+  content: "\e610";
+}
+.offers-2 .list .item .photo .info .ico.pictures:after {
+  content: "\e611";
+}
+.offers-2 .list .item .photo .info .count {
+  font-size: 14px;
+  display: inline-block;
+  height: 35px;
+}
+.offers-2 .list .item .photo .info .div {
+  width: 15px;
+  display: inline-block;
+  height: 35px;
+}
+.offers-2 .list .item .data {
+  font-size: 1rem;
+  display: inline-block;
+}
 .offer-title-params {
   padding-top: 8px;
 }
