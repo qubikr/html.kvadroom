@@ -9206,14 +9206,26 @@ a.is-online {
 .offers-2 .heading .actions .group a {
   margin: 0 0 0 -1px;
 }
+.offers-2 .list {
+  zoom: 1;
+}
+.offers-2 .list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .offers-2 .list .item {
   font-size: 0;
+  min-height: 180px;
+  padding: 0 0 0 240px;
+  position: relative;
 }
 .offers-2 .list .item .photo {
   width: 240px;
   height: 180px;
-  display: inline-block;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .offers-2 .list .item .photo img {
   display: block;
@@ -9224,14 +9236,16 @@ a.is-online {
   left: 0;
   color: #fff;
   line-height: 14px;
-  height: 30px;
+  height: 35px;
 }
 .offers-2 .list .item .photo .info .ico {
   display: inline-block;
-  height: 30px;
+  height: 35px;
   speak: none;
   position: relative;
   padding-left: 35px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.9);
 }
 .offers-2 .list .item .photo .info .ico:after {
   font-family: 'icomoon';
@@ -9251,19 +9265,12 @@ a.is-online {
 .offers-2 .list .item .photo .info .ico.pictures:after {
   content: "\e611";
 }
-.offers-2 .list .item .photo .info .count {
-  font-size: 14px;
-  display: inline-block;
-  height: 35px;
-}
-.offers-2 .list .item .photo .info .div {
-  width: 15px;
-  display: inline-block;
-  height: 35px;
-}
 .offers-2 .list .item .data {
+  min-height: 180px;
+  overflow: hidden;
   font-size: 1rem;
-  display: inline-block;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .offer-title-params {
   padding-top: 8px;
