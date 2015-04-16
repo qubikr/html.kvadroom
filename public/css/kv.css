@@ -1915,6 +1915,10 @@ body {
 .metro-bg-orange {
   background-color: #f58631;
 }
+.right-col-240 {
+  width: 240px;
+  margin-left: auto;
+}
 .right-col-250 {
   width: 250px;
   margin-left: auto;
@@ -9147,7 +9151,7 @@ a.is-online {
   display: none;
 }
 .offers-2 .heading {
-  margin: 0 0 25px;
+  margin: 0 0 30px;
   zoom: 1;
 }
 .offers-2 .heading:after {

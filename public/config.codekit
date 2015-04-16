@@ -38,6 +38,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/i\/banner-right.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 193521,
+		"inputAbbreviatedPath": "\/i\/banner-right.png",
+		"outputAbbreviatedPath": "\/i\/banner-right.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/i\/big-complex-house.png": {
 		"fileType": 32768,
 		"ignore": 0,
