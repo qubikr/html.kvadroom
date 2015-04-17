@@ -9,14 +9,19 @@ app
 		var key = '0f959314baccfe797119bd9320b46cd8';
 		var result = (key == md5(md5(credentials.username)) && key == md5(md5(credentials.password)));
 
-		if(result){
-			app.use(serveStatic(__dirname + '/public'));
+		// if(result){
+		// 	app.use(serveStatic(__dirname + '/public'));
+
+		// 	next();
+		// }else{
+		// 	next();
+
+		// 	return res.status(500).send('Password wrong!');
+		// }
+
+		app.use(serveStatic(__dirname + '/public'));
 
 			next();
-		}else{
-			next();
-			return res.status(500).send('Password wrong!');
-		}
 	 
 	}, 'Please enter your credentials.'));
 
