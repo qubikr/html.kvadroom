@@ -25,20 +25,70 @@ block content
 						a(href="#") ...
 
 				.list
-					.item
-						a.photo(href="#")
-							img(src="http://lorempixel.com/240/180/")
-							span.info
-								span.ico.pictures 1/12
-								span.ico.video 2
+					+offer(1, 'offer', false, 6, 0, 'ул. Ленинского комсомола, 413, корп 3', '14 322 151', 'Продается квартира, 4 комнаты, 146 м²', ['ст. Очаково'], '+7 (495) 983–30–00')
+					+offer(2, 'offer', false, 6, 3, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(3, 'sp', 0, false, 0, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(4, 'premium', false, 6, 1, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(5, 'sp', false, 0, 0, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
 
-						.data
-							.inner
-								.title ул. Ленинского комсомола, 413, корп 3
+					.item-collapsed
+						.title ул. Смирновская, 24
+						.actions
+							a(href="#")
+								i.icon-font.icon-font-trash-big
+								i.icon-font.icon-font-arrow-down
+								|Показать
+
+					+offer(6, 'offer', true, 6, 0, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
 
 			include partials/pagination
 			include partials/show-more-button
+
 		.grid-7
 			.right-col-240
 				a(href="#"): img(src="i/banner-right.png")
 		.clear
+
+
+	mixin offer(id, typeClass, fade, photos, videos, title, price, desc, address, phone)
+		.item(class=typeClass + ((fade) ? ' fade' : ''))
+			a.photo(href="#")
+				if typeClass != 'sp'
+					.slide-left: i.icon-font.icon-font-arr-left
+					.slide-right: i.icon-font.icon-font-arr-right
+					.frame
+						ul.clearfix
+							li: img(src="http://lorempixel.com/240/180/city/?r=1" + id)
+							li: img(src="http://lorempixel.com/240/180/city/?r=2" + id)
+							li: img(src="http://lorempixel.com/240/180/city/?r=3" + id)
+							li: img(src="http://lorempixel.com/240/180/city/?r=4" + id)
+							li: img(src="http://lorempixel.com/240/180/city/?r=5" + id)
+							li: img(src="http://lorempixel.com/240/180/city/?r=6" + id)
+
+					span.info
+						if photos > 0
+							span.ico.pictures 1/#{photos}
+						if videos > 0
+							span.ico.video #{videos}
+				else
+					img(src="http://lorempixel.com/240/180/?r=2311" + id)
+
+			.data
+				.title #{title}
+				.price #{price}&nbsp;
+					span.rub: i ⃏
+				.desc #{desc}
+				ul.transport 
+					each item in address
+						li #{item} 
+				.phone #{phone} 
+
+				if typeClass != 'sp'
+					.actions
+						a(href="#"): i.icon-font.icon-font-compare
+						a(href="#"): i.icon-font.icon-font-heart_stroke
+						a(href="#"): i.icon-font.icon-font-trash-big
+				else
+					.company СМУ «Мособлстрой»
+
+	script(src="js/offers-2.0.js")
