@@ -9249,12 +9249,6 @@ a.is-online {
   border-radius: 3px 0 0 3px;
   background: #eee;
 }
-.offers-2 .list .item .photo:before {
-  content: '';
-  pointer-events: none;
-  height: 180px;
-  width: 240px;
-}
 .offers-2 .list .item .photo img {
   display: block;
   border-radius: 3px 0 0 3px;
@@ -9386,6 +9380,7 @@ a.is-online {
 .offers-2 .list .item .data .price .valute {
   font-size: .85em;
   margin-left: .3ex;
+  color: #888;
 }
 .offers-2 .list .item .data .desc {
   font-size: 14px;
