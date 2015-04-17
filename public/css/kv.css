@@ -9249,6 +9249,20 @@ a.is-online {
   border-radius: 3px 0 0 3px;
   background: #eee;
 }
+.offers-2 .list .item .photo:before {
+  content: '';
+  pointer-events: none;
+  height: 178px;
+  width: 240px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  border: 1px solid transparent;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
 .offers-2 .list .item .photo img {
   display: block;
   border-radius: 3px 0 0 3px;
@@ -9473,6 +9487,11 @@ a.is-online {
 .offers-2 .list .item:hover .data .phone:before {
   opacity: 1;
 }
+.offers-2 .list .item:hover .photo:before {
+  border-color: #E6E6E6;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
 .offers-2 .list .item:hover .photo .info .ico {
   opacity: 1;
 }
@@ -9494,6 +9513,11 @@ a.is-online {
   right: 0;
   opacity: 0;
   color: #666;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.offers-2 .list .item.sp:hover .photo:before {
+  border-color: #F8E71C;
   -webkit-transition: .1s;
           transition: .1s;
 }

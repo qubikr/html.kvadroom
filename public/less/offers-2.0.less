@@ -91,12 +91,20 @@
 				border-radius: 3px 0 0 3px;
 				background: #eee;
 
-				// &:before {
-				// 	content: '';
-				// 	pointer-events: none;
-				// 	height: @photo-height;
-				// 	width: @photo-width;
-				// }
+				&:before {
+					content: '';
+					pointer-events: none;
+					height: @photo-height - 2;
+					width: @photo-width;
+					position: absolute;
+					z-index: 2;
+					top: 0;
+					left: 0;
+					opacity: 1;
+					border: 1px solid transparent;
+					border-right: none;
+					border-radius: 3px 0 0 3px;
+				}
 
 				img {
 					display: block;
@@ -363,6 +371,11 @@
 				}
 
 				.photo {
+					&:before {
+						border-color: #E6E6E6;
+						transition: .1s;
+					}
+
 					.info {
 						.ico {
 							opacity: 1;
@@ -398,6 +411,13 @@
 				}
 
 				&:hover {
+					.photo {
+						&:before {
+							border-color: #F8E71C;
+							transition: .1s;
+						}
+					}
+
 					.data {
 						border-color: #F8E71C;
 
