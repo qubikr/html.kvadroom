@@ -9428,14 +9428,28 @@ a.is-online {
 }
 .offers-2 .list .item .data .actions a {
   display: inline-block;
-  margin-left: 5px;
   text-decoration: none !important;
+  height: 32px;
+  margin-left: 5px;
+  position: relative;
+  padding-left: 33px;
+  line-height: 32px;
+}
+.offers-2 .list .item .data .actions a:after {
+  content: attr(data-title);
+  font-size: 14px;
+  color: #737373;
 }
 .offers-2 .list .item .data .actions a i {
+  position: absolute;
+  left: 0;
+  top: -2px;
   color: #737373;
 }
 .offers-2 .list .item .data .actions a i.icon-font-heart_stroke {
-  font-size: 29px;
+  font-size: 28px;
+  top: 2px;
+  left: -1px;
   color: #5a5a5a;
 }
 .offers-2 .list .item .data .actions a:hover i {

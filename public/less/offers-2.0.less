@@ -293,14 +293,29 @@
 
 					a {
 						display: inline-block;
-						margin-left: 5px;
 						text-decoration: none !important;
+						height: 32px;
+						margin-left: 5px;
+						position: relative;
+						padding-left: 33px;
+						line-height: 32px;
+
+						&:after {
+							content: attr(data-title);
+							font-size: 14px;
+							color: #737373;
+						}
 
 						i {
+							position: absolute;
+							left: 0;
+							top: -2px;
 							color: #737373;
 
 							&.icon-font-heart_stroke {
-								font-size: 29px;
+								font-size: 28px;
+								top: 2px;
+								left: -1px;
 								color: #737373 - 25;
 							}
 						}

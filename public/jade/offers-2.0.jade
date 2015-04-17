@@ -29,7 +29,7 @@ block content
 					+offer(2, 'sp', false, 0, 0, 'V-House. Дарим 500 000 руб!', '188 000', 'Нагорная. 5 мин. от ТТК. Подземный паркинг. Окончание строительства – дек. 2015. Ипотека 11,55%', ['м. Нагорная'], '+7 (495) 120-02-43', 'Ведис Групп')
 					+offer(3, 'sp', false, 0, 0, 'Невесомые цены от 5 млн.руб!', '5 000 000', 'Квартиры бизнес-класса в ЖК «Лайнер» на Ходынке, 300м от метро. Закрытый двор, рядом парк.', ['м. Динамо'], '+7 (495) 112-20-20', 'Компания &laquo;Магистрат&raquo;')
 					+offer(4, 'offer', false, 6, 0, 'ул. Ленинского комсомола, 413, корп 3', '14 322 151', 'Продается квартира, 4 комнаты, 146 м²', ['ст. Очаково'], '+7 (495) 983–30–00')
-					+offer(5, 'offer', false, 6, 3, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(5, 'notautherized', false, 6, 3, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
 					+offer(6, 'premium', false, 6, 1, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
 					
 					.item-collapsed
@@ -79,18 +79,25 @@ block content
 				.price #{price}&nbsp;
 					if price != 'Звоните!'
 						span.rub: i ⃏
+
 				.desc #{desc}
 				ul.transport 
 					each item in address
 						li #{item} 
 				.phone #{phone} 
 
-				if typeClass != 'sp'
+				if typeClass != 'sp' && typeClass != 'notautherized'
 					.actions
 						a(href="#"): i.icon-font.icon-font-compare
 						a(href="#"): i.icon-font.icon-font-heart_stroke
 						a(href="#"): i.icon-font.icon-font-trash-big
+
 				else
 					.company !{company}
+				
+				if typeClass == 'notautherized'
+					.actions
+						a(href="#", data-title="Хочу"): i.icon-font.icon-font-heart_stroke
+						a(href="#", data-title="Не хочу"): i.icon-font.icon-font-trash-big
 
 	script(src="js/offers-2.0.js")
