@@ -3597,6 +3597,15 @@ code {
   height: 32px;
   display: block;
 }
+.icon-font-compare:before {
+  content: "\e662";
+}
+.icon-font-arrow-down:before {
+  content: "\e661";
+}
+.icon-font-trash-big:before {
+  content: "\e660";
+}
 .icon-font-bell:before {
   content: "\e65f";
 }
@@ -9169,6 +9178,7 @@ a.is-online {
 }
 .offers-2 .heading .actions a {
   background: #F7F7F7;
+  border-radius: 2px;
   border: 1px solid #DEDEDE;
   font-size: 13px;
   color: #666;
@@ -9205,6 +9215,13 @@ a.is-online {
 }
 .offers-2 .heading .actions .group a {
   margin: 0 0 0 -1px;
+  border-radius: 0;
+}
+.offers-2 .heading .actions .group a:first-child {
+  border-radius: 2px 0 0 2px;
+}
+.offers-2 .heading .actions .group a:last-child {
+  border-radius: 0 2px 2px 0;
 }
 .offers-2 .list {
   zoom: 1;
@@ -9219,6 +9236,9 @@ a.is-online {
   min-height: 180px;
   padding: 0 0 0 240px;
   position: relative;
+  margin-bottom: 30px;
+  -webkit-transition: opacity .1s;
+          transition: opacity .1s;
 }
 .offers-2 .list .item .photo {
   width: 240px;
@@ -9226,14 +9246,75 @@ a.is-online {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 3px 0 0 3px;
+  background: #eee;
 }
 .offers-2 .list .item .photo img {
   display: block;
+  border-radius: 3px 0 0 3px;
+}
+.offers-2 .list .item .photo .slide-left,
+.offers-2 .list .item .photo .slide-right {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  margin-top: -16px;
+  -webkit-transition: .1s;
+          transition: .1s;
+  opacity: 0;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.offers-2 .list .item .photo .slide-left i,
+.offers-2 .list .item .photo .slide-right i {
+  font-size: 24px;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}
+.offers-2 .list .item .photo .slide-left.slide-left,
+.offers-2 .list .item .photo .slide-right.slide-left {
+  left: 0;
+}
+.offers-2 .list .item .photo .slide-left.slide-right,
+.offers-2 .list .item .photo .slide-right.slide-right {
+  right: 0;
+}
+.offers-2 .list .item .photo .slide-left.disabled,
+.offers-2 .list .item .photo .slide-right.disabled {
+  opacity: 0 !important;
+}
+.offers-2 .list .item .photo:hover .slide-left,
+.offers-2 .list .item .photo:hover .slide-right {
+  opacity: .65;
+}
+.offers-2 .list .item .photo:hover .slide-left:hover,
+.offers-2 .list .item .photo:hover .slide-right:hover {
+  opacity: 1;
+}
+.offers-2 .list .item .photo .frame {
+  height: 240px;
+  height: 180px;
+  overflow: hidden;
+}
+.offers-2 .list .item .photo .frame ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.offers-2 .list .item .photo .frame ul li {
+  float: left;
+  width: 240px;
+  height: 180px;
+  padding: 0;
 }
 .offers-2 .list .item .photo .info {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 1px;
+  left: -6px;
   color: #fff;
   line-height: 14px;
   height: 35px;
@@ -9243,21 +9324,30 @@ a.is-online {
   height: 35px;
   speak: none;
   position: relative;
-  padding-left: 35px;
+  padding-left: 44px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 255, 0.9);
+  color: #EEE;
+  font-size: 14px;
+  line-height: 40px;
+  margin-right: 8px;
 }
 .offers-2 .list .item .photo .info .ico:after {
   font-family: 'icomoon';
-  font-size: 55px;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
+  font-size: 53px;
+  width: 53px;
+  height: 53px;
+  line-height: 53px;
   display: block;
   position: absolute;
   top: 50%;
-  left: 50%;
-  margin: -27.5px 0 0 -27.5px;
+  left: 0;
+  opacity: .55;
+  margin: -26.5px 0 0 0;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.offers-2 .list .item .photo .info .ico.video {
+  padding-left: 50px;
 }
 .offers-2 .list .item .photo .info .ico.video:after {
   content: "\e610";
@@ -9269,8 +9359,198 @@ a.is-online {
   min-height: 180px;
   overflow: hidden;
   font-size: 1rem;
-  padding: 20px;
+  padding: 14px 20px;
+  border: 1px solid transparent;
+  border-left: none;
   box-sizing: border-box;
+  border-radius: 0 3px 3px 0;
+  -webkit-transition: .1s;
+          transition: .1s;
+  cursor: pointer;
+  position: relative;
+}
+.offers-2 .list .item .data .title {
+  margin-bottom: 6px;
+}
+.offers-2 .list .item .data .price {
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+.offers-2 .list .item .data .desc {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.offers-2 .list .item .data .transport {
+  font-size: 14px;
+  list-style: none;
+}
+.offers-2 .list .item .data .transport li {
+  margin-bottom: 3px;
+}
+.offers-2 .list .item .data .phone {
+  position: absolute;
+  left: 20px;
+  bottom: 14px;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.offers-2 .list .item .data .phone:before {
+  font-family: 'icomoon';
+  content: "\e637";
+  font-size: 30px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -11px;
+  top: 0;
+  color: #999;
+  opacity: .5;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.offers-2 .list .item .data .company {
+  position: absolute;
+  bottom: 14px;
+  right: 20px;
+  text-align: right;
+  font-size: 14px;
+}
+.offers-2 .list .item .data .actions {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  text-align: right;
+}
+.offers-2 .list .item .data .actions a {
+  display: inline-block;
+  margin-left: 5px;
+  text-decoration: none !important;
+}
+.offers-2 .list .item .data .actions a i {
+  color: #737373;
+}
+.offers-2 .list .item .data .actions a i.icon-font-heart_stroke {
+  font-size: 29px;
+  color: #5a5a5a;
+}
+.offers-2 .list .item .data .actions a:hover i {
+  color: #000;
+}
+.offers-2 .list .item.fade {
+  opacity: .5;
+}
+.offers-2 .list .item:hover .data {
+  border-color: #B3D9FF;
+}
+.offers-2 .list .item:hover .data .title {
+  color: #0073E6;
+}
+.offers-2 .list .item:hover .data .phone:before {
+  opacity: 1;
+}
+.offers-2 .list .item:hover .photo .info .ico:after {
+  opacity: 1;
+}
+.offers-2 .list .item.sp .data {
+  border-color: #F8E71C;
+  position: relative;
+}
+.offers-2 .list .item.sp .data:before {
+  position: absolute;
+  content: 'Реклама';
+  font-size: 10px;
+  height: 15px;
+  line-height: 13px;
+  padding: 0 6px;
+  display: block;
+  top: 0;
+  right: 0;
+  background: #F8E71C;
+  border-radius: 0 1px 0 3px;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.offers-2 .list .item.sp:hover .data {
+  border-color: #eedd12;
+}
+.offers-2 .list .item.sp:hover .data:before {
+  background: #eedd12;
+}
+.offers-2 .list .item.premium .data {
+  border-color: transparent;
+  position: relative;
+}
+.offers-2 .list .item.premium .data:before {
+  position: absolute;
+  content: 'Премиум';
+  font-size: 10px;
+  height: 15px;
+  line-height: 13px;
+  padding: 0 6px;
+  display: block;
+  top: 0;
+  right: 0;
+  background: #E6E6E6;
+  border-radius: 0 1px 0 3px;
+  -webkit-transition: .1s;
+          transition: .1s;
+  opacity: 0;
+}
+.offers-2 .list .item.premium:hover .data {
+  border-color: #E6E6E6;
+}
+.offers-2 .list .item.premium:hover .data:before {
+  opacity: 1;
+}
+.offers-2 .list .item-collapsed {
+  background: #F7F7F7;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  margin: 0 0 30px;
+  padding: 0 20px;
+  font-size: 13px;
+  color: #666;
+  -webkit-transition: .1s;
+          transition: .1s;
+  cursor: pointer;
+  position: relative;
+}
+.offers-2 .list .item-collapsed .actions {
+  position: absolute;
+  right: 20px;
+  text-align: right;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.offers-2 .list .item-collapsed .actions a {
+  display: inline-block;
+  position: relative;
+  padding-left: 42px;
+  color: #666;
+  text-decoration: none;
+}
+.offers-2 .list .item-collapsed .actions a i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -18px;
+}
+.offers-2 .list .item-collapsed .actions a i.icon-font-arrow-down {
+  left: 16px;
+  margin-top: -21px;
+}
+.offers-2 .list .item-collapsed .actions a:hover {
+  color: #333;
+}
+.offers-2 .list .item-collapsed:hover {
+  background: #E6F2FF;
+}
+.offers-2 .list .item-collapsed:hover .actions {
+  opacity: 1;
 }
 .offer-title-params {
   padding-top: 8px;
