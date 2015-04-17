@@ -401,6 +401,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
+	"\/jade\/_layout-no-valutes.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/_layout-no-valutes.jade",
+		"outputAbbreviatedPath": "\/_layout-no-valutes.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
 	"\/jade\/_layout.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
