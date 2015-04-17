@@ -241,6 +241,7 @@
 				.desc {
 					font-size: 14px;
 					margin-bottom: 3px;
+					line-height: 1.45em;
 				}
 
 				.transport {
@@ -287,6 +288,8 @@
 					right: 20px;
 					bottom: 10px;
 					text-align: right;
+					opacity: 0;
+					transition: .1s;
 
 					a {
 						display: inline-block;
@@ -337,6 +340,10 @@
 						}
 					}
 				}
+
+				.actions {
+					opacity: 1;
+				}
 			}
 
 			&.sp {
@@ -349,13 +356,14 @@
 						content: 'Реклама';
 						font-size: 10px;
 						height: 15px;
-						line-height: 13px;
+						line-height: 17px;
 						padding: 0 6px;
 						display: block;
 						top: 0;
 						right: 0;
-						background: #F8E71C;
-						border-radius: 0 1px 0 3px;
+						color: #666;
+						// background: #F8E71C;
+						// border-radius: 0 1px 0 3px;
 						transition: .1s;
 					}
 				}
@@ -365,7 +373,7 @@
 						border-color: #F8E71C - 10;
 
 						&:before {
-							background: #F8E71C - 10;
+							// background: #F8E71C - 10;
 						}
 					}
 				}
@@ -381,13 +389,14 @@
 						content: 'Премиум';
 						font-size: 10px;
 						height: 15px;
-						line-height: 13px;
+						line-height: 17px;
 						padding: 0 6px;
 						display: block;
 						top: 0;
 						right: 0;
-						background: #E6E6E6;
-						border-radius: 0 1px 0 3px;
+						color: #666;
+						// background: #E6E6E6;
+						// border-radius: 0 1px 0 3px;
 						transition: .1s;
 						opacity: 0;
 					}

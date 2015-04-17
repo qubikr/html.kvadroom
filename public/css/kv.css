@@ -9380,6 +9380,7 @@ a.is-online {
 .offers-2 .list .item .data .desc {
   font-size: 14px;
   margin-bottom: 3px;
+  line-height: 1.45em;
 }
 .offers-2 .list .item .data .transport {
   font-size: 14px;
@@ -9421,6 +9422,9 @@ a.is-online {
   right: 20px;
   bottom: 10px;
   text-align: right;
+  opacity: 0;
+  -webkit-transition: .1s;
+          transition: .1s;
 }
 .offers-2 .list .item .data .actions a {
   display: inline-block;
@@ -9452,6 +9456,9 @@ a.is-online {
 .offers-2 .list .item:hover .photo .info .ico {
   opacity: 1;
 }
+.offers-2 .list .item:hover .actions {
+  opacity: 1;
+}
 .offers-2 .list .item.sp .data {
   border-color: #F8E71C;
   position: relative;
@@ -9461,21 +9468,17 @@ a.is-online {
   content: 'Реклама';
   font-size: 10px;
   height: 15px;
-  line-height: 13px;
+  line-height: 17px;
   padding: 0 6px;
   display: block;
   top: 0;
   right: 0;
-  background: #F8E71C;
-  border-radius: 0 1px 0 3px;
+  color: #666;
   -webkit-transition: .1s;
           transition: .1s;
 }
 .offers-2 .list .item.sp:hover .data {
   border-color: #eedd12;
-}
-.offers-2 .list .item.sp:hover .data:before {
-  background: #eedd12;
 }
 .offers-2 .list .item.premium .data {
   border-color: transparent;
@@ -9486,13 +9489,12 @@ a.is-online {
   content: 'Премиум';
   font-size: 10px;
   height: 15px;
-  line-height: 13px;
+  line-height: 17px;
   padding: 0 6px;
   display: block;
   top: 0;
   right: 0;
-  background: #E6E6E6;
-  border-radius: 0 1px 0 3px;
+  color: #666;
   -webkit-transition: .1s;
           transition: .1s;
   opacity: 0;
