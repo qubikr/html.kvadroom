@@ -9186,7 +9186,7 @@ a.is-online {
   height: 26px;
   display: inline-block;
   padding: 0 8px;
-  margin: 0 0 5px 10px;
+  margin: 0 0 5px 7px;
   text-decoration: none;
   -webkit-transition: .1s;
           transition: .1s;
@@ -9211,7 +9211,7 @@ a.is-online {
   border-color: #faba00;
 }
 .offers-2 .heading .actions .group {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 7px;
 }
 .offers-2 .heading .actions .group a {
   margin: 0 0 0 -1px;
