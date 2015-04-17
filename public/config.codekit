@@ -313,6 +313,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/i\/sp\/sp-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19552,
+		"inputAbbreviatedPath": "\/i\/sp\/sp-1.jpg",
+		"outputAbbreviatedPath": "\/i\/sp\/sp-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/sp\/sp-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22827,
+		"inputAbbreviatedPath": "\/i\/sp\/sp-2.jpg",
+		"outputAbbreviatedPath": "\/i\/sp\/sp-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/sp\/sp-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23441,
+		"inputAbbreviatedPath": "\/i\/sp\/sp-3.jpg",
+		"outputAbbreviatedPath": "\/i\/sp\/sp-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/i\/sprite-icons.png": {
 		"fileType": 32768,
 		"ignore": 0,
