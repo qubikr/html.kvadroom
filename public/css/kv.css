@@ -9452,7 +9452,8 @@ a.is-online {
   left: -1px;
   color: #5a5a5a;
 }
-.offers-2 .list .item .data .actions a:hover i {
+.offers-2 .list .item .data .actions a:hover i,
+.offers-2 .list .item .data .actions a:hover:after {
   color: #000;
 }
 .offers-2 .list .item.fade {
