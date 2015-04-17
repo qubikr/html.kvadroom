@@ -9393,7 +9393,7 @@ a.is-online {
   left: 20px;
   bottom: 14px;
   font-size: 14px;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 .offers-2 .list .item .data .phone:before {
   font-family: 'icomoon';
@@ -14237,8 +14237,10 @@ yx-axis
 .pagination > li > a,
 .pagination > li > span {
   text-decoration: none;
-  padding: 9px 12px;
   display: inline-block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
 }
 @-webkit-keyframes bounceShowMore {
   0% {
