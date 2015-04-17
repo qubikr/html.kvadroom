@@ -9,7 +9,7 @@ $(function(){
 			itemNav: 'basic',
 			smart: 1,
 			activateOn: 'click',
-			mouseDragging: 1,
+			mouseDragging: 0,
 			touchDragging: 1,
 			releaseSwing: 1,
 			startAt: 3,
