@@ -9330,6 +9330,9 @@ a.is-online {
   font-size: 14px;
   line-height: 40px;
   margin-right: 8px;
+  opacity: .6;
+  -webkit-transition: .1s;
+          transition: .1s;
 }
 .offers-2 .list .item .photo .info .ico:after {
   font-family: 'icomoon';
@@ -9341,10 +9344,7 @@ a.is-online {
   position: absolute;
   top: 50%;
   left: 0;
-  opacity: .55;
   margin: -26.5px 0 0 0;
-  -webkit-transition: .1s;
-          transition: .1s;
 }
 .offers-2 .list .item .photo .info .ico.video {
   padding-left: 50px;
@@ -9449,7 +9449,7 @@ a.is-online {
 .offers-2 .list .item:hover .data .phone:before {
   opacity: 1;
 }
-.offers-2 .list .item:hover .photo .info .ico:after {
+.offers-2 .list .item:hover .photo .info .ico {
   opacity: 1;
 }
 .offers-2 .list .item.sp .data {
