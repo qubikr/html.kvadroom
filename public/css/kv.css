@@ -9445,7 +9445,7 @@ a.is-online {
   opacity: .5;
 }
 .offers-2 .list .item:hover .data {
-  border-color: #B3D9FF;
+  border-color: #E6E6E6;
 }
 .offers-2 .list .item:hover .data .title {
   color: #0073E6;
@@ -9481,7 +9481,6 @@ a.is-online {
   border-color: #eedd12;
 }
 .offers-2 .list .item.premium .data {
-  border-color: transparent;
   position: relative;
 }
 .offers-2 .list .item.premium .data:before {
@@ -9498,9 +9497,6 @@ a.is-online {
   -webkit-transition: .1s;
           transition: .1s;
   opacity: 0;
-}
-.offers-2 .list .item.premium:hover .data {
-  border-color: #E6E6E6;
 }
 .offers-2 .list .item.premium:hover .data:before {
   opacity: 1;
