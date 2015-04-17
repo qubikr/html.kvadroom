@@ -364,7 +364,6 @@
 
 			&.sp {
 				.data {
-					border-color: #F8E71C;
 					position: relative;
 
 					&:before {
@@ -377,6 +376,7 @@
 						display: block;
 						top: 0;
 						right: 0;
+						opacity: 0;
 						color: #666;
 						// background: #F8E71C;
 						// border-radius: 0 1px 0 3px;
@@ -386,9 +386,10 @@
 
 				&:hover {
 					.data {
-						border-color: #F8E71C - 10;
+						border-color: #F8E71C;
 
 						&:before {
+							opacity: 1;
 							// background: #F8E71C - 10;
 						}
 					}

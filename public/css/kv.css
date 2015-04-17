@@ -9475,7 +9475,6 @@ a.is-online {
   opacity: 1;
 }
 .offers-2 .list .item.sp .data {
-  border-color: #F8E71C;
   position: relative;
 }
 .offers-2 .list .item.sp .data:before {
@@ -9488,12 +9487,16 @@ a.is-online {
   display: block;
   top: 0;
   right: 0;
+  opacity: 0;
   color: #666;
   -webkit-transition: .1s;
           transition: .1s;
 }
 .offers-2 .list .item.sp:hover .data {
-  border-color: #eedd12;
+  border-color: #F8E71C;
+}
+.offers-2 .list .item.sp:hover .data:before {
+  opacity: 1;
 }
 .offers-2 .list .item.premium .data {
   position: relative;
