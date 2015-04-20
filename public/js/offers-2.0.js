@@ -1,7 +1,7 @@
 $(function(){
 	$('.offers-2 .list>.item').each(function(){
-		var $frame  = $(this).find('.frame');
-		var $slidee = $frame.children('ul').eq(0);
+		var $frame  = $(this).find('.frames');
+		var $slidee = $frame.children('.frames-content').eq(0);
 		var $wrap   = $frame.parent();
 
 		$frame.sly({

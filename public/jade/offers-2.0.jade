@@ -11,6 +11,9 @@ block content
 	.divider-20
 
 	.container-24
+		.grid-7
+			a(href="#"): img(src="i/banner-right.png")
+
 		.grid-17
 			.offers-2
 				.heading 
@@ -45,9 +48,6 @@ block content
 			include partials/pagination
 			include partials/show-more-button
 
-		.grid-7
-			.right-col-240
-				a(href="#"): img(src="i/banner-right.png")
 		.clear
 
 
@@ -55,16 +55,16 @@ block content
 		.item(class=typeClass + ((fade) ? ' fade' : ''))
 			a.photo(href="#")
 				if typeClass != 'sp'
-					.slide-left: i.icon-font.icon-font-arr-left
-					.slide-right: i.icon-font.icon-font-arr-right
-					.frame
-						ul.clearfix
-							li: img(src="http://lorempixel.com/240/180/city/?r=1" + id)
-							li: img(src="http://lorempixel.com/240/180/city/?r=2" + id)
-							li: img(src="http://lorempixel.com/240/180/city/?r=3" + id)
-							li: img(src="http://lorempixel.com/240/180/city/?r=4" + id)
-							li: img(src="http://lorempixel.com/240/180/city/?r=5" + id)
-							li: img(src="http://lorempixel.com/240/180/city/?r=6" + id)
+					span.slide-left: i.icon-font.icon-font-arr-left
+					span.slide-right: i.icon-font.icon-font-arr-right
+					span.frames
+						span.frames-content
+							span.frame: img(src="http://lorempixel.com/240/180/city/?r=1" + id)
+							span.frame: img(src="http://lorempixel.com/240/180/city/?r=2" + id)
+							span.frame: img(src="http://lorempixel.com/240/180/city/?r=3" + id)
+							span.frame: img(src="http://lorempixel.com/240/180/city/?r=4" + id)
+							span.frame: img(src="http://lorempixel.com/240/180/city/?r=5" + id)
+							span.frame: img(src="http://lorempixel.com/240/180/city/?r=6" + id)
 
 					span.info
 						if photos > 0
@@ -81,7 +81,7 @@ block content
 						span.valute.rub: i ⃏
 
 				.desc #{desc}
-				ul.transport 
+				ul.transport
 					each item in address
 						li #{item} 
 				.phone #{phone} 

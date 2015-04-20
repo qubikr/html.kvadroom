@@ -155,22 +155,25 @@
 					}
 				}
 
-				.frame {
+				.frames {
 					height: @photo-width;
 					height: @photo-height;
 					overflow: hidden;
+					display: block;
 
-					ul {
+					.frames-content {
 						list-style: none;
 						margin: 0;
 						padding: 0;
 						height: 100%;
+						display: block;
 
-						li {
+						.frame {
 							float: left;
 							width: @photo-width;
 							height: @photo-height;
 							padding: 0;
+							display: block;
 						}
 					}
 				}

@@ -9308,22 +9308,25 @@ a.is-online {
 .offers-2 .list .item .photo:hover .slide-right:hover {
   opacity: 1;
 }
-.offers-2 .list .item .photo .frame {
+.offers-2 .list .item .photo .frames {
   height: 240px;
   height: 180px;
   overflow: hidden;
+  display: block;
 }
-.offers-2 .list .item .photo .frame ul {
+.offers-2 .list .item .photo .frames .frames-content {
   list-style: none;
   margin: 0;
   padding: 0;
   height: 100%;
+  display: block;
 }
-.offers-2 .list .item .photo .frame ul li {
+.offers-2 .list .item .photo .frames .frames-content .frame {
   float: left;
   width: 240px;
   height: 180px;
   padding: 0;
+  display: block;
 }
 .offers-2 .list .item .photo .info {
   position: absolute;
