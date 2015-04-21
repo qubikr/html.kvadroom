@@ -3597,6 +3597,15 @@ code {
   height: 32px;
   display: block;
 }
+.icon-font-arrow-medium-right:before {
+  content: "\e663";
+}
+.icon-font-video-big:before {
+  content: "\e664";
+}
+.icon-font-photo-big:before {
+  content: "\e665";
+}
 .icon-font-compare:before {
   content: "\e662";
 }
@@ -9261,7 +9270,7 @@ a.is-online {
   opacity: 1;
   border: 1px solid transparent;
   border-right: none;
-  border-radius: 3px 0 0 3px;
+  border-radius: 4px 0 0 4px;
 }
 .offers-2 .list .item .photo img {
   display: block;
@@ -9269,32 +9278,40 @@ a.is-online {
 }
 .offers-2 .list .item .photo .slide-left,
 .offers-2 .list .item .photo .slide-right {
-  width: 32px;
-  height: 32px;
+  width: 23px;
+  height: 23px;
   position: absolute;
   z-index: 3;
   top: 50%;
-  margin-top: -16px;
+  margin-top: -11px;
   -webkit-transition: .1s;
           transition: .1s;
   opacity: 0;
   color: #fff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
-.offers-2 .list .item .photo .slide-left i,
-.offers-2 .list .item .photo .slide-right i {
-  font-size: 24px;
-  position: absolute;
-  left: 6px;
-  top: 6px;
+.offers-2 .list .item .photo .slide-left:after,
+.offers-2 .list .item .photo .slide-right:after {
+  font-family: 'icomoon';
+  content: '\e663';
+  display: block;
+  width: 23px;
+  height: 23px;
+  font-size: 32px;
 }
 .offers-2 .list .item .photo .slide-left.slide-left,
 .offers-2 .list .item .photo .slide-right.slide-left {
-  left: 0;
+  left: 10px;
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+}
+.offers-2 .list .item .photo .slide-left.slide-left:after,
+.offers-2 .list .item .photo .slide-right.slide-left:after {
+  -webkit-transform: rotateZ(-180deg);
+          transform: rotateZ(-180deg);
 }
 .offers-2 .list .item .photo .slide-left.slide-right,
 .offers-2 .list .item .photo .slide-right.slide-right {
-  right: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  right: 10px;
 }
 .offers-2 .list .item .photo .slide-left.disabled,
 .offers-2 .list .item .photo .slide-right.disabled {
@@ -9330,8 +9347,8 @@ a.is-online {
 }
 .offers-2 .list .item .photo .info {
   position: absolute;
-  bottom: 1px;
-  left: -6px;
+  bottom: 0;
+  left: 5px;
   color: #fff;
   line-height: 14px;
   height: 35px;
@@ -9341,7 +9358,7 @@ a.is-online {
   height: 35px;
   speak: none;
   position: relative;
-  padding-left: 44px;
+  padding-left: 32px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   color: #EEE;
   font-size: 14px;
@@ -9350,27 +9367,25 @@ a.is-online {
   opacity: .6;
   -webkit-transition: .1s;
           transition: .1s;
+  margin-right: 15px;
 }
 .offers-2 .list .item .photo .info .ico:after {
   font-family: 'icomoon';
-  font-size: 53px;
-  width: 53px;
-  height: 53px;
-  line-height: 53px;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
   display: block;
   position: absolute;
   top: 50%;
   left: 0;
-  margin: -26.5px 0 0 0;
-}
-.offers-2 .list .item .photo .info .ico.video {
-  padding-left: 50px;
+  margin: -16px 0 0 0;
 }
 .offers-2 .list .item .photo .info .ico.video:after {
-  content: "\e610";
+  content: "\e664";
 }
 .offers-2 .list .item .photo .info .ico.pictures:after {
-  content: "\e611";
+  content: "\e665";
 }
 .offers-2 .list .item .data {
   min-height: 180px;
@@ -9397,6 +9412,7 @@ a.is-online {
 .offers-2 .list .item .data .price .valute {
   font-size: .85em;
   margin-left: .3ex;
+  font-weight: normal;
   color: #888;
 }
 .offers-2 .list .item .data .desc {
@@ -9409,7 +9425,8 @@ a.is-online {
   list-style: none;
 }
 .offers-2 .list .item .data .transport li {
-  margin-bottom: 3px;
+  display: inline-block;
+  margin: 0 30px 3px 0;
 }
 .offers-2 .list .item .data .phone {
   position: absolute;
@@ -9417,6 +9434,14 @@ a.is-online {
   bottom: 14px;
   font-size: 14px;
   padding-left: 18px;
+}
+.offers-2 .list .item .data .phone img {
+  height: 13px;
+  margin-bottom: -1px;
+  display: inline-block;
+}
+.offers-2 .list .item .data .phone img:last-child {
+  margin-left: -4px;
 }
 .offers-2 .list .item .data .phone:before {
   font-family: 'icomoon';
@@ -9442,7 +9467,7 @@ a.is-online {
 .offers-2 .list .item .data .actions {
   position: absolute;
   right: 20px;
-  bottom: 10px;
+  bottom: 6px;
   text-align: right;
   opacity: 0;
   -webkit-transition: .1s;

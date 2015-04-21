@@ -39,7 +39,6 @@ block content
 						.title ул. Смирновская, 24
 						.actions
 							a(href="#")
-								i.icon-font.icon-font-trash-big
 								i.icon-font.icon-font-arrow-down
 								|Показать
 
@@ -55,8 +54,8 @@ block content
 		.item(class=typeClass + ((fade) ? ' fade' : ''))
 			a.photo(href="#")
 				if typeClass != 'sp'
-					span.slide-left: i.icon-font.icon-font-arr-left
-					span.slide-right: i.icon-font.icon-font-arr-right
+					span.slide-left
+					span.slide-right
 					span.frames
 						span.frames-content
 							span.frame: img(src="http://lorempixel.com/240/180/city/?r=1" + id)
