@@ -103,7 +103,8 @@
     background: #fff;
     position: relative;
     padding-bottom: 20px;
-    width: 618px;
+    width: 100%;
+    padding-right: 40px;
     top: -1px;
     left: -21px;
     z-index: 3;
@@ -112,7 +113,8 @@
     .page-num-delimiter-functional-input-form {
       border-bottom: 1px solid @color-gray-medium;
       height: 40px;
-      width: 618px;
+      width: 100%;
+      padding-right: 40px;
       display: block;
       position: relative;
 
@@ -121,8 +123,9 @@
         border: none;
         height: 30px;
         line-height: 30px;
-        width: 580px;
+        width: 93%;
         position: absolute;
+        box-sizing: border-box;
         top: 5px;
         left: 20px;
         font-size: 14px;
@@ -334,13 +337,27 @@
   display: block;
   text-decoration: none;
 
+  .right-link {
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 18px;
+    text-decoration: none;
+    line-height: 1.4em;
+  }
+
   &.wide {
     .sp-labels {
-      padding-top: 21px !important;
+      padding-top: 16px !important;
     }
 
     .offer-params li {
       margin-right: 0 !important;
+    }
+
+    .offers-params-table {
+      .grid-4 {
+        width: 192px !important;
+      }
     }
   }
 
@@ -355,7 +372,6 @@
   & > .grid-4.alpha {
     margin-bottom: 15px;
   }
-
 
   .offers-rows-item-header-above {
     color: @color-gray;
@@ -421,10 +437,6 @@
       .metro {
         color: #FD0008;
         margin-top: -1px;
-      }
-
-      .icon-font-soc_metro_spb {
-        color: #2250A3;
       }
 
       .highway {
@@ -529,7 +541,6 @@
     .offer-image-ready {
       opacity: 1 !important;
     }
-
 
     .offer-image-holder {
         display: block;
@@ -739,7 +750,7 @@
   cursor: pointer;
   line-height: 1.6em;
   margin-bottom: 0px;
-  
+
   .yellow {
     display: block !important;
     font-size: 12px;
@@ -751,7 +762,6 @@
   .offer-contacts-button {
     opacity: 1;
     margin-left: -15px;
-    margin-right: 20px;
     text-decoration: none;
 
     .icon-font {
@@ -875,7 +885,7 @@
   }
 
   .offer-action-icon {
-    color: @color-pink-dark !important;
+    color: #FF8A80 !important;
   }
 
   span {
@@ -979,4 +989,19 @@
 
 .pp-to {
   display: none;
+}
+
+.offers-row-sp {
+  .offer-price {
+    margin: 1em 0 0.12em;
+
+    &.no-price {
+      margin: 1em 0 0.32em;
+    }
+  } 
+  
+}
+
+.creeper-wrap-inner {
+  transition: margin-top .5s;
 }

@@ -6,6 +6,12 @@
   @gallery-width: 620px;
   @gallery-height: 465px;
 
+  .loading-dots-invert {
+    .loading-dots-big;
+
+    margin-left: -22px;
+  }
+
   img.backup-image {
     display: none;
   }
@@ -900,6 +906,11 @@
     width: 150px;
     text-align: center;
 
+    .loading-dots-invert {
+      left: 50%;
+      position: absolute;
+    }
+
     &:hover {
       background: #fff;
     }
@@ -916,9 +927,17 @@
       display: inline;
 
       img {
+        opacity: 0;
         display: inline;
         max-width: 150px;
         max-height: 113px;
+        transition: .2s;
+      }
+    }
+
+    &.ready {
+      img {
+        opacity: 1;
       }
     }
   }

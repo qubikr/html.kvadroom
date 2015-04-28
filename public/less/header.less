@@ -6,7 +6,7 @@
 .header {
   background: #fff;
   height: @header-height;
-  border-bottom: 1px solid @header-border-color;
+  border-bottom: 1px solid #E6E6E6;
   position: absolute;
   width: 940px;
   top: 0;
@@ -20,7 +20,7 @@
     position: relative;
     height: @header-height;
     width: 158px;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
 
     .icon-kvadroom-logo {
       display: block;
@@ -53,7 +53,7 @@
 
   .kvadroom-logo-link-short {
     width: 20px;
-    padding: 0 10px 0 20px;
+    padding: 0 10px 0 0;
 
     .icon-kvadroom-logo {
       width: 20px;
@@ -93,11 +93,16 @@
       left: 48px;
       top: 27px;
     }
+
+    &:hover {
+      .user-block-autherized-info-name-text {
+        color: #333;
+      }
+    }
   }
 
   .user-block-autherized-info-avatar {
-    .border-radius(10px);
-
+    .border-radius(4px);
     height: 40px;
     width: 40px;
     overflow: hidden;
@@ -115,7 +120,7 @@
   }
 
   .user-block-autherized-info-avatar-image {
-    .border-radius(10px);
+    .border-radius(4px);
     .animation-easeOutQuad(200);
     display: block;
   }
@@ -141,6 +146,7 @@
     white-space: nowrap;
     text-overflow: clip;
     overflow: hidden;
+    color: #666;
   }
 
   .user-block-autherized-info-no-nick {
@@ -213,7 +219,6 @@
 
   .user-block-icons {
     float: right;
-    margin-right: 20px;
     height: @header-height;
   }
 
@@ -234,21 +239,27 @@
   }
 
   .user-block-icons-icon-symbol {
-    color: #999;
+    color: #B2B2B2;
     display: inline-block;
     position: absolute !important;
     left: 14px;
     top: 50%;
     margin-top: -17px;
+    transition: .1s;
+
+    &.icon-font-heart_stroke {
+      font-size: 31px;
+      margin-top: -15px;
+    }
   }
 
   .user-block-icons-icon-text {
-    color: #999;
+    color: #666;
   }
 
   .user-block-icons-item:hover {
     .user-block-icons-icon-symbol {
-      color: @color-cyan-dk;
+      color: #B2B2B2 - 100;
     }
 
     .user-block-icons-icon-text {
@@ -267,23 +278,17 @@
   @button-make-ad-height: 40px;
 
   .button-make-ad {
-    background-color: @yellow-button-bg;
-    height: @button-make-ad-height;
-    line-height: @button-make-ad-height;
-    padding: 0 13px;
+    padding: 18px 13px;
     position: relative;
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
-    color: @color-black;
-    margin-top: 10px;
+    color: #666;
     float: right;
 
-    .animation-easeOutQuad(50ms);
-  }
-
-  .button-make-ad:hover {
-    background-color: @yellow-button-bg-hover;
+    &:hover {
+      color: #333;
+    }
   }
 
   .button-select-language {
@@ -331,7 +336,6 @@
   width: @header-height;
   height: @header-height;
   float: left;
-  border-right: 1px solid @header-border-color;
   cursor: pointer;
   text-decoration: none !important;
 
@@ -353,7 +357,7 @@
     left: 50%;
     top: 50%;
     margin: -16px 0 0 -16px;
-    color: @color-cyan-lighten;
+    color: #B2B2B2;
   }
 }
 
@@ -745,7 +749,7 @@
   .header {
     .kvadroom-logo-link {
       width: 20px;
-      padding: 0 10px 0 20px;
+      padding: 0 10px 0 0;
 
       .icon-kvadroom-logo {
         width: 20px;

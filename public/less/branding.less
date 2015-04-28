@@ -1,3 +1,13 @@
+.bbb-bottom-banner {
+  width: 970px;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  bottom: -200px;
+  left: 0;
+}
+
 .bbb {
   width: 100%;
   top: 0;
@@ -5,12 +15,28 @@
   background-position: center top;
   background-repeat: no-repeat;
 
+  &.full-width {
+    position: fixed;
+    background-position: center bottom;
+    height: 100% !important;
+
+    .bbb-wrapper {
+      margin-bottom: 200px;
+    }
+  }
+
   .bbb-link {
     width: 100%;
     display: block;
     position: relative;
     z-index: 1;
     margin: 0 auto;
+
+    &.full-width-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 
   .bbb-placeholder {

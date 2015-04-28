@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18493",
+"creatorBuild": "18904",
 "files": {
 	"\/complex.html": {
 		"fileType": 8192,
@@ -423,6 +423,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
+	"\/jade\/_layout2.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/_layout2.jade",
+		"outputAbbreviatedPath": "\/_layout2.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
 	"\/jade\/complex.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -467,13 +478,13 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/jade\/offers-2.0.jade": {
+	"\/jade\/offers2.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/jade\/offers-2.0.jade",
-		"outputAbbreviatedPath": "\/offers-2.0.html",
+		"inputAbbreviatedPath": "\/jade\/offers2.jade",
+		"outputAbbreviatedPath": "\/offers2.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
@@ -595,6 +606,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/partials\/header.jade",
 		"outputAbbreviatedPath": "\/header.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/jade\/partials\/header2.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/partials\/header2.jade",
+		"outputAbbreviatedPath": "\/header2.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
@@ -1038,6 +1060,28 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/json\/zk.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/json\/zk.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/json\/zk-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/json\/zk_objects.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/json\/zk_objects.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/json\/zk_objects-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/less\/_pdf.less": {
 		"allowInsecureImports": 0,
@@ -1501,7 +1545,7 @@
 		},
 	"\/less\/kv.less": {
 		"allowInsecureImports": 0,
-		"createSourceMap": 0,
+		"createSourceMap": 1,
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
@@ -2088,24 +2132,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/offers-2.0.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/offers-2.0.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/offers-wide.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/offers-wide.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/search.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -2407,6 +2433,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"futurehostile": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"globalstrict": {
 			"active": 0,
 			"flagValue": -1
@@ -2493,6 +2523,10 @@
 			},
 		"noarg": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"nocomma": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"node": {
@@ -2593,6 +2627,10 @@
 			},
 		"unused": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"varstmt": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"withstmt": {
@@ -2718,6 +2756,14 @@
 			"flagValue": -1
 			}
 		},
+	"jsonAutoOutputPathEnabled": 0,
+	"jsonAutoOutputPathFilenamePattern": "*-min.json",
+	"jsonAutoOutputPathRelativePath": "",
+	"jsonAutoOutputPathReplace1": "",
+	"jsonAutoOutputPathReplace2": "",
+	"jsonAutoOutputPathStyle": 0,
+	"jsonOrderOutput": 0,
+	"jsonOutputStyle": 1,
 	"kitAutoOutputPathEnabled": 1,
 	"kitAutoOutputPathFilenamePattern": "*.html",
 	"kitAutoOutputPathRelativePath": "",
@@ -2745,9 +2791,18 @@
 	"markdownAutoOutputPathReplace1": "",
 	"markdownAutoOutputPathReplace2": "",
 	"markdownAutoOutputPathStyle": 0,
+	"markdownCriticStyle": 0,
 	"markdownEnableFootnotes": 0,
-	"markdownEnableSmartyPants": 1,
-	"markdownExpandTabs": 1,
+	"markdownEnableLabels": 1,
+	"markdownEnableSmartQuotes": 1,
+	"markdownEscapeLineBreaks": 0,
+	"markdownMaskEmailAddresses": 1,
+	"markdownOutputFormat": 0,
+	"markdownOutputStyle": 0,
+	"markdownParseMetadata": 1,
+	"markdownProcessHTML": 0,
+	"markdownRandomFootnoteNumbers": 0,
+	"markdownUseCompatibilityMode": 0,
 	"reloadFileURLs": 0,
 	"sassAutoOutputPathEnabled": 1,
 	"sassAutoOutputPathFilenamePattern": "*.css",
@@ -2803,6 +2858,10 @@
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bare-returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2883,6 +2942,10 @@
 			"flagValue": -1
 			},
 		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
 			"active": 0,
 			"flagValue": -1
 			},

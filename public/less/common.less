@@ -6,10 +6,6 @@
   float: right !important;
 }
 
-.center, .fc {
-  float: center;
-}
-
 .fn {
   float: none !important;
 }
@@ -749,11 +745,6 @@
   background-color: @metro-color-orange;
 }
 
-.right-col-240 {
-  width: 240px;
-  margin-left: auto;
-}
-
 .right-col-250 {
   width: 250px;
   margin-left: auto;
@@ -948,24 +939,28 @@
   }
 
   &.big {
+    .loading-dots-big;
+  }
+}
+
+.loading-dots-big {
+  height: 16px;
+  width: 80px;
+  display: block;
+
+  i {
     height: 16px;
-    width: 80px;
+    width: 16px;
+    margin-top: -8px;
     display: block;
+  }
 
-    i {
-      height: 16px;
-      width: 16px;
-      margin-top: -8px;
-      display: block;
-    }
+  .loading-dot-2 {
+    left: 28px;
+  }
 
-    .loading-dot-2 {
-      left: 28px;
-    }
-
-    .loading-dot-3 {
-      left: 56px;
-    }
+  .loading-dot-3 {
+    left: 56px;
   }
 }
 
@@ -2153,6 +2148,18 @@ table.table-content {
     //background-image: url(../i/kvad_filter_bg.png);
     background-position: top left;
   }
+
+  .loading-dots {
+    height: 16px;
+    width: 80px;
+    display: block;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: -7px 0 0 -30px;
+
+    .loading-dots-big;
+  }
 }
 
 .show-history-more {
@@ -2511,11 +2518,12 @@ table.table-content {
 
 .text-expandable-at-footer,
 .bottom-seo-block {
+  margin-top: 40px;
+
   .text-expandable {
     margin-bottom: -30px;
   }
 }
-
 
 .text-label {
   border: 1px solid #1CD0C3;
@@ -2555,6 +2563,12 @@ table.table-content {
   margin-bottom: 1em;
   color: #666;
   font-size: 13px;
+  line-height: 1.4em;
+
+  h2 {
+    color: #333;
+    font-size: 16px;
+  }
 
   &.have-icon {
     position: relative;
@@ -2640,4 +2654,85 @@ table.table-content {
     left: 10px;
     color: #4AA3A7;
   }
+}
+
+.offers-header {
+  .my-lovely {
+    width: auto;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 17px !important;
+    display: block;
+    padding: 8px 0 0 33px;
+    font-size: 13px;
+    line-height: 1.3em;
+    float: right;
+    position: relative;
+    text-decoration: none !important;
+    color: #333 !important;
+    transition: background-color 0.15s;
+    margin: 0 14px 0 0;
+
+    &:hover {
+      color: @color-red !important;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    .full {
+      display: none;
+    }
+
+    .hidden {
+
+      display: inline !important;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      margin-top: -7px;
+      left: 3px;
+      color: #2ECFC2;
+      font-size: 24px;
+      width: 25px;
+      height: 24px;
+    }
+  }
+}
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+
+.icon-font-soc_metro_spb {
+  color: @underground-color-spb !important;
+}
+
+.icon-font-soc_metro_samara {
+  color: @underground-color-samara !important;
+}
+
+.icon-font-soc_metro_novosibirsk {
+  color: @underground-color-nsk !important;
+}
+
+.icon-font-soc_metro_nnovgorod {
+  color: @underground-color-nnov !important;
+}
+
+.icon-font-soc_metro_ekaterin {
+  color: @underground-color-ekb !important;
+}
+
+.icon-font-soc_metro_volgograd {
+  color: @underground-color-volgograd !important;
+}
+
+.icon-font-soc_metro_kazan {
+  color: @underground-color-kazan !important;
 }
