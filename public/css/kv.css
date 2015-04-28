@@ -4428,7 +4428,6 @@ code {
 }
 .header .user-menu {
   position: absolute;
-  display: none;
   width: 230px;
   z-index: 1000;
   left: 0;
