@@ -1,0 +1,59 @@
+@elements-border-color: #DEDEDE;
+@elements-border-color-hover: @elements-border-color - 15;
+
+h1 {
+	
+}
+
+.dropdown {
+	border: 1px solid @elements-border-color;
+	border-radius: 2px;
+	background-color: #fff;
+	height: 38px;
+	padding-right: 30px;
+	cursor: pointer;
+	transition: .1s;
+
+	&:hover {
+		border-color: @elements-border-color-hover;
+
+		&:after {
+			border-top-color: #B4B4B4 - 15;
+		}
+	}
+
+	&:after {
+		position: absolute;
+		top: 50%;
+		right: 12px;
+		margin-top: -2.5px;
+		display: block;
+  		content: '';
+  		font-size: 28px;
+  		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 4px 0 4px;
+		border-color: #B4B4B4 transparent transparent transparent;
+		transition: .1s;
+	}
+
+	.title {
+		font-size: 16px;
+		font-weight: bold;
+		height: 38px;
+		padding: 0 0 0 12px;
+		line-height: 38px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	ul {
+		display: none;
+	}
+}
+
+.filter-3 {
+	
+}

@@ -1059,6 +1059,10 @@
     float: left;
     margin-right: 2.5ex;
 
+    &.push-right {
+      margin-right: 5ex;
+    }
+
     .counter {
       color: @color-gray-light;
     }
@@ -2608,6 +2612,7 @@ table.table-content {
         color: #666;
         font-size: 13px;
         margin-left: 1ex;
+        line-height: 1;
       }
 
       a {
@@ -2624,6 +2629,38 @@ table.table-content {
             color: #ff0000;
           }
         }
+      }
+    }
+  }
+
+  &.striped {
+    .title {
+      border-bottom: 2px solid #6ACEC6;
+      margin-bottom: 0;
+    }
+
+    ul {
+      li {
+        padding: 13px 0 13px;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+}
+
+.menu-verticals-striped-wrapper {
+  .menu-verticals {
+    .title {
+      border-bottom: 2px solid #6ACEC6;
+      margin-bottom: 0;
+    }
+
+    ul {
+      li {
+        padding: 13px 0 13px;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ccc;
       }
     }
   }

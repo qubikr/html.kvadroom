@@ -17046,3 +17046,48 @@ ul.circular-switcher li.active {
 .offers-2 .page-delimiter-dummy {
   height: 30px;
 }
+.dropdown {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  background-color: #fff;
+  height: 38px;
+  padding-right: 30px;
+  cursor: pointer;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.dropdown:hover {
+  border-color: #cfcfcf;
+}
+.dropdown:hover:after {
+  border-top-color: #a5a5a5;
+}
+.dropdown:after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  margin-top: -2.5px;
+  display: block;
+  content: '';
+  font-size: 28px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #B4B4B4 transparent transparent transparent;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.dropdown .title {
+  font-size: 16px;
+  font-weight: bold;
+  height: 38px;
+  padding: 0 0 0 12px;
+  line-height: 38px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dropdown ul {
+  display: none;
+}
