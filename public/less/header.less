@@ -34,7 +34,7 @@
       }
     }
 
-    margin-right: 10px;
+    margin-right: 0;
 
     /*
     &:after {
@@ -54,6 +54,7 @@
   .kvadroom-logo-link-short {
     width: 20px;
     padding: 0 10px 0 0;
+    margin-right: 10px;
 
     .icon-kvadroom-logo {
       width: 20px;
@@ -73,6 +74,19 @@
   .user-block-login {
     float: left;
     margin-right: 20px;
+
+    .link-dotted  {
+      color: #666;
+
+      &:hover {
+        color: #0073E6;
+        border: none !important;
+
+        .dotted {
+          border: none !important;
+        }
+      }
+    }
   }
 
   .user-block-autherized-info {
@@ -193,7 +207,7 @@
 
   .user-menu {
     position: absolute;
-    // display: none;
+    display: none;
     width: 230px;
     z-index: 1000;
     left: 0;
@@ -219,7 +233,7 @@
     .nav-user-menu {
       box-shadow: 0 7px 7px rgba(0, 0, 0, .15);
       padding: 0 0;
-      border-radius: 4px;
+      border-radius: 0 0 4px 4px;
       background: #fff;
       position: relative;
       z-index: 1001;
@@ -233,14 +247,14 @@
         .count {
           color: #999;
           margin-left: 1ex;
+
+          i {
+            font-style: italic;
+          }
         }
 
         &:hover {
           background: #FFF2B3;
-        }
-
-        &:first-child {
-          border-radius: 4px 4px 0 0;
         }
 
         &:last-child {
@@ -284,7 +298,11 @@
     &.icon-font-heart_stroke,
     &.icon-font-heart {
       font-size: 31px;
-      margin-top: -15px;
+      margin-top: -16px;
+    }
+
+    &.icon-font-heart {
+      color: #FF0000;
     }
   }
 
@@ -295,6 +313,10 @@
   .user-block-icons-item:hover {
     .user-block-icons-icon-symbol {
       color: #B2B2B2 - 100;
+
+      &.icon-font-heart {
+        color: #FF0000 - 20 !important;
+      }
     }
 
     .user-block-icons-icon-text {
@@ -313,7 +335,7 @@
   @button-make-ad-height: 40px;
 
   .button-make-ad {
-    padding: 18px 13px;
+    padding: 19px 13px;
     position: relative;
     text-align: center;
     white-space: nowrap;
@@ -322,7 +344,7 @@
     float: right;
 
     &:hover {
-      color: #333;
+      color: #0073E6;
     }
   }
 
@@ -539,14 +561,14 @@
     left: -@header-height;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.05);
+    box-shadow: -2px 3px 2px 0px rgba(0,0,0,0.05);
 
     .nav-main-container-icon {
       position: absolute;
       left: 50%;
       top: 50%;
       display: block;
-      margin: -16px 0 0 -16px;
+      margin: -17px 0 0 -16px;
       color: #B2B2B2;
     }
   }
@@ -574,9 +596,6 @@
   .animation-easeOutQuad(300ms);
 }
 
-
-
-
 .header.shadowed {
   .scroll-shadow {
     opacity: 1;
@@ -599,6 +618,16 @@
 
 .nav-main-container.nav-main-container-active {
   display: block;
+  padding-bottom: 20px;
+
+  .nav-main-container-icon {
+    margin: -14px 0 0 -14px;
+    font-size: 28px;
+
+    &:before {
+      content: '\e612';
+    }
+  }
 }
 
 .nav-main-container-section {

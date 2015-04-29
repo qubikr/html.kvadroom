@@ -4283,7 +4283,7 @@ code {
   height: 60px;
   width: 158px;
   padding: 0 20px 0 0;
-  margin-right: 10px;
+  margin-right: 0;
   /*
     &:after {
       content: '';
@@ -4311,6 +4311,7 @@ code {
 .header .kvadroom-logo-link-short {
   width: 20px;
   padding: 0 10px 0 0;
+  margin-right: 10px;
 }
 .header .kvadroom-logo-link-short .icon-kvadroom-logo {
   width: 20px;
@@ -4326,6 +4327,16 @@ code {
 .header .user-block-login {
   float: left;
   margin-right: 20px;
+}
+.header .user-block-login .link-dotted {
+  color: #666;
+}
+.header .user-block-login .link-dotted:hover {
+  color: #0073E6;
+  border: none !important;
+}
+.header .user-block-login .link-dotted:hover .dotted {
+  border: none !important;
 }
 .header .user-block-autherized-info {
   float: left;
@@ -4428,6 +4439,7 @@ code {
 }
 .header .user-menu {
   position: absolute;
+  display: none;
   width: 230px;
   z-index: 1000;
   left: 0;
@@ -4437,7 +4449,7 @@ code {
 .header .user-menu .nav-user-menu {
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.15);
   padding: 0 0;
-  border-radius: 4px;
+  border-radius: 0 0 4px 4px;
   background: #fff;
   position: relative;
   z-index: 1001;
@@ -4452,11 +4464,11 @@ code {
   color: #999;
   margin-left: 1ex;
 }
+.header .user-menu .nav-user-menu .nav-user-menu-link .count i {
+  font-style: italic;
+}
 .header .user-menu .nav-user-menu .nav-user-menu-link:hover {
   background: #FFF2B3;
-}
-.header .user-menu .nav-user-menu .nav-user-menu-link:first-child {
-  border-radius: 4px 4px 0 0;
 }
 .header .user-menu .nav-user-menu .nav-user-menu-link:last-child {
   border-top: 1px solid #E6E6E6;
@@ -4498,13 +4510,19 @@ code {
 .header .user-block-icons-icon-symbol.icon-font-heart_stroke,
 .header .user-block-icons-icon-symbol.icon-font-heart {
   font-size: 31px;
-  margin-top: -15px;
+  margin-top: -16px;
+}
+.header .user-block-icons-icon-symbol.icon-font-heart {
+  color: #FF0000;
 }
 .header .user-block-icons-icon-text {
   color: #666;
 }
 .header .user-block-icons-item:hover .user-block-icons-icon-symbol {
   color: #4e4e4e;
+}
+.header .user-block-icons-item:hover .user-block-icons-icon-symbol.icon-font-heart {
+  color: #eb0000 !important;
 }
 .header .user-block-icons-item:hover .user-block-icons-icon-text {
   color: #333;
@@ -4517,7 +4535,7 @@ code {
   top: 0;
 }
 .header .button-make-ad {
-  padding: 18px 13px;
+  padding: 19px 13px;
   position: relative;
   text-align: center;
   white-space: nowrap;
@@ -4526,7 +4544,7 @@ code {
   float: right;
 }
 .header .button-make-ad:hover {
-  color: #333;
+  color: #0073E6;
 }
 .header .button-select-language {
   float: right;
@@ -4703,14 +4721,14 @@ code {
   left: -60px;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: -2px 3px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .nav-main-container .nav-main-container-button .nav-main-container-icon {
   position: absolute;
   left: 50%;
   top: 50%;
   display: block;
-  margin: -16px 0 0 -16px;
+  margin: -17px 0 0 -16px;
   color: #B2B2B2;
 }
 .nav-main-container .nav-main-container-button:hover .nav-main-container-icon {
@@ -4753,6 +4771,14 @@ code {
 }
 .nav-main-container.nav-main-container-active {
   display: block;
+  padding-bottom: 20px;
+}
+.nav-main-container.nav-main-container-active .nav-main-container-icon {
+  margin: -14px 0 0 -14px;
+  font-size: 28px;
+}
+.nav-main-container.nav-main-container-active .nav-main-container-icon:before {
+  content: '\e612';
 }
 .nav-main-container-section {
   color: #ffcc66 !important;
@@ -16914,13 +16940,13 @@ ul.circular-switcher li.active {
 .offers-2 .list .item.favorite .action.heart i {
   -webkit-transition: .15s;
           transition: .15s;
-  color: #FF3366 !important;
+  color: #FF0000 !important;
 }
 .offers-2 .list .item.favorite .action.heart i:before {
   content: '\e65a';
 }
 .offers-2 .list .item.favorite .action.heart:hover i {
-  color: #eb1f52 !important;
+  color: #eb0000 !important;
 }
 .offers-2 .list .item.favorite .action.heart:hover i:before {
   content: '\e666';
@@ -16929,7 +16955,7 @@ ul.circular-switcher li.active {
   pointer-events: none;
 }
 .offers-2 .list .item.favorite .action.heart.not-ready i {
-  color: #FF3366 !important;
+  color: #FF0000 !important;
 }
 .offers-2 .list .item.favorite .action.heart.not-ready i:before {
   content: '\e65a';
@@ -17020,4 +17046,3 @@ ul.circular-switcher li.active {
 .offers-2 .page-delimiter-dummy {
   height: 30px;
 }
-/*# sourceMappingURL=kv.css.map */
