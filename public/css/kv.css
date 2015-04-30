@@ -4609,6 +4609,7 @@ code {
 .nav-main-button {
   width: 60px;
   height: 60px;
+  margin-left: -21px;
   float: left;
   cursor: pointer;
   text-decoration: none !important;
@@ -14066,7 +14067,7 @@ yx-axis
   border-bottom: 4px solid transparent;
   font-size: 16px;
   display: inline-block;
-  margin-bottom: -2px;
+  margin-bottom: -1px;
   margin-right: -6px;
   padding: 12px 20px;
   color: #666;
@@ -14091,7 +14092,7 @@ yx-axis
   border-bottom: 4px solid transparent;
   font-size: 16px;
   display: inline-block;
-  margin-bottom: -2px;
+  margin-bottom: -1px;
   margin-right: -6px;
   padding: 12px 20px;
 }
@@ -14106,6 +14107,58 @@ yx-axis
   border-color: #ddd;
   color: #ff0000;
   border-bottom: 4px solid #fff;
+}
+.seo-list.seo-list-new .labels {
+  border-bottom-color: #6ECEC6;
+}
+.seo-list.seo-list-new .labels .label {
+  margin-bottom: -3px;
+  color: #333;
+}
+.seo-list.seo-list-new .labels .label.active {
+  border-left-color: #6ECEC6;
+  border-top-color: #6ECEC6;
+  border-right-color: #6ECEC6;
+  color: #f00;
+  font-weight: normal;
+}
+.seo-list.seo-list-new .labels .label:hover {
+  color: #666;
+}
+.seo-list.seo-list-new .column ul li a .title,
+.seo-list.seo-list-new .column-2 ul li a .title {
+  font-size: 16px;
+  color: #333;
+}
+.seo-list.seo-list-new .column ul li a:hover .title,
+.seo-list.seo-list-new .column-2 ul li a:hover .title {
+  color: #f00;
+}
+.seo-list.seo-list-new-main .labels {
+  border-bottom-color: #6ECEC6;
+}
+.seo-list.seo-list-new-main .labels .label {
+  margin-bottom: -3px;
+  color: #333;
+}
+.seo-list.seo-list-new-main .labels .label.active {
+  border-left-color: #6ECEC6;
+  border-top-color: #6ECEC6;
+  border-right-color: #6ECEC6;
+  color: #f00;
+  font-weight: normal;
+}
+.seo-list.seo-list-new-main .labels .label:hover {
+  color: #666;
+}
+.seo-list.seo-list-new-main .column ul li a .title,
+.seo-list.seo-list-new-main .column-2 ul li a .title {
+  font-size: 13px;
+  color: #333;
+}
+.seo-list.seo-list-new-main .column ul li a:hover .title,
+.seo-list.seo-list-new-main .column-2 ul li a:hover .title {
+  color: #f00;
 }
 .seo-list ul {
   list-style: none;
@@ -14143,23 +14196,40 @@ yx-axis
 }
 .seo-list .tab .column li,
 .seo-list .tab .column-2 li {
+  position: relative;
   margin-bottom: 13px;
+}
+.seo-list .tab .column li:after,
+.seo-list .tab .column-2 li:after {
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  pointer-events: none;
 }
 .seo-list .tab .column li .title,
 .seo-list .tab .column-2 li .title {
-  display: block;
+  display: inline-block;
   color: #999;
   font-size: 13px;
   text-decoration: none !important;
 }
 .seo-list .tab .column li .subtitle,
 .seo-list .tab .column-2 li .subtitle {
-  display: block;
   text-decoration: none !important;
 }
 .seo-list .tab .column li a,
 .seo-list .tab .column-2 li a {
   text-decoration: none;
+}
+.seo-list .tab .column li a:hover .title,
+.seo-list .tab .column-2 li a:hover .title {
+  color: #333;
 }
 .seo-list .tab .column li a:hover .subtitle,
 .seo-list .tab .column-2 li a:hover .subtitle {
@@ -14173,13 +14243,7 @@ yx-axis
   margin-bottom: 14px;
   line-height: 1.1em;
 }
-.seo-list .tab .column-2 a .title {
-  overflow: hidden;
-  text-overflow: clip;
-  white-space: nowrap;
-  position: relative;
-}
-.seo-list .tab .column-2 a .title:after {
+.seo-list .tab .column-2 a:after {
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
   top: 0;
@@ -14192,7 +14256,13 @@ yx-axis
   pointer-events: none;
 }
 .seo-list .tab .column-2 a .title {
-  color: #666666;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  position: relative;
+}
+.seo-list .tab .column-2 a .title {
+  color: #666;
 }
 .seo-list .tab .column-2 a:hover .title {
   color: #333;
@@ -16513,6 +16583,9 @@ ul.circular-switcher li.active {
   margin-bottom: 30px;
   -webkit-transition: .2s;
           transition: .2s;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 .offers-2 .list .item .photo {
   width: 240px;
@@ -16530,24 +16603,8 @@ ul.circular-switcher li.active {
   padding: 0;
   display: block;
   position: relative;
-}
-.offers-2 .list .item .photo .frame:after,
-.offers-2 .list .item .photo .frame:before {
-  content: '';
-  display: block;
-  width: 3px;
-  height: 3px;
-  position: absolute;
-  left: 0;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iNHB4IiBoZWlnaHQ9IjRweCIgdmlld0JveD0iMCAwIDQgNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+ICAgICAgICA8dGl0bGU+UmVjdGFuZ2xlIDE8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBza2V0Y2g6dHlwZT0iTVNQYWdlIj4gICAgICAgIDxwYXRoIGQ9Ik0wLC0wLjAwMDUwOTg0MjI1OCBMNCwtMC4wMDA1MDk4NDIyNTggQzQsLTAuMDAwNTA5ODQyMjU4IDIuMjQ3ODE3NTEsMC4xODE2NTc2OTIgMS4yNDg1MzUxNiwxLjE4MDkwODIgQzAuMjQ5MjUyODA1LDIuMTgwMTU4NzEgMCwzLjk5OTM2MjcgMCwzLjk5OTM2MjcgTDAsLTAuMDAwNTA5ODQyMjU4IFoiIGlkPSJSZWN0YW5nbGUtMSIgZmlsbD0iI0ZGRkZGRiIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCI+PC9wYXRoPiAgICA8L2c+PC9zdmc+);
-}
-.offers-2 .list .item .photo .frame:before {
-  top: 0;
-}
-.offers-2 .list .item .photo .frame:after {
-  bottom: 0;
-  -webkit-transform: rotateZ(-90deg);
-          transform: rotateZ(-90deg);
+  overflow: hidden;
+  border-radius: 3px 0 0 3px;
 }
 .offers-2 .list .item .photo .frame > span {
   width: 240px;
@@ -16592,20 +16649,6 @@ ul.circular-switcher li.active {
   height: 140px;
   display: block;
   line-height: 140px;
-}
-.offers-2 .list .item .photo:before {
-  content: '';
-  pointer-events: none;
-  height: 178px;
-  width: 241px;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: -1px;
-  opacity: 1;
-  border: 1px solid transparent;
-  border-right: none;
-  border-radius: 4px 0 0 4px;
 }
 .offers-2 .list .item .photo .slide-left,
 .offers-2 .list .item .photo .slide-right {
@@ -16785,7 +16828,7 @@ ul.circular-switcher li.active {
   padding-left: 18px;
 }
 .offers-2 .list .item .data .phone img {
-  height: 12px;
+  height: 13px;
   margin-bottom: -1px;
   display: inline-block;
 }
@@ -16856,8 +16899,8 @@ ul.circular-switcher li.active {
 .offers-2 .list .item .data .actions a:hover:after {
   color: #000;
 }
-.offers-2 .list .item:hover .data {
-  border-color: #E6E6E6;
+.offers-2 .list .item:hover {
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .offers-2 .list .item:hover .data .title {
   color: #0073E6;
@@ -16866,7 +16909,6 @@ ul.circular-switcher li.active {
   opacity: 1;
 }
 .offers-2 .list .item:hover .photo:before {
-  border-color: #E6E6E6;
   -webkit-transition: .1s;
           transition: .1s;
 }
@@ -16889,8 +16931,8 @@ ul.circular-switcher li.active {
   display: block;
   top: 0;
   right: 0;
-  opacity: 0;
-  color: #666;
+  opacity: 1;
+  color: #f00;
   -webkit-transition: .1s;
           transition: .1s;
 }
@@ -16898,12 +16940,8 @@ ul.circular-switcher li.active {
   opacity: 1;
 }
 .offers-2 .list .item.sp:hover .photo:before {
-  border-color: #F8E71C;
   -webkit-transition: .1s;
           transition: .1s;
-}
-.offers-2 .list .item.sp:hover .data {
-  border-color: #F8E71C;
 }
 .offers-2 .list .item.sp:hover .data:before {
   opacity: 1;
@@ -16929,6 +16967,10 @@ ul.circular-switcher li.active {
 .offers-2 .list .item.premium:hover .data:before {
   opacity: 1;
 }
+.offers-2 .list .item.viewed {
+  background: transparent;
+  box-shadow: none;
+}
 .offers-2 .list .item.viewed .data:before {
   position: absolute;
   font-size: 10px;
@@ -16941,8 +16983,12 @@ ul.circular-switcher li.active {
   color: #666;
   -webkit-transition: .1s;
           transition: .1s;
-  opacity: 0;
-  content: '\041F\0440\043E\0441\043C\043E\0442\0440\0435\043D\043E\00a0\0432\0430\043C\0438\00a0\0440\0430\043D\0435\0435' !important;
+  opacity: 1;
+  content: '\041F\0440\043E\0441\043C\043E\0442\0440\0435\043D\043E' !important;
+}
+.offers-2 .list .item.viewed:hover {
+  background: #fff;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .offers-2 .list .item.viewed:hover .data:before {
   opacity: 1;
@@ -17180,4 +17226,16 @@ body {
 }
 .dropdown ul {
   display: none;
+}
+.filter-right-block {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.filter-right-block section {
+  padding: 20px;
+  border-bottom: 1px solid #CCC;
+}
+.filter-right-block section:last-child {
+  border-bottom: none;
 }

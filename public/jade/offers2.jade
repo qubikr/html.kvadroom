@@ -36,9 +36,12 @@ block content
 
 	.container-24
 		.grid-7
-			.filter-3
+			.filter-right-block
+				section
+					.prices
+						
 				
-
+			
 		.grid-17
 			.offers-2
 				// .heading 
@@ -78,7 +81,7 @@ block content
 
 
 	mixin offer(id, typeClass, fade, photos, videos, title, price, desc, address, phone, company)
-		.item(class=typeClass + ((fade) ? ' fade' : ''))
+		.item(class=typeClass + ((fade) ? ' viewed' : ''))
 			a.photo(href="#")
 				if typeClass != 'sp'
 					span.slide-left
@@ -93,7 +96,9 @@ block content
 						if videos > 0
 							span.ico.video #{videos}
 				else
-					img(src="/i/sp/sp-" + id + ".jpg")
+					span.frames
+						span.frames-content
+							span.frame.loaded: img(src="http://lorempixel.com/240/180/city/?r=1" + id)
 
 			.data
 				.title #{title}
@@ -109,9 +114,9 @@ block content
 
 				if typeClass != 'sp' && typeClass != 'notautherized'
 					.actions
-						a(href="#"): i.icon-font.icon-font-compare
-						a.heart(href="#"): i.icon-font.icon-font-heart_stroke
-						a.trash(href="#"): i.icon-font.icon-font-trash-big
+						a(href="#", data-title=" "): i.icon-font.icon-font-compare
+						a.heart(href="#", data-title=" "): i.icon-font.icon-font-heart_stroke
+						a.trash(href="#", data-title=" "): i.icon-font.icon-font-trash-big
 
 				else
 					.company !{company}
