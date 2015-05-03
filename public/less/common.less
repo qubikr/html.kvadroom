@@ -756,33 +756,34 @@
 }
 
 .dash-button {
-  height: 45px;
-  line-height: 46px;
+  height: 50px;
+  line-height: 51px;
   text-align: center;
   text-decoration: none;
-  color: @color-black !important;
-  background: @color-cyan-nm;
+  color: #000;
+  background: #C9F4F2;
   width: 100%;
   display: block;
   cursor: pointer;
   position: relative;
+  border-radius: 4px;
 
   .animation-easeOutQuad(100ms);
 
   .dotted {
-    border: none;
+    border-bottom: none !important;
   }
 
   .loading-dots {
-    height: 45px;
+    height: 50px;
   }
 }
 
 .dash-button:hover {
-  background: @color-cyan-md;
+  background: #C9F4F2;
 
   .dotted {
-    border-bottom: 1px dotted @color-black;
+    border-bottom: none;
   }
 }
 
@@ -2130,7 +2131,7 @@ table.table-content {
 
 .kv-show-more,
 .show-history-more {
-  background-color: @color-cyan-nm !important;
+  background-color: #C9F4F2;
   position: relative;
   //background-image: url(../i/kvad_filter_bg.png);
   background-position: top left;
@@ -2148,7 +2149,7 @@ table.table-content {
   }
 
   &:hover {
-    background-color: @color-cyan-md !important;
+    background-color: #C9F4F2 - 15;
     //background-image: url(../i/kvad_filter_bg.png);
     background-position: top left;
   }

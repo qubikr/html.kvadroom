@@ -1975,16 +1975,17 @@ body {
   margin-left: auto;
 }
 .dash-button {
-  height: 45px;
-  line-height: 46px;
+  height: 50px;
+  line-height: 51px;
   text-align: center;
   text-decoration: none;
-  color: #333333 !important;
-  background: #c2f2f2;
+  color: #000;
+  background: #C9F4F2;
   width: 100%;
   display: block;
   cursor: pointer;
   position: relative;
+  border-radius: 4px;
   -webkit-transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /* easeOutQuad */
@@ -1993,16 +1994,16 @@ body {
   /* easeOutQuad */
 }
 .dash-button .dotted {
-  border: none;
+  border-bottom: none !important;
 }
 .dash-button .loading-dots {
-  height: 45px;
+  height: 50px;
 }
 .dash-button:hover {
-  background: #9ae6e6;
+  background: #C9F4F2;
 }
 .dash-button:hover .dotted {
-  border-bottom: 1px dotted #333333;
+  border-bottom: none;
 }
 .yellow-small-button {
   height: 30px;
@@ -3109,7 +3110,7 @@ table.table-content tbody tr:hover td {
 }
 .kv-show-more,
 .show-history-more {
-  background-color: #c2f2f2 !important;
+  background-color: #C9F4F2;
   position: relative;
   background-position: top left;
 }
@@ -3127,7 +3128,7 @@ table.table-content tbody tr:hover td {
 }
 .kv-show-more:hover,
 .show-history-more:hover {
-  background-color: #9ae6e6 !important;
+  background-color: #bae5e3;
   background-position: top left;
 }
 .kv-show-more .loading-dots,
@@ -3648,8 +3649,8 @@ td {
 }
 h1 {
   line-height: 1.1em;
-  font-size: 35px;
-  margin-bottom: 0.65em;
+  font-size: 27px;
+  margin-bottom: 35px;
   margin-right: 2ex !important;
 }
 h2 {
@@ -8236,7 +8237,7 @@ textarea.error {
   opacity: 0.85;
 }
 .breadcrumbs {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   margin-left: 1px;
 }
 .breadcrumbs .loading-dots-invert {
@@ -17039,8 +17040,10 @@ ul.circular-switcher li.active {
 }
 .offers-2 .item-collapsed {
   background: #F7F7F7;
+  border: 1px solid #CCCCCC;
   height: 40px;
-  line-height: 40px;
+  box-sizing: border-box;
+  line-height: 39px;
   border-radius: 3px;
   margin: 0 0 30px;
   padding: 0 20px;
@@ -17081,7 +17084,8 @@ ul.circular-switcher li.active {
   color: #333;
 }
 .offers-2 .item-collapsed:hover {
-  background: #E6F2FF;
+  background: #E3E3E3;
+  border-color: #E3E3E3;
 }
 .offers-2 .item-collapsed:hover .actions {
   opacity: 1;
@@ -17233,9 +17237,98 @@ body {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
 .filter-right-block section {
-  padding: 20px;
-  border-bottom: 1px solid #CCC;
+  padding: 15px 20px;
+  border-bottom: 1px solid #E6E6E6;
 }
 .filter-right-block section:last-child {
   border-bottom: none;
+}
+.filter-right-block section > *:last-child {
+  margin-bottom: 0;
+}
+.filter-right-block .prices > *:last-child {
+  margin-bottom: 0;
+}
+.filter-right-block .prices .selector {
+  margin-bottom: 12px;
+  font-size: 13px;
+  zoom: 1;
+}
+.filter-right-block .prices .selector:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.filter-right-block .prices .selector .title {
+  float: left;
+}
+.filter-right-block .prices .selector ul {
+  float: right;
+  list-style-type: none;
+}
+.filter-right-block .prices .selector ul li {
+  display: inline-block;
+  margin-left: 1.2ex;
+  cursor: pointer;
+}
+.filter-right-block .prices .selector ul li.active {
+  font-weight: bold;
+}
+.filter-right-block .radios {
+  margin-bottom: 15px;
+}
+.filter-right-block .radios input {
+  position: absolute;
+  left: -1000px;
+}
+.filter-right-block .radios input:checked + label:before {
+  background: #FFF2B3;
+  border: 1px solid #FFC10A;
+}
+.filter-right-block .radios input:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.filter-right-block .radios .item {
+  display: inline-block;
+  margin-right: 15px;
+}
+.filter-right-block .radios .item:last-child {
+  margin-right: 0;
+}
+.filter-right-block .radios label {
+  position: relative;
+  padding-left: 27px;
+}
+.filter-right-block .radios label:before {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  border: 1px solid #CECECE;
+  border-radius: 20px;
+  -webkit-transition: .2s;
+          transition: .2s;
+}
+.filter-right-block .radios label:after {
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  content: '';
+  top: 6px;
+  left: 6px;
+  border-radius: 20px;
+  background: #666047;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .2s;
+          transition: .2s;
 }
