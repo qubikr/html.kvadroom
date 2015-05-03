@@ -42,18 +42,27 @@ block content
 						.selector
 							.title Цена в рублях
 							ul
-								li.active(data-type="Цена в рублях") Р
+								li.active(data-type="Цена в рублях"): span.rub: i ⃏
 								li(data-type="Цена в USD") $
 								li(data-type="Цена в EURO") &euro;
 
 						.radios
 							.item
-								input#cb-1(type="radio", name="cb-1", checked)
-								label(for="cb-1") В месяц
+								input#rad-1(type="radio", name="rad-1", checked)
+								label(for="rad-1") В месяц
 
 							.item
-								input#cb-2(type="radio", name="cb-1")
-								label(for="cb-2") 1 м² / год
+								input#rad-2(type="radio", name="rad-1")
+								label(for="rad-2") 1 м² / год
+
+						.range
+							.input-hybrid
+								label от
+									input(type="text")
+
+							.input-hybrid
+								label до
+									input(type="text")
 						
 				section
 					.checkboxes
@@ -62,8 +71,30 @@ block content
 							label(for="cb-1") 1 комната
 
 						.item
-							input#cb-2(type="checkbox", name="cb-1")
+							input#cb-2(type="checkbox", name="cb-2")
 							label(for="cb-2") 2 комнаты
+
+						.item
+							input#cb-3(type="checkbox", name="cb-3")
+							label(for="cb-3") 3 комнаты
+
+						.item
+							input#cb-4(type="checkbox", name="cb-2")
+							label(for="cb-4") 4 комнаты
+
+						.item
+							input#cb-5(type="checkbox", name="cb-5")
+							label(for="cb-5") 5 и более
+
+				section
+					.checkboxes
+						.item
+							input#cb-6(type="checkbox", name="cb-6", checked)
+							label(for="cb-6") Вторичка
+
+						.item
+							input#cb-7(type="checkbox", name="cb-7")
+							label(for="cb-7") Новостройка
 				
 			
 		.grid-17

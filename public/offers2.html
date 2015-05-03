@@ -147,19 +147,31 @@
                 <div class="selector">
                   <div class="title">Цена в рублях</div>
                   <ul>
-                    <li data-type="Цена в рублях" class="active">Р</li>
+                    <li data-type="Цена в рублях" class="active"><span class="rub"><i>⃏</i></span></li>
                     <li data-type="Цена в USD">$</li>
                     <li data-type="Цена в EURO">&euro;</li>
                   </ul>
                 </div>
                 <div class="radios">
                   <div class="item">
-                    <input id="cb-1" type="radio" name="cb-1" checked>
-                    <label for="cb-1">В месяц</label>
+                    <input id="rad-1" type="radio" name="rad-1" checked>
+                    <label for="rad-1">В месяц</label>
                   </div>
                   <div class="item">
-                    <input id="cb-2" type="radio" name="cb-1">
-                    <label for="cb-2">1 м² / год</label>
+                    <input id="rad-2" type="radio" name="rad-1">
+                    <label for="rad-2">1 м² / год</label>
+                  </div>
+                </div>
+                <div class="range">
+                  <div class="input-hybrid">
+                    <label>от
+                      <input type="text">
+                    </label>
+                  </div>
+                  <div class="input-hybrid">
+                    <label>до
+                      <input type="text">
+                    </label>
                   </div>
                 </div>
               </div>
@@ -171,8 +183,32 @@
                   <label for="cb-1">1 комната</label>
                 </div>
                 <div class="item">
-                  <input id="cb-2" type="checkbox" name="cb-1">
+                  <input id="cb-2" type="checkbox" name="cb-2">
                   <label for="cb-2">2 комнаты</label>
+                </div>
+                <div class="item">
+                  <input id="cb-3" type="checkbox" name="cb-3">
+                  <label for="cb-3">3 комнаты</label>
+                </div>
+                <div class="item">
+                  <input id="cb-4" type="checkbox" name="cb-2">
+                  <label for="cb-4">4 комнаты</label>
+                </div>
+                <div class="item">
+                  <input id="cb-5" type="checkbox" name="cb-5">
+                  <label for="cb-5">5 и более</label>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="checkboxes">
+                <div class="item">
+                  <input id="cb-6" type="checkbox" name="cb-6" checked>
+                  <label for="cb-6">Вторичка</label>
+                </div>
+                <div class="item">
+                  <input id="cb-7" type="checkbox" name="cb-7">
+                  <label for="cb-7">Новостройка</label>
                 </div>
               </div>
             </section>
