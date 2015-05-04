@@ -10,10 +10,17 @@ block content
 	.container-24
 		.grid-7
 			.filter
-				.dropdown
+				.dropdown#dd-type
 					.title Квартиры
 					ul.items
-						li 
+						li(data-value="1") Новостройки
+						li(data-value="2") Квартиры
+						li.active(data-value="3") Комнаты
+						li(data-value="4") Таунхаусы
+						li(data-value="5") Дома
+						li(data-value="6") Участки
+						li(data-value="7") Гаражи
+						li(data-value="8") Нежилые
 
 		.grid-17
 			.grid-11.alpha
@@ -24,10 +31,12 @@ block content
 						a(href="#") На сутки
 
 			.grid-6.omega
-				.dropdown
+				.dropdown#dd-sort
 					.title Сначала новые
 					ul.items
-						li 
+						li(data-value="1").active Сначала новые
+						li(data-value="2") С видео
+						li(data-value="3") Много фото
 
 			.clear
 		.clear

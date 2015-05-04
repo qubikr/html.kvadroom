@@ -1,3 +1,30 @@
+var ClickOutside = function(options){
+	var _this = this,
+		_id = _.uniqueId('UIClickOutside_');
+
+	this.options = $.extend({
+		selector: '', 
+		onClickOutside: function($target){}
+	}, options);
+
+	this.bind = function(){
+		this.unbind();
+		
+		$(document).on('mouseup.' + _id, function (e){
+			var $container = $(_this.options.selector);
+
+			if (!$container.is(e.target) && $container.has(e.target).length === 0){
+			    _this.options.onClickOutside(e.target);
+			}
+		});
+	};
+ 
+	this.unbind = function(){
+		$(document).off('mouseup.' + _id);
+	};
+};
+
+
 $(function(){
 	$('.offers-2 .list>.item').each(function(){
 		var $frame  = $(this).find('.frames');
@@ -33,4 +60,29 @@ $(function(){
 			nextPage: $wrap.find('.nextPage')
 		});
 	});
-})
+
+	$('.dropdown').off('click').on('click', function(){
+		var $dd = $(this);
+
+		if(!$dd.hasClass('active')){
+			var co = new ClickOutside({
+				selector: '#' + $dd.attr('id'),
+				onClickOutside: function(){
+					$dd.removeClass('active');
+				}
+			});
+
+			co.bind();
+
+			$dd.addClass('active');
+
+			$dd.find('li').off('click').on('click', function(){
+				$dd.find('li').removeClass('active');
+				$(this).addClass('active');
+				$dd.find('.title').html($(this).html());
+			});
+		}else{
+			$dd.removeClass('active');
+		}
+	});
+});
