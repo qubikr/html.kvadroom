@@ -17236,9 +17236,29 @@ body {
   border-radius: 4px;
   background: #fff;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+}
+.filter-right-block .link {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+}
+.filter-right-block .link:hover {
+  color: #333;
+}
+.filter-right-block.link {
+  display: block;
+  font-size: 13px;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+}
+.filter-right-block.link:hover {
+  color: #666;
 }
 .filter-right-block section {
-  padding: 15px 20px;
+  padding: 20px;
   border-bottom: 1px solid #E6E6E6;
 }
 .filter-right-block section:last-child {
@@ -17247,6 +17267,11 @@ body {
 .filter-right-block section > *:last-child {
   margin-bottom: 0;
 }
+.filter-right-block .section-title {
+  font-size: 13px;
+  margin-top: -7px;
+  margin-bottom: 12px;
+}
 .filter-right-block input[type="radio"] {
   position: absolute;
   left: -1000px;
@@ -17254,6 +17279,11 @@ body {
 .filter-right-block input[type="radio"] + label {
   position: relative;
   padding-left: 27px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .filter-right-block input[type="radio"] + label:before {
   display: block;
@@ -17300,9 +17330,14 @@ body {
   left: -1000px;
 }
 .filter-right-block input[type="checkbox"] + label {
+  cursor: pointer;
   position: relative;
   padding-left: 27px;
   margin-bottom: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .filter-right-block input[type="checkbox"] + label:before {
   display: block;
@@ -17348,6 +17383,7 @@ body {
   margin-bottom: 0;
 }
 .filter-right-block .prices .selector {
+  margin-top: -5px;
   margin-bottom: 12px;
   font-size: 13px;
   zoom: 1;
@@ -17393,7 +17429,101 @@ body {
 .filter-right-block .input-hybrid {
   border: 1px solid #dedede;
   border-radius: 2px;
+  height: 30px;
+}
+.filter-right-block .input-hybrid label {
+  font-size: 13px;
+  position: relative;
+  height: 30px;
+}
+.filter-right-block .input-hybrid label:hover {
+  border-color: #cfcfcf;
+}
+.filter-right-block .input-hybrid label:hover:after {
+  border-top-color: #a5a5a5;
+}
+.filter-right-block .input-hybrid label:after {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  margin-top: -2px;
+  display: block;
+  content: '';
+  font-size: 28px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #B4B4B4 transparent transparent transparent;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.filter-right-block .input-hybrid label span {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  padding-left: 7px;
+  color: #999;
+  height: 30px;
+  line-height: 30px;
 }
 .filter-right-block .input-hybrid input {
   display: inline-block;
+  font-size: 13px;
+  width: 100%;
+  padding-left: 26px;
+  padding-right: 20px;
+  border: none;
+  background: none;
+  appearance: none;
+  height: 30px;
+}
+.filter-right-block .input-select {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  position: relative;
+  padding: 0 20px 0 7px;
+  cursor: pointer;
+}
+.filter-right-block .input-select:hover {
+  border-color: #cfcfcf;
+}
+.filter-right-block .input-select:hover:after {
+  border-top-color: #a5a5a5;
+}
+.filter-right-block .input-select:after {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  margin-top: -2px;
+  display: block;
+  content: '';
+  font-size: 28px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #B4B4B4 transparent transparent transparent;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+.filter-right-block .range {
+  zoom: 1;
+}
+.filter-right-block .range:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.filter-right-block .range .input-hybrid {
+  width: 48%;
+}
+.filter-right-block .range .input-hybrid:first-child {
+  float: left;
+}
+.filter-right-block .range .input-hybrid:last-child {
+  float: right;
 }

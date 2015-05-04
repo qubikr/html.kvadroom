@@ -36,7 +36,7 @@ block content
 
 	.container-24
 		.grid-7
-			.filter-right-block
+			form.filter-right-block
 				section
 					.prices
 						.selector
@@ -57,11 +57,13 @@ block content
 
 						.range
 							.input-hybrid
-								label от
+								label 
+									span от
 									input(type="text")
 
 							.input-hybrid
-								label до
+								label 
+									span до
 									input(type="text")
 						
 				section
@@ -79,7 +81,7 @@ block content
 							label(for="cb-3") 3 комнаты
 
 						.item
-							input#cb-4(type="checkbox", name="cb-2")
+							input#cb-4(type="checkbox", name="cb-4")
 							label(for="cb-4") 4 комнаты
 
 						.item
@@ -95,8 +97,124 @@ block content
 						.item
 							input#cb-7(type="checkbox", name="cb-7")
 							label(for="cb-7") Новостройка
-				
-			
+
+				section
+					.section-title Общая площадь, м²
+					.range
+						.input-hybrid
+							label 
+								span от
+								input(type="text")
+
+						.input-hybrid
+							label 
+								span до
+								input(type="text")
+
+				section
+					.checkboxes
+						.item
+							input#cb-8(type="checkbox", name="cb-8", checked)
+							label(for="cb-8") Без отделки
+
+						.item
+							input#cb-9(type="checkbox", name="cb-9")
+							label(for="cb-9") Нужен ремонт
+
+						.item
+							input#cb-10(type="checkbox", name="cb-10")
+							label(for="cb-10") Нормальный ремонт
+
+						.item
+							input#cb-11(type="checkbox", name="cb-11")
+							label(for="cb-11") Хороший ремонт
+
+						.item
+							input#cb-12(type="checkbox", name="cb-12")
+							label(for="cb-12") Евроремонт
+
+				section
+					.section-title Этаж
+					.range
+						.input-hybrid
+							label 
+								span от
+								input(type="text")
+
+						.input-hybrid
+							label 
+								span до
+								input(type="text")
+
+					br
+
+					.checkboxes
+						.item
+							input#cb-13(type="checkbox", name="cb-13", checked)
+							label(for="cb-13") Не первый
+
+						.item
+							input#cb-14(type="checkbox", name="cb-14")
+							label(for="cb-14") Не последний
+
+				section
+					.checkboxes
+						.item
+							input#cb-15(type="checkbox", name="cb-15", checked)
+							label(for="cb-15") Балкон
+
+						.item
+							input#cb-16(type="checkbox", name="cb-16")
+							label(for="cb-16") Лоджия
+
+						.item
+							input#cb-17(type="checkbox", name="cb-17")
+							label(for="cb-17") Фото
+
+						.item
+							input#cb-18(type="checkbox", name="cb-18")
+							label(for="cb-18") Торг
+
+						.item
+							input#cb-19(type="checkbox", name="cb-19")
+							label(for="cb-19") Ипотека
+
+				section
+					.checkboxes
+						.item
+							input#cb-20(type="checkbox", name="cb-20", checked)
+							label(for="cb-20") От собственников
+
+						.item
+							input#cb-21(type="checkbox", name="cb-21")
+							label(for="cb-21") От специалистов
+
+				section
+					.input-select
+						label За любую дату
+
+				section
+					.checkboxes
+						.item
+							input#cb-22(type="checkbox", name="cb-22", checked)
+							label(for="cb-22") Убрать рекламу
+
+						.item
+							input#cb-23(type="checkbox", name="cb-23")
+							label(for="cb-23") Помнить настройки
+
+				section
+					a.link(href="#") Сбросить фильтр
+
+
+			a.filter-right-block.link(href="#")
+				|Подписаться на результаты
+				|этого поиска
+
+			a.filter-right-block.link(href="#")
+				|История ваших поисковых 
+				|запросов
+
 		.grid-17
 			.offers-2
 				// .heading 
