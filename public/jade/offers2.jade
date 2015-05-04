@@ -67,7 +67,7 @@ block content
 							.input-hybrid#price-from
 								label 
 									span от
-									.title 200 000
+									input.title(value="200 000")
 
 								ul.items
 									.list
@@ -78,13 +78,13 @@ block content
 										li(data-value="5") 300 000
 										li(data-value="6") 350 000
 										li(data-value="7") 400 000
-									input(placeholder="Своя цена")
+									input.val(placeholder="Своя цена")
 									.ok Применить
 
 							.input-hybrid#price-to
 								label 
 									span до
-									.title 400 000
+									input.title(value="400 000")
 
 								ul.items
 									.list
@@ -95,7 +95,7 @@ block content
 										li(data-value="5") 300 000
 										li(data-value="6") 350 000
 										li.active(data-value="7") 400 000
-									input(placeholder="Своя цена")
+									input.val(placeholder="Своя цена")
 									.ok Применить
 						
 				section
@@ -136,7 +136,7 @@ block content
 						.input-hybrid#measure-from
 							label 
 								span от
-								.title 60
+								input.title(value="60")
 
 							ul.items
 								.list
@@ -147,13 +147,13 @@ block content
 									li(data-value="5") 80
 									li(data-value="6") 90
 									li(data-value="7") 100
-								input(placeholder="Своя площадь")
+								input.val(placeholder="Своя площадь")
 								.ok Применить
 
 						.input-hybrid#measure-to
 							label 
 								span до
-								.title 100
+								input.title(value="100")
 
 							ul.items
 								.list
@@ -165,7 +165,7 @@ block content
 									li(data-value="6") 90
 									li.active(data-value="7") 100
 									li(data-value="8") Больше 100
-								input(placeholder="Своя площадь")
+								input.val(placeholder="Своя площадь")
 								.ok Применить
 
 				section
@@ -196,7 +196,7 @@ block content
 						.input-hybrid#level-from
 							label 
 								span от
-								.title 3
+								input.title(value="3")
 
 							ul.items
 								.list
@@ -209,13 +209,13 @@ block content
 									li(data-value="7") 7
 									li(data-value="8") 8
 									li(data-value="9") 9
-								input(placeholder="Свой этаж")
+								input.val(placeholder="Свой этаж")
 								.ok Применить
 
 						.input-hybrid#level-to
 							label 
 								span до
-								.title 7
+								input.title(value="7")
 
 							ul.items
 								.list
@@ -228,7 +228,7 @@ block content
 									li.active(data-value="7") 7
 									li(data-value="8") 8
 									li(data-value="9") 9
-								input(placeholder="Свой этаж")
+								input.val(placeholder="Свой этаж")
 								.ok Применить
 
 					br

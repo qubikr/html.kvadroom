@@ -76,11 +76,49 @@ $(function(){
 
 			$dd.addClass('active');
 
+			$(document).off('keyup.filter3dropdown').on('keyup.filter3dropdown', function(e){
+				if(e.keyCode === 27){
+					$dd.removeClass('active');
+					$(document).off('keyup.filter3dropdown');
+				}
+			});
+
 			$dd.find('li').off('click').on('click', function(e){
 				$dd.find('li').removeClass('active');
 				$(this).addClass('active');
-				$dd.find('.title').html($(this).html());
+
+				if($dd.find('.title').is('input')){
+					$dd.find('.title').val($(this).html());
+				}else{
+					$dd.find('.title').html($(this).html());
+				}
+
 				$dd.removeClass('active');
+				e.stopPropagation();
+			});
+
+			$dd
+				.find('.val')
+					.off('click')
+					.on('click', function(e){
+						e.stopPropagation();
+					})
+					.off('focus')
+					.on('focus', function(e){
+						$(this).off('keyup').on('keyup', function(e){
+							if(e.keyCode === 13){
+								$dd.find('.title').val($(this).val());
+								$(this).off('keyup focus');
+								$dd.removeClass('active');
+							}
+						});
+					})
+					.focus();
+
+			$dd.find('.ok').off('click').on('click', function(e){
+				$dd.removeClass('active');
+				$dd.find('.title').val($dd.find('.val').val());
+				e.preventDefault();
 				e.stopPropagation();
 			});
 		}else{

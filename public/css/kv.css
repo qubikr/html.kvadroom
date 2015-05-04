@@ -17268,6 +17268,10 @@ body {
   left: -1px;
   z-index: 3;
   background: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .dropdown.active {
   border-color: #FFBF00;
@@ -17575,6 +17579,10 @@ body {
   left: -1px;
   z-index: 3;
   background: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .filter-side .input-hybrid.active {
   border-color: #FFBF00;
@@ -17682,6 +17690,10 @@ body {
   left: -1px;
   z-index: 3;
   background: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .filter-side .input-select.active {
   border-color: #FFBF00;
