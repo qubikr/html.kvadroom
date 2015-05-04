@@ -23,20 +23,19 @@ block content
 						li(data-value="8") Нежилые
 
 		.grid-17
-			.grid-11.alpha
+			.grid-7-5.alpha
 				.selector
 					span.group
 						a.active(href="#") Купить
 						a(href="#") Снять
 						a(href="#") На сутки
 
-			.grid-6.omega
-				.dropdown#dd-sort
-					.title Сначала новые
-					ul.items
-						li(data-value="1").active Сначала новые
-						li(data-value="2") С видео
-						li(data-value="3") Много фото
+			.grid-9-5.omega
+				.selector.right-side
+					a.active(href="#") Новые
+					a(href="#") Дешевле
+					a(href="#") Дороже
+					a(href="#") ...
 
 			.clear
 		.clear
@@ -45,7 +44,7 @@ block content
 
 	.container-24
 		.grid-7
-			form.filter-right-block
+			form.filter-side
 				section
 					.prices
 						.selector
@@ -65,15 +64,37 @@ block content
 								label(for="rad-2") 1 м² / год
 
 						.range
-							.input-hybrid
+							.input-hybrid#price-from
 								label 
 									span от
-									input(type="text")
+									.title 200 000
 
-							.input-hybrid
+								ul.items
+									li(data-value="1") 100 000
+									li(data-value="2") 150 000
+									li.active(data-value="3") 200 000
+									li(data-value="4") 250 000
+									li(data-value="5") 300 000
+									li(data-value="6") 350 000
+									li(data-value="7") 400 000
+									input(placeholder="Своя цена")
+									button Применить
+
+							.input-hybrid#price-to
 								label 
 									span до
-									input(type="text")
+									.title 400 000
+
+								ul.items
+									li(data-value="1") 100 000
+									li(data-value="2") 150 000
+									li(data-value="3") 200 000
+									li(data-value="4") 250 000
+									li(data-value="5") 300 000
+									li(data-value="6") 350 000
+									li.active(data-value="7") 400 000
+									input(placeholder="Своя цена")
+									button Применить
 						
 				section
 					.checkboxes
@@ -110,15 +131,38 @@ block content
 				section
 					.section-title Общая площадь, м²
 					.range
-						.input-hybrid
+						.input-hybrid#measure-from
 							label 
 								span от
-								input(type="text")
+								.title 60
 
-						.input-hybrid
+							ul.items
+								li(data-value="1") 40
+								li(data-value="2") 50
+								li.active(data-value="3") 60
+								li(data-value="4") 70
+								li(data-value="5") 80
+								li(data-value="6") 90
+								li(data-value="7") 100
+								input(placeholder="Своя площадь")
+								button Применить
+
+						.input-hybrid#measure-to
 							label 
 								span до
-								input(type="text")
+								.title 100
+
+							ul.items
+								li(data-value="1") 40
+								li(data-value="2") 50
+								li(data-value="3") 60
+								li(data-value="4") 70
+								li(data-value="5") 80
+								li(data-value="6") 90
+								li.active(data-value="7") 100
+								li(data-value="8") Больше 100
+								input(placeholder="Своя площадь")
+								button Применить
 
 				section
 					.checkboxes
@@ -145,15 +189,41 @@ block content
 				section
 					.section-title Этаж
 					.range
-						.input-hybrid
+						.input-hybrid#level-from
 							label 
 								span от
-								input(type="text")
+								.title 3
 
-						.input-hybrid
+							ul.items
+								li(data-value="1") 1
+								li(data-value="2") 2
+								li.active(data-value="3") 3
+								li(data-value="4") 4
+								li(data-value="5") 5
+								li(data-value="6") 6
+								li(data-value="7") 7
+								li(data-value="8") 8
+								li(data-value="9") 9
+								input(placeholder="Свой этаж")
+								button Применить
+
+						.input-hybrid#level-to
 							label 
 								span до
-								input(type="text")
+								.title 7
+
+							ul.items
+								li(data-value="1") 1
+								li(data-value="2") 2
+								li(data-value="3") 3
+								li(data-value="4") 4
+								li(data-value="5") 5
+								li(data-value="6") 6
+								li.active(data-value="7") 7
+								li(data-value="8") 8
+								li(data-value="9") 9
+								input(placeholder="Свой этаж")
+								button Применить
 
 					br
 
@@ -199,8 +269,12 @@ block content
 							label(for="cb-21") От специалистов
 
 				section
-					.input-select
-						label За любую дату
+					.input-select#is-date
+						.title За любую дату
+						ul.items
+							li.active(data-value="3") За любую дату
+							li(data-value="1") За последний месяц
+							li(data-value="2") За год
 
 				section
 					.checkboxes
@@ -216,11 +290,11 @@ block content
 					a.link(href="#") Сбросить фильтр
 
 
-			a.filter-right-block.link(href="#")
+			a.filter-side.link(href="#")
 				|Подписаться на результаты
 				|этого поиска
 
-			a.filter-right-block.link(href="#")
+			a.filter-side.link(href="#")
 				|История ваших поисковых 
 				|запросов
 

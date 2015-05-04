@@ -43,7 +43,7 @@ h1 {
 		font-size: 16px;
 		display: inline-block;
 		padding: 0 15px;
-		margin: 0 7px 5px 0;
+		margin: 0 5px 5px 0;
 		text-decoration: none;
 		transition: .1s;
 		position: relative;
@@ -70,7 +70,7 @@ h1 {
 	}
 
 	.group {
-		margin: 0 7px 0 0;
+		margin: 0 5px 0 0;
 
 		a {
 			margin: 0 0 0 -1px;
@@ -83,6 +83,18 @@ h1 {
 			&:last-child {
 				border-radius: 0 3px 3px 0;
 			}
+		}
+	}
+
+	&.right-side {
+		text-align: right;
+
+		a {
+			margin: 0 0 5px 5px;
+		}
+
+		.group {
+			margin-right: 0;
 		}
 	}
 }
@@ -159,7 +171,7 @@ h1 {
 			width: 100%;
 			border-radius: 0 0 3px 3px;
 			box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.10);
-			font-size: 13px;
+			font-size: 14px;
 			list-style-type: none;
 			
 			li {
@@ -179,7 +191,7 @@ h1 {
 	}
 }
 
-.filter-right-block {
+.filter-side {
 	border-radius: 4px;
 	background: #fff;
 	box-shadow: 0px 1px 2px rgba(0,0,0,.2);
@@ -402,11 +414,24 @@ h1 {
 		border: 1px solid @elements-border-color;
 		border-radius: 2px;
 		height: 30px;
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			border-color: @elements-border-color-hover;
+
+			&:after {
+				border-top-color: #B4B4B4 - 15;
+			}
+		}
 
 		label {
 			font-size: 13px;
 			position: relative;
 			height: 30px;
+			display: block;
+			cursor: pointer;
+			user-select: none;
 
 			&:hover {
 				border-color: @elements-border-color-hover;
@@ -443,16 +468,91 @@ h1 {
 			}
 		}
 
-		input {
+		.title {
 			display: inline-block;
 			font-size: 13px;
 			width: 100%;
 			padding-left: 26px;
 			padding-right: 20px;
+			line-height: 30px;
 			border: none;
 			background: none;
 			appearance: none;
 			height: 30px;
+			box-sizing: border-box;
+		}
+
+		ul {
+			display: none;
+			opacity: 0;
+			transition: opacity .2s;
+			transition-delay: .25s;
+			left: -1px;
+			z-index: 3;
+			background: #fff;
+		}
+
+		&.active {
+			border-color: #FFBF00;
+			border-radius: 3px 3px 0 0;
+			box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.10);
+
+			ul {
+				border: 1px solid #FFBF00;
+				border-top: none;
+				display: block;
+				opacity: 1;
+				position: absolute;
+				width: 100%;
+				border-radius: 0 0 3px 3px;
+				box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.10);
+				font-size: 13px;
+				list-style-type: none;
+
+				input {
+					display: block;
+					width: 100%;
+					height: 30px;
+					background: none;
+					border: none;
+					padding: 0 7px;
+
+					&:placeholder {
+						padding: 0 7px;
+						color: #999;
+					}
+				}
+				
+				button {
+					background: #737373;
+					color: #fff;
+					border: none;
+					display: inline-block;
+					width: auto;
+					height: 30px;
+					border-radius: 3px;
+					margin: 3px;
+
+					&:hover {
+						background: #737373 - 15;
+					}
+				}
+
+				li {
+					padding: 0 7px;
+					height: 30px;
+					line-height: 30px;
+					cursor: pointer;
+
+					&.active {
+						background: RGBA(255, 242, 179, 1);
+					}
+
+					&:hover {
+						background: rgba(255, 242, 179, .4);
+					}
+				}
+			}
 		}
 	}
 
@@ -460,11 +560,12 @@ h1 {
 		border: 1px solid @elements-border-color;
 		border-radius: 2px;
 		height: 30px;
-		line-height: 30px;
+		line-height: 29px;
 		font-size: 13px;
 		position: relative;
 		padding: 0 20px 0 7px;
 		cursor: pointer;
+		user-select: none;
 
 		&:hover {
 			border-color: @elements-border-color-hover;
@@ -488,6 +589,49 @@ h1 {
 			border-width: 5px 4px 0 4px;
 			border-color: #B4B4B4 transparent transparent transparent;
 			transition: .1s;
+		}
+
+		ul {
+			display: none;
+			opacity: 0;
+			transition: opacity .2s;
+			transition-delay: .25s;
+			left: -1px;
+			z-index: 3;
+			background: #fff;
+		}
+
+		&.active {
+			border-color: #FFBF00;
+			border-radius: 3px 3px 0 0;
+			box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.10);
+
+			ul {
+				border: 1px solid #FFBF00;
+				border-top: none;
+				display: block;
+				opacity: 1;
+				position: absolute;
+				width: 100%;
+				border-radius: 0 0 3px 3px;
+				box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.10);
+				font-size: 13px;
+				list-style-type: none;
+				
+				li {
+					padding: 0 7px;
+					height: 30px;
+					line-height: 30px;
+
+					&.active {
+						background: RGBA(255, 242, 179, 1);
+					}
+
+					&:hover {
+						background: rgba(255, 242, 179, .4);
+					}
+				}
+			}
 		}
 	}
 

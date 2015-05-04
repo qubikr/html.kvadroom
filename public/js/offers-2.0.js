@@ -61,7 +61,7 @@ $(function(){
 		});
 	});
 
-	$('.dropdown').off('click').on('click', function(){
+	$('.dropdown, #is-date, .input-hybrid').off('click').on('click', function(){
 		var $dd = $(this);
 
 		if(!$dd.hasClass('active')){
@@ -76,10 +76,12 @@ $(function(){
 
 			$dd.addClass('active');
 
-			$dd.find('li').off('click').on('click', function(){
+			$dd.find('li').off('click').on('click', function(e){
 				$dd.find('li').removeClass('active');
 				$(this).addClass('active');
 				$dd.find('.title').html($(this).html());
+				$dd.removeClass('active');
+				e.stopPropagation();
 			});
 		}else{
 			$dd.removeClass('active');
