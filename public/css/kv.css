@@ -17593,6 +17593,10 @@ body {
   font-size: 13px;
   list-style-type: none;
 }
+.filter-side .input-hybrid.active ul .list {
+  height: 150px;
+  overflow: auto;
+}
 .filter-side .input-hybrid.active ul input {
   display: block;
   width: 100%;
@@ -17605,17 +17609,19 @@ body {
   padding: 0 7px;
   color: #999;
 }
-.filter-side .input-hybrid.active ul button {
+.filter-side .input-hybrid.active ul .ok {
   background: #737373;
   color: #fff;
   border: none;
-  display: inline-block;
+  display: block;
   width: auto;
+  text-align: center;
   height: 30px;
+  line-height: 30px;
   border-radius: 3px;
   margin: 3px;
 }
-.filter-side .input-hybrid.active ul button:hover {
+.filter-side .input-hybrid.active ul .ok:hover {
   background: #646464;
 }
 .filter-side .input-hybrid.active ul li {

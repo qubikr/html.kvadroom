@@ -509,6 +509,11 @@ h1 {
 				font-size: 13px;
 				list-style-type: none;
 
+				.list {
+					height: 150px;
+					overflow: auto;
+				}
+
 				input {
 					display: block;
 					width: 100%;
@@ -523,13 +528,15 @@ h1 {
 					}
 				}
 				
-				button {
+				.ok {
 					background: #737373;
 					color: #fff;
 					border: none;
-					display: inline-block;
+					display: block;
 					width: auto;
+					text-align: center;
 					height: 30px;
+					line-height: 30px;
 					border-radius: 3px;
 					margin: 3px;
 
