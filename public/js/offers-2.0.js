@@ -77,9 +77,23 @@ $(function(){
 			$dd.addClass('active');
 
 			$(document).off('keyup.filter3dropdown').on('keyup.filter3dropdown', function(e){
-				if(e.keyCode === 27){
-					$dd.removeClass('active');
-					$(document).off('keyup.filter3dropdown');
+				switch(e.keyCode){
+					case 27 : {
+						$dd.removeClass('active');
+						$(document).off('keyup.filter3dropdown');
+					} break;
+
+					case 40 : {
+						var $next = $dd.find('li.highlight').next();
+
+						if($next.length > 0){
+							$next = $dd.find('li:first');
+						}
+
+						$next.addClass('highlight');
+
+						e.preventDefault();
+					} break;
 				}
 			});
 
