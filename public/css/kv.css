@@ -17300,7 +17300,7 @@ body {
   background: #fff2b3;
 }
 .dropdown.active ul li:hover,
-.dropdown.active ul li .highlight {
+.dropdown.active ul li.highlight {
   background: rgba(255, 242, 179, 0.4);
 }
 .filter-side {
@@ -17643,7 +17643,7 @@ body {
   background: #fff2b3;
 }
 .filter-side .input-hybrid.active ul li:hover,
-.filter-side .input-hybrid.active ul li .highlight {
+.filter-side .input-hybrid.active ul li.highlight {
   background: rgba(255, 242, 179, 0.4);
 }
 .filter-side .input-select {
@@ -17723,7 +17723,7 @@ body {
   background: #fff2b3;
 }
 .filter-side .input-select.active ul li:hover,
-.filter-side .input-select.active ul li .highlight {
+.filter-side .input-select.active ul li.highlight {
   background: rgba(255, 242, 179, 0.4);
 }
 .filter-side .range {

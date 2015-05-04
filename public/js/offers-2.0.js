@@ -76,23 +76,59 @@ $(function(){
 
 			$dd.addClass('active');
 
-			$(document).off('keyup.filter3dropdown').on('keyup.filter3dropdown', function(e){
+			$dd.find('li.highlight').removeClass('highlight');
+
+			$dd.find('li').off('mouseover').on('mouseover', function(e){
+				$dd.find('li').removeClass('highlight');
+				$dd.data('keysNav', false);
+			});
+
+			$(document).off('keydown.filter3dropdown').on('keydown.filter3dropdown', function(e){
+				if(!$dd.data('keysNav')){
+					$dd.find('li').removeClass('highlight');
+					$dd.data('keysNav', true);
+				}
+
 				switch(e.keyCode){
 					case 27 : {
 						$dd.removeClass('active');
-						$(document).off('keyup.filter3dropdown');
+						$(document).off('keydown.filter3dropdown');
 					} break;
 
-					case 40 : {
-						var $next = $dd.find('li.highlight').next();
+					case 13 : {
+						$dd.find('li.highlight').trigger('click');
+						$dd.removeClass('active');
+						$(document).off('keydown.filter3dropdown');
+					} break;
 
-						if($next.length > 0){
-							$next = $dd.find('li:first');
+					case 38 : {
+						var $next = $dd.find('li.highlight').prev('li');
+
+						if($next.length === 0){
+							$next = $dd.find('li:last');
 						}
+
+						$dd.find('li.highlight').removeClass('highlight');
 
 						$next.addClass('highlight');
 
 						e.preventDefault();
+						e.stopPropagation();
+					} break;
+
+					case 40 : {
+						var $next = $dd.find('li.highlight').next('li');
+
+						if($next.length === 0){
+							$next = $dd.find('li').eq(0);
+						}
+
+						$dd.find('li.highlight').removeClass('highlight');
+
+						$next.addClass('highlight');
+
+						e.preventDefault();
+						e.stopPropagation();
 					} break;
 				}
 			});
@@ -119,11 +155,12 @@ $(function(){
 					})
 					.off('focus')
 					.on('focus', function(e){
-						$(this).off('keyup').on('keyup', function(e){
+						$(this).off('keydown').on('keydown', function(e){
 							if(e.keyCode === 13){
 								$dd.find('.title').val($(this).val());
 								$(this).off('keyup focus');
 								$dd.removeClass('active');
+								$(this).val('');
 							}
 						});
 					})
@@ -136,6 +173,7 @@ $(function(){
 				e.stopPropagation();
 			});
 		}else{
+			$dd.find('li.highlight').removeClass('highlight');
 			$dd.removeClass('active');
 		}
 	});
