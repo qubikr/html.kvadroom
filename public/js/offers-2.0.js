@@ -85,4 +85,10 @@ $(function(){
 			$dd.removeClass('active');
 		}
 	});
+
+	$('.prices .selector li').off('click').on('click', function(){
+		$('.prices .selector li').removeClass('active');
+		$(this).addClass('active');
+		$('.prices .selector .title').html($(this).data('title'));
+	});
 });

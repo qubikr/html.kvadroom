@@ -3785,6 +3785,9 @@ code {
   height: 32px;
   display: block;
 }
+.icon-font-checkbox:before {
+  content: "\e667";
+}
 .icon-font-heart-broken:before {
   content: "\e666";
 }
@@ -17141,7 +17144,7 @@ body {
 }
 .selector a {
   background: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 1px solid #dedede;
   font-size: 13px;
   color: #666;
@@ -17181,10 +17184,10 @@ body {
   border-radius: 0;
 }
 .selector .group a:first-child {
-  border-radius: 2px 0 0 2px;
+  border-radius: 3px 0 0 3px;
 }
 .selector .group a:last-child {
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 3px 3px 0;
 }
 .dropdown {
   border: 1px solid #dedede;
@@ -17399,17 +17402,22 @@ body {
   width: 8px;
   height: 8px;
   position: absolute;
-  content: '';
+  content: '\e667';
+  font-family: 'icomoon';
+  color: #666047;
   top: 6px;
   left: 6px;
   border-radius: 2px;
-  background: #666047;
   opacity: 0;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
   -webkit-transition: .2s;
           transition: .2s;
+  text-indent: -10px;
+  font-size: 32px;
+  line-height: 7px;
+  text-indent: -12px;
 }
 .filter-right-block input[type="checkbox"]:checked + label:before {
   background: #FFF2B3;
