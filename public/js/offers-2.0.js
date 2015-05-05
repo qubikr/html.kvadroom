@@ -180,6 +180,17 @@ $(function(){
 		}
 	});
 
+	$('.selector').each(function(){
+		var $selector = $(this);
+
+		$selector.find('a').on('click', function(e){
+			e.preventDefault();
+
+			$selector.find('a').removeClass('active');
+			$(this).addClass('active');
+		});
+	});
+
 	$('.prices .selector li').off('click').on('click', function(){
 		$('.prices .selector li').removeClass('active');
 		$(this).addClass('active');
