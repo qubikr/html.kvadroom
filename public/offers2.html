@@ -134,7 +134,17 @@
         <div class="right-col">
           <div class="selectors">
             <div class="selector"><span class="group"><a href="#" class="active">Купить</a><a href="#">Снять</a><a href="#">На сутки</a></span></div>
-            <div class="selector right-side"><a href="#" class="active">Новые</a><a href="#">Дешевле</a><a href="#">Дороже</a><a href="#">...</a></div>
+            <div class="selector right-side"><a href="#" class="active">Новые</a><a href="#">Дешевле</a><a href="#">Дороже</a><span class="expandable-selector"><span class="title">...</span>
+                <ul class="items">
+                  <li data-value="1">Новостройки</li>
+                  <li data-value="2">Квартиры</li>
+                  <li data-value="3" class="active">Комнаты</li>
+                  <li data-value="4">Таунхаусы</li>
+                  <li data-value="5">Дома</li>
+                  <li data-value="6">Участки</li>
+                  <li data-value="7">Гаражи</li>
+                  <li data-value="8">Нежилые</li>
+                </ul></span></div>
           </div>
           <div class="clear"></div>
         </div>
@@ -446,7 +456,7 @@
         </div>
         <div class="right-col">
           <div class="offers-2">
-            <!-- .heading 
+            <!-- .heading
             .title 12 535 объявлений
             .actions
             	a.active(href="#") Новые

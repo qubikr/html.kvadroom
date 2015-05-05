@@ -34,7 +34,19 @@ block content
 					a.active(href="#") Новые
 					a(href="#") Дешевле
 					a(href="#") Дороже
-					a(href="#") ...
+
+					span.expandable-selector
+						span.title ...
+						ul.items
+							li(data-value="1") Новостройки
+							li(data-value="2") Квартиры
+							li.active(data-value="3") Комнаты
+							li(data-value="4") Таунхаусы
+							li(data-value="5") Дома
+							li(data-value="6") Участки
+							li(data-value="7") Гаражи
+							li(data-value="8") Нежилые
+
 
 			.clear
 		.clear
@@ -321,7 +333,7 @@ block content
 
 		.right-col
 			.offers-2
-				// .heading 
+				// .heading
 					.title 12 535 объявлений
 					.actions
 						a.active(href="#") Новые

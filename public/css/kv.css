@@ -17195,7 +17195,8 @@ body {
 .selectors .selector {
   float: left;
 }
-.selectors .selector a {
+.selectors .selector a,
+.selectors .selector .expandable-selector {
   background: #fff;
   border-radius: 3px;
   border: 1px solid #dedede;
@@ -17212,40 +17213,102 @@ body {
           transition: .1s;
   position: relative;
   box-sizing: border-box;
+  cursor: pointer;
 }
-.selectors .selector a:hover {
+.selectors .selector a:hover,
+.selectors .selector .expandable-selector:hover {
   background: #F7F7F7;
   border-color: #cfcfcf;
   z-index: 3;
 }
-.selectors .selector a.active {
+.selectors .selector a.active,
+.selectors .selector .expandable-selector.active {
   background: #FFF2B3;
   border-color: #FFBF00;
   color: #333;
   z-index: 4;
 }
-.selectors .selector a.active:hover {
+.selectors .selector a.active:hover,
+.selectors .selector .expandable-selector.active:hover {
   background: #faedae;
   border-color: #faba00;
+}
+.selectors .selector .expandable-selector {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+}
+.selectors .selector .expandable-selector ul {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+          transition: opacity .2s;
+  -webkit-transition-delay: .25s;
+          transition-delay: .25s;
+  left: -1px;
+  z-index: 3;
+  background: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.selectors .selector .expandable-selector.active ul {
+  border: 1px solid #FFBF00;
+  display: block;
+  opacity: 1;
+  position: absolute;
+  width: 130px;
+  border-radius: 3px;
+  top: 46px;
+  left: auto;
+  right: -1px;
+  box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  list-style-type: none;
+  text-align: left;
+}
+.selectors .selector .expandable-selector.active ul .list {
+  max-height: 240px;
+  overflow: auto;
+}
+.selectors .selector .expandable-selector.active ul li {
+  padding: 0 12px;
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+}
+.selectors .selector .expandable-selector.active ul li.active {
+  background: #fff2b3;
+}
+.selectors .selector .expandable-selector.active ul li:hover,
+.selectors .selector .expandable-selector.active ul li.highlight {
+  background: rgba(255, 242, 179, 0.4);
 }
 .selectors .selector .group {
   margin: 0 5px 0 0;
 }
-.selectors .selector .group a {
+.selectors .selector .group a,
+.selectors .selector .group .expandable-selector {
   margin: 0 0 0 -1px;
   border-radius: 0;
 }
-.selectors .selector .group a:first-child {
+.selectors .selector .group a:first-child,
+.selectors .selector .group .expandable-selector:first-child {
   border-radius: 3px 0 0 3px;
 }
-.selectors .selector .group a:last-child {
+.selectors .selector .group a:last-child,
+.selectors .selector .group .expandable-selector:last-child {
   border-radius: 0 3px 3px 0;
 }
 .selectors .selector.right-side {
   float: right;
   text-align: right;
 }
-.selectors .selector.right-side a {
+.selectors .selector.right-side a,
+.selectors .selector.right-side .expandable-selector {
   margin: 0 0 5px 5px;
 }
 .selectors .selector.right-side .group {

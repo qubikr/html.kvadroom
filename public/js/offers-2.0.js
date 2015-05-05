@@ -61,7 +61,7 @@ $(function(){
 		});
 	});
 
-	$('.dropdown, #is-date, .input-hybrid').off('click').on('click', function(){
+	$('.dropdown, .input-select, .input-hybrid, .expandable-selector').off('click').on('click', function(){
 		var $dd = $(this);
 
 		if(!$dd.hasClass('active')){
