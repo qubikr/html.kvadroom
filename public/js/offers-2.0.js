@@ -69,6 +69,7 @@ $(function(){
 				selector: '#' + $dd.attr('id'),
 				onClickOutside: function(){
 					$dd.removeClass('active');
+					$(document).off('keydown.filter3dropdown');
 				}
 			});
 
@@ -175,6 +176,7 @@ $(function(){
 		}else{
 			$dd.find('li.highlight').removeClass('highlight');
 			$dd.removeClass('active');
+			$(document).off('keydown.filter3dropdown');
 		}
 	});
 
