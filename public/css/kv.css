@@ -688,6 +688,8 @@ body {
 .container-24 .grid-4,
 .container-24 .grid-5,
 .container-24 .grid-6,
+.container-24 .grid-6-5,
+.container-24 .grid-6-75,
 .container-24 .grid-7,
 .container-24 .grid-7-5,
 .container-24 .grid-8,
@@ -785,6 +787,12 @@ body {
 }
 .container-24 .grid-6 {
   width: 220px;
+}
+.container-24 .grid-6-5 {
+  width: 240px;
+}
+.container-24 .grid-6-75 {
+  width: 250px;
 }
 .container-24 .grid-7 {
   width: 260px;
@@ -17154,7 +17162,18 @@ body {
   position: absolute;
   margin-left: -50vw;
 }
-.selector a {
+.container-main .left-col {
+  width: 250px;
+  float: left;
+}
+.container-main .right-col {
+  width: 670px;
+  float: right;
+}
+.selectors .selector {
+  float: left;
+}
+.selectors .selector a {
   background: #fff;
   border-radius: 3px;
   border: 1px solid #dedede;
@@ -17172,41 +17191,42 @@ body {
   position: relative;
   box-sizing: border-box;
 }
-.selector a:hover {
+.selectors .selector a:hover {
   background: #F7F7F7;
   border-color: #cfcfcf;
   z-index: 3;
 }
-.selector a.active {
+.selectors .selector a.active {
   background: #FFF2B3;
   border-color: #FFBF00;
   color: #333;
   z-index: 4;
 }
-.selector a.active:hover {
+.selectors .selector a.active:hover {
   background: #faedae;
   border-color: #faba00;
 }
-.selector .group {
+.selectors .selector .group {
   margin: 0 5px 0 0;
 }
-.selector .group a {
+.selectors .selector .group a {
   margin: 0 0 0 -1px;
   border-radius: 0;
 }
-.selector .group a:first-child {
+.selectors .selector .group a:first-child {
   border-radius: 3px 0 0 3px;
 }
-.selector .group a:last-child {
+.selectors .selector .group a:last-child {
   border-radius: 0 3px 3px 0;
 }
-.selector.right-side {
+.selectors .selector.right-side {
+  float: right;
   text-align: right;
 }
-.selector.right-side a {
+.selectors .selector.right-side a {
   margin: 0 0 5px 5px;
 }
-.selector.right-side .group {
+.selectors .selector.right-side .group {
   margin-right: 0;
 }
 .dropdown {

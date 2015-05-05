@@ -7,8 +7,8 @@ block content
 
 	h1.page-title-header Продажа квартир, Москва и Московская область
 
-	.container-24
-		.grid-7
+	.container-main
+		.left-col
 			.filter
 				.dropdown#dd-type
 					.title Квартиры
@@ -22,15 +22,14 @@ block content
 						li(data-value="7") Гаражи
 						li(data-value="8") Нежилые
 
-		.grid-17
-			.grid-7-5.alpha
+		.right-col
+			.selectors
 				.selector
 					span.group
 						a.active(href="#") Купить
 						a(href="#") Снять
 						a(href="#") На сутки
 
-			.grid-9-5.omega
 				.selector.right-side
 					a.active(href="#") Новые
 					a(href="#") Дешевле
@@ -42,8 +41,8 @@ block content
 
 	.divider-20
 
-	.container-24
-		.grid-7
+	.container-main
+		.left-col
 			aside
 				form.filter-side
 					section
@@ -305,9 +304,24 @@ block content
 						|История ваших поисковых 
 						|запросов
 
-					a.filter-side.link.sticky-block(href="#") Показать фильтр
+					a.filter-side.link(href="#") Показать фильтр
 
-		.grid-17
+					.creeper-wrap
+						.creeper-wrap-inner
+							.banner-1
+								.right-col-250.mb30.banner-250x250.sticky-banner(data-swf='1')
+									object#side-bbb-banner-126(type='application/x-shockwave-flash', data='http://v2s.kvadroom.ru/i/bigboss/126.swf', width='250', height='250', style='visibility: visible;')
+										param(name='wmode', value='opaque')
+										param(name='flashvars', value='target=_blank&link1=http%3A%2F%2Fwww.kvadroom.ru%2Fgo81.php%3Fo_id%3D126')
+
+							.divider-10
+							.banner-2
+								.right-col-250.mb30.banner-250x250.sticky-banner(data-swf='0')
+									#side-bbb-banner-297(data-id='297')
+									a(href='http://www.kvadroom.ru/go81.php?o_id=297', rel='nofollow', target='_blank')
+										img.page-title-banner-image(src='http://v2s.kvadroom.ru/i/bigboss/297.jpg', alt='')
+
+		.right-col
 			.offers-2
 				// .heading 
 					.title 12 535 объявлений

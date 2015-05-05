@@ -198,7 +198,7 @@ $(function(){
 	});
 
 	$('aside').css({ 
-		height: $('aside').parents('.container-24').outerHeight() 
+		height: $('aside').parents('.container-main').outerHeight() 
 	});
 
 	$('.sticky-block').stick_in_parent({
