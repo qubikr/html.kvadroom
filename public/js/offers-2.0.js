@@ -185,4 +185,19 @@ $(function(){
 		$(this).addClass('active');
 		$('.prices .selector .title').html($(this).data('title'));
 	});
+
+	$('aside').css({ 
+		height: $('aside').parents('.container-24').outerHeight() 
+	});
+
+	$('.sticky-block').stick_in_parent({
+		offset_top: 20
+	});
+
+	$('.sticky-block').on('click', function(e){
+		e.preventDefault();
+		$('html, body').animate({
+            scrollTop: $('aside').offset().top - 20
+        }, 600, "swing");
+	});
 });

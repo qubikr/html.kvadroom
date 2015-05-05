@@ -16,6 +16,7 @@
     <script src="js/sly.js"></script>
     <script src="js/maps.js"></script>
     <script src="js/custom-scrollbar.js"></script>
+    <script src="js/sticky-kit.js"></script>
   </head>
   <body>
     <div class="wrapper page-width">
@@ -144,288 +145,291 @@
       <div class="divider-20"></div>
       <div class="container-24">
         <div class="grid-7">
-          <form class="filter-side">
-            <section>
-              <div class="prices">
-                <div class="selector">
-                  <div class="title">Цена в рублях</div>
-                  <ul>
-                    <li data-title="Цена в рублях" class="active"><span class="rub"><i>⃏</i></span></li>
-                    <li data-title="Цена в USD">$</li>
-                    <li data-title="Цена в EURO">&euro;</li>
-                  </ul>
+          <aside>
+            <form class="filter-side">
+              <section>
+                <div class="prices">
+                  <div class="selector">
+                    <div class="title">Цена в рублях</div>
+                    <ul>
+                      <li data-title="Цена в рублях" class="active"><span class="rub"><i>⃏</i></span></li>
+                      <li data-title="Цена в USD">$</li>
+                      <li data-title="Цена в EURO">&euro;</li>
+                    </ul>
+                  </div>
+                  <div class="radios">
+                    <div class="item">
+                      <input id="rad-1" type="radio" name="rad-1" checked>
+                      <label for="rad-1">В месяц</label>
+                    </div>
+                    <div class="item">
+                      <input id="rad-2" type="radio" name="rad-1">
+                      <label for="rad-2">1 м² / год</label>
+                    </div>
+                  </div>
+                  <div class="range">
+                    <div id="price-from" class="input-hybrid">
+                      <label> <span>от</span>
+                        <input value="200 000" class="title">
+                      </label>
+                      <ul class="items">
+                        <div class="list">
+                          <li data-value="1">100 000</li>
+                          <li data-value="2">150 000</li>
+                          <li data-value="3" class="active">200 000</li>
+                          <li data-value="4">250 000</li>
+                          <li data-value="5">300 000</li>
+                          <li data-value="6">350 000</li>
+                          <li data-value="7">400 000</li>
+                        </div>
+                        <input placeholder="Своя цена" class="val">
+                        <div class="ok">Применить</div>
+                      </ul>
+                    </div>
+                    <div id="price-to" class="input-hybrid">
+                      <label> <span>до</span>
+                        <input value="400 000" class="title">
+                      </label>
+                      <ul class="items">
+                        <div class="list">
+                          <li data-value="1">100 000</li>
+                          <li data-value="2">150 000</li>
+                          <li data-value="3">200 000</li>
+                          <li data-value="4">250 000</li>
+                          <li data-value="5">300 000</li>
+                          <li data-value="6">350 000</li>
+                          <li data-value="7" class="active">400 000</li>
+                        </div>
+                        <input placeholder="Своя цена" class="val">
+                        <div class="ok">Применить</div>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div class="radios">
+              </section>
+              <section>
+                <div class="checkboxes">
                   <div class="item">
-                    <input id="rad-1" type="radio" name="rad-1" checked>
-                    <label for="rad-1">В месяц</label>
+                    <input id="cb-1" type="checkbox" name="cb-1" checked>
+                    <label for="cb-1">1 комната</label>
                   </div>
                   <div class="item">
-                    <input id="rad-2" type="radio" name="rad-1">
-                    <label for="rad-2">1 м² / год</label>
+                    <input id="cb-2" type="checkbox" name="cb-2">
+                    <label for="cb-2">2 комнаты</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-3" type="checkbox" name="cb-3">
+                    <label for="cb-3">3 комнаты</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-4" type="checkbox" name="cb-4">
+                    <label for="cb-4">4 комнаты</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-5" type="checkbox" name="cb-5">
+                    <label for="cb-5">5 и более</label>
                   </div>
                 </div>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-6" type="checkbox" name="cb-6" checked>
+                    <label for="cb-6">Вторичка</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-7" type="checkbox" name="cb-7">
+                    <label for="cb-7">Новостройка</label>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="section-title">Общая площадь, м²</div>
                 <div class="range">
-                  <div id="price-from" class="input-hybrid">
+                  <div id="measure-from" class="input-hybrid">
                     <label> <span>от</span>
-                      <input value="200 000" class="title">
+                      <input value="60" class="title">
                     </label>
                     <ul class="items">
                       <div class="list">
-                        <li data-value="1">100 000</li>
-                        <li data-value="2">150 000</li>
-                        <li data-value="3" class="active">200 000</li>
-                        <li data-value="4">250 000</li>
-                        <li data-value="5">300 000</li>
-                        <li data-value="6">350 000</li>
-                        <li data-value="7">400 000</li>
+                        <li data-value="1">40</li>
+                        <li data-value="2">50</li>
+                        <li data-value="3" class="active">60</li>
+                        <li data-value="4">70</li>
+                        <li data-value="5">80</li>
+                        <li data-value="6">90</li>
+                        <li data-value="7">100</li>
                       </div>
-                      <input placeholder="Своя цена" class="val">
+                      <input placeholder="Своя площадь" class="val">
                       <div class="ok">Применить</div>
                     </ul>
                   </div>
-                  <div id="price-to" class="input-hybrid">
+                  <div id="measure-to" class="input-hybrid">
                     <label> <span>до</span>
-                      <input value="400 000" class="title">
+                      <input value="100" class="title">
                     </label>
                     <ul class="items">
                       <div class="list">
-                        <li data-value="1">100 000</li>
-                        <li data-value="2">150 000</li>
-                        <li data-value="3">200 000</li>
-                        <li data-value="4">250 000</li>
-                        <li data-value="5">300 000</li>
-                        <li data-value="6">350 000</li>
-                        <li data-value="7" class="active">400 000</li>
+                        <li data-value="1">40</li>
+                        <li data-value="2">50</li>
+                        <li data-value="3">60</li>
+                        <li data-value="4">70</li>
+                        <li data-value="5">80</li>
+                        <li data-value="6">90</li>
+                        <li data-value="7" class="active">100</li>
+                        <li data-value="8">Больше 100</li>
                       </div>
-                      <input placeholder="Своя цена" class="val">
+                      <input placeholder="Своя площадь" class="val">
                       <div class="ok">Применить</div>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </section>
-            <section>
-              <div class="checkboxes">
-                <div class="item">
-                  <input id="cb-1" type="checkbox" name="cb-1" checked>
-                  <label for="cb-1">1 комната</label>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-8" type="checkbox" name="cb-8" checked>
+                    <label for="cb-8">Без отделки</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-9" type="checkbox" name="cb-9">
+                    <label for="cb-9">Нужен ремонт</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-10" type="checkbox" name="cb-10">
+                    <label for="cb-10">Нормальный ремонт</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-11" type="checkbox" name="cb-11">
+                    <label for="cb-11">Хороший ремонт</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-12" type="checkbox" name="cb-12">
+                    <label for="cb-12">Евроремонт</label>
+                  </div>
                 </div>
-                <div class="item">
-                  <input id="cb-2" type="checkbox" name="cb-2">
-                  <label for="cb-2">2 комнаты</label>
+              </section>
+              <section>
+                <div class="section-title">Этаж</div>
+                <div class="range">
+                  <div id="level-from" class="input-hybrid">
+                    <label> <span>от</span>
+                      <input value="3" class="title">
+                    </label>
+                    <ul class="items">
+                      <div class="list">
+                        <li data-value="1">1</li>
+                        <li data-value="2">2</li>
+                        <li data-value="3" class="active">3</li>
+                        <li data-value="4">4</li>
+                        <li data-value="5">5</li>
+                        <li data-value="6">6</li>
+                        <li data-value="7">7</li>
+                        <li data-value="8">8</li>
+                        <li data-value="9">9</li>
+                      </div>
+                      <input placeholder="Свой этаж" class="val">
+                      <div class="ok">Применить</div>
+                    </ul>
+                  </div>
+                  <div id="level-to" class="input-hybrid">
+                    <label> <span>до</span>
+                      <input value="7" class="title">
+                    </label>
+                    <ul class="items">
+                      <div class="list">
+                        <li data-value="1">1</li>
+                        <li data-value="2">2</li>
+                        <li data-value="3">3</li>
+                        <li data-value="4">4</li>
+                        <li data-value="5">5</li>
+                        <li data-value="6">6</li>
+                        <li data-value="7" class="active">7</li>
+                        <li data-value="8">8</li>
+                        <li data-value="9">9</li>
+                      </div>
+                      <input placeholder="Свой этаж" class="val">
+                      <div class="ok">Применить</div>
+                    </ul>
+                  </div>
+                </div><br>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-13" type="checkbox" name="cb-13" checked>
+                    <label for="cb-13">Не первый</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-14" type="checkbox" name="cb-14">
+                    <label for="cb-14">Не последний</label>
+                  </div>
                 </div>
-                <div class="item">
-                  <input id="cb-3" type="checkbox" name="cb-3">
-                  <label for="cb-3">3 комнаты</label>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-15" type="checkbox" name="cb-15" checked>
+                    <label for="cb-15">Балкон</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-16" type="checkbox" name="cb-16">
+                    <label for="cb-16">Лоджия</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-17" type="checkbox" name="cb-17">
+                    <label for="cb-17">Фото</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-18" type="checkbox" name="cb-18">
+                    <label for="cb-18">Торг</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-19" type="checkbox" name="cb-19">
+                    <label for="cb-19">Ипотека</label>
+                  </div>
                 </div>
-                <div class="item">
-                  <input id="cb-4" type="checkbox" name="cb-4">
-                  <label for="cb-4">4 комнаты</label>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-20" type="checkbox" name="cb-20" checked>
+                    <label for="cb-20">От собственников</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-21" type="checkbox" name="cb-21">
+                    <label for="cb-21">От специалистов</label>
+                  </div>
                 </div>
-                <div class="item">
-                  <input id="cb-5" type="checkbox" name="cb-5">
-                  <label for="cb-5">5 и более</label>
-                </div>
-              </div>
-            </section>
-            <section>
-              <div class="checkboxes">
-                <div class="item">
-                  <input id="cb-6" type="checkbox" name="cb-6" checked>
-                  <label for="cb-6">Вторичка</label>
-                </div>
-                <div class="item">
-                  <input id="cb-7" type="checkbox" name="cb-7">
-                  <label for="cb-7">Новостройка</label>
-                </div>
-              </div>
-            </section>
-            <section>
-              <div class="section-title">Общая площадь, м²</div>
-              <div class="range">
-                <div id="measure-from" class="input-hybrid">
-                  <label> <span>от</span>
-                    <input value="60" class="title">
-                  </label>
+              </section>
+              <section>
+                <div id="is-date" class="input-select">
+                  <div class="title">За любую дату</div>
                   <ul class="items">
-                    <div class="list">
-                      <li data-value="1">40</li>
-                      <li data-value="2">50</li>
-                      <li data-value="3" class="active">60</li>
-                      <li data-value="4">70</li>
-                      <li data-value="5">80</li>
-                      <li data-value="6">90</li>
-                      <li data-value="7">100</li>
-                    </div>
-                    <input placeholder="Своя площадь" class="val">
-                    <div class="ok">Применить</div>
+                    <li data-value="3" class="active">За любую дату</li>
+                    <li data-value="1">За последний месяц</li>
+                    <li data-value="2">За год</li>
                   </ul>
                 </div>
-                <div id="measure-to" class="input-hybrid">
-                  <label> <span>до</span>
-                    <input value="100" class="title">
-                  </label>
-                  <ul class="items">
-                    <div class="list">
-                      <li data-value="1">40</li>
-                      <li data-value="2">50</li>
-                      <li data-value="3">60</li>
-                      <li data-value="4">70</li>
-                      <li data-value="5">80</li>
-                      <li data-value="6">90</li>
-                      <li data-value="7" class="active">100</li>
-                      <li data-value="8">Больше 100</li>
-                    </div>
-                    <input placeholder="Своя площадь" class="val">
-                    <div class="ok">Применить</div>
-                  </ul>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-22" type="checkbox" name="cb-22" checked>
+                    <label for="cb-22">Убрать рекламу</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-23" type="checkbox" name="cb-23">
+                    <label for="cb-23">Помнить настройки</label>
+                  </div>
                 </div>
-              </div>
-            </section>
-            <section>
-              <div class="checkboxes">
-                <div class="item">
-                  <input id="cb-8" type="checkbox" name="cb-8" checked>
-                  <label for="cb-8">Без отделки</label>
-                </div>
-                <div class="item">
-                  <input id="cb-9" type="checkbox" name="cb-9">
-                  <label for="cb-9">Нужен ремонт</label>
-                </div>
-                <div class="item">
-                  <input id="cb-10" type="checkbox" name="cb-10">
-                  <label for="cb-10">Нормальный ремонт</label>
-                </div>
-                <div class="item">
-                  <input id="cb-11" type="checkbox" name="cb-11">
-                  <label for="cb-11">Хороший ремонт</label>
-                </div>
-                <div class="item">
-                  <input id="cb-12" type="checkbox" name="cb-12">
-                  <label for="cb-12">Евроремонт</label>
-                </div>
-              </div>
-            </section>
-            <section>
-              <div class="section-title">Этаж</div>
-              <div class="range">
-                <div id="level-from" class="input-hybrid">
-                  <label> <span>от</span>
-                    <input value="3" class="title">
-                  </label>
-                  <ul class="items">
-                    <div class="list">
-                      <li data-value="1">1</li>
-                      <li data-value="2">2</li>
-                      <li data-value="3" class="active">3</li>
-                      <li data-value="4">4</li>
-                      <li data-value="5">5</li>
-                      <li data-value="6">6</li>
-                      <li data-value="7">7</li>
-                      <li data-value="8">8</li>
-                      <li data-value="9">9</li>
-                    </div>
-                    <input placeholder="Свой этаж" class="val">
-                    <div class="ok">Применить</div>
-                  </ul>
-                </div>
-                <div id="level-to" class="input-hybrid">
-                  <label> <span>до</span>
-                    <input value="7" class="title">
-                  </label>
-                  <ul class="items">
-                    <div class="list">
-                      <li data-value="1">1</li>
-                      <li data-value="2">2</li>
-                      <li data-value="3">3</li>
-                      <li data-value="4">4</li>
-                      <li data-value="5">5</li>
-                      <li data-value="6">6</li>
-                      <li data-value="7" class="active">7</li>
-                      <li data-value="8">8</li>
-                      <li data-value="9">9</li>
-                    </div>
-                    <input placeholder="Свой этаж" class="val">
-                    <div class="ok">Применить</div>
-                  </ul>
-                </div>
-              </div><br>
-              <div class="checkboxes">
-                <div class="item">
-                  <input id="cb-13" type="checkbox" name="cb-13" checked>
-                  <label for="cb-13">Не первый</label>
-                </div>
-                <div class="item">
-                  <input id="cb-14" type="checkbox" name="cb-14">
-                  <label for="cb-14">Не последний</label>
-                </div>
-              </div>
-            </section>
-            <section>
-              <div class="checkboxes">
-                <div class="item">
-                  <input id="cb-15" type="checkbox" name="cb-15" checked>
-                  <label for="cb-15">Балкон</label>
-                </div>
-                <div class="item">
-                  <input id="cb-16" type="checkbox" name="cb-16">
-                  <label for="cb-16">Лоджия</label>
-                </div>
-                <div class="item">
-                  <input id="cb-17" type="checkbox" name="cb-17">
-                  <label for="cb-17">Фото</label>
-                </div>
-                <div class="item">
-                  <input id="cb-18" type="checkbox" name="cb-18">
-                  <label for="cb-18">Торг</label>
-                </div>
-                <div class="item">
-                  <input id="cb-19" type="checkbox" name="cb-19">
-                  <label for="cb-19">Ипотека</label>
-                </div>
-              </div>
-            </section>
-            <section>
-              <div class="checkboxes">
-                <div class="item">
-                  <input id="cb-20" type="checkbox" name="cb-20" checked>
-                  <label for="cb-20">От собственников</label>
-                </div>
-                <div class="item">
-                  <input id="cb-21" type="checkbox" name="cb-21">
-                  <label for="cb-21">От специалистов</label>
-                </div>
-              </div>
-            </section>
-            <section>
-              <div id="is-date" class="input-select">
-                <div class="title">За любую дату</div>
-                <ul class="items">
-                  <li data-value="3" class="active">За любую дату</li>
-                  <li data-value="1">За последний месяц</li>
-                  <li data-value="2">За год</li>
-                </ul>
-              </div>
-            </section>
-            <section>
-              <div class="checkboxes">
-                <div class="item">
-                  <input id="cb-22" type="checkbox" name="cb-22" checked>
-                  <label for="cb-22">Убрать рекламу</label>
-                </div>
-                <div class="item">
-                  <input id="cb-23" type="checkbox" name="cb-23">
-                  <label for="cb-23">Помнить настройки</label>
-                </div>
-              </div>
-            </section>
-            <section><a href="#" class="link">Сбросить фильтр</a></section>
-          </form><a href="#" class="filter-side link">
-            Подписаться на результаты
-            этого поиска</a><a href="#" class="filter-side link">
-            История ваших поисковых 
-            запросов</a>
+              </section>
+              <section><a href="#" class="link">Сбросить фильтр</a></section>
+            </form>
+            <div class="sticky-block"><a href="#" class="filter-side link">
+                Подписаться на результаты
+                этого поиска</a><a href="#" class="filter-side link">
+                История ваших поисковых 
+                запросов</a><a href="#" class="filter-side link sticky-block">Показать фильтр</a></div>
+          </aside>
         </div>
         <div class="grid-17">
           <div class="offers-2">
@@ -547,11 +551,90 @@
                   <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
                 </div>
               </div>
+              <div class="item offer"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=19"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ленинского комсомола, 413, корп 3</div>
+                  <div class="price">14 322 151&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 4 комнаты, 146 м²</div>
+                  <ul class="transport">
+                    <li>ст. Очаково </li>
+                  </ul>
+                  <div class="phone">+7 (495) 983–30–00 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer favorite"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=110"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ленинского комсомола, 413, корп 3</div>
+                  <div class="price">14 322 151&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 4 комнаты, 146 м²</div>
+                  <ul class="transport">
+                    <li>ст. Очаково </li>
+                  </ul>
+                  <div class="phone">+7 (495) 983–30–00 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item notautherized"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=111"/></span></span></span><span class="info"><span class="ico pictures">1/6</span><span class="ico video">3</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="company"></div>
+                  <div class="actions"><a href="#" data-title="Хочу"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title="Не хочу"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item premium"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=112"/></span></span></span><span class="info"><span class="ico pictures">1/6</span><span class="ico video">1</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
               <div class="item-collapsed">
                 <div class="title">ул. Смирновская, 24</div>
                 <div class="actions"><a href="#"><i class="icon-font icon-font-arrow-down"></i>Показать</a></div>
               </div>
-              <div class="item offer viewed"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=16"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+              <div class="item offer viewed"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=113"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer viewed"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=114"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer viewed"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=115"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
                 <div class="data">
                   <div class="title">ул. Ярцевская, 20</div>
                   <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
