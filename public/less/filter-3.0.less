@@ -43,6 +43,27 @@ h1 {
 	}
 }
 
+.show-on-stuck {
+	transform: scale(0);
+	opacity: 0;
+	height: 0em;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+	transition: .2s;
+}
+
+.is_stuck {
+	.show-on-stuck {
+		transform: scale(1);
+		opacity: 1;
+		height: 1.5em;
+		padding-top: 15px !important;
+		padding-bottom: 15px !important;
+		margin-bottom: 10px !important;
+	}
+}
+
 .selectors {
 	.selector {
 		float: left;
