@@ -17222,14 +17222,18 @@ body {
   z-index: 3;
 }
 .selectors .selector a.active,
-.selectors .selector .expandable-selector.active {
+.selectors .selector .expandable-selector.active,
+.selectors .selector a.selected,
+.selectors .selector .expandable-selector.selected {
   background: #FFF2B3;
   border-color: #FFBF00;
   color: #333;
   z-index: 4;
 }
 .selectors .selector a.active:hover,
-.selectors .selector .expandable-selector.active:hover {
+.selectors .selector .expandable-selector.active:hover,
+.selectors .selector a.selected:hover,
+.selectors .selector .expandable-selector.selected:hover {
   background: #faedae;
   border-color: #faba00;
 }

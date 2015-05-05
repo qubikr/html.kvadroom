@@ -138,10 +138,15 @@ $(function(){
 				$dd.find('li').removeClass('active');
 				$(this).addClass('active');
 
-				if($dd.find('.title').is('input')){
-					$dd.find('.title').val($(this).html());
+				if($dd.is('.expandable-selector')){
+					$dd.parents('.selector').find('a').removeClass('active');
+					$dd.addClass('selected');
 				}else{
-					$dd.find('.title').html($(this).html());
+					if($dd.find('.title').is('input')){
+						$dd.find('.title').val($(this).html());
+					}else{
+						$dd.find('.title').html($(this).html());
+					}
 				}
 
 				$dd.removeClass('active');
@@ -188,6 +193,9 @@ $(function(){
 
 			$selector.find('a').removeClass('active');
 			$(this).addClass('active');
+
+			$selector.find('.expandable-selector').removeClass('selected');
+			$selector.find('.expandable-selector ul li').removeClass('active');
 		});
 	});
 
