@@ -7,6 +7,10 @@ block content
 
 	h1.page-title-header Продажа квартир, Москва и Московская область
 
+	include partials/filter-short
+
+	.divider-40
+
 	.container-main
 		.left-col
 			.filter
@@ -23,31 +27,29 @@ block content
 						li(data-value="8") Нежилые
 
 		.right-col
-			.selectors
-				.selector.selector-types
-					span.group
-						a.active(href="#") Купить
-						a(href="#") Снять
-						a(href="#") На сутки
+			.selectors.selector-types
+				span.group
+					a.active(href="#") Купить
+					a(href="#") Снять
+					a(href="#") На сутки
 
-				.selector.right-side.selector-sort
-					span.group
-						a.active(href="#") Новые
-						a(href="#") Дешевле
-						a(href="#") Дороже
+			.selectors.right-side.selector-sort
+				span.group
+					a.active(href="#") Новые
+					a(href="#") Дешевле
+					a(href="#") Дороже
 
-						span.expandable-selector
-							span.title ...
-							ul.items
-								li(data-value="1") Новостройки
-								li(data-value="2") Квартиры
-								li.active(data-value="3") Комнаты
-								li(data-value="4") Таунхаусы
-								li(data-value="5") Дома
-								li(data-value="6") Участки
-								li(data-value="7") Гаражи
-								li(data-value="8") Нежилые
-
+					span.expandable-selector
+						span.title ...
+						ul.items
+							li(data-value="1") Новостройки
+							li(data-value="2") Квартиры
+							li.active(data-value="3") Комнаты
+							li(data-value="4") Таунхаусы
+							li(data-value="5") Дома
+							li(data-value="6") Участки
+							li(data-value="7") Гаражи
+							li(data-value="8") Нежилые
 
 			.clear
 		.clear
