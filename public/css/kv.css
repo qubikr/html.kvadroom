@@ -17318,6 +17318,10 @@ body {
 .selectors .selector.right-side .group {
   margin-right: 0;
 }
+.selectors .selector.right-side .group a,
+.selectors .selector.right-side .group .expandable-selector {
+  margin: 0 0 5px -1px;
+}
 .dropdown {
   border: 1px solid #dedede;
   border-radius: 3px;
