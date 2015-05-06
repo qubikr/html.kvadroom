@@ -235,7 +235,7 @@ $(function(){
 	$('.sticky-block').on('click', function(e){
 		e.preventDefault();
 		$('html, body').animate({
-            scrollTop: $('aside').offset().top - 20
+            scrollTop: 0
         }, 600, "swing");
 	});
 });
