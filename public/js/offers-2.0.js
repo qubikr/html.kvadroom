@@ -135,13 +135,21 @@ $(function(){
 			});
 
 			$dd.find('li').off('click').on('click', function(e){
-				$dd.find('li').removeClass('active');
-				$(this).addClass('active');
-
 				if($dd.is('.expandable-selector')){
 					$dd.parents('.selector').find('a').removeClass('active');
-					$dd.addClass('selected');
+					
+					if(!$(this).hasClass('active')){
+						$dd.find('li').removeClass('active');
+						$(this).addClass('active');
+						$dd.addClass('selected');
+					}else{
+						$(this).removeClass('active');
+						$dd.removeClass('selected');
+					}
 				}else{
+					$dd.find('li').removeClass('active');
+					$(this).addClass('active');
+
 					if($dd.find('.title').is('input')){
 						$dd.find('.title').val($(this).html());
 					}else{
@@ -185,19 +193,30 @@ $(function(){
 		}
 	});
 
-	$('.selector').each(function(){
-		var $selector = $(this);
-
-		$selector.find('a').on('click', function(e){
-			e.preventDefault();
-
-			$selector.find('a').removeClass('active');
-			$(this).addClass('active');
-
-			$selector.find('.expandable-selector').removeClass('selected');
-			$selector.find('.expandable-selector ul li').removeClass('active');
-		});
+	$('.selector-types').find('a').on('click', function(e){
+		e.preventDefault();
+		$(this).siblings('a').removeClass('active');
+		$(this).addClass('active');
 	});
+
+	$('.selector-sort').find('a').on('click', function(e){
+		e.preventDefault();
+
+		$(this).siblings('a').removeClass('active');
+
+		if(!$(this).hasClass('active')){
+			$(this).addClass('active');
+		}else{
+			$(this).removeClass('active');
+		}
+
+		$(this)
+			.siblings('.expandable-selector')
+			.removeClass('selected')
+			.find('ul li')
+				.removeClass('active');
+	});
+
 
 	$('.prices .selector li').off('click').on('click', function(){
 		$('.prices .selector li').removeClass('active');
