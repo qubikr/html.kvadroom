@@ -239,7 +239,7 @@ $(function(){
         }, 600, "swing");
 	});
 
-	$('.expand-collapse-filter-top').on('click', function(e){
+	$('.expand-filter-top-inline, .expand-filter-top').on('click', function(e){
 		e.preventDefault();
 
 		$('.top-filter').show();

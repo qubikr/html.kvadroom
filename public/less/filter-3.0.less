@@ -6,7 +6,17 @@ body.version3 {
 		font-size: 27px;
 		transition: .2s;
 
-		.expand-collapse-filter-top {
+		.expand-filter-top-inline {
+			border-bottom: 1px dotted #333;
+			cursor: pointer;
+
+			&:hover {
+				color: #f00; 
+				border-color: #f00;
+			}
+		}
+
+		.expand-filter-top {
 			color: #2E8AE6;
 			font-size: 14px;
 			font-weight: normal;
@@ -23,7 +33,7 @@ body.version3 {
 				content: '';
 				display: block;
 				position: absolute;
-				bottom: -3px;
+				bottom: -5px;
 				left: 0;
 				height: 0;
 				width: 100%;
