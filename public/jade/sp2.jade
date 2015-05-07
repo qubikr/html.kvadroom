@@ -1,0 +1,499 @@
+extend _layout2
+
+block content
+	.divider-20
+
+	include partials/breadcrumbs
+
+	h1.page-title-header Продажа квартир, Москва и Московская область
+
+	// include partials/filter-short
+
+	.sp-2-cards
+		.container-24
+			.grid-8
+				a.item(href="#")
+					span.image: img(src="http://lorempixel.com/300/225/city/?r=0")
+					span.info
+						span.title «Эко Видное». 4км от Москвы
+						span.desc Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+						span.foot
+							|ООО «10 квартал»
+							br
+							|+7 (495) 510-10-94
+			.grid-8
+				a.item(href="#")
+					span.image: img(src="http://lorempixel.com/300/225/city/?r=1")
+					span.info
+						span.title «Эко Видное». 4км от Москвы
+						span.desc Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+						span.foot
+							|ООО «10 квартал»
+							br
+							|+7 (495) 510-10-94
+			
+			.grid-8
+				a.item(href="#")
+					span.image: img(src="http://lorempixel.com/300/225/city/?r=2")
+					span.info
+						span.title «Эко Видное». 4км от Москвы
+						span.desc Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+						span.foot
+							|ООО «10 квартал»
+							br
+							|+7 (495) 510-10-94
+		.clear
+
+		.container-24
+			.grid-8
+				a.item(href="#")
+					span.image: img(src="http://lorempixel.com/300/225/city/?r=3")
+					span.info
+						span.title «Эко Видное». 4км от Москвы
+						span.desc Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+						span.foot
+							|ООО «10 квартал»
+							br
+							|+7 (495) 510-10-94
+
+			.grid-8
+				a.item(href="#")
+					span.image: img(src="http://lorempixel.com/300/225/city/?r=4")
+					span.info
+						span.title «Эко Видное». 4км от Москвы
+						span.desc Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+						span.foot
+							|ООО «10 квартал»
+							br
+							|+7 (495) 510-10-94
+
+			.grid-8
+				a.item(href="#")
+					span.image: img(src="http://lorempixel.com/300/225/city/?r=5")
+					span.info
+						span.title «Эко Видное». 4км от Москвы
+						span.desc Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+						span.foot
+							|ООО «10 квартал»
+							br
+							|+7 (495) 510-10-94
+		.clear
+
+
+
+	.divider-60
+
+	.container-main
+		.left-col
+			.filter
+				.dropdown#dd-type
+					.title Квартиры
+					ul.items
+						li(data-value="1") Новостройки
+						li(data-value="2") Квартиры
+						li.active(data-value="3") Комнаты
+						li(data-value="4") Таунхаусы
+						li(data-value="5") Дома
+						li(data-value="6") Участки
+						li(data-value="7") Гаражи
+						li(data-value="8") Нежилые
+
+		.right-col
+			.selectors.selector-types
+				span.group
+					a.active(href="#") Купить
+					a(href="#") Снять
+					a(href="#") На сутки
+
+			.selectors.right-side.selector-sort
+				span.group
+					a.active(href="#") Новые
+					a(href="#") Дешевле
+					a(href="#") Дороже
+
+					span.expandable-selector
+						span.title ...
+						ul.items
+							li(data-value="1") Новостройки
+							li(data-value="2") Квартиры
+							li.active(data-value="3") Комнаты
+							li(data-value="4") Таунхаусы
+							li(data-value="5") Дома
+							li(data-value="6") Участки
+							li(data-value="7") Гаражи
+							li(data-value="8") Нежилые
+
+			.clear
+		.clear
+
+	.divider-20
+
+	.container-main
+		.left-col
+			aside
+				form.filter-side
+					section
+						.prices
+							.selector
+								.title Цена в рублях
+								ul
+									li.active(data-title="Цена в рублях"): span.rub: i ⃏
+									li(data-title="Цена в USD") $
+									li(data-title="Цена в EURO") &euro;
+
+							.radios
+								.item
+									input#rad-1(type="radio", name="rad-1", checked)
+									label(for="rad-1") В месяц
+
+								.item
+									input#rad-2(type="radio", name="rad-1")
+									label(for="rad-2") 1 м² / год
+
+							.range
+								.input-hybrid#price-from
+									label 
+										span от
+										input.title(value="200 000")
+
+									ul.items
+										.list
+											li(data-value="1") 100 000
+											li(data-value="2") 150 000
+											li.active(data-value="3") 200 000
+											li(data-value="4") 250 000
+											li(data-value="5") 300 000
+											li(data-value="6") 350 000
+											li(data-value="7") 400 000
+										input.val(placeholder="Своя цена")
+										.ok Применить
+
+								.input-hybrid#price-to
+									label 
+										span до
+										input.title(value="400 000")
+
+									ul.items
+										.list
+											li(data-value="1") 100 000
+											li(data-value="2") 150 000
+											li(data-value="3") 200 000
+											li(data-value="4") 250 000
+											li(data-value="5") 300 000
+											li(data-value="6") 350 000
+											li.active(data-value="7") 400 000
+										input.val(placeholder="Своя цена")
+										.ok Применить
+							
+					section
+						.checkboxes
+							.item
+								input#cb-1(type="checkbox", name="cb-1", checked)
+								label(for="cb-1") 1 комната
+
+							.item
+								input#cb-2(type="checkbox", name="cb-2")
+								label(for="cb-2") 2 комнаты
+
+							.item
+								input#cb-3(type="checkbox", name="cb-3")
+								label(for="cb-3") 3 комнаты
+
+							.item
+								input#cb-4(type="checkbox", name="cb-4")
+								label(for="cb-4") 4 комнаты
+
+							.item
+								input#cb-5(type="checkbox", name="cb-5")
+								label(for="cb-5") 5 и более
+
+					section
+						.checkboxes
+							.item
+								input#cb-6(type="checkbox", name="cb-6", checked)
+								label(for="cb-6") Вторичка
+
+							.item
+								input#cb-7(type="checkbox", name="cb-7")
+								label(for="cb-7") Новостройка
+
+					section
+						.section-title Общая площадь, м²
+						.range
+							.input-hybrid#measure-from
+								label 
+									span от
+									input.title(value="60")
+
+								ul.items
+									.list
+										li(data-value="1") 40
+										li(data-value="2") 50
+										li.active(data-value="3") 60
+										li(data-value="4") 70
+										li(data-value="5") 80
+										li(data-value="6") 90
+										li(data-value="7") 100
+									input.val(placeholder="Своя площадь")
+									.ok Применить
+
+							.input-hybrid#measure-to
+								label 
+									span до
+									input.title(value="100")
+
+								ul.items
+									.list
+										li(data-value="1") 40
+										li(data-value="2") 50
+										li(data-value="3") 60
+										li(data-value="4") 70
+										li(data-value="5") 80
+										li(data-value="6") 90
+										li.active(data-value="7") 100
+										li(data-value="8") Больше 100
+									input.val(placeholder="Своя площадь")
+									.ok Применить
+
+					section
+						.checkboxes
+							.item
+								input#cb-8(type="checkbox", name="cb-8", checked)
+								label(for="cb-8") Без отделки
+
+							.item
+								input#cb-9(type="checkbox", name="cb-9")
+								label(for="cb-9") Нужен ремонт
+
+							.item
+								input#cb-10(type="checkbox", name="cb-10")
+								label(for="cb-10") Нормальный ремонт
+
+							.item
+								input#cb-11(type="checkbox", name="cb-11")
+								label(for="cb-11") Хороший ремонт
+
+							.item
+								input#cb-12(type="checkbox", name="cb-12")
+								label(for="cb-12") Евроремонт
+
+					section
+						.section-title Этаж
+						.range
+							.input-hybrid#level-from
+								label 
+									span от
+									input.title(value="3")
+
+								ul.items
+									.list
+										li(data-value="1") 1
+										li(data-value="2") 2
+										li.active(data-value="3") 3
+										li(data-value="4") 4
+										li(data-value="5") 5
+										li(data-value="6") 6
+										li(data-value="7") 7
+										li(data-value="8") 8
+										li(data-value="9") 9
+									input.val(placeholder="Свой этаж")
+									.ok Применить
+
+							.input-hybrid#level-to
+								label 
+									span до
+									input.title(value="7")
+
+								ul.items
+									.list
+										li(data-value="1") 1
+										li(data-value="2") 2
+										li(data-value="3") 3
+										li(data-value="4") 4
+										li(data-value="5") 5
+										li(data-value="6") 6
+										li.active(data-value="7") 7
+										li(data-value="8") 8
+										li(data-value="9") 9
+									input.val(placeholder="Свой этаж")
+									.ok Применить
+
+						br
+
+						.checkboxes
+							.item
+								input#cb-13(type="checkbox", name="cb-13", checked)
+								label(for="cb-13") Не первый
+
+							.item
+								input#cb-14(type="checkbox", name="cb-14")
+								label(for="cb-14") Не последний
+
+					section
+						.checkboxes
+							.item
+								input#cb-15(type="checkbox", name="cb-15", checked)
+								label(for="cb-15") Балкон
+
+							.item
+								input#cb-16(type="checkbox", name="cb-16")
+								label(for="cb-16") Лоджия
+
+							.item
+								input#cb-17(type="checkbox", name="cb-17")
+								label(for="cb-17") Фото
+
+							.item
+								input#cb-18(type="checkbox", name="cb-18")
+								label(for="cb-18") Торг
+
+							.item
+								input#cb-19(type="checkbox", name="cb-19")
+								label(for="cb-19") Ипотека
+
+					section
+						.checkboxes
+							.item
+								input#cb-20(type="checkbox", name="cb-20", checked)
+								label(for="cb-20") От собственников
+
+							.item
+								input#cb-21(type="checkbox", name="cb-21")
+								label(for="cb-21") От специалистов
+
+					section
+						.input-select#is-date
+							.title За любую дату
+							ul.items
+								li.active(data-value="3") За любую дату
+								li(data-value="1") За последний месяц
+								li(data-value="2") За год
+
+					section
+						.checkboxes
+							.item
+								input#cb-22(type="checkbox", name="cb-22", checked)
+								label(for="cb-22") Убрать рекламу
+
+							.item
+								input#cb-23(type="checkbox", name="cb-23")
+								label(for="cb-23") Помнить настройки
+
+					section
+						a.link(href="#") Сбросить фильтр
+
+				.sticky-block
+					a.filter-side.link.show-on-stuck(href="#") Показать фильтр
+
+					a.filter-side.link(href="#")
+						|Получать по почте
+
+					a.filter-side.link(href="#")
+						|История поиска
+
+					.creeper-wrap
+						.creeper-wrap-inner
+							.banner-1
+								.right-col-250.mb30.banner-250x250.sticky-banner(data-swf='1')
+									object#side-bbb-banner-126(type='application/x-shockwave-flash', data='http://v2s.kvadroom.ru/i/bigboss/126.swf', width='250', height='250', style='visibility: visible;')
+										param(name='wmode', value='opaque')
+										param(name='flashvars', value='target=_blank&link1=http%3A%2F%2Fwww.kvadroom.ru%2Fgo81.php%3Fo_id%3D126')
+
+							.divider-10
+							.banner-2
+								.right-col-250.mb30.banner-250x250.sticky-banner(data-swf='0')
+									#side-bbb-banner-297(data-id='297')
+									a(href='http://www.kvadroom.ru/go81.php?o_id=297', rel='nofollow', target='_blank')
+										img.page-title-banner-image(src='http://v2s.kvadroom.ru/i/bigboss/297.jpg', alt='')
+
+		.right-col
+			.offers-2
+				// .heading
+					.title 12 535 объявлений
+					.actions
+						a.active(href="#") Новые
+						a(href="#") Видео
+						a(href="#") Много фото
+						span.group
+							a(href="#") Дешевле
+							a(href="#") Дороже
+						a(href="#") ...
+
+				.list
+					+offer(1, 'sp', false, 0, 0, 'Апартаменты в центре Москвы!', 'Звоните!', 'Готовые апартаменты со скидкой 20%! М.Белорусская, м. Бауманская. Собственники делают ремонт!', ['м. Бауманская'], '+7 (495) 646-04-15', '')
+					+offer(2, 'sp', false, 0, 0, 'V-House. Дарим 500 000 руб!', '188 000', 'Нагорная. 5 мин. от ТТК. Подземный паркинг. Окончание строительства – дек. 2015. Ипотека 11,55%', ['м. Нагорная'], '+7 (495) 120-02-43', 'Ведис Групп Ведис Групп Ведис Групп Ведис Групп')
+					+offer(3, 'sp', false, 0, 0, 'Невесомые цены от 5 млн.руб!', '5 000 000', 'Квартиры бизнес-класса в ЖК «Лайнер» на Ходынке, 300м от метро. Закрытый двор, рядом парк.', ['м. Динамо'], '+7 (495) 112-20-20', 'Компания &laquo;Магистрат&raquo;')
+					+offer(4, 'offer', true, 6, 0, 'ул. Ленинского комсомола, 413, корп 3', '14 322 151', 'Продается квартира, 4 комнаты, 146 м²', ['ст. Очаково'], '+7 (495) 983–30–00')
+					+offer(5, 'offer', false, 6, 0, 'ул. Ленинского комсомола, 413, корп 3', '14 322 151', 'Продается квартира, 4 комнаты, 146 м²', ['ст. Очаково'], '+7 (495) 983–30–00')
+					+offer(6, 'offer favorite', false, 6, 0, 'ул. Ленинского комсомола, 413, корп 3', '14 322 151', 'Продается квартира, 4 комнаты, 146 м²', ['ст. Очаково'], '+7 (495) 983–30–00')
+					+offer(7, 'notautherized', false, 6, 3, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(8, 'premium', false, 6, 1, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(9, 'offer', false, 6, 0, 'ул. Ленинского комсомола, 413, корп 3', '14 322 151', 'Продается квартира, 4 комнаты, 146 м²', ['ст. Очаково'], '+7 (495) 983–30–00')
+					+offer(10, 'offer favorite', false, 6, 0, 'ул. Ленинского комсомола, 413, корп 3', '14 322 151', 'Продается квартира, 4 комнаты, 146 м²', ['ст. Очаково'], '+7 (495) 983–30–00')
+					+offer(11, 'notautherized', false, 6, 3, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(12, 'premium', false, 6, 1, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					
+					.item-collapsed
+						.title ул. Смирновская, 24
+						.actions
+							a(href="#")
+								i.icon-font.icon-font-arrow-down
+								|Показать
+
+					+offer(13, 'offer', true, 6, 0, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(14, 'offer', true, 6, 0, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+					+offer(15, 'offer', true, 6, 0, 'ул. Ярцевская, 20', '21 000 000', 'Продается квартира, 3 комнаты, 122 м²', ['м. Молодежная'], '+7 (495) 112-20-20')
+
+			include partials/pagination
+			include partials/show-more-button
+
+		.clear
+
+
+	mixin offer(id, typeClass, fade, photos, videos, title, price, desc, address, phone, company)
+		.item(class=typeClass + ((fade) ? ' viewed' : ''))
+			a.photo(href="#")
+				if typeClass != 'sp'
+					span.slide-left
+					span.slide-right
+					span.frames
+						span.frames-content
+							span.frame.loaded: img(src="http://lorempixel.com/240/180/city/?r=1" + id)
+
+					span.info
+						if photos > 0
+							span.ico.pictures 1/#{photos}
+						if videos > 0
+							span.ico.video #{videos}
+				else
+					span.frames
+						span.frames-content
+							span.frame.loaded: img(src="http://lorempixel.com/240/180/city/?r=1" + id)
+
+			.data
+				.title #{title}
+				.price #{price}&nbsp;
+					if price != 'Звоните!'
+						span.valute.rub: i ⃏
+
+				.desc #{desc}
+				ul.transport
+					each item in address
+						li #{item} 
+				.phone #{phone} 
+
+				if typeClass != 'sp' && typeClass != 'notautherized'
+					.actions
+						a(href="#", data-title=" "): i.icon-font.icon-font-compare
+						a.heart(href="#", data-title=" "): i.icon-font.icon-font-heart_stroke
+						a.trash(href="#", data-title=" "): i.icon-font.icon-font-trash-big
+
+				else
+					.company !{company}
+				
+				if typeClass == 'notautherized'
+					.actions
+						a(href="#", data-title="Хочу"): i.icon-font.icon-font-heart_stroke
+						a(href="#", data-title="Не хочу"): i.icon-font.icon-font-trash-big
+
+	script(src="js/offers-2.0.js")

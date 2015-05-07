@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kvadroom HTML</title>
+    <link rel="stylesheet" type="text/css" href="css/kv.css">
+    <script src="js/_.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.KVSearchString.js"></script>
+    <script src="js/jquery.KVLoadingElement.js"></script>
+    <script src="js/clickuotside.js"></script>
+    <script src="js/ractive.js"></script>
+    <script src="js/bloodhound.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/sly.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/custom-scrollbar.js"></script>
+    <script src="js/sticky-kit.js"></script>
+  </head>
+  <body>
+    <div class="wrapper page-width">
+      <div class="header-placeholder">
+        <header class="page-width header"><i class="scroll-shadow"></i><a rel="nofollow" href="#stayhere" class="nav-main-button"><span class="nav-main-button-holder"><span class="nav-main-button-icon icon-font icon-font-menu-3lines"></span></span></a>
+          <div class="nav-main-container"><a rel="nofollow" href="#stayhere" class="nav-main-container-button"><span class="nav-main-container-icon icon-font icon-font-menu-3lines"></span></a>
+            <nav class="tabs tabs-big tabs-main-menu"><a rel="nofollow" data-tab="main-menu-1" data-tab-ns="main-menu" href="#stayhere" class="tab-link kiv first tab-link_active"><span class="nav-main-links-table-link-text kiv-e">Купить</span></a><a rel="nofollow" data-tab="main-menu-2" data-tab-ns="main-menu" href="#stayhere" class="tab-link kiv"><span class="nav-main-links-table-link-text kiv-e">Снять</span></a><a rel="nofollow" data-tab="main-menu-3" data-tab-ns="main-menu" href="#stayhere" class="tab-link kiv"><span class="nav-main-links-table-link-text kiv-e">Снять на сутки</span></a><a rel="nofollow" data-tab="main-menu-4" data-tab-ns="main-menu" href="#stayhere" class="tab-link kiv last"><span class="nav-main-links-table-link-text kiv-e">Изучить</span></a>
+              <div class="clear"></div>
+            </nav>
+            <div class="nav-main-container-content">
+              <div class="tab-content tab-content-ns-main-menu tab-content-main-menu-1 tab-content_active">
+                <ul class="nav-main-links-table">
+                  <li><a href="http://kras.kvadroom.ru/novostroyki/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Новостройки</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/garaji-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Гаражи и машиноместа</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/proizvodstvo-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Под производство</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/kupit-kvartiru/" rel="nofollow" class="nav-main-links-table-link crop-text kiv nav-main-links-table-link_hover"><span class="nav-main-links-table-link-text kiv-e">Квартиры</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/ofisy-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Офисы</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/obshepit-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Под общепит</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/kupit-komnatu/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Комнаты</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/torgovie-ploshadi-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Торговые площади</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/avtoservis-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Под автосервис</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/kupit-taunhaus/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Таунхаусы</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/skladi-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Склады</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/bitovie-uslugi-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Под бытовые услуги</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/kupit-dom/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Дома</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/psn-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Свободного назначения</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/zemlia-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Земельные участки</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/zemelnie-uchastki/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Участки</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/zdaniya-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Здания целиком</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/business-kupit/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Готовый бизнес</span></a></li>
+                </ul>
+              </div>
+              <div class="tab-content tab-content-ns-main-menu tab-content-main-menu-2">
+                <ul class="nav-main-links-table">
+                  <li><a href="http://kras.kvadroom.ru/sniat-kvartiru/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Квартиры</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/garaji-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Гаражи и машиноместа</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/proizvodstvo-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Под производство</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/sniat-komnatu/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Комнаты</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/ofisy-sniat/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Офисы</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/obshepit-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Под общепит</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/sniat-taunhaus/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Таунхаусы</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/torgovie-ploshadi-sniat/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Торговые площади</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/avtoservis-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Под автосервис</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/sniat-dom/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Дома</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/skladi-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Склады</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/bitovie-uslugi-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Под бытовые услуги</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/sniat-dachu/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Дачи</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/psn-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Свободного назначения</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/business-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Готовый бизнес</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/sniat-kottedj/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Коттеджи</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/zdaniya-sniat/" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Здания целиком</span></a></li>
+                  <li class="nav-main-links-table-link-dummy"></li>
+                </ul>
+              </div>
+              <div class="tab-content tab-content-ns-main-menu tab-content-main-menu-3">
+                <ul class="nav-main-links-table">
+                  <li><a href="http://kras.kvadroom.ru/kvartiri-posutochno/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Квартиры посуточно</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/komnati-posutochno/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Комнаты посуточно</span></a></li>
+                  <li><a href="http://kras.kvadroom.ru/kottedji-posutochno/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Коттеджи посуточно</span></a></li>
+                </ul>
+              </div>
+              <div class="tab-content tab-content-ns-main-menu tab-content-main-menu-4">
+                <ul class="nav-main-links-table">
+                  <li><a href="http://cons.kvadroom.ru" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Консультации</span></a></li>
+                  <li><a href="http://journal.kvadroom.ru" rel="nofollow" target="_blank" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Квадрум. Журнал</span></a></li>
+                  <li><a href="http://planirovki.kvadroom.ru/" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Планировки квартир</span></a></li>
+                  <li><a href="http://my.kvadroom.ru/add/?d=kras" rel="nofollow" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Разместить объявление</span></a></li>
+                  <li><a href="http://help.kvadroom.ru/" rel="nofollow" target="_blank" class="nav-main-links-table-link crop-text kiv"><span class="nav-main-links-table-link-text kiv-e">Помощь по сайту</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div><a href="/" class="kvadroom-logo-link kiv kiv-e kvadroom-logo-link-short"><span class="icon icon-kvadroom-logo"><i>Квадрум</i></span></a>
+          <div class="user-block">
+            <div class="user-block-autherized-info"><a href="#stayhere" title="Алексей" class="user-block-autherized-info-link kiv"><span class="user-block-autherized-info-avatar"><img src="http://imgb.kvadroom.ru/i/billing/13681903-small.jpg" width="40" height="40" style="opacity: 1;" alt="Алексей" class="user-block-autherized-info-avatar-image"></span><span class="user-block-autherized-info-name"><span class="user-block-autherized-info-name-text kiv-e">Алексей</span><i class="arrow-triangle-down"></i></span></a>
+              <div class="user-menu">
+                <nav class="nav-user-menu"><a href="http://my.kvadroom.ru/my_money.html" class="nav-user-menu-link kiv"><span class="kiv-e">Объявления<span class="count">4</span></span></a><a href="http://my.kvadroom.ru/my_company_adv.html" class="nav-user-menu-link kiv"><span class="kiv-e">Уведомления<span class="count">12</span></span></a><a href="http://my.kvadroom.ru/support.php" class="nav-user-menu-link kiv"><span class="kiv-e">Подписки<span class="count">7</span></span></a><a href="http://my.kvadroom.ru/my_info.php" class="nav-user-menu-link kiv"><span class="kiv-e">Избранные<span class="count">311</span></span></a><a href="http://my.kvadroom.ru/my_info.php" class="nav-user-menu-link kiv"><span class="kiv-e">Сравнения<span class="count">6</span></span></a><a href="http://my.kvadroom.ru/my_info.php" class="nav-user-menu-link kiv"><span class="kiv-e">История поиска<span class="count">4289</span></span></a><a href="http://my.kvadroom.ru/my_info.php" class="nav-user-menu-link kiv"><span class="kiv-e">Деньги<span class="count">2 394,25 <span class="rub"><i>⃏</i></span></span></span></a><a href="http://my.kvadroom.ru/my_info.php" class="nav-user-menu-link kiv"><span class="kiv-e">Настройка</span></a><a href="http://samara.kvadroom.ru/?action=LOGOUT&amp;from=http://www.bproject.kvadroom.ru%2F" class="nav-user-menu-link kiv"><span class="kiv-e">Выход</span></a></nav>
+              </div>
+            </div>
+            <div class="user-block-icons"><a href="http://my.kvadroom.ru/my_company_adv.html" rel="nofollow" class="user-block-icons-item kiv kiv-e"><span class="user-block-icons-icon-symbol icon-font icon-font-compare"></span><span class="user-block-icons-icon-text">5</span></a><a href="http://www.bproject.kvadroom.ru/favorites/" rel="nofollow" class="user-block-icons-item kiv kiv-e"><span class="user-block-icons-icon-symbol icon-font favorites-icon-anchor icon-font-heart"></span><span class="user-block-icons-icon-text">18</span></a></div>
+          </div>
+          <div class="right-side"><a rel="nofollow" href="http://my.kvadroom.ru/add/?d=www.bproject" class="button-make-ad kiv kiv-e">Разместить бесплатно</a></div>
+          <div class="open-filter open-filter-new"><span>Изменить условия поиска</span></div>
+        </header>
+      </div>
+      <div class="divider-20"></div>
+      <div class="breadcrumbs-new">
+        <ul class="row">
+          <li class="item ico"><a href="/" class="link"><i class="icon-font icon-font-home"></i></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>Москва</span></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>Северо-Западный</span></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>Хорошево-Мневники</span></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>Продажа квартир</span></a></li>
+          <li class="item"><a href="#" class="link kiv-e"><span>2-комнатные</span></a></li>
+        </ul>
+      </div>
+      <h1 class="page-title-header">Продажа квартир, Москва и Московская область</h1>
+      <!-- include partials/filter-short-->
+      <div class="sp-2-cards">
+        <div class="container-24">
+          <div class="grid-8"><a href="#" class="item"><span class="image"><img src="http://lorempixel.com/300/225/city/?r=0"></span><span class="info"><span class="title">«Эко Видное». 4км от Москвы</span><span class="desc">Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется</span><span class="foot">ООО «10 квартал»<br>+7 (495) 510-10-94</span></span></a></div>
+          <div class="grid-8"><a href="#" class="item"><span class="image"><img src="http://lorempixel.com/300/225/city/?r=1"></span><span class="info"><span class="title">«Эко Видное». 4км от Москвы</span><span class="desc">Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется</span><span class="foot">ООО «10 квартал»<br>+7 (495) 510-10-94</span></span></a></div>
+          <div class="grid-8"><a href="#" class="item"><span class="image"><img src="http://lorempixel.com/300/225/city/?r=2"></span><span class="info"><span class="title">«Эко Видное». 4км от Москвы</span><span class="desc">Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется</span><span class="foot">ООО «10 квартал»<br>+7 (495) 510-10-94</span></span></a></div>
+        </div>
+        <div class="clear"></div>
+        <div class="container-24">
+          <div class="grid-8"><a href="#" class="item"><span class="image"><img src="http://lorempixel.com/300/225/city/?r=3"></span><span class="info"><span class="title">«Эко Видное». 4км от Москвы</span><span class="desc">Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется</span><span class="foot">ООО «10 квартал»<br>+7 (495) 510-10-94</span></span></a></div>
+          <div class="grid-8"><a href="#" class="item"><span class="image"><img src="http://lorempixel.com/300/225/city/?r=4"></span><span class="info"><span class="title">«Эко Видное». 4км от Москвы</span><span class="desc">Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется</span><span class="foot">ООО «10 квартал»<br>+7 (495) 510-10-94</span></span></a></div>
+          <div class="grid-8"><a href="#" class="item"><span class="image"><img src="http://lorempixel.com/300/225/city/?r=5"></span><span class="info"><span class="title">«Эко Видное». 4км от Москвы</span><span class="desc">Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется</span><span class="foot">ООО «10 квартал»<br>+7 (495) 510-10-94</span></span></a></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="divider-60"></div>
+      <div class="container-main">
+        <div class="left-col">
+          <div class="filter">
+            <div id="dd-type" class="dropdown">
+              <div class="title">Квартиры</div>
+              <ul class="items">
+                <li data-value="1">Новостройки</li>
+                <li data-value="2">Квартиры</li>
+                <li data-value="3" class="active">Комнаты</li>
+                <li data-value="4">Таунхаусы</li>
+                <li data-value="5">Дома</li>
+                <li data-value="6">Участки</li>
+                <li data-value="7">Гаражи</li>
+                <li data-value="8">Нежилые</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right-col">
+          <div class="selectors selector-types"><span class="group"><a href="#" class="active">Купить</a><a href="#">Снять</a><a href="#">На сутки</a></span></div>
+          <div class="selectors right-side selector-sort"><span class="group"><a href="#" class="active">Новые</a><a href="#">Дешевле</a><a href="#">Дороже</a><span class="expandable-selector"><span class="title">...</span>
+                <ul class="items">
+                  <li data-value="1">Новостройки</li>
+                  <li data-value="2">Квартиры</li>
+                  <li data-value="3" class="active">Комнаты</li>
+                  <li data-value="4">Таунхаусы</li>
+                  <li data-value="5">Дома</li>
+                  <li data-value="6">Участки</li>
+                  <li data-value="7">Гаражи</li>
+                  <li data-value="8">Нежилые</li>
+                </ul></span></span></div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="divider-20"></div>
+      <div class="container-main">
+        <div class="left-col">
+          <aside>
+            <form class="filter-side">
+              <section>
+                <div class="prices">
+                  <div class="selector">
+                    <div class="title">Цена в рублях</div>
+                    <ul>
+                      <li data-title="Цена в рублях" class="active"><span class="rub"><i>⃏</i></span></li>
+                      <li data-title="Цена в USD">$</li>
+                      <li data-title="Цена в EURO">&euro;</li>
+                    </ul>
+                  </div>
+                  <div class="radios">
+                    <div class="item">
+                      <input id="rad-1" type="radio" name="rad-1" checked>
+                      <label for="rad-1">В месяц</label>
+                    </div>
+                    <div class="item">
+                      <input id="rad-2" type="radio" name="rad-1">
+                      <label for="rad-2">1 м² / год</label>
+                    </div>
+                  </div>
+                  <div class="range">
+                    <div id="price-from" class="input-hybrid">
+                      <label> <span>от</span>
+                        <input value="200 000" class="title">
+                      </label>
+                      <ul class="items">
+                        <div class="list">
+                          <li data-value="1">100 000</li>
+                          <li data-value="2">150 000</li>
+                          <li data-value="3" class="active">200 000</li>
+                          <li data-value="4">250 000</li>
+                          <li data-value="5">300 000</li>
+                          <li data-value="6">350 000</li>
+                          <li data-value="7">400 000</li>
+                        </div>
+                        <input placeholder="Своя цена" class="val">
+                        <div class="ok">Применить</div>
+                      </ul>
+                    </div>
+                    <div id="price-to" class="input-hybrid">
+                      <label> <span>до</span>
+                        <input value="400 000" class="title">
+                      </label>
+                      <ul class="items">
+                        <div class="list">
+                          <li data-value="1">100 000</li>
+                          <li data-value="2">150 000</li>
+                          <li data-value="3">200 000</li>
+                          <li data-value="4">250 000</li>
+                          <li data-value="5">300 000</li>
+                          <li data-value="6">350 000</li>
+                          <li data-value="7" class="active">400 000</li>
+                        </div>
+                        <input placeholder="Своя цена" class="val">
+                        <div class="ok">Применить</div>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-1" type="checkbox" name="cb-1" checked>
+                    <label for="cb-1">1 комната</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-2" type="checkbox" name="cb-2">
+                    <label for="cb-2">2 комнаты</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-3" type="checkbox" name="cb-3">
+                    <label for="cb-3">3 комнаты</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-4" type="checkbox" name="cb-4">
+                    <label for="cb-4">4 комнаты</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-5" type="checkbox" name="cb-5">
+                    <label for="cb-5">5 и более</label>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-6" type="checkbox" name="cb-6" checked>
+                    <label for="cb-6">Вторичка</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-7" type="checkbox" name="cb-7">
+                    <label for="cb-7">Новостройка</label>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="section-title">Общая площадь, м²</div>
+                <div class="range">
+                  <div id="measure-from" class="input-hybrid">
+                    <label> <span>от</span>
+                      <input value="60" class="title">
+                    </label>
+                    <ul class="items">
+                      <div class="list">
+                        <li data-value="1">40</li>
+                        <li data-value="2">50</li>
+                        <li data-value="3" class="active">60</li>
+                        <li data-value="4">70</li>
+                        <li data-value="5">80</li>
+                        <li data-value="6">90</li>
+                        <li data-value="7">100</li>
+                      </div>
+                      <input placeholder="Своя площадь" class="val">
+                      <div class="ok">Применить</div>
+                    </ul>
+                  </div>
+                  <div id="measure-to" class="input-hybrid">
+                    <label> <span>до</span>
+                      <input value="100" class="title">
+                    </label>
+                    <ul class="items">
+                      <div class="list">
+                        <li data-value="1">40</li>
+                        <li data-value="2">50</li>
+                        <li data-value="3">60</li>
+                        <li data-value="4">70</li>
+                        <li data-value="5">80</li>
+                        <li data-value="6">90</li>
+                        <li data-value="7" class="active">100</li>
+                        <li data-value="8">Больше 100</li>
+                      </div>
+                      <input placeholder="Своя площадь" class="val">
+                      <div class="ok">Применить</div>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-8" type="checkbox" name="cb-8" checked>
+                    <label for="cb-8">Без отделки</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-9" type="checkbox" name="cb-9">
+                    <label for="cb-9">Нужен ремонт</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-10" type="checkbox" name="cb-10">
+                    <label for="cb-10">Нормальный ремонт</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-11" type="checkbox" name="cb-11">
+                    <label for="cb-11">Хороший ремонт</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-12" type="checkbox" name="cb-12">
+                    <label for="cb-12">Евроремонт</label>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="section-title">Этаж</div>
+                <div class="range">
+                  <div id="level-from" class="input-hybrid">
+                    <label> <span>от</span>
+                      <input value="3" class="title">
+                    </label>
+                    <ul class="items">
+                      <div class="list">
+                        <li data-value="1">1</li>
+                        <li data-value="2">2</li>
+                        <li data-value="3" class="active">3</li>
+                        <li data-value="4">4</li>
+                        <li data-value="5">5</li>
+                        <li data-value="6">6</li>
+                        <li data-value="7">7</li>
+                        <li data-value="8">8</li>
+                        <li data-value="9">9</li>
+                      </div>
+                      <input placeholder="Свой этаж" class="val">
+                      <div class="ok">Применить</div>
+                    </ul>
+                  </div>
+                  <div id="level-to" class="input-hybrid">
+                    <label> <span>до</span>
+                      <input value="7" class="title">
+                    </label>
+                    <ul class="items">
+                      <div class="list">
+                        <li data-value="1">1</li>
+                        <li data-value="2">2</li>
+                        <li data-value="3">3</li>
+                        <li data-value="4">4</li>
+                        <li data-value="5">5</li>
+                        <li data-value="6">6</li>
+                        <li data-value="7" class="active">7</li>
+                        <li data-value="8">8</li>
+                        <li data-value="9">9</li>
+                      </div>
+                      <input placeholder="Свой этаж" class="val">
+                      <div class="ok">Применить</div>
+                    </ul>
+                  </div>
+                </div><br>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-13" type="checkbox" name="cb-13" checked>
+                    <label for="cb-13">Не первый</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-14" type="checkbox" name="cb-14">
+                    <label for="cb-14">Не последний</label>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-15" type="checkbox" name="cb-15" checked>
+                    <label for="cb-15">Балкон</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-16" type="checkbox" name="cb-16">
+                    <label for="cb-16">Лоджия</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-17" type="checkbox" name="cb-17">
+                    <label for="cb-17">Фото</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-18" type="checkbox" name="cb-18">
+                    <label for="cb-18">Торг</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-19" type="checkbox" name="cb-19">
+                    <label for="cb-19">Ипотека</label>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-20" type="checkbox" name="cb-20" checked>
+                    <label for="cb-20">От собственников</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-21" type="checkbox" name="cb-21">
+                    <label for="cb-21">От специалистов</label>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="is-date" class="input-select">
+                  <div class="title">За любую дату</div>
+                  <ul class="items">
+                    <li data-value="3" class="active">За любую дату</li>
+                    <li data-value="1">За последний месяц</li>
+                    <li data-value="2">За год</li>
+                  </ul>
+                </div>
+              </section>
+              <section>
+                <div class="checkboxes">
+                  <div class="item">
+                    <input id="cb-22" type="checkbox" name="cb-22" checked>
+                    <label for="cb-22">Убрать рекламу</label>
+                  </div>
+                  <div class="item">
+                    <input id="cb-23" type="checkbox" name="cb-23">
+                    <label for="cb-23">Помнить настройки</label>
+                  </div>
+                </div>
+              </section>
+              <section><a href="#" class="link">Сбросить фильтр</a></section>
+            </form>
+            <div class="sticky-block"><a href="#" class="filter-side link show-on-stuck">Показать фильтр</a><a href="#" class="filter-side link">Получать по почте</a><a href="#" class="filter-side link">История поиска</a>
+              <div class="creeper-wrap">
+                <div class="creeper-wrap-inner">
+                  <div class="banner-1">
+                    <div data-swf="1" class="right-col-250 mb30 banner-250x250 sticky-banner">
+                      <object id="side-bbb-banner-126" type="application/x-shockwave-flash" data="http://v2s.kvadroom.ru/i/bigboss/126.swf" width="250" height="250" style="visibility: visible;">
+                        <param name="wmode" value="opaque">
+                        <param name="flashvars" value="target=_blank&amp;link1=http%3A%2F%2Fwww.kvadroom.ru%2Fgo81.php%3Fo_id%3D126">
+                      </object>
+                    </div>
+                  </div>
+                  <div class="divider-10"></div>
+                  <div class="banner-2">
+                    <div data-swf="0" class="right-col-250 mb30 banner-250x250 sticky-banner">
+                      <div id="side-bbb-banner-297" data-id="297"></div><a href="http://www.kvadroom.ru/go81.php?o_id=297" rel="nofollow" target="_blank"><img src="http://v2s.kvadroom.ru/i/bigboss/297.jpg" alt="" class="page-title-banner-image"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="right-col">
+          <div class="offers-2">
+            <!-- .heading
+            .title 12 535 объявлений
+            .actions
+            	a.active(href="#") Новые
+            	a(href="#") Видео
+            	a(href="#") Много фото
+            	span.group
+            		a(href="#") Дешевле
+            		a(href="#") Дороже
+            	a(href="#") ...
+            
+            -->
+            <div class="list">
+              <div class="item sp"><a href="#" class="photo"><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=11"/></span></span></span></a>
+                <div class="data">
+                  <div class="title">Апартаменты в центре Москвы!</div>
+                  <div class="price">Звоните!&nbsp;
+                  </div>
+                  <div class="desc">Готовые апартаменты со скидкой 20%! М.Белорусская, м. Бауманская. Собственники делают ремонт!</div>
+                  <ul class="transport">
+                    <li>м. Бауманская </li>
+                  </ul>
+                  <div class="phone">+7 (495) 646-04-15 </div>
+                  <div class="company"></div>
+                </div>
+              </div>
+              <div class="item sp"><a href="#" class="photo"><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=12"/></span></span></span></a>
+                <div class="data">
+                  <div class="title">V-House. Дарим 500 000 руб!</div>
+                  <div class="price">188 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Нагорная. 5 мин. от ТТК. Подземный паркинг. Окончание строительства – дек. 2015. Ипотека 11,55%</div>
+                  <ul class="transport">
+                    <li>м. Нагорная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 120-02-43 </div>
+                  <div class="company">Ведис Групп Ведис Групп Ведис Групп Ведис Групп</div>
+                </div>
+              </div>
+              <div class="item sp"><a href="#" class="photo"><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=13"/></span></span></span></a>
+                <div class="data">
+                  <div class="title">Невесомые цены от 5 млн.руб!</div>
+                  <div class="price">5 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Квартиры бизнес-класса в ЖК «Лайнер» на Ходынке, 300м от метро. Закрытый двор, рядом парк.</div>
+                  <ul class="transport">
+                    <li>м. Динамо </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="company">Компания &laquo;Магистрат&raquo;</div>
+                </div>
+              </div>
+              <div class="item offer viewed"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=14"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ленинского комсомола, 413, корп 3</div>
+                  <div class="price">14 322 151&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 4 комнаты, 146 м²</div>
+                  <ul class="transport">
+                    <li>ст. Очаково </li>
+                  </ul>
+                  <div class="phone">+7 (495) 983–30–00 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=15"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ленинского комсомола, 413, корп 3</div>
+                  <div class="price">14 322 151&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 4 комнаты, 146 м²</div>
+                  <ul class="transport">
+                    <li>ст. Очаково </li>
+                  </ul>
+                  <div class="phone">+7 (495) 983–30–00 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer favorite"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=16"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ленинского комсомола, 413, корп 3</div>
+                  <div class="price">14 322 151&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 4 комнаты, 146 м²</div>
+                  <ul class="transport">
+                    <li>ст. Очаково </li>
+                  </ul>
+                  <div class="phone">+7 (495) 983–30–00 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item notautherized"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=17"/></span></span></span><span class="info"><span class="ico pictures">1/6</span><span class="ico video">3</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="company"></div>
+                  <div class="actions"><a href="#" data-title="Хочу"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title="Не хочу"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item premium"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=18"/></span></span></span><span class="info"><span class="ico pictures">1/6</span><span class="ico video">1</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=19"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ленинского комсомола, 413, корп 3</div>
+                  <div class="price">14 322 151&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 4 комнаты, 146 м²</div>
+                  <ul class="transport">
+                    <li>ст. Очаково </li>
+                  </ul>
+                  <div class="phone">+7 (495) 983–30–00 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer favorite"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=110"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ленинского комсомола, 413, корп 3</div>
+                  <div class="price">14 322 151&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 4 комнаты, 146 м²</div>
+                  <ul class="transport">
+                    <li>ст. Очаково </li>
+                  </ul>
+                  <div class="phone">+7 (495) 983–30–00 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item notautherized"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=111"/></span></span></span><span class="info"><span class="ico pictures">1/6</span><span class="ico video">3</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="company"></div>
+                  <div class="actions"><a href="#" data-title="Хочу"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title="Не хочу"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item premium"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=112"/></span></span></span><span class="info"><span class="ico pictures">1/6</span><span class="ico video">1</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item-collapsed">
+                <div class="title">ул. Смирновская, 24</div>
+                <div class="actions"><a href="#"><i class="icon-font icon-font-arrow-down"></i>Показать</a></div>
+              </div>
+              <div class="item offer viewed"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=113"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer viewed"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=114"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+              <div class="item offer viewed"><a href="#" class="photo"><span class="slide-left"></span><span class="slide-right"></span><span class="frames"><span class="frames-content"><span class="frame loaded"><img src="http://lorempixel.com/240/180/city/?r=115"/></span></span></span><span class="info"><span class="ico pictures">1/6</span></span></a>
+                <div class="data">
+                  <div class="title">ул. Ярцевская, 20</div>
+                  <div class="price">21 000 000&nbsp;<span class="valute rub"><i>⃏</i></span>
+                  </div>
+                  <div class="desc">Продается квартира, 3 комнаты, 122 м²</div>
+                  <ul class="transport">
+                    <li>м. Молодежная </li>
+                  </ul>
+                  <div class="phone">+7 (495) 112-20-20 </div>
+                  <div class="actions"><a href="#" data-title=" "><i class="icon-font icon-font-compare"></i></a><a href="#" data-title=" " class="heart"><i class="icon-font icon-font-heart_stroke"></i></a><a href="#" data-title=" " class="trash"><i class="icon-font icon-font-trash-big"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination-block">
+            <ul class="pagination">
+              <li><a href="#" rel="nofollow">1</a></li>
+              <li><a href="#" rel="nofollow">2</a></li>
+              <li><a href="#" rel="nofollow">3</a></li>
+              <li><a href="#" rel="nofollow">4</a></li>
+              <li class="active"><span>5</span></li>
+              <li><a href="#" rel="nofollow">6</a></li>
+              <li><a href="#" rel="nofollow">7</a></li>
+              <li><a href="#" rel="nofollow">8</a></li>
+              <li><a href="#" rel="nofollow">9</a></li>
+              <li class="ellipsis"><a href="#" rel="nofollow">10</a></li>
+              <li><a href="#" rel="nofollow">6063</a></li>
+            </ul>
+          </div>
+          <div class="kv-show-more dash-button link-dotted"><span class="dotted">Следующая страница</span></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <script src="js/offers-2.0.js"></script>
+      <footer class="footer footer-new">
+        <div class="footer-content">
+          <div class="left">
+            <div class="heading"><span class="item">&copy; 2005 – 2015 Квадрум <sup>®</sup></span><a rel="nofollow" target="_blank" href="http://help.kvadroom.ru/" class="item kiv-e">Помощь</a><a rel="nofollow" target="_blank" href="http://my.kvadroom.ru/add/" class="item kiv-e bold">Разместить объявление</a></div>
+            <div class="sub"><a rel="nofollow" target="_blank" href="http://help.kvadroom.ru/legal/agreement/" class="item kiv-e">Пользовательское соглашение</a><a rel="nofollow" target="_blank" href="http://help.kvadroom.ru/legal/privacy/" class="item kiv-e">Политика конфиденциальности</a><a target="_blank" href="http://reg.kvadroom.ru/" class="item kiv-e">Недвижимость в регионах</a></div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
