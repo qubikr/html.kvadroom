@@ -2,6 +2,78 @@
 @elements-border-color-hover: @elements-border-color - 15;
 
 body.version3 {
+	.checkboxFilter {
+		position: absolute;
+		left: -1000px;
+
+		+label {
+			cursor: pointer;
+			position: relative;
+			padding-left: 27px;
+			margin-bottom: 10px;
+			user-select: none;
+
+			&:before {
+				display: block;
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				border: 1px solid @elements-border-color;
+				border-radius: 2px;
+				transition: .2s;
+			}
+
+			&:after {
+				display: block;
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				content: '\e667';
+				font-family: 'icomoon';
+				color: #666047;
+				top: 6px;
+				left: 6px;
+				border-radius: 2px;
+				opacity: 0;
+				transform: scale(0);
+				transition: .2s;
+				text-indent: -10px;
+				font-size: 32px;
+				line-height: 7px;
+				text-indent: -12px;
+			}
+
+			&:hover {
+				&:before {
+					border-color: @elements-border-color-hover;
+				}
+			}
+		}
+
+		&:checked {
+			+label {
+				&:before {
+					background: #FFF2B3;
+					border: 1px solid #FFC10A;
+				}
+
+				&:after {
+					opacity: 1;
+					transform: scale(1);
+				}
+
+				&:hover {
+					&:before {
+						border-color: #FFC10A - 15;
+					}
+				}
+			}
+		}
+	}
+
 	background: #F7F7F7;
 
 	.wrapper {
@@ -63,6 +135,83 @@ body.version3 {
 			padding-top: 15px !important;
 			padding-bottom: 15px !important;
 			margin-bottom: 10px !important;
+		}
+	}
+
+	.main-filter {
+		background: #fff;
+		box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+		border-radius: 3px;
+
+		.top-tab span.counter {
+			color: #666;
+		}
+
+		input[type="checkbox"].custom {
+			.checkboxFilter();
+
+			+label {
+				margin-bottom: 0;
+
+				&:before {
+					top: -2px;
+				}
+
+				&:after {
+					top: 4px;
+				}
+			}
+		}
+
+		.row.centered {
+			text-align: center;
+		}
+
+		.close {
+			color: #666;
+			font-size: 13px;
+			text-decoration: none;
+			position: relative;
+			display: inline-block;
+			bottom: -3px;
+			line-height: 1;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 0;
+				bottom: -2px;
+				left: 0;
+				position: absolute;
+				border-bottom: 1px dotted #666;
+			}
+
+			&:hover {
+				color: #333;
+
+				&:after {
+					border-bottom-color: #333;
+				}
+			}
+		}
+
+		.search-string {
+			border-color: @elements-border-color;
+			border-radius: 2px;
+
+			&.focused {
+				box-shadow: @elements-border-color-hover;
+			}
+
+			&:hover {
+				background-color: transparent;
+				border-color: @elements-border-color-hover;
+
+				input.entry {
+					background-color: transparent;
+				}
+			}
 		}
 	}
 
@@ -379,7 +528,7 @@ body.version3 {
 					content: '';
 					top: 0;
 					left: 0;
-					border: 1px solid #CECECE;
+					border: 1px solid @elements-border-color;
 					border-radius: 20px;
 					transition: .2s;
 				}
@@ -398,6 +547,12 @@ body.version3 {
 					transform: scale(0);
 					transition: .2s;
 				}
+
+				&:hover {
+					&:before {
+						border-color: @elements-border-color-hover;
+					}
+				}
 			}
 
 			&:checked {
@@ -410,69 +565,20 @@ body.version3 {
 					&:after {
 						opacity: 1;
 						transform: scale(1);
+					}
+
+					&:hover {
+						&:before {
+							border-color: #FFC10A - 15;
+						}
 					}
 				}
 			}
 		}
 
+
 		input[type="checkbox"] {
-			position: absolute;
-			left: -1000px;
-
-			+label {
-				cursor: pointer;
-				position: relative;
-				padding-left: 27px;
-				margin-bottom: 10px;
-				user-select: none;
-
-				&:before {
-					display: block;
-					width: 18px;
-					height: 18px;
-					position: absolute;
-					content: '';
-					top: 0;
-					left: 0;
-					border: 1px solid #CECECE;
-					border-radius: 2px;
-					transition: .2s;
-				}
-
-				&:after {
-					display: block;
-					width: 8px;
-					height: 8px;
-					position: absolute;
-					content: '\e667';
-					font-family: 'icomoon';
-					color: #666047;
-					top: 6px;
-					left: 6px;
-					border-radius: 2px;
-					opacity: 0;
-					transform: scale(0);
-					transition: .2s;
-					text-indent: -10px;
-					font-size: 32px;
-					line-height: 7px;
-					text-indent: -12px;
-				}
-			}
-
-			&:checked {
-				+label {
-					&:before {
-						background: #FFF2B3;
-						border: 1px solid #FFC10A;
-					}
-
-					&:after {
-						opacity: 1;
-						transform: scale(1);
-					}
-				}
-			}
+			.checkboxFilter();
 		}
 
 		.prices {
