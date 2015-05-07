@@ -1,7 +1,7 @@
 .sp-2-cards {
 	.item {
 		display: block;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 		text-decoration: none;
 		color: #333;
 		line-height: 1.5em;
@@ -15,6 +15,7 @@
 			overflow: hidden;
 			position: relative;
 			border-radius: 3px 3px 0 0;
+			background-color: #eee;
 
 			&:before {
 				display: block;
@@ -67,6 +68,8 @@
 			transition: .25s;
 			overflow: hidden;
 			transition-delay: .1s;
+			opacity: 0;
+			transition: .15s;
 		}
 
 		.foot {
@@ -89,7 +92,139 @@
 			.desc {
 				height: 5em;
 				padding-bottom: 20px;
+				opacity: 1;
 			}
 		}
+	}
+}
+
+.sp-2-fantastic {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: #fff;
+	margin-bottom: 30px;
+	padding: 24px 26px;
+	line-height: 1.5em;
+
+	.left-side {
+		float: left;
+	}
+
+	.right-side {
+		float: right;
+	}
+
+	.top {
+		display: block;
+		margin-bottom: 20px;
+
+		.clearfix();
+
+		.left-side {
+			width: 360px;
+		}
+
+		.right-side {
+			width: 240px;
+		}
+	}
+
+	.map {
+		margin-bottom: 20px;
+		display: block;
+		position: relative;
+
+		.fullscreen {
+			background-color: rgba(0, 0, 0, .3);
+			color: #D1D1D1;
+			top: 0;
+			right: 0;
+			position: absolute;
+			z-index: 3;
+			display: block;
+			width: 40px;
+			height: 40px;
+			border-radius: 0 0 0 4px;
+			transition: .1s;
+			cursor: pointer;
+			line-height: 40px;
+			text-align: center;
+
+			&:after {
+				font-family: 'icomoon';
+  				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font-size: 32px;
+				width: 32px;
+				height: 32px;
+				zoom: 1;
+				line-height: 40px;
+				display: inline-block;
+				content: "\e618";
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, .4);
+				color: #eee;
+			}
+		}
+	}
+
+	.phone {
+		font-weight: bold;
+		font-size: 27px;
+		text-align: center;
+		width: 100%;
+		display: block;
+		padding: 24px 26px 0;
+		margin-left: -26px;
+		border-top: 1px solid #CCC;
+		margin-top: 24px;
+	}
+
+	.bottom {
+		display: block;
+		.clearfix();
+
+		.left-side,
+		.right-side {
+			width: 49%;
+		}
+	}
+
+	.link {
+		color: #2E8AE6;
+		text-decoration: underline;
+
+		&:hover {
+			color: #f00;
+		}
+	}
+
+	.subtitle {
+		display: block;
+		font-size: 14px;
+		color: #666;
+		margin-bottom: 10px;
+	}
+
+	.title {
+		font-size: 27px;
+		display: block;
+		font-weight: bold;
+		line-height: 1.2em;
+		margin-bottom: 0.3em;
+		color: #000;
+	}
+
+	.desc {
+		display: block;
+		margin-bottom: 12px;
 	}
 }
