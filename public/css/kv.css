@@ -17961,7 +17961,7 @@ body.version3 .filter-side .range .input-hybrid:last-child {
   opacity: 1;
 }
 .sp-2-fantastic {
-  border: 1px solid #ccc;
+  border: 1px solid #D9D9D9;
   border-radius: 4px;
   background: #fff;
   margin-bottom: 30px;
@@ -18042,7 +18042,7 @@ body.version3 .filter-side .range .input-hybrid:last-child {
   display: block;
   padding: 24px 26px 0;
   margin-left: -26px;
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #D9D9D9;
   margin-top: 24px;
 }
 .sp-2-fantastic .bottom {
