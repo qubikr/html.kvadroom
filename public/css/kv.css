@@ -17128,6 +17128,19 @@ body.version3 .offers-2 .page-delimiter-dummy {
 body.version3 {
   background: #F7F7F7;
 }
+body.version3 .kv-show-more {
+  background-color: #2E8AE6 !important;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 3px;
+}
+body.version3 .kv-show-more:hover {
+  background-color: #3894f0 !important;
+}
+body.version3 .kv-show-more .dotted {
+  color: #fff;
+  border-bottom: none;
+}
 body.version3 .page-title-header {
   font-size: 27px;
   -webkit-transition: .2s;

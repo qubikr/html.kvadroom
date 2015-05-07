@@ -2,6 +2,22 @@
 @elements-border-color-hover: @elements-border-color - 15;
 
 body.version3 {
+	.kv-show-more {
+		background-color: #2E8AE6 !important;
+		height: 50px;
+		line-height: 50px;
+		border-radius: 3px;
+
+		&:hover {
+			background-color: #2E8AE6 + 10 !important;
+		}
+
+		.dotted {
+			color: #fff;
+			border-bottom: none;
+		}
+	}
+
 	.page-title-header {
 		font-size: 27px;
 		transition: .2s;
