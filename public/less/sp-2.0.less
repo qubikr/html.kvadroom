@@ -129,6 +129,12 @@
 		}
 	}
 
+	.image {
+		width: 240px;
+		height: 180px;
+		display: block;
+	}
+
 	.map {
 		margin-bottom: 20px;
 		display: block;
@@ -221,10 +227,17 @@
 		line-height: 1.2em;
 		margin-bottom: 0.3em;
 		color: #000;
+		transition: .15s;
 	}
 
 	.desc {
 		display: block;
 		margin-bottom: 12px;
+	}
+
+	&:hover {
+		.title {
+			color: #2E8AE6;
+		}
 	}
 }
