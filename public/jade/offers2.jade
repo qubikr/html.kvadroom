@@ -5,11 +5,15 @@ block content
 
 	include partials/breadcrumbs
 
-	h1.page-title-header Продажа квартир, Москва и Московская область
+	h1.page-title-header 
+		|Продажа квартир, Москва и Московская область
+		span.expand-collapse-filter-top Изменить регион
 
-	include partials/filter-short
+	.top-filter
+		include partials/filter-short
+		.divider-20
 
-	.divider-40
+	.divider-20
 
 	.container-main
 		.left-col

@@ -238,4 +238,18 @@ $(function(){
             scrollTop: 0
         }, 600, "swing");
 	});
+
+	$('.expand-collapse-filter-top').on('click', function(e){
+		e.preventDefault();
+
+		$('.top-filter').show();
+		$('.page-title-header').hide();
+	});
+
+	$('.top-filter .close').on('click', function(e){
+		e.preventDefault();
+
+		$('.top-filter').hide();
+		$('.page-title-header').show();
+	});
 });

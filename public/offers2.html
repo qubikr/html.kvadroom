@@ -9,6 +9,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.KVSearchString.js"></script>
     <script src="js/jquery.KVLoadingElement.js"></script>
+    <script src="js/jquery.KVMetaLink.js"></script>
     <script src="js/clickuotside.js"></script>
     <script src="js/ractive.js"></script>
     <script src="js/bloodhound.js"></script>
@@ -112,41 +113,40 @@
           <li class="item"><a href="#" class="link kiv-e"><span>2-комнатные</span></a></li>
         </ul>
       </div>
-      <h1 class="page-title-header">Продажа квартир, Москва и Московская область</h1>
-      <div class="main-filter-container">
-        <div data-region_id="11" data-region_name="Москва" data-subregion_id="14" data-subregion_name="Московская область" data-region_domain="http://www.kvadroom.ru" data-map_h="37.619900" data-map_w="55.753677" data-zoom="0" data-tab_underground="1" data-tab_highway="1" data-tab_railway="1" data-tab_map="1" data-subregion_selected="1" class="main-filter short">
-          <div id="top-tabs" class="row mt0 ready">
-            <div class="colBlock">
-              <div class="top-tab city"><span data-type="city" class="title kiv-e">Москва</span></div>
+      <h1 class="page-title-header">
+         
+        Продажа квартир, Москва и Московская область<span class="expand-collapse-filter-top">Изменить регион</span>
+      </h1>
+      <div class="top-filter">
+        <div class="main-filter-container">
+          <div data-region_id="11" data-region_name="Москва" data-subregion_id="14" data-subregion_name="Московская область" data-region_domain="http://www.kvadroom.ru" data-map_h="37.619900" data-map_w="55.753677" data-zoom="0" data-tab_underground="1" data-tab_highway="1" data-tab_railway="1" data-tab_map="1" data-subregion_selected="1" class="main-filter short">
+            <div id="top-tabs" class="row mt0 ready">
+              <div class="colBlock">
+                <div class="top-tab city"><span data-type="city" class="title kiv-e">Москва</span></div>
+              </div>
+              <div class="colBlock">
+                <input id="subcity-add" type="checkbox" class="custom">
+                <label for="subcity-add">Московская область</label>
+              </div>
+              <div class="colBlock right r0">
+                <div class="top-tab"><span data-type="underground" class="title kiv-e">Метро</span><span class="counter"></span></div>
+                <div class="top-tab"><span data-type="railway" class="title kiv-e">Электрички</span><span class="counter"></span></div>
+                <div class="top-tab"><span data-type="highway" class="title kiv-e">Шоссе</span><span class="counter"></span></div>
+                <div class="top-tab"><span data-type="map" class="title kiv-e">Карта</span><span class="counter"></span></div>
+              </div>
             </div>
-            <div class="colBlock">
-              <input id="subcity-add" type="checkbox" class="custom">
-              <label for="subcity-add">Московская область</label>
+            <div class="row">
+              <p data-placeholder="Введите метро, район, названия ЖК, город ..." data-width="550" class="search-string">
+                <input tabindex="1" placeholder="Введите метро, район, названия ЖК, город ..." style="width: 550px;" class="entry animated"><span class="train"></span>
+              </p>
+              <ul class="search-selector"></ul>
             </div>
-            <div class="colBlock right r0">
-              <div class="top-tab"><span data-type="underground" class="title kiv-e">Метро</span><span class="counter"></span></div>
-              <div class="top-tab"><span data-type="railway" class="title kiv-e">Электрички</span><span class="counter"></span></div>
-              <div class="top-tab"><span data-type="highway" class="title kiv-e">Шоссе</span><span class="counter"></span></div>
-              <div class="top-tab"><span data-type="map" class="title kiv-e">Карта</span><span class="counter"></span></div>
-            </div>
+            <div class="row centered"><a href="#" class="close">Закрыть</a></div>
           </div>
-          <div class="row">
-            <p data-placeholder="Введите метро, район, названия ЖК, город ..." data-width="550" class="search-string">
-              <input tabindex="1" placeholder="Введите метро, район, названия ЖК, город ..." style="width: 550px;" class="entry animated"><span class="train"></span>
-            </p>
-            <ul class="search-selector"></ul>
-          </div>
-          <div class="row centered"><a href="#" class="close">Закрыть</a></div>
         </div>
-        <div class="row attached">
-          <div class="filter-flash-message">
-            <!-- noindex-->Нужен полный поиск, история поиска, избранное, настройки и многое другое? Все бесплатно и доступно <a href="http://my.kvadroom.ru/?reg=1&amp;from=www.kvadroom.ru%2Fkupit-kvartiru%2Fdvuhkomnatnie-kvartiri%2Ftorg%2Fipoteka%2Ffoto%2Fbalkon%2F%3Fr_m%255B0%255D%3D11%26r_m%255B1%255D%3D14%26price_to%3D2%26price_from%3D2%26vtorichka%3D1" rel="nofollow">зарегистрированным</a> пользователям!
-            <!-- /noindex-->
-          </div>
-          <div class="col right"></div>
-        </div>
+        <div class="divider-20"></div>
       </div>
-      <div class="divider-40"></div>
+      <div class="divider-20"></div>
       <div class="container-main">
         <div class="left-col">
           <div class="filter">

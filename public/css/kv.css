@@ -17128,6 +17128,41 @@ body.version3 .offers-2 .page-delimiter-dummy {
 body.version3 {
   background: #F7F7F7;
 }
+body.version3 .page-title-header {
+  font-size: 27px;
+  -webkit-transition: .2s;
+          transition: .2s;
+}
+body.version3 .page-title-header .expand-collapse-filter-top {
+  color: #2E8AE6;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+body.version3 .page-title-header .expand-collapse-filter-top:after {
+  border-bottom: 1px dotted #2E8AE6;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 0;
+  width: 100%;
+}
+body.version3 .page-title-header .expand-collapse-filter-top:hover {
+  color: #f00;
+}
+body.version3 .page-title-header .expand-collapse-filter-top:hover:after {
+  border-color: #f00;
+}
+body.version3 .top-filter {
+  display: none;
+}
 body.version3 .checkboxFilter {
   position: absolute;
   left: -1000px;

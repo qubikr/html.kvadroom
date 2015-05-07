@@ -2,6 +2,47 @@
 @elements-border-color-hover: @elements-border-color - 15;
 
 body.version3 {
+	.page-title-header {
+		font-size: 27px;
+		transition: .2s;
+
+		.expand-collapse-filter-top {
+			color: #2E8AE6;
+			font-size: 14px;
+			font-weight: normal;
+			font-style: italic;
+			margin-left: 20px;
+			cursor: pointer;
+			position: relative;
+			display: inline-block;
+			line-height: 1;
+
+
+			&:after {
+				border-bottom: 1px dotted #2E8AE6;
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				height: 0;
+				width: 100%;
+			}
+
+			&:hover {
+				color: #f00; 
+
+				&:after {
+					border-color: #f00;
+				}
+			}
+		}
+	}
+
+	.top-filter {
+		display: none;
+	}
+
 	.checkboxFilter {
 		position: absolute;
 		left: -1000px;
