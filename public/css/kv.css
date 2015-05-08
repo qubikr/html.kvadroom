@@ -16511,6 +16511,12 @@ ul.circular-switcher li.active {
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
+body.version3 .offers-2 .no-results-block {
+  font-size: 19px;
+  text-align: center;
+  width: 400px;
+  margin: 40px auto 50px;
+}
 body.version3 .offers-2 .heading {
   margin: 0 0 30px;
   zoom: 1;
@@ -17547,11 +17553,13 @@ body.version3 .selectors .group .expandable-selector {
 }
 body.version3 .selectors .group a:first-child,
 body.version3 .selectors .group .expandable-selector:first-child {
-  border-radius: 3px 0 0 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 body.version3 .selectors .group a:last-child,
 body.version3 .selectors .group .expandable-selector:last-child {
-  border-radius: 0 3px 3px 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 body.version3 .selectors.right-side {
   float: right;
