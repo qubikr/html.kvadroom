@@ -85,9 +85,8 @@ block content
 
 							.range
 								.input-hybrid#price-from
-									label 
-										span от
-										input.title(value="200 000")
+									label
+										input.title(value="400 000", placeholder="от")
 
 									ul.items
 										.list
@@ -98,13 +97,10 @@ block content
 											li(data-value="5") 300 000
 											li(data-value="6") 350 000
 											li(data-value="7") 400 000
-										input.val(placeholder="Своя цена")
-										.ok Применить
 
 								.input-hybrid#price-to
-									label 
-										span до
-										input.title(value="400 000")
+									label
+										input.title(value="400 000", placeholder="до")
 
 									ul.items
 										.list
@@ -115,8 +111,6 @@ block content
 											li(data-value="5") 300 000
 											li(data-value="6") 350 000
 											li.active(data-value="7") 400 000
-										input.val(placeholder="Своя цена")
-										.ok Применить
 							
 					section
 						.checkboxes
@@ -154,9 +148,8 @@ block content
 						.section-title Общая площадь, м²
 						.range
 							.input-hybrid#measure-from
-								label 
-									span от
-									input.title(value="60")
+								label
+									input.title(value="60", placeholder="от")
 
 								ul.items
 									.list
@@ -167,13 +160,10 @@ block content
 										li(data-value="5") 80
 										li(data-value="6") 90
 										li(data-value="7") 100
-									input.val(placeholder="Своя площадь")
-									.ok Применить
 
 							.input-hybrid#measure-to
-								label 
-									span до
-									input.title(value="100")
+								label
+									input.title(value="100", placeholder="до")
 
 								ul.items
 									.list
@@ -214,9 +204,8 @@ block content
 						.section-title Этаж
 						.range
 							.input-hybrid#level-from
-								label 
-									span от
-									input.title(value="3")
+								label
+									input.title(value="3", placeholder="от")
 
 								ul.items
 									.list
@@ -229,13 +218,10 @@ block content
 										li(data-value="7") 7
 										li(data-value="8") 8
 										li(data-value="9") 9
-									input.val(placeholder="Свой этаж")
-									.ok Применить
 
 							.input-hybrid#level-to
 								label 
-									span до
-									input.title(value="7")
+									input.title(value="7", placeholder="до")
 
 								ul.items
 									.list
@@ -248,8 +234,6 @@ block content
 										li.active(data-value="7") 7
 										li(data-value="8") 8
 										li(data-value="9") 9
-									input.val(placeholder="Свой этаж")
-									.ok Применить
 
 						br
 
@@ -354,8 +338,41 @@ block content
 
 				.list
 					.no-results-block 
-						p Объявлений по вашему запросу не найдено.  Измените параметры поиска.
-						p Похожие объявления:
+						.texts
+							img(src="/i/cat.png")
+							p По вашему запросу ничего не найдено.
+							p: em 
+								|&laquo;2-комнатные квартиры в Геленджике,
+								br
+								|от 5 000 000 до 4 000 000&raquo;
+							p Поменяйте параметры поиска.
+
+						hr
+						.subheader Может пригодиться
+
+						hr
+						.subheader Уверены, вас это заинтересует
+
+						.sp-2-cards
+							a.spitem(href="#", target="_blank")
+								span.image: img(src="http://lorempixel.com/300/225/city/?r=0")
+								span.info
+									span.title «Эко Видное». 4км от Москвы
+									span.desc Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+									span.foot
+										|ООО «10 квартал»
+										br
+										|+7 (495) 510-10-94
+
+							a.spitem(href="#", target="_blank")
+								span.image: img(src="http://lorempixel.com/300/225/city/?r=1")
+								span.info
+									span.title «Эко Видное». 4км от Москвы
+									span.desc Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+									span.foot
+										|ООО «10 квартал»
+										br
+										|+7 (495) 510-10-94
 
 					+offer(1, 'sp', false, 0, 0, 'Апартаменты в центре Москвы!', 'Звоните!', 'Готовые апартаменты со скидкой 20%! М.Белорусская, м. Бауманская. Собственники делают ремонт!', ['м. Бауманская'], '+7 (495) 646-04-15', '')
 					+offer(2, 'sp', false, 0, 0, 'V-House. Дарим 500 000 руб!', '188 000', 'Нагорная. 5 мин. от ТТК. Подземный паркинг. Окончание строительства – дек. 2015. Ипотека 11,55%', ['м. Нагорная'], '+7 (495) 120-02-43', 'Ведис Групп Ведис Групп Ведис Групп Ведис Групп')
