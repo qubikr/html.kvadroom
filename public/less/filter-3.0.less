@@ -214,12 +214,43 @@ body.version3 {
 		}
 
 		hr {
-			margin: 20px 0 30px;
+			margin: 20px 0 25px;
 		}
 
 		.subheader {
 			font-size: 13px;
 			margin-bottom: 30px;
+		}
+
+		.interesting-links {
+			text-align: left;
+			padding-left: 80px;
+			margin-bottom: 50px;
+
+			>div {
+				margin-bottom: 15px;
+			}
+
+			a {
+				font-size: 16px;
+				display: inline-block;
+				position: relative;
+				color: #2E8AE6;
+
+				i {
+					position: absolute;
+					top: -4px;
+					left: -40px;
+					color: #ACACAC
+				}
+
+				.icon-font-arrow_up {
+					transform: rotateZ(90deg);
+					font-size: 28px;
+					top: -2px;
+					left: -42px;
+				}
+			}
 		}
 	}
 
@@ -598,8 +629,7 @@ body.version3 {
 		.group {
 			margin: 0 5px 0 0;
 
-			a,
-			.expandable-selector {
+			a, .expandable-selector {
 				margin: 0 0 0 -1px;
 				border-radius: 0;
 
