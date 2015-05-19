@@ -9,6 +9,15 @@
 		padding-bottom: 151px;
 		position: relative;
 		width: 300px;
+		border-radius: 3px;
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		transition: .2s;
+		float: left;
+		margin-right: 20px;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
 
 		.image {
 			display: block;
@@ -81,6 +90,8 @@
 		}
 
 		&:hover {
+			box-shadow: 0 5px 18px rgba(0, 0, 0, .125);
+
 			.image {
 				&:before {
 					opacity: 1;
@@ -92,7 +103,7 @@
 			}
 
 			.desc {
-				height: 5em;
+				height: 5.5em;
 				padding-bottom: 20px;
 				opacity: 1;
 			}

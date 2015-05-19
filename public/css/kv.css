@@ -18609,6 +18609,15 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
   padding-bottom: 151px;
   position: relative;
   width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-transition: .2s;
+          transition: .2s;
+  float: left;
+  margin-right: 20px;
+}
+.sp-2-cards .spitem:nth-child(3n) {
+  margin-right: 0;
 }
 .sp-2-cards .spitem .image {
   display: block;
@@ -18678,6 +18687,9 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
   font-size: 14px;
   line-height: 1.5em;
 }
+.sp-2-cards .spitem:hover {
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.125);
+}
 .sp-2-cards .spitem:hover .image:before {
   opacity: 1;
 }
@@ -18685,7 +18697,7 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
   color: #2E8AE6;
 }
 .sp-2-cards .spitem:hover .desc {
-  height: 5em;
+  height: 5.5em;
   padding-bottom: 20px;
   opacity: 1;
 }
