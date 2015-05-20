@@ -304,6 +304,11 @@ ul.circular-switcher {
     display: inline-block;
     margin-left: 15px;
     cursor: pointer;
+    padding: 4px 0;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
 
     &.city {
       font-weight: bold;
@@ -321,6 +326,12 @@ ul.circular-switcher {
 
       &.counter {
         color: #00A6A6
+      }
+    }
+
+    &.link {
+      span {
+        border-bottom: none;
       }
     }
 

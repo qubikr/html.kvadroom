@@ -1,13 +1,25 @@
 .main-filter-container
 	.main-filter.short(data-region_id='11', data-region_name='Москва', data-subregion_id='14', data-subregion_name='Московская область', data-region_domain='http://www.kvadroom.ru', data-map_h='37.619900', data-map_w='55.753677', data-zoom='0', data-tab_underground='1', data-tab_highway='1', data-tab_railway='1', data-tab_map='1', data-subregion_selected='1')
-		#top-tabs.row.mt0.ready
+		.row.mt0
 			.colBlock
-				.top-tab.city
-					span.title.kiv-e(data-type='city') Москва
+				.top-tab.link
+					span.title.kiv-e Краснодар
+				.top-tab.link
+					span.title.kiv-e Сочи
+				.top-tab.link
+					span.title.kiv-e Адлер
+				.top-tab.link
+					span.title.kiv-e Новороссийск
+
+		.row
+			p.search-string(data-placeholder='Введите метро, район, названия ЖК, город ...', data-width='550')
+				input.entry.animated(tabindex='1', placeholder='Введите метро, район, названия ЖК, город ...', style='width: 550px;')
+				span.train
+				
+			ul.search-selector
+
+		#top-tabs.row.ready
 			.colBlock
-				input#subcity-add.custom(type='checkbox')
-				label(for='subcity-add') Московская область
-			.colBlock.right.r0
 				.top-tab
 					span.title.kiv-e(data-type='underground') Метро
 					span.counter
@@ -20,12 +32,7 @@
 				.top-tab
 					span.title.kiv-e(data-type='map') Карта
 					span.counter
-		.row
-			p.search-string(data-placeholder='Введите метро, район, названия ЖК, город ...', data-width='550')
-				input.entry.animated(tabindex='1', placeholder='Введите метро, район, названия ЖК, город ...', style='width: 550px;')
-				span.train
-				
-			ul.search-selector
 
-		.row.centered
-			a.close(href="#") Закрыть
+			.colBlock.right
+				a.close(href="#") Закрыть
+			
