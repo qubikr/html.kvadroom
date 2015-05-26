@@ -1,0 +1,46 @@
+.panoram {
+	height: 420px;
+	background: url('../i/city.jpg') top center;
+	background-size: cover;
+
+	.inner {
+		width: @page-width;
+		margin: 0 auto;
+		padding: 85px 0;
+		text-align: center;
+	}
+
+	.title {
+		font-size: 36px;
+		font-weight: bold;
+		color: #fff;
+		margin-bottom: 48px;
+	}
+}
+
+.btn {
+	border-radius: 2px;
+	font-size: 19px;
+	font-weight: bold;
+	line-height: 50px;
+	height: 50px;
+	min-width: 200px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	transition: .125s;
+	text-decoration: none !important;
+
+	&:active {
+		transform: translateY(1px);
+	}
+
+	&.blue {
+		background: #2E8AE6;
+		color: #FFFFFF;
+
+		&:hover {
+			background: #2E8AE6 + 15;
+		}
+	}
+}

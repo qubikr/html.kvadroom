@@ -75,6 +75,18 @@ $(function(){
 
 			co.bind();
 
+			$dd.removeClass('top');
+
+			var ddExpandedHeight = $dd.find('li:not(.hide)').length * $dd.height() + $dd.height(),
+				ddExpandedStartPositionTop = $dd.offset().top - ddExpandedHeight + $dd.height();
+				ddExpandedEndPositionBottom = ddExpandedHeight + $dd.offset().top;
+
+			console.log(ddExpandedStartPositionTop)
+
+			if(ddExpandedStartPositionTop > $(window).scrollTop() && $(window).height() + $(window).scrollTop() < ddExpandedEndPositionBottom){
+				$dd.addClass('top');
+			}
+
 			$dd.addClass('active');
 
 			$dd.find('li.highlight').removeClass('highlight');
@@ -92,13 +104,13 @@ $(function(){
 
 				switch(e.keyCode){
 					case 27 : {
-						$dd.removeClass('active');
+						$dd.removeClass('active top');
 						$(document).off('keydown.filter3dropdown');
 					} break;
 
 					case 13 : {
 						$dd.find('li.highlight').trigger('click');
-						$dd.removeClass('active');
+						$dd.removeClass('active top');
 						$(document).off('keydown.filter3dropdown');
 					} break;
 
@@ -157,7 +169,7 @@ $(function(){
 					}
 				}
 
-				$dd.removeClass('active');
+				$dd.removeClass('active top');
 				e.stopPropagation();
 			});
 
@@ -173,7 +185,7 @@ $(function(){
 							if(e.keyCode === 13){
 								$dd.find('.title').val($(this).val());
 								$(this).off('keyup focus');
-								$dd.removeClass('active');
+								$dd.removeClass('active top');
 								$(this).val('');
 							}
 						});
@@ -181,14 +193,14 @@ $(function(){
 					.focus();
 
 			$dd.find('.ok').off('click').on('click', function(e){
-				$dd.removeClass('active');
+				$dd.removeClass('active top');
 				$dd.find('.title').val($dd.find('.val').val());
 				e.preventDefault();
 				e.stopPropagation();
 			});
 		}else{
 			$dd.find('li.highlight').removeClass('highlight');
-			$dd.removeClass('active');
+			$dd.removeClass('active top');
 			$(document).off('keydown.filter3dropdown');
 		}
 	});

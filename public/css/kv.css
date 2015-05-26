@@ -17168,6 +17168,13 @@ body.version3 .offers-2 .list .item.sp:hover .photo:before {
 body.version3 .offers-2 .list .item.sp:hover .data:before {
   opacity: 1;
 }
+body.version3 .offers-2 .list .item.sp-accent {
+  box-shadow: 0px 1px 2px 0px #9CB32D;
+  background: #E2FF8C;
+}
+body.version3 .offers-2 .list .item.sp-accent:hover {
+  box-shadow: 0px 3px 5px 0px #9CB32D;
+}
 body.version3 .offers-2 .list .item.premium .data {
   position: relative;
 }
@@ -18081,6 +18088,17 @@ body.version3 .dropdown.active ul li.highlight {
 body.version3 .dropdown.active ul li.hide {
   display: none;
 }
+body.version3 .dropdown.active.top {
+  border-bottom: 1px solid #FFBF00;
+  border-radius: 0 0 3px 3px;
+}
+body.version3 .dropdown.active.top ul {
+  bottom: 100%;
+  border-bottom: none;
+  border-top: 1px solid #FFBF00;
+  border-radius: 3px 3px 0 0;
+  box-shadow: none;
+}
 body.version3 .my-lovely {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   background: #fff !important;
@@ -18832,4 +18850,47 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
 }
 .sp-2-fantastic:hover .title {
   color: #2E8AE6;
+}
+.panoram {
+  height: 420px;
+  background: url('../i/city.jpg') top center;
+  background-size: cover;
+}
+.panoram .inner {
+  width: 940px;
+  margin: 0 auto;
+  padding: 85px 0;
+  text-align: center;
+}
+.panoram .title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 48px;
+}
+.btn {
+  border-radius: 2px;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 50px;
+  height: 50px;
+  min-width: 200px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: .125s;
+          transition: .125s;
+  text-decoration: none !important;
+}
+.btn:active {
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+}
+.btn.blue {
+  background: #2E8AE6;
+  color: #FFFFFF;
+}
+.btn.blue:hover {
+  background: #3d99f5;
 }
