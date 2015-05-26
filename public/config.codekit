@@ -495,7 +495,7 @@
 	"\/jade\/_layout3.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/_layout3.jade",
 		"outputAbbreviatedPath": "\/_layout3.html",
@@ -2439,14 +2439,14 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Ruslan",
+"lastSavedByUser": "Дмитрий",
 "manualImportLinks": {
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "Quad",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-fry"
+	"iconImageName": "globe_brown"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,

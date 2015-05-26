@@ -18851,14 +18851,16 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
 .sp-2-fantastic:hover .title {
   color: #2E8AE6;
 }
+body.version3 .inner {
+  width: 940px;
+  margin: 0 auto;
+}
 body.version3 .panoram {
   height: 420px;
   background: url('../i/city.jpg') top center;
   background-size: cover;
 }
 body.version3 .panoram .inner {
-  width: 940px;
-  margin: 0 auto;
   padding: 85px 0;
 }
 body.version3 .panoram .hero-title {
@@ -18901,6 +18903,148 @@ body.version3 .panoram .main-page-search-strings {
   width: 100%;
   padding: 0 14px;
   margin-bottom: 50px;
+}
+body.version3 .actions .inner {
+  padding: 50px 0;
+}
+body.version3 .actions .action-block img {
+  border-radius: 3px;
+}
+body.version3 .actions .action-block .action-title {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+}
+body.version3 .actions .journal {
+  margin: 50px 0 50px;
+}
+body.version3 .actions .journal .journal-left {
+  width: 50%;
+  float: left;
+}
+body.version3 .actions .journal .journal-body {
+  margin-top: 20px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+}
+body.version3 .actions .journal .journal-nav {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+body.version3 .actions .journal .journal-nav li {
+  display: block;
+  border-left: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  list-style-type: none;
+  width: 100%;
+}
+body.version3 .actions .journal .journal-nav li a {
+  display: block;
+  padding: 30px 0 30px 30px;
+  font-size: 19px;
+  line-height: 23px;
+  background: white;
+}
+body.version3 .actions .journal .journal-nav li a:hover {
+  cursor: pointer;
+}
+body.version3 .actions .journal .journal-nav li:last-child {
+  border-bottom: none;
+}
+body.version3 .actions .btn-group-1,
+body.version3 .actions .btn-group-2 {
+  margin-top: 85px;
+  margin-bottom: 45px;
+}
+body.version3 .actions .btn-group-2 {
+  margin-bottom: 60px;
+}
+body.version3 .actions .get-adv {
+  margin: 80px 0 60px;
+}
+body.version3 .actions .get-adv .hero-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+body.version3 .actions .get-adv .icons-set {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+body.version3 .actions .get-adv .icons-set .icon-i {
+  height: 80px;
+}
+body.version3 .actions .get-adv .icons-set .icon-title {
+  padding-top: 10px;
+  font-size: 19px;
+  line-height: 25px;
+}
+body.version3 .actions .btn {
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: 0 1px 5px -1px #adadad;
+  background-color: #fff;
+  height: auto;
+}
+body.version3 .actions .btn:hover {
+  cursor: pointer;
+}
+body.version3 .actions .btn.do-register {
+  width: initial;
+  line-height: 24px;
+  font-size: 19px;
+  padding: 13px 22px;
+}
+body.version3 .actions .btn.large {
+  line-height: 31px;
+  padding: 24px 25px;
+  font-size: 25px;
+}
+body.version3 .actions .btn.al {
+  text-align: left;
+}
+body.version3 .actions .count:before {
+  content: attr(data-count);
+  position: absolute;
+  top: 25%;
+  right: 28px;
+  font-weight: normal;
+  opacity: .5;
+  font-size: 16px;
+  line-height: 40px;
+}
+body.version3 .actions .fast-links {
+  margin: 0px 0 5px;
+}
+body.version3 .actions .fast-links li {
+  font-size: 16px;
+  line-height: 34px;
+  padding: 0 6px;
+  list-style-type: none;
+  display: inline-block;
+}
+body.version3 .actions .hero-block {
+  margin: 50px 0;
+}
+body.version3 .actions .hero-block .hero-title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 28px;
+}
+body.version3 .actions .hero-block .hero-text {
+  margin-bottom: 40px;
+  line-height: 30px;
+  font-size: 19px;
 }
 body.version3 .btn {
   border-radius: 2px;
