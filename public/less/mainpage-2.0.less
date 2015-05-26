@@ -1,46 +1,87 @@
-.panoram {
-	height: 420px;
-	background: url('../i/city.jpg') top center;
-	background-size: cover;
+body.version3 {
+	.panoram {
+		height: 420px;
+		background: url('../i/city.jpg') top center;
+		background-size: cover;
 
-	.inner {
-		width: @page-width;
-		margin: 0 auto;
-		padding: 85px 0;
-		text-align: center;
+		.inner {
+			width: @page-width;
+			margin: 0 auto;
+			padding: 85px 0;
+		}
+
+		.hero-title {
+			font-size: 36px;
+			font-weight: bold;
+			color: #fff;
+			margin-bottom: 48px;
+		}
+
+		.dropdown {
+			border-color: #fff;
+			padding-right: 30px;
+
+			&.active {
+				border-color: #FFBF00;
+			}
+		}
+
+		.selectors {
+			a {
+				width: 101px;
+				box-sizing: border-box;
+				white-space: nowrap;
+				text-align: center;
+				border-color: transparent !important;
+				border-left-color: #dedede !important;
+				border-right-color: #dedede !important;
+				
+				&:first-child {
+					border-left-color: transparent !important;
+					border-right-color: #dedede !important;
+				}
+
+				&.active {
+					border-color: #FFBF00 !important;
+					font-weight: bold;
+				}
+			}
+		}
+
+		.main-page-search-strings {
+			height: 40px;
+			border:none;
+			border-radius: 3px;
+			width: 100%;
+			padding: 0 14px;
+			margin-bottom: 50px;
+		}
 	}
 
-	.title {
-		font-size: 36px;
+	.btn {
+		border-radius: 2px;
+		font-size: 19px;
 		font-weight: bold;
-		color: #fff;
-		margin-bottom: 48px;
-	}
-}
+		line-height: 50px;
+		height: 50px;
+		min-width: 200px;
+		text-align: center;
+		display: inline-block;
+		position: relative;
+		transition: .125s;
+		text-decoration: none !important;
 
-.btn {
-	border-radius: 2px;
-	font-size: 19px;
-	font-weight: bold;
-	line-height: 50px;
-	height: 50px;
-	min-width: 200px;
-	text-align: center;
-	display: inline-block;
-	position: relative;
-	transition: .125s;
-	text-decoration: none !important;
+		&:active {
+			transform: translateY(1px);
+		}
 
-	&:active {
-		transform: translateY(1px);
-	}
+		&.blue {
+			background: #2E8AE6;
+			color: #FFF;
 
-	&.blue {
-		background: #2E8AE6;
-		color: #FFFFFF;
-
-		&:hover {
-			background: #2E8AE6 + 15;
+			&:hover {
+				background: #2E8AE6 + 15;
+			}
 		}
 	}
 }

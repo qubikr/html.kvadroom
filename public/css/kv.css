@@ -18851,24 +18851,55 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
 .sp-2-fantastic:hover .title {
   color: #2E8AE6;
 }
-.panoram {
+body.version3 .panoram {
   height: 420px;
   background: url('../i/city.jpg') top center;
   background-size: cover;
 }
-.panoram .inner {
+body.version3 .panoram .inner {
   width: 940px;
   margin: 0 auto;
   padding: 85px 0;
-  text-align: center;
 }
-.panoram .title {
+body.version3 .panoram .hero-title {
   font-size: 36px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 48px;
 }
-.btn {
+body.version3 .panoram .dropdown {
+  border-color: #fff;
+  padding-right: 30px;
+}
+body.version3 .panoram .dropdown.active {
+  border-color: #FFBF00;
+}
+body.version3 .panoram .selectors a {
+  width: 101px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-align: center;
+  border-color: transparent !important;
+  border-left-color: #dedede !important;
+  border-right-color: #dedede !important;
+}
+body.version3 .panoram .selectors a:first-child {
+  border-left-color: transparent !important;
+  border-right-color: #dedede !important;
+}
+body.version3 .panoram .selectors a.active {
+  border-color: #FFBF00 !important;
+  font-weight: bold;
+}
+body.version3 .panoram .main-page-search-strings {
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  padding: 0 14px;
+  margin-bottom: 50px;
+}
+body.version3 .btn {
   border-radius: 2px;
   font-size: 19px;
   font-weight: bold;
@@ -18882,15 +18913,15 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
           transition: .125s;
   text-decoration: none !important;
 }
-.btn:active {
+body.version3 .btn:active {
   -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
           transform: translateY(1px);
 }
-.btn.blue {
+body.version3 .btn.blue {
   background: #2E8AE6;
-  color: #FFFFFF;
+  color: #FFF;
 }
-.btn.blue:hover {
+body.version3 .btn.blue:hover {
   background: #3d99f5;
 }

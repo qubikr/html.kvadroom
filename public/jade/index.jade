@@ -1,5 +1,58 @@
-extend _layout3
-
-block content
-	.divider-20
+doctype html
+html
+	head
+		include partials/head
 		
+	body.version3
+		.wrapper.page-width
+			include partials/header2
+
+		.panoram
+			.inner
+				.ac
+					.hero-title Недвижимость в Москве и Московской области
+
+				.container-24
+					.grid-8
+						.dropdown
+							.title Москва и Московская область
+							ul.items
+								li(data-value="1") Новостройки
+								li(data-value="2") Квартиры
+								li.active(data-value="3") Комнаты
+								li(data-value="4") Таунхаусы
+								li(data-value="5") Дома
+								li(data-value="6") Участки
+								li(data-value="7") Гаражи
+								li(data-value="8") Нежилые
+
+					.grid-8
+						.dropdown(data-count="45 672")
+							.title Квартиры
+							ul.items
+								li(data-value="1") Новостройки
+								li(data-value="2") Квартиры
+								li.active(data-value="3") Комнаты
+								li(data-value="4") Таунхаусы
+								li(data-value="5") Дома
+								li(data-value="6") Участки
+								li(data-value="7") Гаражи
+								li(data-value="8") Нежилые
+
+					.grid-8
+						.selectors.right-side.selector-sort
+							span.group
+								a.active(href="#") Купить
+								a(href="#") Снять
+								a(href="#") На сутки
+
+					.clear
+				br
+				input.main-page-search-strings(placeholder="Введите уточнение региона, например: Химки или Арбатская")
+				.ac
+					a.btn.blue(href="#") Найти	
+
+		.wrapper.page-width
+			include partials/footer
+
+		script(src="js/offers-2.0.js")
