@@ -18874,6 +18874,9 @@ body.version3 .panoram .dropdown {
 body.version3 .panoram .dropdown.active {
   border-color: #FFBF00;
 }
+body.version3 .panoram .container-24 {
+  margin-bottom: 20px;
+}
 body.version3 .panoram .selectors a {
   width: 101px;
   box-sizing: border-box;
