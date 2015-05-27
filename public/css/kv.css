@@ -18958,7 +18958,7 @@ body.version3 .actions .banner-item .banner-wrapper .inner-meta {
   border-bottom-right-radius: 3px;
 }
 body.version3 .actions .banner-item .banner-wrapper .inner-meta .inner-text {
-  font-weight: 300;
+  font-weight: 700;
   font-size: 14px;
   color: #E8E8E8;
   line-height: 21px;
@@ -19186,6 +19186,7 @@ body.version3 .actions .btn.do-register {
   line-height: 24px;
   font-size: 19px;
   padding: 12px 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 body.version3 .actions .btn.large {
   line-height: 31px;
