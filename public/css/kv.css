@@ -18924,19 +18924,12 @@ body.version3 .actions .banner-item:hover .banner-wrapper .inner-meta:before {
           transform: translateY(0);
 }
 body.version3 .actions .banner-item .banner-wrapper {
-  padding-bottom: 225px;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  height: 0;
 }
 body.version3 .actions .banner-item .banner-wrapper .banner-anchor {
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   cursor: pointer;
   border-radius: 3px;
   overflow: hidden;
@@ -18952,8 +18945,8 @@ body.version3 .actions .banner-item .banner-wrapper .inner-meta {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 80px 20px 25px;
-  background: none;
+  padding: 16px;
+  background: rgba(30, 30, 30, 0.8);
   color: #fff;
   opacity: 0;
   -webkit-transform: translateY(10px);
@@ -18961,28 +18954,20 @@ body.version3 .actions .banner-item .banner-wrapper .inner-meta {
           transform: translateY(10px);
   -webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease;
           transition: transform 0.35s ease, opacity 0.35s ease;
+}
+body.version3 .actions .banner-item .banner-wrapper .inner-meta .inner-text {
   font-weight: 300;
   font-size: 14px;
   color: #E8E8E8;
   line-height: 21px;
-}
-body.version3 .actions .banner-item .banner-wrapper .inner-meta:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: -webkit-linear-gradient(bottom, rgba(30, 30, 30, 0.8) 30%, transparent 100%) repeat-x;
-  background: linear-gradient(to top, rgba(30, 30, 30, 0.8) 30%, transparent 100%) repeat-x;
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: -webkit-transform 0.3s ease, opacity 0.45s ease;
-          transition: transform 0.3s ease, opacity 0.45s ease;
-}
-body.version3 .actions .banner-item .banner-wrapper .inner-meta .inner-text {
   position: relative;
+  padding-bottom: 5px;
+}
+body.version3 .actions .banner-item .banner-wrapper .inner-meta .inner-address {
+  position: relative;
+  font-size: 12px;
+  line-height: 20px;
+  color: #9FA09F;
 }
 body.version3 .actions .banner-item .banner-title {
   padding-top: 10px;
