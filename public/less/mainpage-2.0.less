@@ -89,7 +89,7 @@ body.version3 {
 			}
 
 			.banner-wrapper {
-				padding-bottom: 74%;
+				padding-bottom: 225px;
 				position: relative;
 				overflow: hidden;
 				z-index: 1;
@@ -103,6 +103,8 @@ body.version3 {
 					  right: 0;
 					  bottom: 0;
 					  cursor: pointer;
+					  border-radius: 3px;
+					  overflow: hidden;
 					}
 
 				.inner-image {
@@ -151,7 +153,8 @@ body.version3 {
 			}
 
 			.banner-title {
-					padding-top: 10px; 
+					padding-top: 10px;
+					padding-left: 10px;
 					font-weight: bold;
 					font-size: 19px;
 					line-height: 23px;
@@ -174,11 +177,8 @@ body.version3 {
 
 				&:hover {
 					.post-meta-wrapper {
-						opacity: 0;
-					}
-
-					.post-meta {
-						color: white;
+						  background: #2E8AE6;
+  						  color: #FFF;
 					}
 				}
 			}
@@ -197,17 +197,17 @@ body.version3 {
 			.post-image {
 				height: 323px;
 				overflow: hidden;
+				border-radius: 3px 0 0 3px;
 			}
 
 			.post-image img {
 				width: 100%;
 				max-width:100%;
-				border-radius: 3px 0 0 3px;
 			}
 
 			.post-meta-wrapper {
 				opacity: 1;
-				transition: opacity .5s ease;
+				transition: all .3s ease;
 				position: absolute;
 				top:0;
 				bottom:0;
@@ -267,8 +267,9 @@ body.version3 {
 						right: 0;
 						width: 90px;
 						height: 80px;
-						background: -webkit-linear-gradient(bottom, rgba(30, 30, 30, 0.8) 30%, transparent 100%) repeat-x;
+						background: linear-radial(to right, #2E8AE6 0, white 100%) repeat-x;
 						background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, white 100%) repeat-x;
+						
 					}
 
 					a {
@@ -335,8 +336,8 @@ body.version3 {
 			}
 		
 			.icons-set {
-				margin-top: 50px;
-				margin-bottom: 70px;
+				margin-top: 40px;
+				margin-bottom: 60px;
 				text-align: center;
 
 				.icon-i {
@@ -344,39 +345,50 @@ body.version3 {
 				}
 
 				.icon-title {
-					padding-top: 10px;
 					font-size: 19px;
 					line-height: 25px;
 				}
 			}
+
 			.icon-box {
 				text-align: center;
 			}
 
-			[class^="icon-svg"] {
+			.svg-dims {
+				width: 120px;
+				height: 120px;
 				display: inline-block;
+
 			}
 
-			.icon-svg-chart {
-				background: url(../i/svg/sprite-38a44c1b.svg) 58.62068965517241% 0 no-repeat;
-				width: 80px;
-				height: 68px;
+			.svg-common() {
+				background: url(../i/svg/sprite-88462800.svg) no-repeat;
 			}
-			.icon-svg-click {
-				background: url(../i/svg/sprite-38a44c1b.svg) 100% 0 no-repeat;
-				width: 72px;
-				height: 72px;
+
+			.icon-svg-bigphoto {
+				.svg-common();
+				.svg-dims();
+				background-position: 0 0;
 			}
-			.icon-svg-house {
-				background: url(../i/svg/sprite-38a44c1b.svg) 0 99.84375% no-repeat;
-				width: 80px;
-				height: 70px;
+
+			.icon-svg-clicks {
+				.svg-common();
+				.svg-dims();
+				background-position: 100% 0;
 			}
-			.icon-svg-love {
-				background: url(../i/svg/sprite-38a44c1b.svg) 0 0 no-repeat;
-				width: 102px;
-				height: 79.875px;
+
+			.icon-svg-design {
+				.svg-common();
+				.svg-dims();
+				background-position: 0 100%;
 			}
+
+			.icon-svg-stats {
+				.svg-common();
+				.svg-dims();
+				background-position: 100% 100%;
+			}
+
 		} 
 
 		.btn {
@@ -395,7 +407,7 @@ body.version3 {
 				width: initial;
 				line-height: 24px;
 				font-size: 19px;
-				padding: 13px 22px;
+				padding: 12px 25px;
 			}
 
 			&.large {
