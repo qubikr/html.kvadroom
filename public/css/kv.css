@@ -18954,6 +18954,7 @@ body.version3 .actions .banner-item .banner-wrapper .inner-meta {
           transform: translateY(10px);
   -webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease;
           transition: transform 0.35s ease, opacity 0.35s ease;
+  border-radius: 3px;
 }
 body.version3 .actions .banner-item .banner-wrapper .inner-meta .inner-text {
   font-weight: 300;
