@@ -8,6 +8,8 @@
     <script src="js/_.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.KVSearchString.js"></script>
+    <script src="js/jquery.autosizeInput.js"></script>
+    <script src="js/jquery.KVMainSearchString.js"></script>
     <script src="js/jquery.KVLoadingElement.js"></script>
     <script src="js/jquery.KVMetaLink.js"></script>
     <script src="js/clickuotside.js"></script>
@@ -130,10 +132,11 @@
                 </ul>
               </li>
               <li>
-                <input placeholder="Введите город, регион, улицу и т.п." class="main-page-search-strings">
+                <div data-placeholder="Введите город, регион, улицу и т.п." data-width="360" class="filter"></div>
               </li>
               <li><a href="#" class="btn blue">Найти</a></li>
             </ul>
+            <script>$(function(){$('.filter').KVTestSearchString({"dataGetter":function(val){return {'rn':val};},'url':'http://www.kvadroom.ru/action/search_text/'});})</script>
           </div>
         </div>
       </div>

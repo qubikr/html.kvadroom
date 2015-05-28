@@ -18895,6 +18895,7 @@ body.version3 .panoram .inner ul.input-group > li {
   border-left: 1px solid #dedede;
 }
 body.version3 .panoram .inner ul.input-group > li:hover {
+  background-color: #FAF4D4;
   border-color: #FFBF00;
 }
 body.version3 .panoram .inner ul.input-group > li:hover:first-child {
@@ -18915,6 +18916,8 @@ body.version3 .panoram .inner ul.input-group > li:nth-child(2) {
 }
 body.version3 .panoram .inner ul.input-group > li:nth-child(3) {
   width: 360px;
+  background-color: white;
+  height: 50px;
   border: none;
   border-left: 1px solid #dedede;
 }
@@ -19105,7 +19108,7 @@ body.version3 .actions .banner-item .banner-wrapper .inner-meta .inner-address {
 }
 body.version3 .actions .banner-item .banner-title {
   padding-top: 15px;
-  padding-left: 10px;
+  padding-left: 2px;
   font-weight: bold;
   font-size: 19px;
   line-height: 23px;

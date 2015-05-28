@@ -29,11 +29,13 @@ html
 									li(data-value="6") Участок
 									li(data-value="7") Гараж
 									li(data-value="8") Нежилое
+							
 							li
-								input.main-page-search-strings(placeholder="Введите город, регион, улицу и т.п.")
+								.filter(data-placeholder="Введите город, регион, улицу и т.п.", data-width="360")
 							li
 								a.btn.blue(href="#") Найти
-					
+						script
+								$(function(){$('.filter').KVTestSearchString({"dataGetter":function(val){return {'rn':val};},'url':'http://www.kvadroom.ru/action/search_text/'});})
 		.actions
 			.inner
 				.container-24
@@ -349,5 +351,5 @@ html
 
 		.wrapper.page-width
 			include partials/footer
-
+		
 		script(src="js/offers-2.0.js")
