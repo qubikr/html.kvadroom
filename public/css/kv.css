@@ -18861,8 +18861,7 @@ body.version3 .inner {
 }
 body.version3 .panoram {
   height: 540px;
-  background-color: #666E80;
-  background: url('../i/city.jpg') top center;
+  background: #666e80 url('../i/city.jpg') top center;
   background-size: cover;
 }
 body.version3 .panoram .inner {
