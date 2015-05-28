@@ -19134,6 +19134,9 @@ body.version3 .actions .journal .journal-left:hover .post-meta-wrapper {
   background: rgba(17, 70, 135, 0.85);
   color: #FFF;
 }
+body.version3 .actions .journal .journal-left:hover .post-image img {
+  opacity: 0.8;
+}
 body.version3 .actions .journal .journal-body {
   margin-top: 20px;
   background-color: #fff;
@@ -19148,6 +19151,7 @@ body.version3 .actions .journal .post-image {
   border-radius: 3px 0 0 3px;
 }
 body.version3 .actions .journal .post-image img {
+  opacity: 0;
   width: 100%;
   max-width: 100%;
 }
