@@ -31,6 +31,10 @@ body.version3 {
 				text-shadow: -1px 1px 11px rgba(0, 0, 0, 0.5);
 			}
 
+			.main-page-search-strings {
+				margin-bottom: 5px;
+			}
+
 			ul.input-group {
 				margin: 0 auto;
 
@@ -685,4 +689,146 @@ body.version3 {
 			}
 		}
 	}
+
+	.search-selector {
+	    margin-top: -1px;
+	    position: absolute;
+	    z-index: 10;
+	    width: 360px;
+	    box-sizing: border-box;
+	    background: #fff;
+	    border: 1px solid @border-color;
+	    padding: 8px 0;
+	    list-style: none;
+	    color: #666;
+	    display: none;
+
+	    &.active {
+      display: block;
+    }
+
+    li {
+      position: relative;
+      cursor: pointer;
+      padding: 0 14px 0 40px;
+      line-height: 30px;
+
+      &:hover {
+        background: #fff7dc;
+
+        em {
+          color: #C9C49F;
+
+          span {
+            color: #C9C49F;
+          }
+        }
+      }
+
+      &.active {
+        background: #FFF2B3;
+
+        em {
+          color: #CCBF73;
+
+          span {
+            color: #CCBF73;
+          }
+        }
+      }
+
+      &:before {
+        position: absolute;
+        .icon-font;
+        top: 0;
+        left: 10px;
+        font-size: 30px;
+      }
+
+      &.underground {
+        &:before {
+          content: '\e650';
+          color: @color-red;
+        }
+
+        &[data-region="190"] {
+          &:before {
+            content: '\e622' !important;
+            color: #2250A3 !important;
+          }
+        }
+
+        &[data-region="4123"] {
+          &:before {
+            content: '\e634' !important;
+            color: #26A429 !important;
+            top: -2px;
+          }
+        }
+
+        &[data-region="147"] {
+          &:before {
+            content: '\e635' !important;
+            color: #D20915 !important;
+            top: -2px;
+          }
+        }
+
+        &[data-region="3280"] {
+          &:before {
+            content: '\e636' !important;
+            color: @underground-color-kazan !important;
+            top: -2px;
+          }
+        }
+
+        &[data-region="4265"] {
+          &:before {
+            content: '\e632' !important;
+            color: @underground-color-nsk !important;
+            top: -2px;
+          }
+        }
+
+        &[data-region="298"] {
+          &:before {
+            content: '\e633' !important;
+            color: @underground-color-nnov !important;
+            top: -2px;
+          }
+        }
+
+        &[data-region="845"] {
+          &:before {
+            content: '\e631' !important;
+            color: @underground-color-samara !important;
+            top: -2px;
+          }
+        }
+      }
+
+      &.railway {
+        &:before {
+          content: '\e651';
+          color: #090;
+          top: 1px;
+        }
+      }
+
+      &.highway {
+        &:before {
+          content: '\e60d';
+          color: #777;
+        }
+      }
+
+      &.map {
+        &:before {
+          content: '\e616';
+          color: @color-yellow-dark - 15;
+        }
+      }
+    }
+	}
+    
 }

@@ -18876,6 +18876,9 @@ body.version3 .panoram .inner .hero-title {
   letter-spacing: 1px;
   text-shadow: -1px 1px 11px rgba(0, 0, 0, 0.5);
 }
+body.version3 .panoram .inner .main-page-search-strings {
+  margin-bottom: 5px;
+}
 body.version3 .panoram .inner ul.input-group {
   margin: 0 auto;
 }
@@ -19403,4 +19406,115 @@ body.version3 .btn.blue {
 }
 body.version3 .btn.blue:hover {
   background: #3d99f5;
+}
+body.version3 .search-selector {
+  margin-top: -1px;
+  position: absolute;
+  z-index: 10;
+  width: 360px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #9bd0cd;
+  padding: 8px 0;
+  list-style: none;
+  color: #666;
+  display: none;
+}
+body.version3 .search-selector.active {
+  display: block;
+}
+body.version3 .search-selector li {
+  position: relative;
+  cursor: pointer;
+  padding: 0 14px 0 40px;
+  line-height: 30px;
+}
+body.version3 .search-selector li:hover {
+  background: #fff7dc;
+}
+body.version3 .search-selector li:hover em {
+  color: #C9C49F;
+}
+body.version3 .search-selector li:hover em span {
+  color: #C9C49F;
+}
+body.version3 .search-selector li.active {
+  background: #FFF2B3;
+}
+body.version3 .search-selector li.active em {
+  color: #CCBF73;
+}
+body.version3 .search-selector li.active em span {
+  color: #CCBF73;
+}
+body.version3 .search-selector li:before {
+  position: absolute;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  zoom: 1;
+  display: block;
+  top: 0;
+  left: 10px;
+  font-size: 30px;
+}
+body.version3 .search-selector li.underground:before {
+  content: '\e650';
+  color: #ff0000;
+}
+body.version3 .search-selector li.underground[data-region="190"]:before {
+  content: '\e622' !important;
+  color: #2250A3 !important;
+}
+body.version3 .search-selector li.underground[data-region="4123"]:before {
+  content: '\e634' !important;
+  color: #26A429 !important;
+  top: -2px;
+}
+body.version3 .search-selector li.underground[data-region="147"]:before {
+  content: '\e635' !important;
+  color: #D20915 !important;
+  top: -2px;
+}
+body.version3 .search-selector li.underground[data-region="3280"]:before {
+  content: '\e636' !important;
+  color: #0b562e !important;
+  top: -2px;
+}
+body.version3 .search-selector li.underground[data-region="4265"]:before {
+  content: '\e632' !important;
+  color: #d92f34 !important;
+  top: -2px;
+}
+body.version3 .search-selector li.underground[data-region="298"]:before {
+  content: '\e633' !important;
+  color: #116bd1 !important;
+  top: -2px;
+}
+body.version3 .search-selector li.underground[data-region="845"]:before {
+  content: '\e631' !important;
+  color: #104471 !important;
+  top: -2px;
+}
+body.version3 .search-selector li.railway:before {
+  content: '\e651';
+  color: #090;
+  top: 1px;
+}
+body.version3 .search-selector li.highway:before {
+  content: '\e60d';
+  color: #777;
+}
+body.version3 .search-selector li.map:before {
+  content: '\e616';
+  color: #ebb300;
 }
