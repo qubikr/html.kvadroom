@@ -9,47 +9,31 @@ html
 
 		.panoram
 			.inner
-				.ac
-					.hero-title Недвижимость в Москве и Московской области
 				.container-24
-					.grid-8
-						.dropdown
-							.title Москва и Московская область
-							ul.items
-								li(data-value="1") Новостройки
-								li(data-value="2") Квартиры
-								li.active(data-value="3") Комнаты
-								li(data-value="4") Таунхаусы
-								li(data-value="5") Дома
-								li(data-value="6") Участки
-								li(data-value="7") Гаражи
-								li(data-value="8") Нежилые
-
-					.grid-8
-						.dropdown(data-count="45 672")
-							.title Квартиры
-							ul.items
-								li(data-value="1", data-count="1234") Новостройки
-								li(data-value="2", data-count="123") Квартиры
-								li.active(data-value="3", data-count="2223") Комнаты
-								li(data-value="4", data-count="44") Таунхаусы
-								li(data-value="5", data-count="34") Дома
-								li(data-value="6", data-count="9445") Участки
-								li(data-value="7", data-count="21") Гаражи
-								li(data-value="8", data-count="2345") Нежилые
-
-					.grid-8
-						.selectors.right-side.selector-sort
-							span.group
-								a.active(href="#") Купить
-								a(href="#") Снять
-								a(href="#") На сутки
-
-					.clear
-
-				input.main-page-search-strings(placeholder="Введите уточнение региона, например: Химки или Арбатская")
-				.ac
-					a.btn.blue(href="#") Найти
+					.grid-18.push-2
+						.hero-title Недвижимость в Москве <br>и Московской области
+						ul.input-group
+							li.dropdown
+								.title Купить
+								ul.items
+									li(data-value="1") На сутки
+									li(data-value="2") Снять
+									li.active(data-value="3") Купить
+							li.dropdown
+								.title Квартиру
+								ul.items
+									li(data-value="2",) Квартиры
+									li.active(data-value="3") Комнату
+									li(data-value="4") Таунхаус
+									li(data-value="5") Дом
+									li(data-value="6") Участк
+									li(data-value="7") Гараж
+									li(data-value="8") Нежилое
+							li
+								input.main-page-search-strings(placeholder="Введите город, регион, улицу и т.п.")
+							li
+								a.btn.blue(href="#") Найти
+					
 		.actions
 			.inner
 				.container-24
