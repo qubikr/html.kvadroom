@@ -35,13 +35,12 @@
 
             $this.data('searchString', {
                 entryBlock: $('<input class="entry main-page-search-strings" tabindex="1" placeholder="'+$this.data("placeholder")+'" />'),
-                searchSelector: $('<ul class="search-selector" />'),
-                train: $('<span class="train" />')
+                searchSelector: $('<ul class="search-selector" />')
             });
 
             var thisData = $this.data('searchString');
 
-            $this.append(thisData.entryBlock, thisData.train).after(thisData.searchSelector);
+            $this.append(thisData.entryBlock).after(thisData.searchSelector);
 
             thisData.entryBlock.css('width', $this.data('width'));
             thisData.entryBlock.autosizeInput();
@@ -139,10 +138,6 @@
 
                 if($(this).val() == '') {
                     thisData.searchSelector.removeClass('active');
-
-                    if(thisData.train.children().length == 0) {
-                        thisData.entryBlock.val('').css('width', $this.data("width")).prop('placeholder', $this.data("placeholder"));
-                    }
 
                     return false;
                 }

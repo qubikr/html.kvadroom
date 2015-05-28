@@ -19420,6 +19420,8 @@ body.version3 .search-selector {
   list-style: none;
   color: #666;
   display: none;
+  height: 400px;
+  overflow-y: scroll;
 }
 body.version3 .search-selector.active {
   display: block;
