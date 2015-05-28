@@ -18861,6 +18861,7 @@ body.version3 .inner {
 }
 body.version3 .panoram {
   height: 420px;
+  background-color: #666E80;
   background: url('../i/city.jpg') top center;
   background-size: cover;
 }
@@ -18874,6 +18875,8 @@ body.version3 .panoram .inner ul.input-group > li {
   list-style-type: none;
   position: relative;
   float: left;
+  height: 50px;
+  line-height: 50px;
   vertical-align: top;
   margin-left: 0px;
   border: 1px solid white;
@@ -18882,6 +18885,17 @@ body.version3 .panoram .inner ul.input-group > li {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   border-left: 1px solid #dedede;
+}
+body.version3 .panoram .inner ul.input-group > li:hover {
+  background-color: #FAF4D4;
+  border-color: #FFBF00;
+}
+body.version3 .panoram .inner ul.input-group > li:hover:first-child {
+  border-left-color: #FFBF00;
+}
+body.version3 .panoram .inner ul.input-group > li:hover:last-child {
+  background-color: none;
+  border: none;
 }
 body.version3 .panoram .inner ul.input-group > li:first-child {
   border-left-color: white;
@@ -18898,9 +18912,9 @@ body.version3 .panoram .inner ul.input-group > li:nth-child(3) {
   border-left: 1px solid #dedede;
 }
 body.version3 .panoram .inner ul.input-group > li:last-child {
-  height: 40px;
-  box-sizing: border-box;
+  height: 50px;
   border: none;
+  background-color: inherit;
 }
 body.version3 .panoram .inner ul.input-group > li:last-child > a {
   border-top-right-radius: 3px;
@@ -18908,11 +18922,46 @@ body.version3 .panoram .inner ul.input-group > li:last-child > a {
   font-size: 1em;
 }
 body.version3 .panoram .inner ul.input-group > li > input {
+  height: 50px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   margin-bottom: 0;
+}
+body.version3 .panoram .inner ul.input-group > li > input::-webkit-input-placeholder {
+  -webkit-transition: color 0.2s ease;
+          transition: color 0.2s ease;
+}
+body.version3 .panoram .inner ul.input-group > li > input:-ms-input-placeholder {
+  transition: color 0.2s ease;
+}
+body.version3 .panoram .inner ul.input-group > li > input:-moz-placeholder {
+  transition: color 0.2s ease;
+}
+body.version3 .panoram .inner ul.input-group > li > input:focus::-webkit-input-placeholder {
+  color: #dedede;
+}
+body.version3 .panoram .inner ul.input-group > li > input:-ms-input-placeholder:focus {
+  color: #dedede;
+}
+body.version3 .panoram .inner ul.input-group > li > input:-moz-placeholder:focus {
+  color: #dedede;
+}
+body.version3 .panoram .inner ul.input-group > li > .btn {
+  height: 50px;
+  font-size: 16px;
+  font-weight: normal;
+  min-width: 100px;
+  line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: auto;
+  text-overflow: ellipsis;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 body.version3 .panoram .inner ul.input-group > li.active {
   border: 1px solid #FFBF00;
@@ -18923,26 +18972,16 @@ body.version3 .panoram .inner ul.input-group > li.active {
 }
 body.version3 .panoram .inner ul.input-group > li.active {
   border-color: #FFBF00;
+  border-collapse: collapse;
+  border-radius: 0 0 0 0;
 }
 body.version3 .panoram .inner ul.input-group > li.active:first-child {
-  border-bottom-left-radius: 0px;
+  border-radius: 3px 0 0 0;
   border-left-style: solid;
   border-width: 1px;
 }
-body.version3 .panoram .inner ul.input-group .btn {
-  height: 40px;
-  font-size: 16px;
-  font-weight: normal;
-  min-width: 100px;
-  line-height: 38px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: auto;
-  text-overflow: ellipsis;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+body.version3 .panoram .inner ul.input-group > li.active:first-child.top {
+  border-radius: 0 0 0 3px;
 }
 body.version3 .panoram .hero-title {
   margin: 50px 0 20px;
@@ -18959,6 +18998,10 @@ body.version3 .panoram .dropdown {
 }
 body.version3 .panoram .dropdown.active {
   border-color: #FFBF00;
+}
+body.version3 .panoram .dropdown .title {
+  line-height: 48px;
+  height: 48px;
 }
 body.version3 .panoram .container-24 {
   margin-bottom: 20px;
@@ -19265,17 +19308,23 @@ body.version3 .actions .btn {
 body.version3 .actions .btn:hover {
   cursor: pointer;
 }
+body.version3 .actions .btn.large {
+  line-height: 31px;
+  padding: 24px 25px;
+  font-size: 25px;
+  border: 1px solid white;
+}
+body.version3 .actions .btn.large:hover {
+  border: 1px solid #2E8AE6;
+  color: #2E8AE6;
+  box-sizing: border-box;
+}
 body.version3 .actions .btn.do-register {
   width: initial;
   line-height: 24px;
   font-size: 19px;
   padding: 12px 25px;
   box-shadow: none;
-}
-body.version3 .actions .btn.large {
-  line-height: 31px;
-  padding: 24px 25px;
-  font-size: 25px;
 }
 body.version3 .actions .btn.al {
   text-align: left;
