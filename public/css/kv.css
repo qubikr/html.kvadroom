@@ -18895,7 +18895,6 @@ body.version3 .panoram .inner ul.input-group > li {
   border-left: 1px solid #dedede;
 }
 body.version3 .panoram .inner ul.input-group > li:hover {
-  background-color: #FAF4D4;
   border-color: #FFBF00;
 }
 body.version3 .panoram .inner ul.input-group > li:hover:first-child {
@@ -19038,7 +19037,7 @@ body.version3 .panoram .main-page-search-strings {
   margin-bottom: 50px;
 }
 body.version3 .actions .inner {
-  padding: 50px 0;
+  padding: 50px 0 70px;
 }
 body.version3 .actions .banner-item {
   -webkit-transition: color 0.3s ease, text-decoration 0.3s ease;
@@ -19062,7 +19061,7 @@ body.version3 .actions .banner-item .banner-wrapper {
   z-index: 1;
 }
 body.version3 .actions .banner-item .banner-wrapper .banner-anchor {
-  display: block;
+  display: sock;
   cursor: pointer;
   border-radius: 3px;
   overflow: hidden;
@@ -19105,7 +19104,7 @@ body.version3 .actions .banner-item .banner-wrapper .inner-meta .inner-address {
   color: #9FA09F;
 }
 body.version3 .actions .banner-item .banner-title {
-  padding-top: 10px;
+  padding-top: 15px;
   padding-left: 10px;
   font-weight: bold;
   font-size: 19px;
@@ -19125,7 +19124,7 @@ body.version3 .actions .journal .journal-left {
   vertical-align: middle;
 }
 body.version3 .actions .journal .journal-left:hover .post-meta-wrapper {
-  background: #2E8AE6;
+  background: rgba(17, 70, 135, 0.85);
   color: #FFF;
 }
 body.version3 .actions .journal .journal-body {
@@ -19236,6 +19235,12 @@ body.version3 .actions .journal-nav li .push-image {
 body.version3 .actions .journal-nav li:last-child {
   border-bottom: none;
 }
+body.version3 .actions .journal-nav li:last-child a {
+  color: #adadad;
+}
+body.version3 .actions .journal-nav li:last-child a:hover {
+  color: #2E8AE6;
+}
 body.version3 .actions .btn-group-1,
 body.version3 .actions .btn-group-2 {
   margin-top: 85px;
@@ -19245,7 +19250,7 @@ body.version3 .actions .btn-group-2 {
   margin-bottom: 60px;
 }
 body.version3 .actions .get-adv {
-  margin: 80px 0 60px;
+  margin: 80px 0 80px;
 }
 body.version3 .actions .get-adv .hero-title {
   text-align: center;
@@ -19360,9 +19365,9 @@ body.version3 .actions .hero-block {
 }
 body.version3 .actions .hero-block .hero-title {
   font-size: 36px;
-  line-height: 40px;
+  line-height: 50px;
   font-weight: bold;
-  color: #000;
+  color: #333;
   margin-bottom: 28px;
 }
 body.version3 .actions .hero-block .hero-text {
