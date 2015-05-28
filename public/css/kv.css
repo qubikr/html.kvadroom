@@ -18981,6 +18981,10 @@ body.version3 .panoram .inner ul.input-group > li.active {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+body.version3 .panoram .inner ul.input-group > li.active ul li {
+  font-size: 19px;
+  line-height: 38px;
+}
 body.version3 .panoram .inner ul.input-group > li.active {
   border-color: #FFBF00;
   border-collapse: collapse;
