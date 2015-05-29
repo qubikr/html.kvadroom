@@ -135,7 +135,7 @@
 
                 if($(this).val() == '') {
                     thisData.searchSelector.removeClass('active');
-
+                    thisData.entryBlock.attr('placeholder',thisData.entryBlock.parent().data('placeholder'));
                     return false;
                 }
 
