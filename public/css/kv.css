@@ -18874,14 +18874,12 @@ body.version3 .panoram .inner .hero-title {
   line-height: 70px;
   color: #fff;
   letter-spacing: 1px;
-  text-shadow: -1px 1px 11px rgba(0, 0, 0, 0.5);
 }
 body.version3 .panoram .inner h1 {
-  font-size: 27px;
+  font-size: 22px;
   opacity: .8;
   font-weight: 300;
   color: white;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   margin-top: 30px;
 }
 body.version3 .panoram .inner .main-page-search-strings {
