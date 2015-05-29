@@ -19058,6 +19058,163 @@ body.version3 .panoram .main-page-search-strings {
   padding: 0 14px;
   margin-bottom: 50px;
 }
+body.version3 .panoram .search-selector {
+  margin-top: 5px;
+  position: absolute;
+  z-index: 10;
+  width: 478px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #fff;
+  padding: 8px 0;
+  list-style: none;
+  display: none;
+}
+body.version3 .panoram .search-selector.active {
+  display: block;
+}
+body.version3 .panoram .search-selector li {
+  position: relative;
+  cursor: pointer;
+  padding: 0 0 0 15px;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333;
+}
+body.version3 .panoram .search-selector li:after {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-radial(to right, #2e8ae6 0, white 100%) repeat-x;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, white 100%) repeat-x;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, white 100%) repeat-x;
+}
+body.version3 .panoram .search-selector li em {
+  font-style: normal;
+  color: #999;
+}
+body.version3 .panoram .search-selector li em span {
+  color: #666;
+}
+body.version3 .panoram .search-selector li span {
+  color: #333;
+  font-weight: bold;
+}
+body.version3 .panoram .search-selector li:hover {
+  background: #fff7dc;
+}
+body.version3 .panoram .search-selector li:hover:after {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-radial(to right, #2e8ae6 0, #fff7dc 100%) repeat-x;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff7dc 100%) repeat-x;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff7dc 100%) repeat-x;
+}
+body.version3 .panoram .search-selector li.active {
+  background: #FFF2B3;
+}
+body.version3 .panoram .search-selector li.active em {
+  color: #CCBF73;
+}
+body.version3 .panoram .search-selector li.active em span {
+  font-weight: normal;
+  color: #CCBF73;
+}
+body.version3 .panoram .search-selector li.active:after {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-radial(to right, #2e8ae6 0, #fff2b3 100%) repeat-x;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff2b3 100%) repeat-x;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff2b3 100%) repeat-x;
+}
+body.version3 .panoram .search-selector li:before {
+  position: relative;
+  display: inline-block !important;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  zoom: 1;
+  display: block;
+  top: 0;
+  left: -10px;
+  font-size: 30px;
+  width: 20px;
+}
+body.version3 .panoram .search-selector li.underground:before {
+  content: '\e650';
+  color: #ff0000;
+}
+body.version3 .panoram .search-selector li.underground[data-region="190"]:before {
+  content: '\e622' !important;
+  color: #2250A3 !important;
+}
+body.version3 .panoram .search-selector li.underground[data-region="4123"]:before {
+  content: '\e634' !important;
+  color: #26A429 !important;
+  top: -2px;
+}
+body.version3 .panoram .search-selector li.underground[data-region="147"]:before {
+  content: '\e635' !important;
+  color: #D20915 !important;
+  top: -2px;
+}
+body.version3 .panoram .search-selector li.underground[data-region="3280"]:before {
+  content: '\e636' !important;
+  color: #0b562e !important;
+  top: -2px;
+}
+body.version3 .panoram .search-selector li.underground[data-region="4265"]:before {
+  content: '\e632' !important;
+  color: #d92f34 !important;
+  top: -2px;
+}
+body.version3 .panoram .search-selector li.underground[data-region="298"]:before {
+  content: '\e633' !important;
+  color: #116bd1 !important;
+  top: -2px;
+}
+body.version3 .panoram .search-selector li.underground[data-region="845"]:before {
+  content: '\e631' !important;
+  color: #104471 !important;
+  top: -2px;
+}
+body.version3 .panoram .search-selector li.railway:before {
+  content: '\e651';
+  color: #090;
+  top: 8px;
+}
+body.version3 .panoram .search-selector li.highway:before {
+  content: '\e60d';
+  color: #777;
+}
+body.version3 .panoram .search-selector li.map:before {
+  content: '\e616';
+  color: #ebb300;
+}
 body.version3 .sp-group {
   margin-top: 60px;
 }
@@ -19398,148 +19555,6 @@ body.version3 .hero-block .hero-text {
   margin-bottom: 40px;
   line-height: 30px;
   font-size: 19px;
-}
-.search-selector {
-  margin-top: 5px;
-  position: absolute;
-  z-index: 10;
-  width: 478px;
-  box-sizing: border-box;
-  border-radius: 3px;
-  background: #fff;
-  padding: 8px 0;
-  list-style: none;
-  color: #666;
-  display: none;
-}
-.search-selector.active {
-  display: block;
-}
-.search-selector li {
-  position: relative;
-  cursor: pointer;
-  padding: 0 0 0 15px;
-  line-height: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.search-selector li em {
-  font-style: normal;
-}
-.search-selector li em span {
-  color: #999;
-}
-.search-selector li span {
-  color: #333;
-  font-weight: bold;
-}
-.search-selector li:hover {
-  background: #fff7dc;
-}
-.search-selector li:hover:after {
-  content: " ";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 100%;
-  background: linear-radial(to right, #2e8ae6 0, #fff7dc 100%) repeat-x;
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff7dc 100%) repeat-x;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff7dc 100%) repeat-x;
-}
-.search-selector li.active {
-  background: #FFF2B3;
-}
-.search-selector li.active em {
-  color: #CCBF73;
-}
-.search-selector li.active em span {
-  font-weight: normal;
-  color: #CCBF73;
-}
-.search-selector li.active:after {
-  content: " ";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 100%;
-  background: linear-radial(to right, #2e8ae6 0, #fff2b3 100%) repeat-x;
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff2b3 100%) repeat-x;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff2b3 100%) repeat-x;
-}
-.search-selector li:before {
-  position: absolute;
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
-  zoom: 1;
-  display: block;
-  top: 0;
-  left: 10px;
-  font-size: 30px;
-}
-.search-selector li.underground:before {
-  content: '\e650';
-  color: #ff0000;
-}
-.search-selector li.underground[data-region="190"]:before {
-  content: '\e622' !important;
-  color: #2250A3 !important;
-}
-.search-selector li.underground[data-region="4123"]:before {
-  content: '\e634' !important;
-  color: #26A429 !important;
-  top: -2px;
-}
-.search-selector li.underground[data-region="147"]:before {
-  content: '\e635' !important;
-  color: #D20915 !important;
-  top: -2px;
-}
-.search-selector li.underground[data-region="3280"]:before {
-  content: '\e636' !important;
-  color: #0b562e !important;
-  top: -2px;
-}
-.search-selector li.underground[data-region="4265"]:before {
-  content: '\e632' !important;
-  color: #d92f34 !important;
-  top: -2px;
-}
-.search-selector li.underground[data-region="298"]:before {
-  content: '\e633' !important;
-  color: #116bd1 !important;
-  top: -2px;
-}
-.search-selector li.underground[data-region="845"]:before {
-  content: '\e631' !important;
-  color: #104471 !important;
-  top: -2px;
-}
-.search-selector li.railway:before {
-  content: '\e651';
-  color: #090;
-  top: 1px;
-}
-.search-selector li.highway:before {
-  content: '\e60d';
-  color: #777;
-}
-.search-selector li.map:before {
-  content: '\e616';
-  color: #ebb300;
 }
 .btn {
   border-radius: 2px;
