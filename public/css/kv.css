@@ -18868,10 +18868,10 @@ body.version3 .panoram .inner {
   padding: 230px 0;
 }
 body.version3 .panoram .inner .hero-title {
-  margin: 0px 0 20px;
-  font-size: 50px;
+  margin: 0px;
+  font-size: 70px;
   font-weight: bold;
-  line-height: 61px;
+  line-height: 70px;
   color: #fff;
   letter-spacing: 1px;
   text-shadow: -1px 1px 11px rgba(0, 0, 0, 0.5);
@@ -18882,14 +18882,14 @@ body.version3 .panoram .inner h1 {
   font-weight: 300;
   color: white;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-  margin-bottom: 20px;
+  margin-top: 30px;
 }
 body.version3 .panoram .inner .main-page-search-strings {
   margin-bottom: 5px;
   font-size: 19px;
 }
 body.version3 .panoram .inner ul.input-group {
-  margin: 0 auto;
+  margin: 50px auto 0;
 }
 body.version3 .panoram .inner ul.input-group > li {
   list-style-type: none;
@@ -19403,7 +19403,7 @@ body.version3 .hero-block .hero-text {
   margin-top: 5px;
   position: absolute;
   z-index: 10;
-  width: 479px;
+  width: 478px;
   box-sizing: border-box;
   border-radius: 3px;
   background: #fff;

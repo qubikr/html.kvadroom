@@ -181,7 +181,7 @@
             thisData.searchSelector.on('click.li', 'li', function(e){
 
                 var data = $(this).data(),
-                    value = data.title.replace(/^(.*)\s<em.*$/, '$1');
+                    value = data.title.replace(/<[\/]?[span|em][^>]*>/g, '');
 
                 e.stopPropagation();
                 thisData.searchSelector.removeClass('active');
