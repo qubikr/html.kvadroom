@@ -32,9 +32,11 @@ body.version3 {
 			}
 
 			h1 {
-				font-size: 24px;
+				font-size: 27px;
+				opacity: .8;				
 				font-weight: 300;
-				color:#dedede;
+				color:white;
+				text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 				margin-bottom: 20px;
 			}
 
@@ -689,16 +691,28 @@ body.version3 {
 	      white-space: nowrap;
 	      overflow:hidden;
 
+	       em {
+
+	          span {
+	            color: #999;
+	          }
+	        }
+
+	      span {
+	            color: #333;
+	            font-weight: bold;
+	          }
+
 	      &:hover {
 	        background: #fff7dc;
 
-	        em {
-	          color: #C9C49F;
+	        // em {
+	        //   color: #C9C49F;
 
-	          span {
-	            color: #C9C49F;
-	          }
-	        }
+	        //   span {
+	        //     color: #999;
+	        //   }
+	        // }
 
 	        &:after {
 		      	content: " ";
@@ -721,6 +735,7 @@ body.version3 {
 	          color: #CCBF73;
 
 	          span {
+	          	font-weight: normal;
 	            color: #CCBF73;
 	          }
 	        }

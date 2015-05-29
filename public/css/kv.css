@@ -18877,9 +18877,11 @@ body.version3 .panoram .inner .hero-title {
   text-shadow: -1px 1px 11px rgba(0, 0, 0, 0.5);
 }
 body.version3 .panoram .inner h1 {
-  font-size: 24px;
+  font-size: 27px;
+  opacity: .8;
   font-weight: 300;
-  color: #dedede;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   margin-bottom: 20px;
 }
 body.version3 .panoram .inner .main-page-search-strings {
@@ -19421,14 +19423,15 @@ body.version3 .hero-block .hero-text {
   white-space: nowrap;
   overflow: hidden;
 }
+.search-selector li em span {
+  color: #999;
+}
+.search-selector li span {
+  color: #333;
+  font-weight: bold;
+}
 .search-selector li:hover {
   background: #fff7dc;
-}
-.search-selector li:hover em {
-  color: #C9C49F;
-}
-.search-selector li:hover em span {
-  color: #C9C49F;
 }
 .search-selector li:hover:after {
   content: " ";
@@ -19449,6 +19452,7 @@ body.version3 .hero-block .hero-text {
   color: #CCBF73;
 }
 .search-selector li.active em span {
+  font-weight: normal;
   color: #CCBF73;
 }
 .search-selector li.active:after {
