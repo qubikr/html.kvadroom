@@ -18861,7 +18861,7 @@ body.version3 .inner {
 }
 body.version3 .panoram {
   height: 540px;
-  background: #666e80 url('../i/city.jpg') top center;
+  background: #666e80 url('../i/townhouses_01.jpg') top center;
   background-size: cover;
 }
 body.version3 .panoram .inner {
@@ -18875,6 +18875,12 @@ body.version3 .panoram .inner .hero-title {
   color: #fff;
   letter-spacing: 1px;
   text-shadow: -1px 1px 11px rgba(0, 0, 0, 0.5);
+}
+body.version3 .panoram .inner h1 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #dedede;
+  margin-bottom: 20px;
 }
 body.version3 .panoram .inner .main-page-search-strings {
   margin-bottom: 5px;

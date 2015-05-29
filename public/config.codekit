@@ -428,6 +428,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/i\/townhouses_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 170188,
+		"inputAbbreviatedPath": "\/i\/townhouses_01.jpg",
+		"outputAbbreviatedPath": "\/i\/townhouses_01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/i\/yd.png": {
 		"fileType": 32768,
 		"ignore": 0,

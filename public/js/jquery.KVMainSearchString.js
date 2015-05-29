@@ -118,6 +118,7 @@
                         process(cache[token]);
                     } else {
                         cache[token] = returnData;
+                        console.log(data);
                         process(JSON.parse(returnData));
                     }
                 }
