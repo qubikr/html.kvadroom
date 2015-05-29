@@ -19418,10 +19418,13 @@ body.version3 .hero-block .hero-text {
 .search-selector li {
   position: relative;
   cursor: pointer;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 15px;
   line-height: 30px;
   white-space: nowrap;
   overflow: hidden;
+}
+.search-selector li em {
+  font-style: normal;
 }
 .search-selector li em span {
   color: #999;
