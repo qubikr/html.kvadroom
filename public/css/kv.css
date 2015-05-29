@@ -19537,7 +19537,11 @@ body.version3 .fast-links li {
   line-height: 34px;
   padding: 0 6px;
   list-style-type: none;
-  display: inline-block;
+  display: inline;
+}
+body.version3 .fast-links li.brake:after {
+  content: "\A";
+  white-space: pre;
 }
 body.version3 .hero-block {
   margin: 50px 0;

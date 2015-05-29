@@ -838,7 +838,12 @@ body.version3 {
 			line-height: 34px;
 			padding:0 6px;
 			list-style-type: none;
-			display: inline-block;
+			display: inline;
+
+			&.brake:after {
+				content:"\A";
+				white-space:pre;
+			}
 		}
 	}
 
