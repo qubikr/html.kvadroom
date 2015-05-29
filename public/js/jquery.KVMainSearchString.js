@@ -70,6 +70,11 @@
             var t, cache = {};
 
             function process(data){
+
+                var limit = 10,
+                    data = data.slice(0,limit);
+
+                
                 thisData.searchSelector.html('').removeClass('active')
 
                 if(data && data.length > 0){
@@ -114,14 +119,6 @@
                     } else {
                         cache[token] = returnData;
                         process(JSON.parse(returnData));
-                        // $.ajax({
-                        //     url: options.url,
-                        //     data: data,
-                        //     success: function(data){
-                        //         cache[token] = data;
-                        //         process(data);
-                        //     }
-                        // });
                     }
                 }
             }
@@ -181,10 +178,14 @@
             });
 
             thisData.searchSelector.on('click.li', 'li', function(e){
+
+                var data = $(this).data(),
+                    value = data.title.replace(/^(.*)\s<em.*$/, '$1');
+
                 e.stopPropagation();
                 thisData.searchSelector.removeClass('active');
-                thisData.entryBlock.val('').css('width', 50).prop('placeholder', '');
-                $this.trigger('select', $(this).data());
+                thisData.entryBlock.val(value).css('width', thisData.entryBlock.parent().data('width'));
+
             });
         }
     };
