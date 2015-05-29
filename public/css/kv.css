@@ -19539,7 +19539,7 @@ body.version3 .fast-links li {
   list-style-type: none;
   display: inline;
 }
-body.version3 .fast-links li.brake:after {
+body.version3 .fast-links li.lnbr:after {
   content: "\A";
   white-space: pre;
 }
