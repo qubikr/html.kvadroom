@@ -664,38 +664,54 @@ body.version3 {
 					
 				}
 
+
 				a {
 					display: block;
 					font-size: 19px;
 					line-height: 23px;
 					background: white;
 					
+					.push {
+						
+					}
+
+					&:last-child {
+						transform: translateX(0px)
+					}
 
 					&:hover {
 						cursor: pointer;
 						text-decoration: none;
+					}
 
-						.push-image {
-							margin-left: 0;
-							
-						}
+					.text {
+					    line-height: 80px;
+					    padding-left: 20px;
+					    display: inline-block;
+					}
+
+					.image {
+					    display: inline-block;
+					    vertical-align: top;
 					}
 
 				}
 
-				.push-text {
-				    line-height: 80px;
-				    padding-left: 20px;
-				    display: inline-block;
+				&.push {	
+
+					a {
+						transform: translateX(-90px);
+						transition: transform 0.3s ease;
+					}
+
+					&:hover {
+						a {
+							transform: translateX(0px);
+						}
+					}
 				}
 
-				.push-image {
-					margin-left: -90px;
-				    display: inline-block;
-				    vertical-align: top;
-				    transition: margin 0.3s ease;
-
-				}
+				
 
 				&:last-child {
 					border-bottom: none;

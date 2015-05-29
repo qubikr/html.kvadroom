@@ -19401,24 +19401,35 @@ body.version3 .journal .journal-nav li a {
   line-height: 23px;
   background: white;
 }
+body.version3 .journal .journal-nav li a:last-child {
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+}
 body.version3 .journal .journal-nav li a:hover {
   cursor: pointer;
   text-decoration: none;
 }
-body.version3 .journal .journal-nav li a:hover .push-image {
-  margin-left: 0;
-}
-body.version3 .journal .journal-nav li .push-text {
+body.version3 .journal .journal-nav li a .text {
   line-height: 80px;
   padding-left: 20px;
   display: inline-block;
 }
-body.version3 .journal .journal-nav li .push-image {
-  margin-left: -90px;
+body.version3 .journal .journal-nav li a .image {
   display: inline-block;
   vertical-align: top;
-  -webkit-transition: margin 0.3s ease;
-          transition: margin 0.3s ease;
+}
+body.version3 .journal .journal-nav li.push a {
+  -webkit-transform: translateX(-90px);
+      -ms-transform: translateX(-90px);
+          transform: translateX(-90px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+          transition: transform 0.3s ease;
+}
+body.version3 .journal .journal-nav li.push:hover a {
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
 }
 body.version3 .journal .journal-nav li:last-child {
   border-bottom: none;
