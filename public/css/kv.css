@@ -18921,6 +18921,7 @@ body.version3.mainpage .panoram .inner {
   margin: 0 auto;
   width: 940px;
   z-index: 10;
+  position: relative;
 }
 body.version3.mainpage .panoram .inner .hero-title {
   margin: 0px;
@@ -18977,13 +18978,13 @@ body.version3.mainpage .panoram .inner ul.input-group > li:first-child {
   border-left-color: white;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  width: 140px;
+  width: 180px;
 }
 body.version3.mainpage .panoram .inner ul.input-group > li:nth-child(2) {
   width: 180px;
 }
 body.version3.mainpage .panoram .inner ul.input-group > li:nth-child(3) {
-  width: 330px;
+  width: 460px;
   background-color: white;
   height: 50px;
   border: none;
