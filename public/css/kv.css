@@ -18902,20 +18902,27 @@ body.version3 .panoram {
   background-color: #666E80;
   background-size: cover;
 }
+@media only screen and (max-width: 1460px) {
+  body.version3 .panoram {
+    width: 100%;
+  }
+}
 body.version3 .panoram .dop_div {
   background: url('../i/interior_01.jpg') top center;
-  width: 1440px;
   background-size: cover;
   position: absolute;
-  z-index: 1;
+  width: 1440px;
   height: 540px;
+}
+@media only screen and (max-width: 1460px) {
+  body.version3 .panoram .dop_div {
+    width: 100%;
+  }
 }
 body.version3 .panoram .inner {
   padding: 230px 0;
-  position: absolute;
   margin: 0 auto;
   width: 940px;
-  margin-left: 250px;
   z-index: 10;
 }
 body.version3 .panoram .inner .hero-title {
@@ -19213,6 +19220,30 @@ body.version3 .panoram .search-selector li:before {
   font-size: 30px;
   width: 30px;
 }
+body.version3 .panoram .search-selector li.railway {
+  padding-left: 40px;
+}
+body.version3 .panoram .search-selector li.railway:before {
+  content: '\e651';
+  color: #090;
+}
+body.version3 .panoram .search-selector li.highway {
+  padding-left: 40px;
+}
+body.version3 .panoram .search-selector li.highway:before {
+  content: '\e60d';
+  color: #777;
+}
+body.version3 .panoram .search-selector li.map {
+  padding-left: 40px;
+}
+body.version3 .panoram .search-selector li.map:before {
+  content: '\e616';
+  color: #ebb300;
+}
+body.version3 .panoram .search-selector li.underground {
+  padding-left: 40px;
+}
 body.version3 .panoram .search-selector li.underground:before {
   content: '\e650';
   color: #ff0000;
@@ -19250,30 +19281,6 @@ body.version3 .panoram .search-selector li.underground[data-region="845"]:before
   content: '\e631' !important;
   color: #104471 !important;
   top: -2px;
-}
-body.version3 .panoram .search-selector li.railway {
-  padding-left: 40px;
-}
-body.version3 .panoram .search-selector li.railway:before {
-  content: '\e651';
-  color: #090;
-}
-body.version3 .panoram .search-selector li.highway {
-  padding-left: 40px;
-}
-body.version3 .panoram .search-selector li.highway:before {
-  content: '\e60d';
-  color: #777;
-}
-body.version3 .panoram .search-selector li.map {
-  padding-left: 40px;
-}
-body.version3 .panoram .search-selector li.map:before {
-  content: '\e616';
-  color: #ebb300;
-}
-body.version3 .panoram .search-selector li.underground {
-  padding-left: 40px;
 }
 body.version3 .sp-group {
   margin-top: 60px;

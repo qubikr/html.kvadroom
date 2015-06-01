@@ -44,30 +44,38 @@ body.version3 {
     margin: 0 auto;
   }
 
+@desktop:   ~"only screen and (max-width: 1460px)";
+
   .panoram {
     height: 540px;
     margin: 0 auto;
     width: 1440px;
-    background-color: #666E80;;
+
+    @media @desktop {
+      	width: 100%;
+    }
+
+    background-color: #666E80;
     background-size: cover;
     // margin-top: -17px;
 
 
     .dop_div {
-      background: url('../i/interior_01.jpg') top center ;
-      width: 1440px;
+      background: url('../i/interior_01.jpg') top center;
       background-size: cover;
       position: absolute;
-      z-index: 1;
+      width: 1440px;
       height: 540px;
+
+      @media @desktop {
+      	width: 100%;
+    }
     }
 
     .inner {
       padding: 230px 0;
-      position: absolute;
       margin: 0 auto;
       width: 940px;
-      margin-left: 250px;
       z-index: 10;
 
 
@@ -438,6 +446,42 @@ body.version3 {
             width: 30px;
           }
 
+                    &.railway {
+
+            padding-left: 40px;
+
+            &:before {
+              content: '\e651';
+              color: #090;
+            }
+          }
+
+          &.highway {
+
+            padding-left: 40px;
+
+            &:before {
+              content: '\e60d';
+              color: #777;
+            }
+          }
+
+          &.map {
+
+            padding-left: 40px;
+
+            &:before {
+              content: '\e616';
+              color: @color-yellow-dark - 15;
+            }
+          }
+
+
+          &.underground {
+
+            padding-left: 40px;
+          }
+
           &.underground {
             &:before {
               content: '\e650';
@@ -500,41 +544,6 @@ body.version3 {
             }
           }
 
-          &.railway {
-
-            padding-left: 40px;
-
-            &:before {
-              content: '\e651';
-              color: #090;
-            }
-          }
-
-          &.highway {
-
-            padding-left: 40px;
-
-            &:before {
-              content: '\e60d';
-              color: #777;
-            }
-          }
-
-          &.map {
-
-            padding-left: 40px;
-
-            &:before {
-              content: '\e616';
-              color: @color-yellow-dark - 15;
-            }
-          }
-
-
-          &.underground {
-
-            padding-left: 40px;
-          }
         }
       }
 
