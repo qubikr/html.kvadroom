@@ -19682,7 +19682,7 @@ body.version3.mainpage .sp-2-cards:after {
   clear: both;
 }
 body.version3.mainpage .sp-2-cards .spitem {
-  padding-bottom: 85px;
+  padding-bottom: 80px;
 }
 body.version3.mainpage .sp-2-cards .spitem .image:before {
   display: none;
@@ -19692,13 +19692,13 @@ body.version3.mainpage .sp-2-cards .spitem .image img {
   display: block;
 }
 body.version3.mainpage .sp-2-cards .spitem .info {
-  padding: 16px 20px 20px;
+  padding: 14px 20px 18px;
 }
 body.version3.mainpage .sp-2-cards .spitem .title {
   line-height: 24px;
   margin-bottom: 0;
   position: relative;
-  top: 3px;
+  top: 2px;
 }
 body.version3.mainpage .sp-2-cards .spitem .desc {
   height: auto;
@@ -19725,6 +19725,7 @@ body.version3.mainpage .sp-2-cards .spitem .foot {
 }
 body.version3.mainpage .sp-2-cards .spitem:hover {
   box-shadow: 0 3px 10px rgba(40, 70, 100, 0.3);
+  border: none;
 }
 body.version3.mainpage .sp-2-cards .spitem:hover .title {
   color: #2e8ae6;
