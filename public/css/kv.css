@@ -18704,6 +18704,7 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
   color: #666;
 }
 .sp-2-cards .spitem .desc .foot {
+  padding-top: 30px;
   color: #2e8ae6;
 }
 .sp-2-cards .spitem .foot {
