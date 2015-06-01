@@ -19702,6 +19702,7 @@ body.version3.main-page .sp-2-cards .spitem .title {
   margin-bottom: 0;
   position: relative;
   top: 2px;
+  min-height: auto;
 }
 body.version3.main-page .sp-2-cards .spitem .desc {
   height: auto;
@@ -19737,4 +19738,5 @@ body.version3.main-page .sp-2-cards .spitem:hover .desc {
   max-height: 15em;
   height: auto;
   opacity: 1;
+  padding-bottom: 0;
 }
