@@ -18679,8 +18679,8 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
           transition: .25s;
   overflow: hidden;
   opacity: 0;
-  -webkit-transition: .3s ease;
-          transition: .3s ease;
+  -webkit-transition: .35s ease;
+          transition: .35s ease;
   font-size: 14px;
   line-height: 22px;
 }
