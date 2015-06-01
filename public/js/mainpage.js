@@ -321,20 +321,26 @@ $(function(){
     });
 
 
-        var i = 0;
-        var images = ['townhouses_01.jpg','house_01.jpg','interior_01.jpg'];
+    (function($) {
 
-        var id = setInterval(function() {
-            $('.dop_div').fadeTo('slow', 0.3, function(){
-                $('.dop_div').css('background-image', 'url(../i/'+images[i]+')');
-                $('.dop_div').fadeTo('fast', 1);
-            });
+        $.fn.bgSlider = function(options){
 
 
-            i++;
-            if (i >= 3)
-                i = 0;
-        }, 10000);
+            var defaults = {            
+            speed: 500,
+            duration: 10000,
+            }; 
+
+            var options = $.extend(defaults, options);
+
+            var self = $(this);
+            console.log($('li', self));
+
+        };
+
+    })(jQuery);
+
+    $('.bgSlider').bgSlider();
 });
 
 

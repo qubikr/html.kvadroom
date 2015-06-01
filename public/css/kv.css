@@ -18911,6 +18911,12 @@ body.version3.mainpage .panoram .dop_div {
   width: 1440px;
   height: 540px;
 }
+body.version3.mainpage .panoram .dop_div li {
+  display: none;
+}
+body.version3.mainpage .panoram .dop_div li:first-child {
+  display: block;
+}
 @media only screen and (max-width: 1460px) {
   body.version3.mainpage .panoram .dop_div {
     width: 100%;
@@ -18930,11 +18936,13 @@ body.version3.mainpage .panoram .inner .hero-title {
   line-height: 70px;
   color: #fff;
   letter-spacing: 1px;
+  margin-left: -4px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 body.version3.mainpage .panoram .inner h1 {
   font-size: 22px;
   font-weight: 300;
-  color: #f0f0f0;
+  color: #E6E6E6;
   margin-top: 15px;
 }
 body.version3.mainpage .panoram .inner .main-page-search-strings {
@@ -18964,7 +18972,7 @@ body.version3.mainpage .panoram .inner ul.input-group > li.active + li {
   border-left-color: white;
 }
 body.version3.mainpage .panoram .inner ul.input-group > li:hover {
-  background-color: #FAF4D4;
+  background-color: #FFF0B4;
   border-color: #FFBF00;
 }
 body.version3.mainpage .panoram .inner ul.input-group > li:hover:first-child {
@@ -19622,6 +19630,7 @@ body.version3.mainpage .btn.do-register {
   font-size: 19px;
   padding: 12px 25px;
   box-shadow: none;
+  width: 300px;
 }
 body.version3.mainpage .btn.al {
   text-align: left;
@@ -19641,8 +19650,8 @@ body.version3.mainpage .fast-links {
 }
 body.version3.mainpage .fast-links li {
   font-size: 16px;
-  line-height: 34px;
-  padding: 0 6px;
+  line-height: 40px;
+  padding: 0 20px;
   list-style-type: none;
   display: inline;
 }
