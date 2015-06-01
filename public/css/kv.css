@@ -19721,6 +19721,8 @@ body.version3.main-page .sp-2-cards .spitem .desc .text {
 body.version3.main-page .sp-2-cards .spitem .desc .foot {
   padding-top: 20px;
   color: #2e8ae6;
+  position: absolute;
+  bottom: 10px;
 }
 body.version3.main-page .sp-2-cards .spitem .foot {
   display: block;
@@ -19731,6 +19733,9 @@ body.version3.main-page .sp-2-cards .spitem:hover {
   box-shadow: 0 3px 10px rgba(40, 70, 100, 0.3);
   border: none;
 }
+body.version3.main-page .sp-2-cards .spitem:hover .info {
+  height: 215px;
+}
 body.version3.main-page .sp-2-cards .spitem:hover .title {
   color: #2e8ae6;
 }
@@ -19739,4 +19744,7 @@ body.version3.main-page .sp-2-cards .spitem:hover .desc {
   height: auto;
   opacity: 1;
   padding-bottom: 0;
+}
+body.version3.main-page .sp-2-cards .spitem:hover .foot {
+  bottom: 10px;
 }
