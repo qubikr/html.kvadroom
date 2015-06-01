@@ -6,7 +6,7 @@
 		text-decoration: none;
 		color: #333;
 		line-height: 1.5em;
-		padding-bottom: 151px;
+		padding-bottom: 99px;
 		position: relative;
 		width: 300px;
 		border-radius: 3px;
@@ -65,22 +65,27 @@
 			color: #333;
 			font-size: 19px;
 			font-weight: bold;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 			display: block;
 			transition: .15s;
 		}
 
-		.desc {
+		.desc,{
 			color: #666;
 			font-size: 14px;
 			display: block;
-			height: 0;
+			max-height: 0;
 			padding-bottom: 0;
 			transition: .25s;
 			overflow: hidden;
 			transition-delay: .1s;
 			opacity: 0;
-			transition: .15s;
+			transition: .15s ease;
+
+			.text {
+				padding-bottom: 20px;
+			}
+			
 		}
 
 		.foot {
@@ -102,10 +107,13 @@
 				color: #2E8AE6;
 			}
 
-			.desc {
-				height: 5.5em;
-				padding-bottom: 20px;
+			.desc,{
+				max-height: 15em;
 				opacity: 1;
+			}
+
+			.foot {
+				color: #2E8AE6;
 			}
 		}
 	}

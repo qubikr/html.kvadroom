@@ -6,8 +6,21 @@ html
 	body.version3
 		.wrapper.page-width
 			include partials/header2
-
+	
 		.panoram
+			//- .bgSlider
+			//- 	ul
+			//- 		li
+			//- 			img(src="../i/townhouses_01.jpg")
+			//- 		li
+			//- 			img(src="../i/townhouses_01.jpg")
+			//- 		li
+			//- 			img(src="../i/townhouses_01.jpg")
+			//- 		li
+			//- 			img(src="../i/townhouses_01.jpg")
+			//- 		li
+			//- 			img(src="../i/townhouses_01.jpg")
+			.dop_div
 			.inner
 				.container-24
 					.grid-20.push-2
@@ -35,43 +48,41 @@ html
 								.filter(data-placeholder="Введите город, регион, улицу и т.п.", data-width="360")
 							li
 								a.btn.blue(href="#") Найти
-						script
-								$(function(){$('.filter').KVTestSearchString({"dataGetter":function(val){return {'text':val};},'url':'http://www.kvadroom.ru/action/search_text/'});})
-
 		.sp-group
 			.inner
-				.container-24
-					.grid-8
-						a.sp-item(href="javascript:void(0)")
-							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=1")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
-							.sp-title ЖК «Фили Град»
-					.grid-8
-						a.sp-item(href="javascript:void(0)")
-							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=2")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
-							.sp-title Акция!
-					.grid-8
-						a.sp-item(href="javascript:void(0)")
-							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=3")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
-							.sp-title Ваша победа с ЖК «Царицыно»
-					.clear
+				.sp-2-cards
+					a.spitem(href="#", target="_blank")
+						span.image: img(src="http://lorempixel.com/300/225/city/?r=0")
+						span.info
+							span.title «ЖК «Фили Град». <br> Весенние скидки!
+							.desc 
+								.text Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+								.foot
+									|ООО «10 квартал»
+									br
+									|+7 (495) 510-10-94
+
+					a.spitem(href="#", target="_blank")
+						span.image: img(src="http://lorempixel.com/300/225/city/?r=1")
+						span.info
+							span.title «Эко Видное». 4км от Москвы
+							.desc 
+								.text Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+								.foot
+									|ООО «10 квартал»
+									br
+									|+7 (495) 510-10-94
+				
+					a.spitem(href="#", target="_blank")
+						span.image: img(src="http://lorempixel.com/300/225/city/?r=2")
+						span.info
+							span.title «Эко Видное». 4км от Москвы
+							.desc 
+								.text Квартиры от 3,2 млн руб. Своя территория у реки, детсад. Панель П-44. Пл. 35-87 м2. Мкрн заселяется
+								.foot
+									|ООО «10 квартал»
+									br
+									|+7 (495) 510-10-94
 
 		.bb-group
 			.inner
@@ -111,32 +122,29 @@ html
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=11")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=11")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title ЖК «Эко Парк Нахабино»
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=12")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=12")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title Цены «с ног на голову»
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=13")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=13")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title ЖК «Борисоглебское» от  1.9 млн
 					.clear
 
@@ -155,33 +163,30 @@ html
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=21")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=21")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title ЖК «Фили Град»
 							
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=22")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=22")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title Акция! 
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=23")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=23")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title Ваша победа с ЖК «Царицыно»
 					.clear
 
@@ -225,32 +230,29 @@ html
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=31")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=31")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title ЖК «Фили Град»
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=32")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=32")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title Акция!
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=33")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
-										.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=33")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+									.inner-address	ООО "10 квартал"<br> +7 (495) 510-1094
 							.sp-title Ваша победа с ЖК «Царицыно»
 					.clear
 
@@ -268,7 +270,7 @@ html
 									.hero-text
 										|Зарегистрированные пользователи получают доступ
 										|ко всему функционалу сайта: избранное, сравнение, уведомления, подписка на результаты поиска и многое другое.
-									.btn.small.blue.do-register Зарегистрироваться
+									a.btn.small.blue.do-register Зарегистрироваться
 								.clear
 
 		.sp-group
@@ -277,29 +279,26 @@ html
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=41")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=41")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
 							.sp-title ЖК «Фили Град»
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=42")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=42")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
 							.sp-title Акция!
 					.grid-8
 						a.sp-item(href="javascript:void(0)")
 							.sp-wrapper
-								.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=43")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=43")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
 							.sp-title Ваша победа с ЖК «Царицыно»
 					.clear
 
@@ -329,7 +328,7 @@ html
 
 					.clear
 				.ac
-					.btn.small.blue.do-register Подать объявление
+					a.btn.small.blue.do-register Подать объявление
 
 		.sp-group
 			.inner
@@ -337,34 +336,31 @@ html
 					.grid-8
 						.sp-item
 							.sp-wrapper
-								a.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=51")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=51")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
 							.sp-title ЖК «Фили Град»
 					.grid-8
 						.sp-item
 							.sp-wrapper
-								a.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=52")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=52")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
 							.sp-title Акция!
 					.grid-8
 						.sp-item
 							.sp-wrapper
-								a.sp-anchor
-									.inner-image
-										img(src="http://lorempixel.com/300/225/city/?r=53")
-									.inner-meta 
-										.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
+								.inner-image
+									img(src="http://lorempixel.com/300/225/city/?r=53")
+								.inner-meta 
+									.inner-text	МО, Север, 45 минут до центра. Готовые объекты в уютном поселке. Ждем звонка!
 							.sp-title Ваша победа с ЖК «Царицыно»
 					.clear
 
 		.seo-list 
-
+						
 		.wrapper.page-width
 			include partials/footer
 		

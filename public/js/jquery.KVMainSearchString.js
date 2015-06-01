@@ -15,11 +15,11 @@
         // },
 
         getState: function(){
-            return this.data('searchString').searchSelector.hasClass('active');
+            return this.data('filter').searchSelector.hasClass('active');
         },
 
         assume: function(){
-            var data = this.data('searchString');
+            var data = this.data('filter');
 
             if(data.searchSelector.hasClass('active')) {
                 data.entryBlock.trigger('keyup');
@@ -27,7 +27,7 @@
         },
 
         setCurrentCity: function(id){
-            this.data('searchString').city = id;
+            this.data('filter').city = id;
         },
 
         init : function(options) {
@@ -35,15 +35,18 @@
 
             $this.data('searchString', {
                 entryBlock: $('<input class="entry main-page-search-strings" tabindex="1" placeholder="'+$this.data("placeholder")+'" />'),
-                searchSelector: $('<ul class="search-selector" />')
+                searchSelector: $('<ul class="collapsed search-selector"></ul>'),
+                wrapper: $('<div class="search-results"></div>'),
+                caret: $('<div class="hide expand-caret">Показать все</div>')
             });
 
             var thisData = $this.data('searchString');
 
-            $this.append(thisData.entryBlock).after(thisData.searchSelector);
+            $this.append(thisData.entryBlock).after(thisData.wrapper);
+            thisData.wrapper.append(thisData.searchSelector);
+            thisData.wrapper.append(thisData.caret)
 
             thisData.entryBlock.css('width', $this.data('width'));
-            //thisData.entryBlock.autosizeInput();
 
             function highlight(content, what) {
                 what = $.trim(what);
@@ -71,11 +74,20 @@
 
             function process(data){
 
-                var limit = 10,
-                    data = data.slice(0,limit);
+                var data = data.slice(0,11);
+                var count = data.length;
 
-                
-                thisData.searchSelector.html('').removeClass('active')
+                if(count > 10) {
+                    thisData.caret.show();
+                } else {
+                    thisData.caret.hide();
+                }
+
+                var limit = 10,
+                    limitedData = data.slice(0,limit);
+
+                thisData.searchSelector.html('');
+                thisData.wrapper.removeClass('active')
 
                 if(data && data.length > 0){
                     var count = 0;
@@ -100,7 +112,7 @@
 
                     if(count > 0){
                         thisData.searchSelector.find('li').eq(0).addClass('active');
-                        thisData.searchSelector.addClass('active');
+                        thisData.wrapper.addClass('active');
                     }
                 }
             }
@@ -135,7 +147,7 @@
                 clearTimeout(t);
 
                 if($(this).val() == '') {
-                    thisData.searchSelector.removeClass('active');
+                    thisData.wrapper.removeClass('active');
                     thisData.entryBlock.attr('placeholder',thisData.entryBlock.parent().data('placeholder'));
                     return false;
                 }
@@ -157,8 +169,9 @@
                         active.click();
                 }
             });
+            
 
-            $(document).on('click.searchString', function(){
+            $(document).on('click.filter', function(){
                 thisData.searchSelector.removeClass('active');
             });
 
@@ -170,7 +183,7 @@
                 $this.removeClass('focused');
             });
 
-            $('.search-string, .search-selector').on('click', function(e){
+            $('.filter, .search-selector').on('click', function(e){
                 e.stopPropagation();
                 thisData.entryBlock.focus();
 
@@ -185,7 +198,6 @@
 
                 e.stopPropagation();
                 thisData.searchSelector.removeClass('active');
-                // thisData.entryBlock.val(value);.css('width', thisData.entryBlock.parent().data('width'))
                 thisData.entryBlock.val(value);
 
             });
@@ -202,5 +214,6 @@
         }
         return this;
     };
+
 
 })( jQuery );
