@@ -6,7 +6,7 @@
 		text-decoration: none;
 		color: #333;
 		line-height: 1.5em;
-		padding-bottom: 80px;
+		padding-bottom: 151px;
 		position: relative;
 		width: 300px;
 		border-radius: 3px;
@@ -28,20 +28,20 @@
 			border-radius: 3px 3px 0 0;
 			background-color: #eee;
 
-			// &:before {
-			// 	display: block;
-			// 	content: '';
-			// 	position: absolute;
-			// 	top: 0;
-			// 	left: 0;
-			// 	width: 100%;
-			// 	height: 100%;
-			// 	background: rgba(46, 138, 230, .4);
-			// 	opacity: 0;
-			// 	transition: .25s;
-			// 	z-index: 2;
-			// 	border-radius: 3px 3px 0 0;
-			// }
+			&:before {
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(46, 138, 230, .4);
+				opacity: 0;
+				transition: .25s;
+				z-index: 2;
+				border-radius: 3px 3px 0 0;
+			}
 
 			img {
 				position: relative;
@@ -64,39 +64,23 @@
 		.title {
 			color: #333;
 			font-size: 19px;
-			line-height: 22px;
 			font-weight: bold;
+			margin-bottom: 20px;
 			display: block;
 			transition: .15s;
-		  	position: relative;
-  			top: -2px;
 		}
 
 		.desc {
-			
+			color: #666;
+			font-size: 14px;
 			display: block;
-			max-height: 0;
+			height: 0;
 			padding-bottom: 0;
 			transition: .25s;
 			overflow: hidden;
+			transition-delay: .1s;
 			opacity: 0;
-			transition: .35s ease;
-			font-size: 14px;
-			line-height: 22px;
-
-			.text {
-				padding-top: 10px;
-				padding-bottom: 20px;
-				line-height: 22px;
-				color: #333;
-				
-			}
-
-			.foot {
-				padding-top: 20px;
-				color: rgb(46, 138, 230);
-			}
-			
+			transition: .15s;
 		}
 
 		.foot {
@@ -106,23 +90,23 @@
 		}
 
 		&:hover {
-			box-shadow: 0 5px 18px rgba(40, 70, 100, 0.3);
+			box-shadow: 0 5px 18px rgba(0, 0, 0, .125);
 
-			// .image {
-			// 	&:before {
-			// 		opacity: 1;
-			// 	}
-			// }
+			.image {
+				&:before {
+					opacity: 1;
+				}
+			}
 
 			.title {
-				color: rgb(46, 138, 230);
+				color: #2E8AE6;
 			}
 
-			.desc,{
-				max-height: 15em;
+			.desc {
+				height: 5.5em;
+				padding-bottom: 20px;
 				opacity: 1;
 			}
-
 		}
 	}
 }
