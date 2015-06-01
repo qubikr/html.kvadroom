@@ -109,6 +109,8 @@ $(function(){
                             $obj.attr('data-region', thisData.city);
                             $obj.attr('data-title_small', item.title_small);
                             $obj.attr('data-url', item.url);
+                            if(item.main != 0)
+                                $obj.attr('data-region', item.main);
 
                             item.title = highlight(item.title, thisData.entryBlock.val());
 
