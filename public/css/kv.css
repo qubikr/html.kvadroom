@@ -18623,7 +18623,7 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
   text-decoration: none;
   color: #333;
   line-height: 1.5em;
-  padding-bottom: 99px;
+  padding-bottom: 80px;
   position: relative;
   width: 300px;
   border-radius: 3px;
@@ -18678,29 +18678,33 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
 .sp-2-cards .spitem .title {
   color: #333;
   font-size: 19px;
+  line-height: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
   display: block;
   -webkit-transition: .15s;
           transition: .15s;
 }
 .sp-2-cards .spitem .desc {
-  color: #666;
-  font-size: 14px;
   display: block;
   max-height: 0;
   padding-bottom: 0;
   -webkit-transition: .25s;
           transition: .25s;
   overflow: hidden;
-  -webkit-transition-delay: .1s;
-          transition-delay: .1s;
   opacity: 0;
-  -webkit-transition: .15s ease;
-          transition: .15s ease;
+  -webkit-transition: .3s ease;
+          transition: .3s ease;
+  font-size: 14px;
+  line-height: 22px;
 }
 .sp-2-cards .spitem .desc .text {
+  padding-top: 10px;
   padding-bottom: 20px;
+  line-height: 22px;
+  color: #666;
+}
+.sp-2-cards .spitem .desc .foot {
+  color: #2e8ae6;
 }
 .sp-2-cards .spitem .foot {
   display: block;
@@ -18708,20 +18712,17 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
   line-height: 1.5em;
 }
 .sp-2-cards .spitem:hover {
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 5px 18px rgba(40, 70, 100, 0.3);
 }
 .sp-2-cards .spitem:hover .image:before {
   opacity: 1;
 }
 .sp-2-cards .spitem:hover .title {
-  color: #2E8AE6;
+  color: #2e8ae6;
 }
 .sp-2-cards .spitem:hover .desc {
   max-height: 15em;
   opacity: 1;
-}
-.sp-2-cards .spitem:hover .foot {
-  color: #2E8AE6;
 }
 .sp-2-fantastic {
   border: 1px solid #D9D9D9;
@@ -18899,7 +18900,6 @@ body.version3 .panoram {
   width: 1440px;
   background-color: #666E80;
   background-size: cover;
-  margin-top: -17px;
 }
 body.version3 .panoram .dop_div {
   background: url('../i/interior_01.jpg') top center;
