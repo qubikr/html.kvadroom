@@ -18645,21 +18645,6 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
   border-radius: 3px 3px 0 0;
   background-color: #eee;
 }
-.sp-2-cards .spitem .image:before {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(46, 138, 230, 0.4);
-  opacity: 0;
-  -webkit-transition: .25s;
-          transition: .25s;
-  z-index: 2;
-  border-radius: 3px 3px 0 0;
-}
 .sp-2-cards .spitem .image img {
   position: relative;
   display: block;
@@ -18683,6 +18668,8 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
   display: block;
   -webkit-transition: .15s;
           transition: .15s;
+  position: relative;
+  top: -2px;
 }
 .sp-2-cards .spitem .desc {
   display: block;
@@ -18714,9 +18701,6 @@ body.version3 .filter-side .range .input-hybrid:last-child ul li {
 }
 .sp-2-cards .spitem:hover {
   box-shadow: 0 5px 18px rgba(40, 70, 100, 0.3);
-}
-.sp-2-cards .spitem:hover .image:before {
-  opacity: 1;
 }
 .sp-2-cards .spitem:hover .title {
   color: #2e8ae6;
@@ -19582,12 +19566,13 @@ body.version3 .btn.large {
   line-height: 31px;
   padding: 24px 25px;
   font-size: 25px;
-  border: 1px solid white;
+  border: 1px solid #cccccc;
+  box-shadow: none;
 }
 body.version3 .btn.large:hover {
-  border: 1px solid #2E8AE6;
   color: #2E8AE6;
   box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 body.version3 .btn.do-register {
   width: initial;

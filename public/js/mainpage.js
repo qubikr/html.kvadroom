@@ -230,7 +230,7 @@ $(function(){
     $.fn.KVTestSearchString = function(methodOrOptions) {
         if ( methods[methodOrOptions] ) {
             return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
-        } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
+        } ыelse if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
             return methods.init.apply( this, arguments );
         } else {
             $.error( 'Method ' +  methodOrOptions + ' does not exist on jQuery.KVSearchString' );
@@ -277,11 +277,15 @@ $(function(){
 
     co.bind();
 
-        $('.filter').KVTestSearchString({
-            "dataGetter":function(val, cat){
-                return {'text':val, 'cat': cat};}
-            ,'url':'http://www.kvadroom.ru/action/search_text_main/'}
-        );
+    /**
+    *
+    *
+    */
+    $('.filter').KVTestSearchString({
+        "dataGetter":function(val, cat){
+            return {'text':val, 'cat': cat};}
+        ,'url':'http://www.kvadroom.ru/action/search_text_main/'}
+    );
 
     $($('.dropdown')[1]).find('li').on('mousedown', function(){
         var objectId = $(this).data('value');
