@@ -19675,8 +19675,8 @@ body.version3.main-page .hero-block .hero-text {
   font-size: 19px;
 }
 body.version3.main-page .transition-3s {
-  -webkit-transition: all 01s ease;
-          transition: all 01s ease;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
 }
 body.version3.main-page .sp-2-cards {
   zoom: 1;
@@ -19707,8 +19707,8 @@ body.version3.main-page .sp-2-cards .spitem .image:after {
   height: 225px;
   width: 300px;
   border-bottom: 0;
-  -webkit-transition: all 01s ease;
-          transition: all 01s ease;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
 }
 body.version3.main-page .sp-2-cards .spitem .image img {
   position: relative;
@@ -19725,8 +19725,8 @@ body.version3.main-page .sp-2-cards .spitem .info {
   -webkit-transform: translateY(145px);
       -ms-transform: translateY(145px);
           transform: translateY(145px);
-  -webkit-transition: all 01s ease;
-          transition: all 01s ease;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
 }
 body.version3.main-page .sp-2-cards .spitem .title {
   line-height: 24px;
@@ -19734,8 +19734,8 @@ body.version3.main-page .sp-2-cards .spitem .title {
   position: relative;
   top: 2px;
   padding-bottom: 35px;
-  -webkit-transition: all 01s ease;
-          transition: all 01s ease;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
 }
 body.version3.main-page .sp-2-cards .spitem .desc {
   height: auto;
@@ -19751,14 +19751,12 @@ body.version3.main-page .sp-2-cards .spitem .desc .text {
 }
 body.version3.main-page .sp-2-cards .spitem .desc .foot {
   position: absolute;
-  bottom: 20px;
-  padding-top: 20px;
+  bottom: 0px;
   color: #2e8ae6;
-}
-body.version3.main-page .sp-2-cards .spitem .foot {
-  display: block;
-  font-size: 14px;
-  line-height: 1.5em;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
 }
 body.version3.main-page .sp-2-cards .spitem:hover {
   box-shadow: 0 3px 10px rgba(40, 70, 100, 0.3);
@@ -19785,4 +19783,7 @@ body.version3.main-page .sp-2-cards .spitem:hover .desc {
   height: auto;
   opacity: 1;
   padding-bottom: 0;
+}
+body.version3.main-page .sp-2-cards .spitem:hover .foot {
+  bottom: 20px;
 }

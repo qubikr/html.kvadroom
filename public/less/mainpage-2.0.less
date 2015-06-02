@@ -1029,7 +1029,7 @@ body.version3.main-page {
   /*  SP blocks    */
 
 	.transition-3s {
-		transition: all 1s ease;
+		transition: all .3s ease;
 	}
 	
 
@@ -1059,11 +1059,8 @@ body.version3.main-page {
           bottom: 0;
           left: 0;
           right: 0;
-//          height: 224px;
-//          width:298px;
           height: 225px;
           width: 300px;
-//          border: 1px solid transparent;
           border-bottom:0;
           .transition-3s();
         }
@@ -1077,7 +1074,6 @@ body.version3.main-page {
 
       .info {
         padding: 14px 20px 18px;
-        // min-height: 80px;
         height: 225px;
         box-sizing: border-box;
         border-left:1px solid #ccc;
@@ -1087,78 +1083,77 @@ body.version3.main-page {
         .transition-3s();
       }
 
-      .title {
-        line-height: 24px;
-        margin-bottom: 0;
-        position: relative;
-        top: 2px;
-        padding-bottom: 35px;
-        .transition-3s();
-      }
+		.title {
+			line-height: 24px;
+			margin-bottom: 0;
+			position: relative;
+			top: 2px;
+			padding-bottom: 35px;
+			.transition-3s();
+		}
 
-      .desc {
-        height: auto;
-        // max-height: 0;
-        opacity:1;
-        transition: .35s ease;
+		.desc {
+			height: auto;
+			// max-height: 0;
+			opacity:1;
+			transition: .35s ease;
 
-        .text {
-          padding-top: 10px;
-          padding-bottom: 20px;
-          line-height: 22px;
-          color: #333;
+			.text {
+				padding-top: 10px;
+				padding-bottom: 20px;
+				line-height: 22px;
+				color: #333;
 
-        }
+			}
 
-        .foot {
-        	position: absolute;
-        	bottom: 20px;
-		      padding-top: 20px;
-		      color: rgb(46, 138, 230);
-        }
+			.foot {
+				position: absolute;
+				bottom: 0px;
+				color: rgb(46, 138, 230);
+				transition-delay: .3s;
+				.transition-3s();
+			}
 
-      }
+		}
 
-      .foot {
-        display: block;
-        font-size: 14px;
-        line-height: 1.5em;
-      }
+		&:hover {
+			box-shadow: 0 3px 10px rgba(40, 70, 100, 0.3);
 
-      &:hover {
-        box-shadow: 0 3px 10px rgba(40, 70, 100, 0.3);
+			.info {
+				border-color: #ccc;
+				transform:translateY(0px);
+			}
 
-        .info {
-          border-color: #ccc;
-          transform:translateY(0px);
-        }
+			.image img {
+				border-color: #ccc;
+			}
 
-        .image img {
-          border-color: #ccc;
-        }
+			.image {
 
-        .image {
-
-          &:after {
-            background-color: rgba(0,0,0,0.2);
-          }
-        }
+				&:after {
+					background-color: rgba(0,0,0,0.2);
+				}
+			}
 
 
-        .title {
-          color: rgb(46, 138, 230);
-          height: auto;
-          padding-bottom: 10px;
-        }
+			.title {
+				color: rgb(46, 138, 230);
+				height: auto;
+				padding-bottom: 10px;
+			}
 
-        .desc {
-          max-height: 15em;
-          height: auto;
-          opacity: 1;
-          padding-bottom: 0;
-        }
+			.desc {
+				max-height: 15em;
+				height: auto;
+				opacity: 1;
+				padding-bottom: 0;
+			}
 
-      }
+			.foot {
+				bottom: 20px;
+			}
+
+		}
     }
   }
 
