@@ -494,6 +494,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/i\/cottage_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/i\/cottage_01.jpg",
+		"outputAbbreviatedPath": "\/i\/cottage_01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/i\/csl-tl.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1935,6 +1946,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/i\/interior_02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/i\/interior_02.jpg",
+		"outputAbbreviatedPath": "\/i\/interior_02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/i\/ipad.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2782,6 +2804,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/i\/patio_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/i\/patio_01.jpg",
+		"outputAbbreviatedPath": "\/i\/patio_01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/i\/person.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3075,6 +3108,17 @@
 		"initialSize": 1657,
 		"inputAbbreviatedPath": "\/i\/scroll-gradient.png",
 		"outputAbbreviatedPath": "\/i\/scroll-gradient.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/i\/shale_01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/i\/shale_01.jpg",
+		"outputAbbreviatedPath": "\/i\/shale_01.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -6335,6 +6379,26 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/responsiveslides.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/responsiveslides.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/responsiveslides.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/responsiveslides.js",
+		"outputAbbreviatedPath": "\/min\/responsiveslides-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/search.html": {
 		"fileType": 8192,
