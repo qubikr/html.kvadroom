@@ -60,21 +60,14 @@ body.version3.main-page {
     margin-top: -17px;
 
 
-    .dop_div {
+    .dop_div, .bgSlider {
       background-size: cover;
       position: absolute;
       width: 1440px;
       height: 540px;
 
-      li {
-        display: none;
-        &:first-child {
-          display: block;
-        }
-      }
-
       @media @desktop {
-        width: 100%;
+        width: 100% !important;
       }
     }
 

@@ -18904,21 +18904,17 @@ body.version3.main-page .panoram {
     width: 100%;
   }
 }
-body.version3.main-page .panoram .dop_div {
+body.version3.main-page .panoram .dop_div,
+body.version3.main-page .panoram .bgSlider {
   background-size: cover;
   position: absolute;
   width: 1440px;
   height: 540px;
 }
-body.version3.main-page .panoram .dop_div li {
-  display: none;
-}
-body.version3.main-page .panoram .dop_div li:first-child {
-  display: block;
-}
 @media only screen and (max-width: 1460px) {
-  body.version3.main-page .panoram .dop_div {
-    width: 100%;
+  body.version3.main-page .panoram .dop_div,
+  body.version3.main-page .panoram .bgSlider {
+    width: 100% !important;
   }
 }
 body.version3.main-page .panoram .inner {
