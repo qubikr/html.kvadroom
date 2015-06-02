@@ -1,26 +1,3 @@
-/*
- * fadeSlideShow
- * v.2.2.0
- *
- * Copyright (c) 2010 Pascal Bajorat (http://www.pascal-bajorat.com)
- * Dual licensed under the MIT (below)
- * and GPL (http://www.gnu.org/licenses/gpl.txt) licenses.
- *
- *
- * http://plugins.jquery.com/project/fadeslideshow
- * http://www.pascal-bajorat.com
-
-MIT License
-
-Copyright (c) 2013 Pascal Bajorat
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-
 jQuery.fn.fadeSlideShow = function(options) {
     return this.each(function(){
         settings = jQuery.extend({
@@ -28,8 +5,6 @@ jQuery.fn.fadeSlideShow = function(options) {
             height: 480, // default height of the slideshow
             speed: 'slow', // default animation transition speed
             interval: 3000, // default interval between image change 
-
-            allowKeyboardCtrl: true, // allow keyboard controlls left / right / space
             autoplay: true // autoplay the slideshow
         }, options);
         
@@ -77,17 +52,6 @@ jQuery.fn.fadeSlideShow = function(options) {
                 }
             }, settings.interval);
             
-            if(settings.PlayPauseElement){
-                jQuery('#'+settings.PlayPauseElement).html(settings.PauseText);
-            }
-        }
-        
-        var stopAutoplay = function(){
-            clearInterval(intval);
-            intval = false;
-            if(settings.PlayPauseElement){
-                jQuery('#'+settings.PlayPauseElement).html(settings.PlayText);
-            }
         }
         
         var jumpTo = function(newIndex){
@@ -141,28 +105,6 @@ jQuery.fn.fadeSlideShow = function(options) {
             });
         }
         
-        if(settings.PlayPauseElement){
-            if(!jQuery('#'+settings.PlayPauseElement).css('display')){
-                jQuery(this).after('<a href="#" id="'+settings.PlayPauseElement+'"><\/a>');
-            }
-            
-            if(settings.autoplay){
-                jQuery('#'+settings.PlayPauseElement).html(settings.PauseText);
-            }else{
-                jQuery('#'+settings.PlayPauseElement).html(settings.PlayText);
-            }
-            
-            jQuery('#'+settings.PlayPauseElement).bind('click', function(){
-                if(intval){
-                    stopAutoplay();
-                }else{
-                    autoplay();
-                }
-                return false;
-            });
-        }
-        
-        // start autoplay or set it to false
         if(settings.autoplay){autoplay();}else{intval=false;}
     });
 };
@@ -205,6 +147,8 @@ var data_activity_cat = {
 
 
 $(function(){
+
+    
 
     var methods = {
 
@@ -490,11 +434,11 @@ $(function(){
     });
 
     
-    var images = ['cottage_01.jpg','patio_01.jpg','house_01.jpg','interior_01.jpg', 'shale_01.jpg', 'land_01.jpg', 'interior_02.jpg'];
     $('.bgSlider').fadeSlideShow({
         width: 1440,
         height: 560,
-        autoplay: true
+        autoplay: true,
+        interval: 10000
     });
     
 });
