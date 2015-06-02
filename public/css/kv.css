@@ -19776,7 +19776,7 @@ body.version3.main-page .sp-2-cards .spitem:hover .image:after {
 body.version3.main-page .sp-2-cards .spitem:hover .title {
   color: #2e8ae6;
   height: auto;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 body.version3.main-page .sp-2-cards .spitem:hover .desc {
   max-height: 15em;
