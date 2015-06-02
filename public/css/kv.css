@@ -18904,6 +18904,9 @@ body.version3.main-page .panoram {
     width: 100%;
   }
 }
+body.version3.main-page .panoram .bgSlider {
+  display: none;
+}
 body.version3.main-page .panoram .dop_div,
 body.version3.main-page .panoram .bgSlider {
   background-size: cover;

@@ -1,154 +1,160 @@
-jQuery.fn.fadeSlideShow = function(options) {
-    return this.each(function(){
-        settings = jQuery.extend({
-            width: 640, // default width of the slideshow
-            height: 480, // default height of the slideshow
-            speed: 'slow', // default animation transition speed
-            interval: 3000, // default interval between image change 
-            autoplay: true // autoplay the slideshow
-        }, options);
-        
-        // set style for wrapper element
-        jQuery(this).css({
-            width: settings.width,
-            height: settings.height,
-            position: 'relative',
-            overflow: 'hidden'
-        });
-        
-        // set styles for child element
-        jQuery('> *',this).css({
-            position: 'absolute',
-            width: settings.width,
-            height: settings.height
-        });
-        
-        // count number of slides
-        var Slides = jQuery('> *', this).length;
-        Slides = Slides - 1;
-        var ActSlide = Slides;
-        // Set jQuery Slide short var
-        var jQslide = jQuery('> *', this);
-        // save this
-        var fssThis = this;
-        var intval = false;
-        var autoplay = function(){
-            intval = setInterval(function(){
-                jQslide.eq(ActSlide).fadeOut(settings.speed);
-                
-                // if list is on change the active class
-                if(settings.ListElement){
-                    var setActLi = (Slides - ActSlide) + 1;
-                    if(setActLi > Slides){setActLi=0;}
-                    jQuery('#'+settings.ListElement+' li').removeClass(settings.ListLiActive);
-                    jQuery('#'+settings.ListElement+' li').eq(setActLi).addClass(settings.ListLiActive);
-                }
-                
-                if(ActSlide <= 0){
-                    jQslide.fadeIn(settings.speed);
-                    ActSlide = Slides;
-                }else{
-                    ActSlide = ActSlide - 1;    
-                }
-            }, settings.interval);
-            
-        }
-        
-        var jumpTo = function(newIndex){
-            if(newIndex < 0){newIndex = Slides;}
-            else if(newIndex > Slides){newIndex = 0;}
-            if( newIndex >= ActSlide ){
-                jQuery('> *:lt('+(newIndex+1)+')', fssThis).fadeIn(settings.speed);
-            }else if(newIndex <= ActSlide){
-                jQuery('> *:gt('+newIndex+')', fssThis).fadeOut(settings.speed);
-            }
-            
-            // set the active slide
-            ActSlide = newIndex;
-
-            if(settings.ListElement){
-                // set active
-                jQuery('#'+settings.ListElement+' li').removeClass(settings.ListLiActive);
-                jQuery('#'+settings.ListElement+' li').eq((Slides-newIndex)).addClass(settings.ListLiActive);
-            }
-        }
-        
-        // if list is on render it
-        if(settings.ListElement){
-            var i=0;
-            var li = '';
-            while(i<=Slides){
-                if(i==0){
-                    li = li+'<li class="'+settings.ListLi+i+' '+settings.ListLiActive+'"><a href="#">'+(i+1)+'<\/a><\/li>';
-                }else{
-                    li = li+'<li class="'+settings.ListLi+i+'"><a href="#">'+(i+1)+'<\/a><\/li>';
-                }
-                i++;
-            }
-            var List = '<ul id="'+settings.ListElement+'">'+li+'<\/ul>';
-            
-            // add list to a special id or append after the slideshow
-            if(settings.addListToId){
-                jQuery('#'+settings.addListToId).append(List);
-            }else{
-                jQuery(this).after(List);
-            }
-            
-            jQuery('#'+settings.ListElement+' a').bind('click', function(){
-                var index = jQuery('#'+settings.ListElement+' a').index(this);
-                stopAutoplay();
-                var ReverseIndex = Slides-index;
-                
-                jumpTo(ReverseIndex);
-                
-                return false;
-            });
-        }
-        
-        if(settings.autoplay){autoplay();}else{intval=false;}
-    });
-};
-
-var data_activity_cat = {
-    1: {
-        1: 'novostroyki'
-    },
-    2: {
-        1: 'kupit-kvartiru',
-        2: 'sniat-kvartiru',
-        3: 'kvartiri-posutochno'
-    },
-    3: {
-        1: 'kupit-komnatu',
-        2: 'sniat-komnatu',
-        3: 'komnati-posutochno'
-    },
-    4: {
-        1: 'kupit-taunhaus',
-        2: 'sniat-taunhaus'
-    },
-    5: {
-        1: 'kupit-dom',
-        2: 'sniat-dom',
-        3: 'kottedji-posutochno'
-    },
-    6: {
-        1: 'zemelnie-uchastki'
-    },
-    7: {
-        1: 'garaji-kupit',
-        2: 'garaji-sniat'
-    },
-    8: {
-        1: 'ofisy-kupit',
-        2: 'ofisy-sniat'
-    }
-};
-
-
 $(function(){
 
-    
+     if(!$('body').hasClass('main-page'))
+        return;
+
+    jQuery.fn.fadeSlideShow = function(options) {
+        return this.each(function(){
+            settings = jQuery.extend({
+                width: 640, // default width of the slideshow
+                height: 480, // default height of the slideshow
+                speed: 'slow', // default animation transition speed
+                interval: 3000, // default interval between image change
+                autoplay: true, // autoplay the slideshow
+                load: false
+
+            }, options);
+
+            // set style for wrapper element
+            jQuery(this).css({
+                width: settings.width,
+                height: settings.height,
+                position: 'relative',
+                overflow: 'hidden'
+            });
+
+            // set styles for child element
+            jQuery('> *',this).css({
+                position: 'absolute',
+                width: settings.width,
+                height: settings.height
+            });
+
+            jQuery(this)
+                .find('img.lazy:eq(0)')
+                .each(function() {
+                    var src = jQuery(this).attr('data-src');
+                    jQuery(this).attr('src', src).removeAttr('data-src');
+                });
+
+            // count number of slides
+            var Slides = jQuery('> *', this).length;
+            Slides = Slides - 1;
+            var ActSlide = Slides;
+            // Set jQuery Slide short var
+            var jQslide = jQuery('> *', this);
+            // save this
+            var fssThis = this;
+            var intval = false;
+            var autoplay = function(){
+                intval = setInterval(function(){
+                    jQslide.eq(ActSlide).fadeOut(settings.speed);
+
+                    // if list is on change the active class
+                    if(settings.ListElement)
+                        var setActLi = (Slides - ActSlide) + 1;
+
+                    if(ActSlide <= 0){
+                        jQslide.fadeIn(settings.speed);
+                        ActSlide = Slides;
+                    } else {
+                        ActSlide = ActSlide - 1;
+                    }
+                }, settings.interval);
+
+            }
+
+            var jumpTo = function(newIndex){
+                if(newIndex < 0){newIndex = Slides;}
+                else if(newIndex > Slides){newIndex = 0;}
+                if( newIndex >= ActSlide ){
+                    jQuery('> *:lt('+(newIndex+1)+')', fssThis).fadeIn(settings.speed);
+                }else if(newIndex <= ActSlide){
+                    jQuery('> *:gt('+newIndex+')', fssThis).fadeOut(settings.speed);
+                }
+
+                // set the active slide
+                ActSlide = newIndex;
+
+                if(settings.ListElement){
+                    // set active
+                    jQuery('#'+settings.ListElement+' li').removeClass(settings.ListLiActive);
+                    jQuery('#'+settings.ListElement+' li').eq((Slides-newIndex)).addClass(settings.ListLiActive);
+                }
+            }
+
+            // if list is on render it
+            if(settings.ListElement){
+                var i=0;
+                var li = '';
+                while(i<=Slides){
+                    if(i==0){
+                        li = li+'<li class="'+settings.ListLi+i+' '+settings.ListLiActive+'"><a href="#">'+(i+1)+'<\/a><\/li>';
+                    }else{
+                        li = li+'<li class="'+settings.ListLi+i+'"><a href="#">'+(i+1)+'<\/a><\/li>';
+                    }
+                    i++;
+                }
+                var List = '<ul id="'+settings.ListElement+'">'+li+'<\/ul>';
+
+                // add list to a special id or append after the slideshow
+                if(settings.addListToId){
+                    jQuery('#'+settings.addListToId).append(List);
+                }else{
+                    jQuery(this).after(List);
+                }
+
+                jQuery('#'+settings.ListElement+' a').bind('click', function(){
+                    var index = jQuery('#'+settings.ListElement+' a').index(this);
+                    stopAutoplay();
+                    var ReverseIndex = Slides-index;
+
+                    jumpTo(ReverseIndex);
+
+                    return false;
+                });
+            }
+            settings.load(this);
+            if(settings.autoplay){autoplay();}else{intval=false;}
+        });
+    };
+
+
+    var data_activity_cat = {
+        1: {
+            1: 'novostroyki'
+        },
+        2: {
+            1: 'kupit-kvartiru',
+            2: 'sniat-kvartiru',
+            3: 'kvartiri-posutochno'
+        },
+        3: {
+            1: 'kupit-komnatu',
+            2: 'sniat-komnatu',
+            3: 'komnati-posutochno'
+        },
+        4: {
+            1: 'kupit-taunhaus',
+            2: 'sniat-taunhaus'
+        },
+        5: {
+            1: 'kupit-dom',
+            2: 'sniat-dom',
+            3: 'kottedji-posutochno'
+        },
+        6: {
+            1: 'zemelnie-uchastki'
+        },
+        7: {
+            1: 'garaji-kupit',
+            2: 'garaji-sniat'
+        },
+        8: {
+            1: 'ofisy-kupit',
+            2: 'ofisy-sniat'
+        }
+    };
 
     var methods = {
 
@@ -331,8 +337,8 @@ $(function(){
             thisData.searchSelector.on('click.li', 'li', function(e){
 
                 var data = $(this).data('title_small');
-                    thisData.searchSelector.find('li').remove('.active');
-                    $(this).addClass('active');
+                thisData.searchSelector.find('li').remove('.active');
+                $(this).addClass('active');
 
                 e.stopPropagation();
                 thisData.searchSelector.removeClass('active');
@@ -340,6 +346,9 @@ $(function(){
 
             });
         }
+
+
+
     };
 
     $.fn.KVTestSearchString = function(methodOrOptions) {
@@ -392,14 +401,10 @@ $(function(){
 
     co.bind();
 
-    /**
-    *
-    *
-    */
     $('.filter').KVTestSearchString({
-        "dataGetter":function(val, cat){
-            return {'text':val, 'cat': cat};}
-        ,'url':'http://www.kvadroom.ru/action/search_text_main/'}
+            "dataGetter":function(val, cat){
+                return {'text':val, 'cat': cat};}
+            ,'url':'http://www.kvadroom.ru/action/search_text_main/'}
     );
 
     $($('.dropdown')[1]).find('li').on('mousedown', function(){
@@ -424,23 +429,24 @@ $(function(){
 
         var cat;
         var url = $('.search-selector li.active').data('url');
-            option1 = $($('.active[data-value]')[0]).data('value');
-            option2 = $($('.active[data-value]')[1]).data('value');
-            cat = data_activity_cat[option2][option1];
+        option1 = $($('.active[data-value]')[0]).data('value');
+        option2 = $($('.active[data-value]')[1]).data('value');
+        cat = data_activity_cat[option2][option1];
 
         var prefix = url || '';
         document.location = prefix + cat;
 
     });
 
-    
     $('.bgSlider').fadeSlideShow({
         width: 1440,
         height: 560,
         autoplay: true,
-        interval: 10000
+        interval: 2000,
+        load: function(elem){
+            $(elem).css('display', 'block');
+        }
     });
-    
 });
 
 
