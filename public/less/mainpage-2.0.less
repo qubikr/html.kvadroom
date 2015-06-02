@@ -68,10 +68,10 @@ body.version3.main-page {
       height: 540px;
 
       li {
-			display: none;
-			&:first-child {
-				display: block;
-			}
+        display: none;
+        &:first-child {
+          display: block;
+        }
       }
 
       @media @desktop {
@@ -280,7 +280,7 @@ body.version3.main-page {
       padding-right: 30px;
 
 
-	
+
       &.active {
         border-color: #FFBF00;
       }
@@ -915,26 +915,26 @@ body.version3.main-page {
     }
 
     .icon-svg-comparison {
-		.svg-common2();
-		.svg-dims();
-		background-position: 0 0;
-	}
+      .svg-common2();
+      .svg-dims();
+      background-position: 0 0;
+    }
 
-	.icon-svg-favorite {
-		.svg-common2();
-		.svg-dims();
-		background-position: 100% 0;
-	}
-	.icon-svg-settings {
-		.svg-common2();
-		.svg-dims();
-		background-position: 0 100%;
-	}
-	.icon-svg-subscribe {
-		.svg-common2();
-		.svg-dims();
-		background-position: 100% 100%;
-	}
+    .icon-svg-favorite {
+      .svg-common2();
+      .svg-dims();
+      background-position: 100% 0;
+    }
+    .icon-svg-settings {
+      .svg-common2();
+      .svg-dims();
+      background-position: 0 100%;
+    }
+    .icon-svg-subscribe {
+      .svg-common2();
+      .svg-dims();
+      background-position: 100% 100%;
+    }
 
 
   }
@@ -1028,42 +1028,78 @@ body.version3.main-page {
 
   /*  SP blocks    */
 
+	.transition-3s {
+		transition: all 1s ease;
+	}
+	
+
   .sp-2-cards {
     .clearfix();
     .spitem {
 
-      padding-bottom: 80px;
+      // padding-bottom: 80px;
+		padding-bottom: 0px;
+		height: 305px;
+		overflow: hidden;
+		box-sizing: border-box;
+		border-bottom: 1px solid #ccc;
+
 
       .image {
 
         &:before {
-        	display: none;
+          display: none;
+        }
+
+        &:after {
+          content: " ";
+          display: block;
+          position: absolute;
+          border-radius: 3px 3px 0 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+//          height: 224px;
+//          width:298px;
+          height: 225px;
+          width: 300px;
+//          border: 1px solid transparent;
+          border-bottom:0;
+          .transition-3s();
         }
 
         img {
           position: relative;
           display: block;
+          border-radius: 3px 3px 0 0;
         }
       }
-	
-	  .info {
-		padding: 14px 20px 18px;
-		min-height: 80px;
-		box-sizing: border-box;
-	  }
+
+      .info {
+        padding: 14px 20px 18px;
+        // min-height: 80px;
+        height: 225px;
+        box-sizing: border-box;
+        border-left:1px solid #ccc;
+        border-right:1px solid #ccc;
+        border-bottom: none;
+        transform:translateY(145px);
+        .transition-3s();
+      }
 
       .title {
         line-height: 24px;
         margin-bottom: 0;
         position: relative;
         top: 2px;
-        min-height: auto;
+        padding-bottom: 35px;
+        .transition-3s();
       }
 
       .desc {
-      	height: auto;
-        max-height: 0;
-        transition: .35s;
+        height: auto;
+        // max-height: 0;
+        opacity:1;
         transition: .35s ease;
 
         .text {
@@ -1075,10 +1111,10 @@ body.version3.main-page {
         }
 
         .foot {
-          padding-top: 20px;
-          color: rgb(46, 138, 230);
-          position: absolute;
-          bottom: 10px;
+        	position: absolute;
+        	bottom: 20px;
+		      padding-top: 20px;
+		      color: rgb(46, 138, 230);
         }
 
       }
@@ -1091,14 +1127,28 @@ body.version3.main-page {
 
       &:hover {
         box-shadow: 0 3px 10px rgba(40, 70, 100, 0.3);
-        border:none;
 
-		.info {
-			height: 215px;
-		}
+        .info {
+          border-color: #ccc;
+          transform:translateY(0px);
+        }
+
+        .image img {
+          border-color: #ccc;
+        }
+
+        .image {
+
+          &:after {
+            background-color: rgba(0,0,0,0.2);
+          }
+        }
+
 
         .title {
           color: rgb(46, 138, 230);
+          height: auto;
+          padding-bottom: 10px;
         }
 
         .desc {
@@ -1106,10 +1156,6 @@ body.version3.main-page {
           height: auto;
           opacity: 1;
           padding-bottom: 0;
-        }
-
-        .foot {
-          bottom: 10px;
         }
 
       }

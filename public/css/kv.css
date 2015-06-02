@@ -19674,6 +19674,10 @@ body.version3.main-page .hero-block .hero-text {
   line-height: 30px;
   font-size: 19px;
 }
+body.version3.main-page .transition-3s {
+  -webkit-transition: all 01s ease;
+          transition: all 01s ease;
+}
 body.version3.main-page .sp-2-cards {
   zoom: 1;
 }
@@ -19683,32 +19687,59 @@ body.version3.main-page .sp-2-cards:after {
   clear: both;
 }
 body.version3.main-page .sp-2-cards .spitem {
-  padding-bottom: 80px;
+  padding-bottom: 0px;
+  height: 305px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
 }
 body.version3.main-page .sp-2-cards .spitem .image:before {
   display: none;
 }
+body.version3.main-page .sp-2-cards .spitem .image:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  border-radius: 3px 3px 0 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 225px;
+  width: 300px;
+  border-bottom: 0;
+  -webkit-transition: all 01s ease;
+          transition: all 01s ease;
+}
 body.version3.main-page .sp-2-cards .spitem .image img {
   position: relative;
   display: block;
+  border-radius: 3px 3px 0 0;
 }
 body.version3.main-page .sp-2-cards .spitem .info {
   padding: 14px 20px 18px;
-  min-height: 80px;
+  height: 225px;
   box-sizing: border-box;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: none;
+  -webkit-transform: translateY(145px);
+      -ms-transform: translateY(145px);
+          transform: translateY(145px);
+  -webkit-transition: all 01s ease;
+          transition: all 01s ease;
 }
 body.version3.main-page .sp-2-cards .spitem .title {
   line-height: 24px;
   margin-bottom: 0;
   position: relative;
   top: 2px;
-  min-height: auto;
+  padding-bottom: 35px;
+  -webkit-transition: all 01s ease;
+          transition: all 01s ease;
 }
 body.version3.main-page .sp-2-cards .spitem .desc {
   height: auto;
-  max-height: 0;
-  -webkit-transition: .35s;
-          transition: .35s;
+  opacity: 1;
   -webkit-transition: .35s ease;
           transition: .35s ease;
 }
@@ -19719,10 +19750,10 @@ body.version3.main-page .sp-2-cards .spitem .desc .text {
   color: #333;
 }
 body.version3.main-page .sp-2-cards .spitem .desc .foot {
+  position: absolute;
+  bottom: 20px;
   padding-top: 20px;
   color: #2e8ae6;
-  position: absolute;
-  bottom: 10px;
 }
 body.version3.main-page .sp-2-cards .spitem .foot {
   display: block;
@@ -19731,20 +19762,27 @@ body.version3.main-page .sp-2-cards .spitem .foot {
 }
 body.version3.main-page .sp-2-cards .spitem:hover {
   box-shadow: 0 3px 10px rgba(40, 70, 100, 0.3);
-  border: none;
 }
 body.version3.main-page .sp-2-cards .spitem:hover .info {
-  height: 215px;
+  border-color: #ccc;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+body.version3.main-page .sp-2-cards .spitem:hover .image img {
+  border-color: #ccc;
+}
+body.version3.main-page .sp-2-cards .spitem:hover .image:after {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 body.version3.main-page .sp-2-cards .spitem:hover .title {
   color: #2e8ae6;
+  height: auto;
+  padding-bottom: 10px;
 }
 body.version3.main-page .sp-2-cards .spitem:hover .desc {
   max-height: 15em;
   height: auto;
   opacity: 1;
   padding-bottom: 0;
-}
-body.version3.main-page .sp-2-cards .spitem:hover .foot {
-  bottom: 10px;
 }
