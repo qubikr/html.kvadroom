@@ -443,11 +443,10 @@ $(function(){
         typeActionUl.find('.title').html(typeActionUl.find('li.active').text());
     });
 
-    function isValid(option1, option2) {
-        return data_activity_cat[option2][option1] || false;
-    }
-
-
+    $('.dropdown').eq(0).find('li').on('mousedown', function(){
+        if($(this).hasClass('disabled'))
+            return false;
+    })
 
     //@TODO: оформить в функцию
     $('div.btn.blue').on('click', function(){
