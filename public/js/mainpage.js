@@ -368,7 +368,7 @@ $(function(){
         return this;
     };
 
-    $('.sp-wrapper .inner-image img').on('load', function(){
+    $('.main-page  .sp-wrapper .inner-image img').on('load', function(){
         $(this).show();
     });
 
@@ -407,7 +407,7 @@ $(function(){
 
     co.bind();
 
-    $('.filter').KVTestSearchString({
+    $('.main-page  .filter').KVTestSearchString({
             "dataGetter":function(val, cat){
                 return {'text':val, 'cat': cat};}
             ,'url':'http://www.kvadroom.ru/action/search_text_main/'}
