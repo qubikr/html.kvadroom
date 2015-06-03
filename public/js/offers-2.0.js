@@ -81,7 +81,6 @@ $(function(){
 				ddExpandedStartPositionTop = $dd.offset().top - ddExpandedHeight + $dd.height();
 				ddExpandedEndPositionBottom = ddExpandedHeight + $dd.offset().top;
 
-			console.log(ddExpandedStartPositionTop)
 
 			if(ddExpandedStartPositionTop > $(window).scrollTop() && $(window).height() + $(window).scrollTop() < ddExpandedEndPositionBottom){
 				$dd.addClass('top');

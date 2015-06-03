@@ -19090,6 +19090,10 @@ body.version3.main-page .panoram .dropdown .title {
   height: 48px;
   font-size: 19px;
 }
+body.version3.main-page .panoram .dropdown li.disabled {
+  background-color: #F4F4F4;
+  color: #D7D7D7;
+}
 body.version3.main-page .panoram .container-24 {
   margin-bottom: 20px;
 }

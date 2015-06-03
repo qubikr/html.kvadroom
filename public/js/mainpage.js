@@ -33,8 +33,8 @@ $(function(){
             jQuery(this)
                 .find('img.lazy:eq(0)')
                 .each(function() {
-                    var src = jQuery(this).attr('data-src');
-                    jQuery(this).attr('src', src).removeAttr('data-src');
+                    var src = $(this).attr('data-src');
+                    $(this).attr('src', src).removeAttr('data-src');
                 });
 
             // count number of slides
@@ -48,16 +48,22 @@ $(function(){
             var intval = false;
             var autoplay = function(){
                 intval = setInterval(function(){
+
+                    jQslide.parent()
+                        .find('img.lazy:eq(' + ActSlide + '), img.lazy:eq(' + (ActSlide - 1 ) + '), img.lazy:eq(' + (ActSlide + 1) + ')')
+                        .each(function() {
+                            var src = $(this).attr('data-src');
+                            if(src)
+                                $(this).attr('src', src).removeAttr('data-src');
+                        });
+
                     jQslide.eq(ActSlide).fadeOut(settings.speed);
 
-                    // if list is on change the active class
-                    if(settings.ListElement)
-                        var setActLi = (Slides - ActSlide) + 1;
 
                     if(ActSlide <= 0){
                         jQslide.fadeIn(settings.speed);
                         ActSlide = Slides;
-                    } else {
+                    }else{
                         ActSlide = ActSlide - 1;
                     }
                 }, settings.interval);
@@ -407,21 +413,40 @@ $(function(){
             ,'url':'http://www.kvadroom.ru/action/search_text_main/'}
     );
 
-    $($('.dropdown')[1]).find('li').on('mousedown', function(){
+    // Обработчик выбора объекта недвижимости (ОН)
+    $('.dropdown').eq(1).find('li').on('mousedown', function(){
+
         var objectId = $(this).data('value');
+        var typeActionUl = $('.dropdown').eq(0);
+        var elems = typeActionUl.find('li');
+        
+        // получаем объект с вариантами действий у выбранного ОН
         var actions = data_activity_cat[objectId];
 
-        var elems = $($('.dropdown')[0]).find('li');
-        $.each(elems, function(){
-            $(this).addClass('hide').removeClass('active');
+        // запоминаем уже выбранный пункт
+        var choosenActionIndex = typeActionUl.find('li.active').index();
+
+        // выставляем сначала все элементы закрытымти
+        elems.each(function(){
+            $(this).addClass('disabled').removeClass('active');
         });
 
-        for(var i in actions ){
-            $(elems[i-1]).removeClass('hide');
+        //По очереди открываем доступные действия
+        for(var i in actions){
+            elems.eq(i-1).removeClass('disabled');
         }
-        $($($('.dropdown')[0]).find('li').not('.active')[0]).addClass('active');
-        $($('.dropdown')[0]).find('.title').html($($('.dropdown')[0]).find('li').not('.hide')[0].innerText);
+        // Если выбранный ранне элемент возможен - сделать его активным, если нет - выбрать первый доступный
+        typeActionUl.find('li').eq(choosenActionIndex).hasClass('disabled') ?
+            typeActionUl.find('li').not('.disabled').eq(0).addClass('active'):
+            typeActionUl.find('li').eq(choosenActionIndex).addClass('active'); 
+        
+        typeActionUl.find('.title').html(typeActionUl.find('li.active').text());
     });
+
+    function isValid(option1, option2) {
+        return data_activity_cat[option2][option1] || false;
+    }
+
 
 
     //@TODO: оформить в функцию
@@ -442,7 +467,7 @@ $(function(){
         width: 1440,
         height: 560,
         autoplay: true,
-        interval: 2000,
+        interval: 10000,
         load: function(elem){
             $(elem).css('display', 'block');
         }
