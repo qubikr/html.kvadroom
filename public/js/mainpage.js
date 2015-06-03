@@ -443,9 +443,11 @@ $(function(){
         typeActionUl.find('.title').html(typeActionUl.find('li.active').text());
     });
 
-    $('.dropdown').eq(0).find('li').on('mousedown', function(){
-        if($(this).hasClass('disabled'))
+    $('.dropdown').eq(0).find('li').on('mousedown', function(e){
+        if($(this).hasClass('disabled')) {
+            e.preventDefault();
             return false;
+        }
     })
 
     //@TODO: оформить в функцию
