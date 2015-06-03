@@ -444,7 +444,8 @@ $(function(){
     });
 
     $('.main-page  .dropdown').eq(0).find('li').on('mousedown', function(e){
-        e = event || window.event;
+        if(!e)
+         e = window.event;
         if($(this).hasClass('disabled')) {
             e.preventDefault();
             $(this).off('click');
