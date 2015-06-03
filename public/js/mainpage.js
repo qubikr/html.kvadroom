@@ -414,7 +414,7 @@ $(function(){
     );
 
     // Обработчик выбора объекта недвижимости (ОН)
-    $('.dropdown').eq(1).find('li').on('mousedown', function(){
+    $('.main-page .dropdown').eq(1).find('li').on('mousedown', function(){
 
         var objectId = $(this).data('value');
         var typeActionUl = $('.dropdown').eq(0);
@@ -443,10 +443,25 @@ $(function(){
         typeActionUl.find('.title').html(typeActionUl.find('li.active').text());
     });
 
-    $('.dropdown').eq(0).find('li').on('mousedown', function(e){
+    $('.main-page  .dropdown').eq(0).find('li').on('mousedown', function(e){
+        e = event || window.event;
         if($(this).hasClass('disabled')) {
             e.preventDefault();
-            return false;
+            $(this).off('click');
+        }
+        var elems = $('.dropdown').eq(1).find('li');
+        var actionId = $(this).data('value');
+
+        elems.each(function(){
+            if(!$(this).hasClass('disabled'))
+                $(this).addClass('disabled');
+        });
+
+        for(var i in data_activity_cat) {
+            if(data_activity_cat[i][actionId]) {
+                elems.parent().find('[data-value="'+i+'"]').removeClass('disabled');
+            }
+
         }
     })
 
