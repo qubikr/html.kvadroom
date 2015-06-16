@@ -489,6 +489,16 @@ $(function(){
             $(elem).css('display', 'block');
         }
     });
+
+    $('.toggle-description').on('click', function(e){
+        var $elem = $(e.currentTarget).find('.icon-description');
+
+        if ($elem.hasClass('hover-on')) {
+            $elem.removeClass('hover-on').addClass('hover-out');
+        } else {
+            $elem.removeClass('hover-out').addClass('hover-on');
+        }
+    })
 });
 
 

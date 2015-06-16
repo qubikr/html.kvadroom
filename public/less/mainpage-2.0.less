@@ -863,6 +863,10 @@ body.version3.main-page {
       margin-bottom: 60px;
       text-align: center;
 
+      > * {
+        cursor: pointer;
+      }
+
       .icon-i {
         height: 80px;
       }
@@ -870,6 +874,104 @@ body.version3.main-page {
       .icon-title {
         font-size: 19px;
         line-height: 25px;
+      }
+
+      @-webkit-keyframes hover-on {
+        0%	{
+          opacity: 0;
+          transform-origin: 100% 50% 0;
+          transform: translateX(-30%) perspective(400px) rotate3d(0, 1, 0, 90deg) scale(.4, .4);
+
+
+        }
+
+        100%	{
+          transform-origin: 100% 50% 0;
+          transform: translateX(0%) perspective(400px) rotate3d(0, 1, 0, 0deg) scale(1, 1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes hover-on {
+        0%	{
+          opacity: 0;
+          transform-origin: 100% 50% 0;
+          transform: translateX(-30%) perspective(400px) rotate3d(0, 1, 0, 90deg) scale(.4, .4);
+        }
+
+        100%	{
+          transform-origin: 100% 50% 0;
+          transform:  translateX(0%) perspective(400px) rotate3d(0, 1, 0, 0deg) scale(1, 1);
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes hover-out {
+        0%	{
+          opacity: 1;
+          transform-origin: 0% 50% 0;
+          transform: translateX(0%) perspective(400px);
+        }
+
+        100%	{
+          transform-origin: 0% 50% 0;
+          transform:  translateX(30%) perspective(400px) rotate3d(0, 1, 0, -90deg) scale(.4, .4);
+          opacity: 0;
+        }
+      }
+
+      @keyframes hover-out {
+        0%	{
+          opacity: 1;
+          transform-origin: 0% 50% 0;
+          transform: translateX(0%) perspective(400px);
+        }
+
+        100%	{
+          transform-origin: 0% 50% 0;
+          transform: translateX(30%) perspective(400px) rotate3d(0, 1, 0, -90deg) scale(.4, .4);
+          opacity: 0;
+        }
+      }
+
+      .icon-description {
+        border-radius: 3px;
+        box-shadow: 0 3px 10px 0 rgba(40, 70, 100, .3);
+        background-color: #FFFFFF;
+        font-size: 16px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .v-align {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      .icon-description:before {
+        content: ' ';
+        display: inline-block;
+        height: 100%;
+        margin-left: -.25em;
+        vertical-align: middle;
+      }
+
+      .hover-out {
+        -webkit-animation: hover-out .3s ease-in-out;
+        animation: hover-out .3s ease-in-out;
+        opacity: 0;
+      }
+
+      .hover-on {
+        -webkit-animation: hover-on .3s ease-in-out;
+        animation: hover-on .3s ease-in-out;
+        opacity: 1;
       }
     }
 
